@@ -18,14 +18,14 @@ var tabItems = [
     TabItem(name: "Home", icon: "house", tab: .home),
     TabItem(name: "View", icon: "viewfinder", tab: .view),
     TabItem(name: "API", icon: "character", tab: .api),
-    TabItem(name: "Help", icon: "questionmark.circle", tab: .help)
+    TabItem(name: "Example", icon: "pencil.and.outline", tab: .example)
 ]
 
 enum Tab: String {
     case home
     case view
     case api
-    case help
+    case example
 }
 
 struct Tabbar: View {
@@ -56,7 +56,7 @@ struct Tabbar: View {
                     ComponentsView()
                 case .api:
                     API()
-                case .help:
+                case .example:
                     Examples()
                 }
             }
