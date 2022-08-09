@@ -9,31 +9,31 @@ import SwiftUI
 import AVKit
 
 struct api_audio: View {
-    @State var player = AVAudioPlayer()
+    @State var BDPlayer: AVAudioPlayer?
     
     var body: some View {
         VStack {
-            Text("xxx")
-        }
-        .onAppear() {
-            print("------------")
-            playAudio()
+            Button(action: {
+                playAudio()
+            }, label: {
+                Label("播放Bundel下的Mp3音频", systemImage: "waveform.circle")
+            })
+            .buttonStyle(PrimaryBtnStyle())
+            .padding()
         }
         .navigationBarTitle("Audio", displayMode: .inline)
     }
     
     func playAudio() {
-        let path = Bundle.main.path(forResource: "abc", ofType:"mp3")
-        if path == nil {return}
-        let url = URL(fileURLWithPath: path!)
-
-        do {
-            print(url)
-            try self.player = AVAudioPlayer(contentsOf: url)
-            self.player.prepareToPlay()
-            self.player.play()
-        } catch {
-            print("Couldn't play audio. Error: \(error)")
+        let FilePath = Bundle.main.url(forResource: "abc.mp3", withExtension: nil, subdirectory: "/Resouces.bundle")
+        if let BDURL = FilePath {
+            do {
+                try self.BDPlayer = AVAudioPlayer(contentsOf: BDURL) /// make the audio player
+                self.BDPlayer?.volume = 5
+                self.BDPlayer?.play()
+            } catch {
+                print("Couldn't play audio. Error: \(error)")
+            }
         }
     }
     
