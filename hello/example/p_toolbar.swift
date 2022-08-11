@@ -1,5 +1,5 @@
 //
-//  v_toolbar.swift
+//  p_toolbar.swift
 //  HelloSwift
 //
 //  Created by 1 on 8/2/22.
@@ -7,29 +7,34 @@
 
 import SwiftUI
 
-struct v_toolbar: View {
+struct p_toolbar: View {
+    @State var text: String = ""
+    @State var fontType: Font = .body
+    
     var body: some View {
         VStack {
-            Text("My app")
-            .toolbar {
-                ToolbarItemGroup(placement: .bottomBar) {
-                    Image(systemName: "person")
-                    HStack {
-                        Image(systemName: "ellipsis")
-                        Divider()
-                        Image(systemName: "trash")
-                            .frame(width: 32, height: 32)
-                            .background(Color.blue)
-                            .mask(Circle())
+            TextEditor(text: $text)
+                .frame(height: 150)
+                .font(fontType)
+                .padding()
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color.primary, lineWidth: 1)
+                )
+                .padding()
+                .toolbar {
+                    ToolbarItemGroup(placement: .keyboard) {
+                        Button("加粗") { fontType = .body.bold() }
+                        Button("斜体") { fontType = .body.italic() }
+                        Spacer()
                     }
                 }
-            }
         }
     }
 }
 
-struct v_toolbar_Previews: PreviewProvider {
+struct p_toolbar_Previews: PreviewProvider {
     static var previews: some View {
-        v_toolbar()
+        p_toolbar()
     }
 }

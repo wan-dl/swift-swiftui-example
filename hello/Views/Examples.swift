@@ -21,6 +21,7 @@ struct Examples: View {
                     NavigationLink("导航栏样式", destination: p_navigation())
                     NavigationLink("自定义Tabbar", destination: p_tabbar())
                     NavigationLink("Loading", destination: p_loading())
+                    NavigationLink("toolbar", destination: p_toolbar())
                 }
                 
                 Section(header: Text("其它")) {
