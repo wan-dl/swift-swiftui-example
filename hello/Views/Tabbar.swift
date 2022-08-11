@@ -39,6 +39,9 @@ struct Tabbar: View {
             NavigationStack {
                 basic
             }
+            .onOpenURL { url in
+                print("----------\(url)")
+            }
         } else {
             NavigationView {
                 basic

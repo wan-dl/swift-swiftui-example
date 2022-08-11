@@ -8,10 +8,19 @@
 import SwiftUI
 
 class AppDelegate: NSObject, UIApplicationDelegate {
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        print("log-didFinishLaunching")
-        return true
+    func application(
+        _ application: UIApplication,
+        configurationForConnecting connectingSceneSession: UISceneSession,
+        options: UIScene.ConnectionOptions
+    ) -> UISceneConfiguration {
+        let configuration = UISceneConfiguration(
+              name: "Main Scene",
+              sessionRole: connectingSceneSession.role
+        )
+        configuration.delegateClass = MainSceneDelegate.self
+        return configuration
     }
+    
     func applicationDidReceiveMemoryWarning(_ application: UIApplication) {
         print("log-DidReceiveMemoryWarning")
     }
@@ -20,10 +29,29 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct HelloSwiftApp: App {
+    
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
+    // 主屏幕快捷操作菜单
+    @Environment(\.scenePhase) var phase
+    
     var body: some Scene {
+        
         WindowGroup {
             Tabbar()
         }
+        .onChange(of: phase) { (phaseValue) in
+            switch phaseValue {
+            case .active:
+                print("App: -> .active")
+            case .background:
+                print("App: -> .background")
+            case .inactive:
+                print("App: -> .inactive")
+            @unknown default:
+                print("App: -> Default")
+            }
+        }
+        
     }
 }

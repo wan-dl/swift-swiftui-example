@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>访问Github</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>openGithub</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>查看当前设备信息</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>查看</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>ViewDeviceInfo</string>
+		</dict>
+	</array>
+</dict>
+</plist>
