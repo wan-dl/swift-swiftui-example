@@ -137,7 +137,7 @@ struct ComponentsView: View {
     var body: some View {
         VStack {
             List(uiList, id: \.id) { item in
-                Section(header: Text(item.name)) {
+                Section(header: Text(item.name).textCase(.none)) {
                     ForEach(item.seas, id:\.id) { item2 in
                         NavigationLink(item2.name, destination: item2.viewname)
                     }
