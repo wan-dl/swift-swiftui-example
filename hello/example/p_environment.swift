@@ -12,7 +12,7 @@ struct p_environment: View {
     
     var body: some View {
         VStack {
-            Text("药材名称: \(envMedicine.name)")
+            Text("\(envMedicine.name)")
         }
     }
 }

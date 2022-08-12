@@ -8,11 +8,11 @@
 import SwiftUI
 
 class Medicine: ObservableObject {
-    @Published var name = "ginseng"
+    @Published var name:String = "ginseng"
 }
 
 struct Examples: View {
-//    @StateObject var envMedicine = Medicine()
+    var envMedicine = Medicine()
     
     var body: some View {
         VStack {
@@ -32,16 +32,16 @@ struct Examples: View {
                 }
                 
                 Section(header: Text("数据")) {
-                    NavigationLink("视图之间数据传递", destination: p_environment())
+                    NavigationLink("视图之间数据传递", destination: p_environment().environmentObject(envMedicine))
                 }
             }
             .listStyle(.insetGrouped)
+            
         }
         .navigationBarTitle("示例", displayMode: .inline)
         .safeAreaInset(edge: .bottom, content: {
             Color.clear.frame(height: 44)
         })
-        .environmentObject(Medicine())
     }
 }
 
