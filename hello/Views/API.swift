@@ -44,6 +44,7 @@ struct API: View {
                 Section(header: Text("媒体")) {
                     NavigationLink("Video", destination: api_video())
                     NavigationLink("Audio", destination: api_audio())
+                    NavigationLink("录音", destination: api_RecordSound())
                 }
             }
             .listStyle(.insetGrouped)

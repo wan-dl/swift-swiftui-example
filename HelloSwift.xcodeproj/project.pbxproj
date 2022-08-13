@@ -74,6 +74,7 @@
 		63C35C2528A1618900AFA350 /* api_CoreLocationUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C35C2428A1618900AFA350 /* api_CoreLocationUI.swift */; };
 		63CDEB9A28A69879000077E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CDEB9928A69879000077E9 /* ViewController.swift */; };
 		63D8625728A7279F00EC9CCE /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D8625628A7279F00EC9CCE /* UserLogin.swift */; };
+		63D8625D28A76EC300EC9CCE /* api_RecordSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D8625C28A76EC300EC9CCE /* api_RecordSound.swift */; };
 		63DA2555289E950E001EA6B1 /* api_PHPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA2554289E950E001EA6B1 /* api_PHPicker.swift */; };
 		63DA2557289E9674001EA6B1 /* api_PhotosPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA2556289E9674001EA6B1 /* api_PhotosPicker.swift */; };
 		63E3B2A9289DEF4000EECFC5 /* api_Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E3B2A8289DEF4000EECFC5 /* api_Contacts.swift */; };
@@ -193,6 +194,7 @@
 		63C35C2428A1618900AFA350 /* api_CoreLocationUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_CoreLocationUI.swift; sourceTree = "<group>"; };
 		63CDEB9928A69879000077E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		63D8625628A7279F00EC9CCE /* UserLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
+		63D8625C28A76EC300EC9CCE /* api_RecordSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_RecordSound.swift; sourceTree = "<group>"; };
 		63DA2554289E950E001EA6B1 /* api_PHPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_PHPicker.swift; sourceTree = "<group>"; };
 		63DA2556289E9674001EA6B1 /* api_PhotosPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_PhotosPicker.swift; sourceTree = "<group>"; };
 		63E3B2A8289DEF4000EECFC5 /* api_Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_Contacts.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 				63C35C2228A14AFA00AFA350 /* api_CoreLocation.swift */,
 				63C35C2428A1618900AFA350 /* api_CoreLocationUI.swift */,
 				6389EE9828A1683E002B6E4A /* api_HealthKit.swift */,
+				63D8625C28A76EC300EC9CCE /* api_RecordSound.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -570,6 +573,7 @@
 				636104DF289654BF000DA851 /* NavigationBar.swift in Sources */,
 				E5CE5CB72892602500BC7FF1 /* v_Stepper.swift in Sources */,
 				63B7356A289D517B00CA74C8 /* styles.swift in Sources */,
+				63D8625D28A76EC300EC9CCE /* api_RecordSound.swift in Sources */,
 				63AC4B0D28916D71004B4A45 /* v_Button.swift in Sources */,
 				63DA2557289E9674001EA6B1 /* api_PhotosPicker.swift in Sources */,
 				E56AFA37288ABE6300978D59 /* SearchBarView.swift in Sources */,
@@ -826,6 +830,7 @@
 				INFOPLIST_KEY_NSLocationTemporaryUsageDescriptionDictionary = "";
 				INFOPLIST_KEY_NSLocationUsageDescription = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "使用您的位置信息，以便向您更快的找到相应服务";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "使用麦克风，以便录音";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "使用照片，用于头像";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "使用照片，用于头像";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -875,6 +880,7 @@
 				INFOPLIST_KEY_NSLocationTemporaryUsageDescriptionDictionary = "";
 				INFOPLIST_KEY_NSLocationUsageDescription = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "使用您的位置信息，以便向您更快的找到相应服务";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "使用麦克风，以便录音";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "使用照片，用于头像";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "使用照片，用于头像";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
