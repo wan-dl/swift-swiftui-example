@@ -18,7 +18,8 @@ final class MainSceneDelegate: UIResponder, UIWindowSceneDelegate {
         options connectionptions: UIScene.ConnectionOptions
     ) {
         guard let shortcutItem = connectionptions.shortcutItem else { return }
-        handleShortcutItem(shortcutItem)
+        shortcutItemToProcess = shortcutItem
+        //handleShortcutItem(shortcutItem)
     }
   
     func windowScene(
@@ -27,7 +28,7 @@ final class MainSceneDelegate: UIResponder, UIWindowSceneDelegate {
         completionHandler: @escaping (Bool) -> Void
     ) {
         shortcutItemToProcess = shortcutItem
-        handleShortcutItem(shortcutItem, completionHandler: completionHandler)
+        //handleShortcutItem(shortcutItem, completionHandler: completionHandler)
     }
   
     private func handleShortcutItem(
@@ -36,17 +37,17 @@ final class MainSceneDelegate: UIResponder, UIWindowSceneDelegate {
     ) {
         print("App shortcutItem: -> \(shortcutItem)")
                 
-        if shortcutItem.type == "openGithub" {
-            openURL(URL(string: "https://github.com/yi-heng/hello-swift")!) { completed in
-                completionHandler!(completed)
-            }
-        }
-        if shortcutItem.type == "ViewDeviceInfo" {
-            if let window = UIApplication.shared.windows.first {
-                window.rootViewController = UIHostingController(rootView: api_getSystemInfo())
-                window.makeKeyAndVisible()
-            }
-        }
-        
+//        if shortcutItem.type == "openGithub" {
+//            openURL(URL(string: "https://github.com/yi-heng/hello-swift")!) { completed in
+//                completionHandler!(completed)
+//            }
+//        }
+//        if shortcutItem.type == "ViewDeviceInfo" {
+//            if let window = UIApplication.shared.windows.first {
+//                window.rootViewController = UIHostingController(rootView: api_getSystemInfo())
+//                window.makeKeyAndVisible()
+//            }
+//        }
     }
+    
 }

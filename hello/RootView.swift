@@ -36,6 +36,7 @@ class PathManager: ObservableObject {
 enum Target: String {
     case login
     case register
+    case deviceInfo
 }
 
 struct RootView: View {
@@ -44,7 +45,8 @@ struct RootView: View {
     
     @AppStorage("selectedTab") var selectedTab: Tab = .view
     
-    @EnvironmentObject var quickActionSettings: QuickActionSettings
+    @EnvironmentObject var quickActionSettings : QuickActionSettings
+    @Environment(\.openURL) private var openURL
     
     @StateObject var pagePathManager = PathManager()
 
@@ -53,18 +55,29 @@ struct RootView: View {
         if #available(iOS 16.0, *) {
             NavigationStack(path: $pagePathManager.path) {
                 basic
-//                .navigationDestination(for: Target.self) { target in
-//                    switch target {
-//                    case .login:
-//                        UserLogin()
-//                    case .register:
-//                        UserLogin()
-//                    }
-//                }
+                .navigationDestination(for: Target.self) { target in
+                    switch target {
+                    case .login:
+                        UserLogin()
+                    case .register:
+                        UserLogin()
+                    case .deviceInfo:
+                        api_getSystemInfo()
+                    }
+                }
             }
-//            .task {
-//                pagePathManager.path.append(Target.login)
-//            }
+            .onReceive(self.quickActionSettings.$quickAction) { new in
+                let shortcutItem = quickActionSettings.quickAction
+                if (shortcutItem == "ViewDeviceInfo") {
+                    pagePathManager.path.append(Target.deviceInfo)
+                }
+                if (shortcutItem == "openGithub") {
+                    openURL(URL(string: "https://github.com/yi-heng/hello-swift")!) { completed in
+                        print("openGithub: -> \(completed)")
+                    }
+                }
+            }
+            .task {}
         } else {
             NavigationView {
                 basic
