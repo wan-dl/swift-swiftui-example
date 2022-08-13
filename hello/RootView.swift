@@ -1,5 +1,5 @@
 //
-//  Tabbar.swift
+//  RootView.swift
 //  HelloSwift
 //
 //  Created by 1 on 7/30/22.
@@ -28,20 +28,43 @@ enum Tab: String {
     case example
 }
 
-struct Tabbar: View {
-    @AppStorage("selectedTab") var selectedTab: Tab = .view
+@available (iOS 16.0, *)
+class PathManager: ObservableObject {
+    @Published var path = NavigationPath()
+}
+
+enum Target: String {
+    case login
+    case register
+}
+
+struct RootView: View {
     
     let screenHeight = UIScreen.main.bounds.height
     
+    @AppStorage("selectedTab") var selectedTab: Tab = .view
+    
+    @EnvironmentObject var quickActionSettings: QuickActionSettings
+    
+    @StateObject var pagePathManager = PathManager()
+
     var body: some View {
         
         if #available(iOS 16.0, *) {
-            NavigationStack {
+            NavigationStack(path: $pagePathManager.path) {
                 basic
+//                .navigationDestination(for: Target.self) { target in
+//                    switch target {
+//                    case .login:
+//                        UserLogin()
+//                    case .register:
+//                        UserLogin()
+//                    }
+//                }
             }
-            .onOpenURL { url in
-                print("----------\(url)")
-            }
+//            .task {
+//                pagePathManager.path.append(Target.login)
+//            }
         } else {
             NavigationView {
                 basic
@@ -99,8 +122,8 @@ struct Tabbar: View {
     
 }
 
-struct Tabbar_Previews: PreviewProvider {
+struct RootView_Previews: PreviewProvider {
     static var previews: some View {
-        Tabbar()
+        RootView()
     }
 }

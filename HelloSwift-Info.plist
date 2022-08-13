@@ -5,16 +5,20 @@
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeSearch</string>
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>访问Github</string>
 			<key>UIApplicationShortcutItemType</key>
 			<string>openGithub</string>
 		</dict>
 		<dict>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeCompose</string>
 			<key>UIApplicationShortcutItemSubtitle</key>
 			<string>查看当前设备信息</string>
 			<key>UIApplicationShortcutItemTitle</key>
-			<string>查看</string>
+			<string>设备</string>
 			<key>UIApplicationShortcutItemType</key>
 			<string>ViewDeviceInfo</string>
 		</dict>

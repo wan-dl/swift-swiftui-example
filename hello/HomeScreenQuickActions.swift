@@ -9,8 +9,9 @@ import SwiftUI
 import UIKit
 
 final class MainSceneDelegate: UIResponder, UIWindowSceneDelegate {
+    
     @Environment(\.openURL) private var openURL: OpenURLAction
-  
+    
     func scene(
         _ scene: UIScene,
         willConnectTo session: UISceneSession,
@@ -25,6 +26,7 @@ final class MainSceneDelegate: UIResponder, UIWindowSceneDelegate {
         performActionFor shortcutItem: UIApplicationShortcutItem,
         completionHandler: @escaping (Bool) -> Void
     ) {
+        shortcutItemToProcess = shortcutItem
         handleShortcutItem(shortcutItem, completionHandler: completionHandler)
     }
   
@@ -33,21 +35,18 @@ final class MainSceneDelegate: UIResponder, UIWindowSceneDelegate {
         completionHandler: ((Bool) -> Void)? = nil
     ) {
         print("App shortcutItem: -> \(shortcutItem)")
-        
-        guard shortcutItem.type != nil else {
-            completionHandler!(false)
-            return
-        }
                 
         if shortcutItem.type == "openGithub" {
-            openURL(URL(string: "https://www.github.com")!) { completed in
+            openURL(URL(string: "https://github.com/yi-heng/hello-swift")!) { completed in
                 completionHandler!(completed)
             }
         }
         if shortcutItem.type == "ViewDeviceInfo" {
-//            openURL(URL(string: "HelloSwiftQuickActions://ViewDeviceInfo")!) { completed in
-//                completionHandler!(completed)
-//            }
+            if let window = UIApplication.shared.windows.first {
+                window.rootViewController = UIHostingController(rootView: api_getSystemInfo())
+                window.makeKeyAndVisible()
+            }
         }
+        
     }
 }
