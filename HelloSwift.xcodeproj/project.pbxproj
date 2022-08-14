@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		630059DD28A8A5E400092B66 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 630059DC28A8A5E400092B66 /* Launch Screen.storyboard */; };
 		6309715228950FCC00138FAD /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6309715128950FCC00138FAD /* Home.swift */; };
 		63168D0528997BF200C7D0DC /* api_video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63168D0428997BF200C7D0DC /* api_video.swift */; };
 		63179027289947B100A45C93 /* api_share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63179026289947B100A45C93 /* api_share.swift */; };
@@ -124,6 +125,7 @@
 /* Begin PBXFileReference section */
 		3F3DA4E2CBD25B6739ECCFE1 /* Pods-HelloSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloSwift.debug.xcconfig"; path = "Target Support Files/Pods-HelloSwift/Pods-HelloSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		623FDE838B80780113AAD684 /* Pods-HelloSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloSwift.release.xcconfig"; path = "Target Support Files/Pods-HelloSwift/Pods-HelloSwift.release.xcconfig"; sourceTree = "<group>"; };
+		630059DC28A8A5E400092B66 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		6300703728A1F83100EE378D /* HelloSwift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HelloSwift.entitlements; sourceTree = "<group>"; };
 		6309715128950FCC00138FAD /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		63168D0428997BF200C7D0DC /* api_video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_video.swift; sourceTree = "<group>"; };
@@ -444,6 +446,7 @@
 				63CDEB9928A69879000077E9 /* ViewController.swift */,
 				6327FA6328958B740091BB9B /* RootView.swift */,
 				E5C85288288A51B700BBB795 /* Assets.xcassets */,
+				630059DC28A8A5E400092B66 /* Launch Screen.storyboard */,
 				6320822F28A2B1C100B9D888 /* Preview Content */,
 				632081D728A2B0C400B9D888 /* Resouces.bundle */,
 				63AFF205289AAED300C949E3 /* Animation */,
@@ -519,6 +522,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				630059DD28A8A5E400092B66 /* Launch Screen.storyboard in Resources */,
 				632081D828A2B0C400B9D888 /* Resouces.bundle in Resources */,
 				E5C85289288A51B700BBB795 /* Assets.xcassets in Resources */,
 			);
@@ -836,6 +840,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -886,6 +892,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
