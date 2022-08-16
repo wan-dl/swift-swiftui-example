@@ -34,6 +34,7 @@ struct API: View {
                 
                 Section(header: Text("数据")) {
                     NavigationLink("UserDefaults", destination: api_UserDefaults())
+                    NavigationLink("SQLite3", destination: api_SQLite3())
                 }
                 
                 Section(header: Text("网络请求")) {
