@@ -34,6 +34,10 @@ struct Examples: View {
                 Section(header: Text("数据")) {
                     NavigationLink("视图之间数据传递", destination: p_environment().environmentObject(envMedicine))
                 }
+                
+                Section(header: Text("动画")) {
+                    NavigationLink("Tap Animation with Delay", destination: TapDelay())
+                }
             }
             .listStyle(.insetGrouped)
             

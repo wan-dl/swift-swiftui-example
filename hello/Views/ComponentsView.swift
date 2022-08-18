@@ -125,8 +125,7 @@ private let uiList: [CInfo] = [
             Sea(name: "transitions", viewname: AnyView(Transitions())),
             Sea(name: "timing", viewname: AnyView(Timing())),
             Sea(name: "Effect", viewname: AnyView(Effect())),
-            Sea(name: "withAnimation", viewname: AnyView(a_withAnimation())),
-            Sea(name: "Tap Animation with Delay", viewname: AnyView(TapDelay())),
+            Sea(name: "withAnimation", viewname: AnyView(a_withAnimation()))
         ]
     )
 ]
