@@ -4,15 +4,13 @@
 
 ## SwiftUI
 
-|    | 详情   |
-|--	|--	|
-|文本、图像	|[Text](hello/Components/v_Text.swift) 、[Label](hello/Components/v_Label.swift)	、[Text](hello/Components/v_Input.swift) 、[TextEditor](hello/Components/v_TextEditor.swift)、[Image](hello/Components/v_Image.swift)|
-|Controls	|[Button](hello/Components/v_Button.swift)、[Link](hello/Components/v_Link.swift)、[Menu](hello/Components/v_Menu.swift)、<br/>[Slider](hello/Components/v_Slider.swift)、[Stepper](hello/Components/v_Stepper.swift)、[Toggle](hello/Components/v_Toggle.swift)、[Picker](hello/Components/v_Picker.swift)、<br/>[ActionSheet](hello/Components/v_ActionSheet.swift)、[swipeActions](hello/Components/v_swipeActions.swift)、[Alert](hello/Components/v_Alert.swift)	|
-|Containers - 容器	|[VStack/HStack/ZStack](hello/Components/v_Layout.swift)、[Grid](hello/Components/v_Grid.swift)、<br/>[Spacer](hello/Components/v_Spacer.swift)、[Divider](hello/Components/v_Divider.swift)、<br/> [List](hello/Components/v_List.swift)、[Form](hello/Components/v_Form.swift)、[GroupBox](hello/Components/v_GroupBox.swift)、[ScrollView](hello/Components/v_ScrollView.swift)、[ScrollViewReader](hello/Components/v_ScrollViewReader.swift)、[Table](hello/Components/v_Table.swift )、<br/>[Navigation](hello/Components/v_Navigation.swift)、[OutlineGroup](hello/Components/v_OutlineGroup.swift)、[DisclosureGroup](hello/Components/v_DisclosureGroup.swift)、[TabView](hello/Components/v_Tab.swift)、[TimelineView](hello/Components/v_TimelineView.swift)|
-|Animation动画	|[shadow](hello/Animation/Shadow.swift)、[mask](hello/Animation/Mask.swift)、[transitions](hello/Animation/Transitions.swift)、[timing](hello/Animation/Timing.swift)、[effect](hello/Animation/Effect.swift)、[withAnimation](hello/Animation/a_withAnimation.swift)、[](hello/Animation/TapDelay.swift)	|
-|Canvas等    |[Canvas](hello/Components/v_Canvas.swift)、[Gradient渐变](hello/Components/v_Gradient.swift)、[Shape](hello/Components/v_shape.swift)、[Gesture](hello/Components/v_Gesture.swift)|
-|Chart - 图表|[PointMark](hello/Components/chart_PointMark.swift )、[BarMark](hello/Components/chart_BarMark.swift)、[LineMark](hello/Components/chart_LineMark.swift)|
-|Map - 地图|[Map](hello/Components/v_Maps.swift)|
+* 文本、图像：[Text](hello/Components/v_Text.swift) 、[Label](hello/Components/v_Label.swift)	、[Text](hello/Components/v_Input.swift) 、[TextEditor](hello/Components/v_TextEditor.swift)、[Image](hello/Components/v_Image.swift)
+* Controls：[Button](hello/Components/v_Button.swift)、[Link](hello/Components/v_Link.swift)、[Menu](hello/Components/v_Menu.swift)、[Slider](hello/Components/v_Slider.swift)、[Stepper](hello/Components/v_Stepper.swift)、[Toggle](hello/Components/v_Toggle.swift)、[Picker](hello/Components/v_Picker.swift)、[ActionSheet](hello/Components/v_ActionSheet.swift)、[swipeActions](hello/Components/v_swipeActions.swift)、[Alert](hello/Components/v_Alert.swift)	
+* Containers - 容器：[VStack/HStack/ZStack](hello/Components/v_Layout.swift)、[Grid](hello/Components/v_Grid.swift)、[Spacer](hello/Components/v_Spacer.swift)、[Divider](hello/Components/v_Divider.swift)、<br/> [List](hello/Components/v_List.swift)、[Form](hello/Components/v_Form.swift)、[GroupBox](hello/Components/v_GroupBox.swift)、[ScrollView](hello/Components/v_ScrollView.swift)、[ScrollViewReader](hello/Components/v_ScrollViewReader.swift)、[Table](hello/Components/v_Table.swift )、<br/>[Navigation](hello/Components/v_Navigation.swift)、[OutlineGroup](hello/Components/v_OutlineGroup.swift)、[DisclosureGroup](hello/Components/v_DisclosureGroup.swift)、[TabView](hello/Components/v_Tab.swift)、[TimelineView](hello/Components/v_TimelineView.swift)
+* Animation动画：[shadow](hello/Animation/Shadow.swift)、[mask](hello/Animation/Mask.swift)、[transitions](hello/Animation/Transitions.swift)、[timing](hello/Animation/Timing.swift)、[effect](hello/Animation/Effect.swift)、[withAnimation](hello/Animation/a_withAnimation.swift)、[](hello/Animation/TapDelay.swift)	
+* Canvas：  [Canvas](hello/Components/v_Canvas.swift)、[Gradient渐变](hello/Components/v_Gradient.swift)、[Shape](hello/Components/v_shape.swift)、[Gesture](hello/Components/v_Gesture.swift)
+* Chart - 图表：[PointMark](hello/Components/chart_PointMark.swift )、[BarMark](hello/Components/chart_BarMark.swift)、[LineMark](hello/Components/chart_LineMark.swift)
+* Map - 地图：[Map](hello/Components/v_Maps.swift)
 
 ## API 接口
 
