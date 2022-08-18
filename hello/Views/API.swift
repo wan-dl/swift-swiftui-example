@@ -11,11 +11,14 @@ struct API: View {
     var body: some View {
         VStack {
             List {
-                NavigationLink("获取设备信息", destination: api_getSystemInfo())
-                
                 Section(header: Text("")) {
+                    NavigationLink("获取设备信息", destination: api_getSystemInfo())
+                    NavigationLink("openURL", destination: api_openURL())
                     NavigationLink("Shared - 系统分享", destination: api_share())
                     NavigationLink("UIPasteboard - 剪切板", destination: api_clipboard())
+                }
+                
+                Section(header: Text("")) {
                     NavigationLink("Contacts - 联系人", destination: api_Contacts())
                     NavigationLink("HealthKit - 健康", destination: api_HealthKit())
 
