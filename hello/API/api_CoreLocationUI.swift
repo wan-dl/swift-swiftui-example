@@ -46,6 +46,7 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
     }
 }
 
+@available (iOS 15.0, *)
 struct api_CoreLocationUI: View {
     @StateObject var locationManager = LocationManager()
 

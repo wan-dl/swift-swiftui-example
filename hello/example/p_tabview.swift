@@ -34,6 +34,8 @@ struct p_tabview: View {
             .padding()
             .frame(height: 300)
             .cornerRadius(20)
+            
+            Text("备注：轮播图示例，主要用了TabView")
         }
         .navigationBarTitle("轮播图示例", displayMode: .inline)
     }

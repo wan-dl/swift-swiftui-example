@@ -12,6 +12,7 @@ import SwiftUI
 import PhotosUI
 
 
+@available (iOS 16.0, *)
 struct api_PhotosPicker: View {
     var body: some View {
         
@@ -29,6 +30,7 @@ struct api_PhotosPicker: View {
                     choiceVideo()
                 }
             }
+            .navigationBarTitle("PhotosPicker", displayMode: .inline)
         }
         
     }

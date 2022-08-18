@@ -14,6 +14,7 @@ struct p_environment: View {
         VStack {
             Text("\(envMedicine.name)")
         }
+        .navigationBarTitle("接收其它视图传递的数据", displayMode: .inline)
     }
 }
 

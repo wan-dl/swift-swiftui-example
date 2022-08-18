@@ -25,7 +25,6 @@ struct Examples: View {
                 }
                 
                 Section(header: Text("其它")) {
-                    NavigationLink("swipeActions应用", destination: p_swipeActions())
                     NavigationLink("轮播图示例", destination: p_tabview())
                     NavigationLink("滚动视图", destination: p_ScrollWithRotate3DEffect())
                     NavigationLink("Markdown AttributedString", destination: p_markdownWithAttributedString())
