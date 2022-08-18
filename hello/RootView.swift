@@ -71,9 +71,11 @@ struct RootView: View {
                 if (shortcutItem == "ViewDeviceInfo") {
                     pagePathManager.path.append(Target.deviceInfo)
                 }
+                
+                // openURL 适用于iOS 14.0+
                 if (shortcutItem == "openGithub") {
-                    openURL(URL(string: "https://github.com/yi-heng/hello-swift")!) { completed in
-                        print("openGithub: -> \(completed)")
+                    openURL(URL(string: "https://github.com/yi-heng/hello-swift")!) { accepted in
+                        print(accepted ? "Success" : "Failure")
                     }
                 }
             }
