@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		630059DD28A8A5E400092B66 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 630059DC28A8A5E400092B66 /* Launch Screen.storyboard */; };
 		6300BA0F28AE7C5B002D03CE /* api_openURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6300BA0E28AE7C5A002D03CE /* api_openURL.swift */; };
+		63050C2328AFCE98004B0D45 /* navigationBarColorForALL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63050C2228AFCE98004B0D45 /* navigationBarColorForALL.swift */; };
 		6309715228950FCC00138FAD /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6309715128950FCC00138FAD /* Home.swift */; };
 		63168D0528997BF200C7D0DC /* api_video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63168D0428997BF200C7D0DC /* api_video.swift */; };
 		63179027289947B100A45C93 /* api_share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63179026289947B100A45C93 /* api_share.swift */; };
@@ -128,6 +129,7 @@
 		630059DC28A8A5E400092B66 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		6300703728A1F83100EE378D /* HelloSwift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HelloSwift.entitlements; sourceTree = "<group>"; };
 		6300BA0E28AE7C5A002D03CE /* api_openURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_openURL.swift; sourceTree = "<group>"; };
+		63050C2228AFCE98004B0D45 /* navigationBarColorForALL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navigationBarColorForALL.swift; sourceTree = "<group>"; };
 		6309715128950FCC00138FAD /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		63168D0428997BF200C7D0DC /* api_video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_video.swift; sourceTree = "<group>"; };
 		63179026289947B100A45C93 /* api_share.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_share.swift; sourceTree = "<group>"; };
@@ -381,6 +383,7 @@
 				63E8CFD3288AEFEC00550E52 /* common.swift */,
 				63B73569289D517B00CA74C8 /* styles.swift */,
 				63E81B9A289E470B00360F45 /* ToastView.swift */,
+				63050C2228AFCE98004B0D45 /* navigationBarColorForALL.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -626,6 +629,7 @@
 				635DB87E2891801C0019BC3B /* ComponentsView.swift in Sources */,
 				E52ECFB52893A4360051D2DE /* v_Image.swift in Sources */,
 				63C095552899689100498562 /* Effect.swift in Sources */,
+				63050C2328AFCE98004B0D45 /* navigationBarColorForALL.swift in Sources */,
 				639BA7AF28941789007C2797 /* v_Divider.swift in Sources */,
 				6317D7172892E03700192E5A /* v_TimelineView.swift in Sources */,
 				63C35C2328A14AFA00AFA350 /* api_CoreLocation.swift in Sources */,
@@ -810,7 +814,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3F3DA4E2CBD25B6739ECCFE1 /* Pods-HelloSwift.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HelloSwift.entitlements;
@@ -844,7 +848,7 @@
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -862,7 +866,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 623FDE838B80780113AAD684 /* Pods-HelloSwift.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HelloSwift.entitlements;
@@ -896,7 +900,7 @@
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
