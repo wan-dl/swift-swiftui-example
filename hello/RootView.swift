@@ -37,13 +37,14 @@ enum Target: String {
     case login
     case register
     case deviceInfo
+    case search
 }
 
 struct RootView: View {
     
     let screenHeight = UIScreen.main.bounds.height
     
-    @AppStorage("selectedTab") var selectedTab: Tab = .view
+    @AppStorage("selectedTab") var selectedTab: Tab = .home
     
     @EnvironmentObject var quickActionSettings : QuickActionSettings
     @Environment(\.openURL) private var openURL
@@ -63,6 +64,8 @@ struct RootView: View {
                         UserLogin()
                     case .deviceInfo:
                         api_getSystemInfo()
+                    case .search:
+                        GotoSearch()
                     }
                 }
             }
@@ -71,12 +74,8 @@ struct RootView: View {
                 if (shortcutItem == "ViewDeviceInfo") {
                     pagePathManager.path.append(Target.deviceInfo)
                 }
-                
-                // openURL 适用于iOS 14.0+
-                if (shortcutItem == "openGithub") {
-                    openURL(URL(string: "https://github.com/yi-heng/hello-swift")!) { accepted in
-                        print(accepted ? "Success" : "Failure")
-                    }
+                if (shortcutItem == "Search") {
+                    pagePathManager.path.append(Target.search)
                 }
             }
             .task {}

@@ -8,9 +8,9 @@
 			<key>UIApplicationShortcutItemIconType</key>
 			<string>UIApplicationShortcutIconTypeSearch</string>
 			<key>UIApplicationShortcutItemTitle</key>
-			<string>访问Github</string>
+			<string>搜索</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>openGithub</string>
+			<string>Search</string>
 		</dict>
 		<dict>
 			<key>UIApplicationShortcutItemIconType</key>
