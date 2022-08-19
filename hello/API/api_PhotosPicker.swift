@@ -12,7 +12,6 @@ import SwiftUI
 import PhotosUI
 
 
-@available (iOS 16.0, *)
 struct api_PhotosPicker: View {
     var body: some View {
         

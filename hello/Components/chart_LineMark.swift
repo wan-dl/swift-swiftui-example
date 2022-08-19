@@ -5,7 +5,9 @@
 //  Created by 1 on 8/1/22.
 //
 
+#if canImport(Charts)
 import Charts
+#endif
 import SwiftUI
 
 struct WorkItem: Identifiable {

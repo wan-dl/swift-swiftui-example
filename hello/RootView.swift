@@ -41,52 +41,60 @@ enum Target: String {
 }
 
 struct RootView: View {
-    
-    let screenHeight = UIScreen.main.bounds.height
-    
-    @AppStorage("selectedTab") var selectedTab: Tab = .home
-    
     @EnvironmentObject var quickActionSettings : QuickActionSettings
     @Environment(\.openURL) private var openURL
-    
-    @StateObject var pagePathManager = PathManager()
 
     var body: some View {
-        
         if #available(iOS 16.0, *) {
-            NavigationStack(path: $pagePathManager.path) {
-                basic
-                .navigationDestination(for: Target.self) { target in
-                    switch target {
-                    case .login:
-                        UserLogin()
-                    case .register:
-                        UserLogin()
-                    case .deviceInfo:
-                        api_getSystemInfo()
-                    case .search:
-                        GotoSearch()
-                    }
-                }
-            }
-            .onReceive(self.quickActionSettings.$quickAction) { new in
-                let shortcutItem = quickActionSettings.quickAction
-                if (shortcutItem == "ViewDeviceInfo") {
-                    pagePathManager.path.append(Target.deviceInfo)
-                }
-                if (shortcutItem == "Search") {
-                    pagePathManager.path.append(Target.search)
-                }
-            }
-            .task {}
+            RootViewForIOS16()
         } else {
             NavigationView {
-                basic
+                BasicView()
             }
         }
     }
-        
-    var basic: some View {
+}
+
+@available(iOS 16.0, *)
+struct RootViewForIOS16: View {
+    @StateObject var pagePathManager = PathManager()
+    @EnvironmentObject var quickActionSettings : QuickActionSettings
+    
+    var body: some View {
+        NavigationStack() {
+            BasicView()
+            .navigationDestination(for: Target.self) { target in
+                switch target {
+                case .login:
+                    UserLogin()
+                case .register:
+                    UserLogin()
+                case .deviceInfo:
+                    api_getSystemInfo()
+                case .search:
+                    GotoSearch()
+                }
+            }
+        }
+        .onReceive(self.quickActionSettings.$quickAction) { new in
+            let shortcutItem = quickActionSettings.quickAction
+            if (shortcutItem == "ViewDeviceInfo") {
+                pagePathManager.path.append(Target.deviceInfo)
+            }
+            if (shortcutItem == "Search") {
+                pagePathManager.path.append(Target.search)
+            }
+        }
+        .task {}
+    }
+}
+
+struct BasicView: View {
+    let screenHeight = UIScreen.main.bounds.height
+    
+    @State var selectedTab: Tab = .home
+    
+    var body: some View {
         ZStack(alignment: .bottom) {
             Group {
                 switch selectedTab {
@@ -133,8 +141,8 @@ struct RootView: View {
             .ignoresSafeArea()
         }
     }
-    
 }
+
 
 struct RootView_Previews: PreviewProvider {
     static var previews: some View {
