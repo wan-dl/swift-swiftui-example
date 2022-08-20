@@ -96,19 +96,18 @@ struct BasicView: View {
     
     var body: some View {
         ZStack(alignment: .bottom) {
-            Group {
-                switch selectedTab {
-                case .home:
-                    Home()
-                case .view:
-                    ComponentsView()
-                case .api:
-                    API()
-                case .example:
-                    Examples()
-                }
+            
+            switch selectedTab {
+            case .home:
+                Home()
+                
+            case .view:
+                ComponentsView()
+            case .api:
+                API()
+            case .example:
+                Examples()
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
             
             HStack {
                 ForEach(tabItems) { item in

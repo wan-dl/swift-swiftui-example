@@ -17,7 +17,7 @@ struct Examples: View {
     var body: some View {
         VStack {
             List {
-                Section(header: Text("导航栏和Tabber")) {
+                Section(header: Text("导航栏和Tabber").textCase(.none)) {
                     NavigationLink("导航栏样式", destination: p_navigation())
                     NavigationLink("自定义Tabbar", destination: p_tabbar())
                     NavigationLink("Loading", destination: p_loading())
@@ -38,10 +38,9 @@ struct Examples: View {
                     NavigationLink("Tap Animation with Delay", destination: TapDelay())
                 }
             }
-            .listStyle(.insetGrouped)
-            
         }
-        .navigationBarTitle("示例", displayMode: .inline)
+        .navigationTitle("示例")
+        .navigationBarTitleDisplayMode(.inline)
         .safeAreaInset(edge: .bottom, content: {
             Color.clear.frame(height: 44)
         })

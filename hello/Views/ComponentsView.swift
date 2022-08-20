@@ -133,6 +133,10 @@ private let uiList: [CInfo] = [
 
 struct ComponentsView: View {
     
+    init() {
+        
+    }
+    
     var body: some View {
         VStack {
             List(uiList, id: \.id) { item in
@@ -145,7 +149,8 @@ struct ComponentsView: View {
             }
             .listStyle(.insetGrouped)
         }
-        .navigationBarTitle("SwiftUI", displayMode: .inline)
+        .navigationTitle("SwiftUI")
+        .navigationBarTitleDisplayMode(.inline)
         .safeAreaInset(edge: .bottom, content: {
             Color.clear.frame(height: 44)
         })

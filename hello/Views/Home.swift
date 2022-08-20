@@ -10,8 +10,7 @@ import SwiftUI
 struct Home: View {
     var body: some View {
         ScrollView() {
-            card
-            
+            card            
 //            Color.clear.frame(height: 1000)
         }
         .safeAreaInset(edge: .top, content: {
@@ -21,7 +20,9 @@ struct Home: View {
             NavigationBar(title: "Hello")
         )
         .padding(.horizontal, -10)
-        .navigationTitle("")
+//        .navigationTitle("Hello")
+//        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarHidden(true)
     }
     
     var card: some View {

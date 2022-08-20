@@ -54,7 +54,8 @@ struct API: View {
             }
             .listStyle(.insetGrouped)
         }
-        .navigationBarTitle("API", displayMode: .inline)
+        .navigationTitle("API")
+        .navigationBarTitleDisplayMode(.inline)
         .safeAreaInset(edge: .bottom, content: {
             Color.clear.frame(height: 44)
         })
