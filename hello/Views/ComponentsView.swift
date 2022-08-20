@@ -2,7 +2,8 @@
 //  Controls.swift
 //  format
 //
-//  Created by hx on 7/26/22.
+//  Created by 1 on 7/26/22.
+//  Updated by 1 on 2022-08-20 增加搜索
 //
 
 import SwiftUI
@@ -16,14 +17,14 @@ struct Sea: Identifiable {
 struct CInfo: Identifiable {
     let id: UUID = UUID()
     let name: String
-    let seas: [Sea]
+    var seas: [Sea]
 }
 
 enum ViewName {
     case text
 }
 
-private let uiList: [CInfo] = [
+private var uiList: [CInfo] = [
     CInfo(
         name: "Text Input and Output",
         seas: [
@@ -133,27 +134,45 @@ private let uiList: [CInfo] = [
 
 struct ComponentsView: View {
     
-    init() {
-        
-    }
+    @State var searchKeyword: String = ""
     
     var body: some View {
         VStack {
-            List(uiList, id: \.id) { item in
+            List(searchResults, id: \.id) { item in
                 Section(header: Text(item.name).textCase(.none)) {
                     ForEach(item.seas, id:\.id) { item2 in
                         NavigationLink(item2.name, destination: item2.viewname)
                     }
                 }
-                
             }
             .listStyle(.insetGrouped)
+            .searchable(text: $searchKeyword, placement: SearchFieldPlacement.automatic, prompt: "搜索")
         }
         .navigationTitle("SwiftUI")
         .navigationBarTitleDisplayMode(.inline)
         .safeAreaInset(edge: .bottom, content: {
             Color.clear.frame(height: 44)
         })
+    }
+    
+    var searchResults: [CInfo] {
+        if searchKeyword.isEmpty {
+            return uiList
+        }
+        var result: [CInfo] = []
+        for i1 in uiList {
+            var tmp = CInfo(name: i1.name, seas: [])
+            for i2 in i1.seas {
+                let viewname: String = i2.name.lowercased()
+                if viewname.contains(searchKeyword.lowercased()) {
+                    tmp.seas.append(i2)
+                }
+            }
+            if !tmp.seas.isEmpty {
+                result.append(tmp)
+            }
+        }
+        return result
     }
 }
 

@@ -16,7 +16,7 @@ struct TabItem: Identifiable {
 
 var tabItems = [
     TabItem(name: "Home", icon: "house", tab: .home),
-    TabItem(name: "View", icon: "viewfinder", tab: .view),
+    TabItem(name: "SwiftUI", icon: "viewfinder", tab: .view),
     TabItem(name: "API", icon: "character", tab: .api),
     TabItem(name: "Example", icon: "pencil.and.outline", tab: .example)
 ]

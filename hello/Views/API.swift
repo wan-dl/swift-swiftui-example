@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct API: View {
+    
     var body: some View {
         VStack {
             List {
@@ -25,7 +26,7 @@ struct API: View {
                 }
                 
                 Section(header: Text("相册相机")) {
-//                        NavigationLink("PHPicker - 相册", destination: api_PHPicker())
+                    //NavigationLink("PHPicker - 相册", destination: api_PHPicker())
                     NavigationLink("PhotosPicker - 相册", destination: api_PhotosPicker())
                     NavigationLink("UIImagePickerController - 相机相册", destination: api_camera_photo())
                     NavigationLink("保存图片到相册", destination: api_saveImage())
