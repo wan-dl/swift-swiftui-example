@@ -84,9 +84,9 @@ private let uiList: [CInfo] = [
         seas: [
             Sea(name: "ProgressView", viewname: AnyView(v_ProgressView())),
             Sea(name: "Sheet", viewname: AnyView(v_Sheet())),
-            Sea(name: "FullScreenCover", viewname: AnyView(v_fullScreenCover())),
+            Sea(name: "fullScreenCover", viewname: AnyView(v_fullScreenCover())),
             Sea(name: "Popover", viewname: AnyView(v_Popover())),
-            Sea(name: "Dialog", viewname: AnyView(v_Dialog())),
+            Sea(name: "confirmationDialog", viewname: AnyView(v_confirmationDialog())),
         ]
     ),
     CInfo(

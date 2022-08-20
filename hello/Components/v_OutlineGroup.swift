@@ -22,6 +22,7 @@ struct FileItem: Hashable, Identifiable, CustomStringConvertible {
 }
 
 struct v_OutlineGroup: View {
+    
     let data =
       FileItem(name: "users", children:
         [FileItem(name: "user1234", children:
@@ -38,9 +39,18 @@ struct v_OutlineGroup: View {
         ])
     
     var body: some View {
-        OutlineGroup(data, children: \.children) { item in
-            Text("\(item.description)")
+        VStack(alignment: .leading, spacing: 20) {
+            if #available(iOS 14.0, *) {
+                OutlineGroup(data, children: \.children) { item in
+                    Text("\(item.description)")
+                }
+                .padding()
+            } else {
+                Text("OutlineGroup方法，仅支持iOS 14.0+")
+            }
         }
+        .navigationTitle("OutlineGroup")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

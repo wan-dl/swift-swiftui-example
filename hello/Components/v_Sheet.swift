@@ -9,28 +9,26 @@
 
 import SwiftUI
 
+@available (iOS 13.0, *)
 struct v_Sheet: View {
     @State private var sheetShown = false
-        @State private var query = ""
+    @State private var query = ""
 
-        var body: some View {
-            VStack {
-                Button("Display bottom sheet") {
-                    sheetShown = true
-                }
-                .sheet(isPresented: $sheetShown) {
-                    NavigationView {
-                        Text("You query: \(query)")
-                            .searchable(text: $query)
-                            .navigationTitle("Search")
-                    }
+    var body: some View {
+        VStack {
+            Button("Display bottom sheet") {
+                sheetShown = true
+            }
+            .sheet(isPresented: $sheetShown) {
+                NavigationView {
+                    Text("You query: \(query)")
+                        .searchable(text: $query)
+                        .navigationTitle("Search")
                 }
             }
-            .navigationBarTitle(Text("Sheet"), displayMode: .inline)
-    }
-    
-    func didDismiss() {
-        
+        }
+        .navigationTitle(".sheet")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

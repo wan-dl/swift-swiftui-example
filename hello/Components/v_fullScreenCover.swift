@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available (iOS 14.0, *)
 struct v_fullScreenCover: View {
     @State private var isPresenting = false
     
@@ -34,7 +35,8 @@ struct v_fullScreenCover: View {
                 .font(.body)
                 .padding()
         }
-        .navigationBarTitle(Text("fullScreenCover"), displayMode: .inline)
+        .navigationTitle(".fullScreenCover")
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     func didDismiss() {

@@ -9,6 +9,7 @@
 
 import SwiftUI
 
+@available (iOS 15.0, *)
 struct v_TimelineView: View {
     var body: some View {
         VStack {
@@ -31,7 +32,8 @@ struct v_TimelineView: View {
                     .stroke()
             }
         }
-        .navigationBarTitle(Text("TimelineView"), displayMode: .inline)
+        .navigationTitle("TimelineView")
+        .navigationBarTitleDisplayMode(.inline)
    }
 
    private func secondsValue(for date: Date) -> Double {

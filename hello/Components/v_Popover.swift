@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available (iOS 13.0, *)
 struct v_Popover: View {
     @State var isShowPopover: Bool = false
     
@@ -16,9 +17,11 @@ struct v_Popover: View {
                 self.isShowPopover.toggle()
             })
             .popover(isPresented: $isShowPopover) {
-                Text("xxx")
+                Text("本窗口由.popover弹出")
             }
         }
+        .navigationTitle(".popover")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
