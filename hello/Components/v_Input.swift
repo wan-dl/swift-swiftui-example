@@ -167,15 +167,15 @@ struct v_Input: View {
 
                 }
             }
-            
+            .background(.gray.opacity(0.1))
         }
-        .padding(EdgeInsets(top: 0, leading: 0, bottom: 50, trailing: 0))
-        .background(.gray.opacity(0.1))
+//        .padding(EdgeInsets(top: 0, leading: 0, bottom: 50, trailing: 0))
         .submitScope()
         .onTapGesture {
             closeKeyBoard()
         }
-        .navigationBarTitle(Text("TextField"), displayMode: .inline)
+        .navigationTitle("TextField")
+        .navigationBarTitleDisplayMode(.inline)
         
     }
     
@@ -271,8 +271,11 @@ struct InputWithClearIcon: TextFieldStyle {
 
     func _body(configuration: TextField<Self._Label>) -> some View {
         HStack {
+            Text("")
+                .padding(.horizontal, 2)
             configuration
-                .padding()
+                .frame(height: 40)
+
             if !text.isEmpty {
                 Button(action: {
                     self.text = ""
@@ -282,9 +285,7 @@ struct InputWithClearIcon: TextFieldStyle {
                 })
                 .padding(.trailing, 10)
             }
-        }
-        .padding(.horizontal, 10)
-        .border(.gray)
+        }.background(.white)
     }
 }
 
