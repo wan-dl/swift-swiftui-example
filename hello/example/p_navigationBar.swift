@@ -34,7 +34,7 @@ extension View {
     }
 }
 
-struct p_navigation: View {
+struct p_navigationBar: View {
     
     @State var isActive = false
     @State var navBarBgColor: Color = .blue
@@ -96,15 +96,16 @@ struct p_navigation: View {
                 },
                 trailing:
                     Button(action: {}) {
-                        Text("分享").foregroundColor(navBarFgColor)
+                        Label("分享", systemImage: "square.and.arrow.up").foregroundColor(navBarFgColor)
                     }
             )
+//            .toolbar(.hidden, for: .navigationBar)
     }
 }
 
 
-struct p_navigation_Previews: PreviewProvider {
+struct p_navigationBar_Previews: PreviewProvider {
     static var previews: some View {
-        p_navigation()
+        p_navigationBar()
     }
 }

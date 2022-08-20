@@ -37,7 +37,7 @@ struct chart_PointMark: View {
                     .font(.body)
             }
         }
-        .navigationBarTitle("点图", displayMode: .inline)
+        .navigationBarTitle("散点图", displayMode: .inline)
     }
     
     @available(iOS 16.0, *)

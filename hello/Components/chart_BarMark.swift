@@ -48,7 +48,6 @@ struct chart_BarMark: View {
                 Text("图表仅支持iOS 16.0系统")
             }
         }
-        .padding()
         .navigationBarTitle("柱状图", displayMode: .inline)
     }
     

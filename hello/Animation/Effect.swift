@@ -17,9 +17,14 @@ struct Effect: View {
                 .font(.title)
                 .offset(y: -80)
             
+            Text("本页面主要用到了scaleEffect、rotationEffect、rotation3DEffect")
+                .font(.callout)
+                .offset(y: -50)
+            
             exampleTa
         }
-        .navigationBarTitle("Animation", displayMode: .inline)
+        .navigationTitle("Effect")
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     var exampleTa: some View {

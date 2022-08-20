@@ -104,9 +104,9 @@ private let uiList: [CInfo] = [
     CInfo(
         name: "Chart",
         seas: [
-            Sea(name: "BarMark", viewname: AnyView(chart_BarMark())),
-            Sea(name: "LinkMark", viewname: AnyView(chart_LineMark())),
-            Sea(name: "PointMark", viewname: AnyView(chart_PointMark())),
+            Sea(name: "BarMark - 柱状图", viewname: AnyView(chart_BarMark())),
+            Sea(name: "LinkMark - 线形图", viewname: AnyView(chart_LineMark())),
+            Sea(name: "PointMark - 散点图", viewname: AnyView(chart_PointMark())),
         ]
     ),
     CInfo(

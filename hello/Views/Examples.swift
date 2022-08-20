@@ -8,7 +8,7 @@
 import SwiftUI
 
 class Medicine: ObservableObject {
-    @Published var name:String = "ginseng"
+    @Published var name:String = "药材：三七"
 }
 
 struct Examples: View {
@@ -18,7 +18,7 @@ struct Examples: View {
         VStack {
             List {
                 Section(header: Text("导航栏和Tabber").textCase(.none)) {
-                    NavigationLink("导航栏样式", destination: p_navigation())
+                    NavigationLink("自定义导航栏样式", destination: p_navigationBar())
                     NavigationLink("自定义Tabbar", destination: p_tabbar())
                     NavigationLink("Loading", destination: p_loading())
                     NavigationLink("toolbar", destination: p_toolbar())

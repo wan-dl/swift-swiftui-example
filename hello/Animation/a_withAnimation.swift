@@ -12,19 +12,27 @@ struct a_withAnimation: View {
     
     var body: some View {
         VStack {
-            Text("hello")
-                .font(.title.bold())
-                .foregroundColor(.white)
-        }
-        .frame(width: show ? 150: 200, height: show ? 50 : 80)
-        .background(.blue)
-        .cornerRadius(30)
-        .shadow(color: .blue.opacity(0.3), radius: 20)
-        .onTapGesture {
-            withAnimation(.spring()) {
-                show.toggle()
+            VStack {
+                Text("hello")
+                    .font(.title.bold())
+                    .foregroundColor(.white)
             }
+            .frame(width: show ? 150: 200, height: show ? 50 : 80)
+            .background(.blue)
+            .cornerRadius(30)
+            .shadow(color: .blue.opacity(0.3), radius: 20)
+            .onTapGesture {
+                withAnimation(.spring()) {
+                    show.toggle()
+                }
+            }
+            
+            Text("备注：本页面主要展示withAnimation()的使用")
+                .font(.footnote)
+                .offset(y: 30)
         }
+        .navigationTitle("withAnimation")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

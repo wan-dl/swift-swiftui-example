@@ -11,24 +11,32 @@ struct Transitions: View {
     @State var show = false
 
     var body: some View {
-        ZStack {
-            if !show {
-                Text("View Transition")
-                    .padding()
-                    .background(Capsule().stroke())
-            } else {
-                RoundedRectangle(cornerRadius: 30)
-                    .fill(Color.blue)
-                    .padding()
-                    .transition(.move(edge: .top))
-                    .zIndex(1)
+        VStack {
+            ZStack {
+                if !show {
+                    Text("View Transition")
+                        .padding()
+                        .background(Capsule().stroke())
+                    
+                    Text("备注：本页面主要用到了 .transition(.move(edge: .top))")
+                        .font(.footnote)
+                        .offset(y: 60)
+                } else {
+                    RoundedRectangle(cornerRadius: 30)
+                        .fill(Color.blue)
+                        .padding()
+                        .transition(.move(edge: .top))
+                        .zIndex(1)
+                }
+            }
+            .onTapGesture {
+                withAnimation(.spring()) {
+                    show.toggle()
+                }
             }
         }
-        .onTapGesture {
-            withAnimation(.spring()) {
-                show.toggle()
-            }
-        }
+        .navigationTitle(".transition")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

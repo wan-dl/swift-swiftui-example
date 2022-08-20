@@ -31,6 +31,8 @@ struct Mask: View {
             .cornerRadius(30)
             .padding()
         }
+        .navigationTitle(".mask")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
