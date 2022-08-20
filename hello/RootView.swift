@@ -61,7 +61,7 @@ struct RootViewForIOS16: View {
     @EnvironmentObject var quickActionSettings : QuickActionSettings
     
     var body: some View {
-        NavigationStack() {
+        NavigationStack(path: $pagePathManager.path) {
             BasicView()
             .navigationDestination(for: Target.self) { target in
                 switch target {
