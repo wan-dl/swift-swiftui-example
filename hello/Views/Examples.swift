@@ -38,6 +38,7 @@ struct Examples: View {
                     NavigationLink("Tap Animation with Delay", destination: TapDelay())
                 }
             }
+            .listStyle(.insetGrouped)
         }
         .navigationTitle("示例")
         .navigationBarTitleDisplayMode(.inline)

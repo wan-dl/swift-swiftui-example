@@ -100,7 +100,6 @@ struct BasicView: View {
             switch selectedTab {
             case .home:
                 Home()
-                
             case .view:
                 ComponentsView()
             case .api:

@@ -17,6 +17,7 @@ struct API: View {
                     NavigationLink("openURL", destination: api_openURL())
                     NavigationLink("Shared - 系统分享", destination: api_share())
                     NavigationLink("UIPasteboard - 剪切板", destination: api_clipboard())
+                    NavigationLink("WebView", destination: api_WebView())
                 }
                 
                 Section(header: Text("")) {

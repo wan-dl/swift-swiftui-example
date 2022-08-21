@@ -30,20 +30,20 @@ private var uiList: [CInfo] = [
         seas: [
             Sea(name: "Text", viewname: AnyView(v_Text())),
             Sea(name: "Label", viewname: AnyView(v_Label())),
-            Sea(name: "TextField", viewname: AnyView(v_Input())),
-            Sea(name: "TextEditor", viewname: AnyView(v_TextEditor())),
+            Sea(name: "TextField - 文本输入框", viewname: AnyView(v_Input())),
+            Sea(name: "TextEditor - 多行文本框", viewname: AnyView(v_TextEditor())),
         ]
     ),
-    CInfo(name: "Image", seas: [Sea(name: "Image", viewname: AnyView(v_Image()))]),
+    CInfo(name: "Image - 图片", seas: [Sea(name: "Image", viewname: AnyView(v_Image()))]),
     CInfo(
         name: "Controls",
         seas: [
-            Sea(name: "Button", viewname: AnyView(v_Button())),
+            Sea(name: "Button - 按钮", viewname: AnyView(v_Button())),
             Sea(name: "Slider", viewname: AnyView(v_Slider())),
             Sea(name: "Stepper", viewname: AnyView(v_Stepper())),
-            Sea(name: "Picker", viewname: AnyView(v_Picker())),
+            Sea(name: "Picker - 选择器", viewname: AnyView(v_Picker())),
             Sea(name: "Toggle", viewname: AnyView(v_Toggle())),
-            Sea(name: "Link", viewname: AnyView(v_Link())),
+            Sea(name: "Link - 链接", viewname: AnyView(v_Link())),
             Sea(name: "Menu", viewname: AnyView(v_Menu())),
             Sea(name: "Alert", viewname: AnyView(v_Alert())),
             Sea(name: "ActionSheet", viewname: AnyView(v_ActionSheet())),
@@ -53,7 +53,7 @@ private var uiList: [CInfo] = [
     CInfo(
         name: "Layout Containers",
         seas: [
-            Sea(name: "Layout - VStack | HStack | ZStack", viewname: AnyView(v_Layout())),
+            Sea(name: "Layout - VStack | HStack | ZStack 布局", viewname: AnyView(v_Layout())),
             Sea(name: "Grid", viewname: AnyView(v_Grid())),
             Sea(name: "Divider", viewname: AnyView(v_Divider())),
             Sea(name: "Spacer", viewname: AnyView(v_Spacer()))
@@ -62,12 +62,12 @@ private var uiList: [CInfo] = [
     CInfo(
         name: "Conllection Containers",
         seas: [
-            Sea(name: "List", viewname: AnyView(v_List())),
+            Sea(name: "List - 列表", viewname: AnyView(v_List())),
             Sea(name: "Form", viewname: AnyView(v_Form())),
             Sea(name: "GroupBox", viewname: AnyView(v_GroupBox())),
             Sea(name: "ScrollView", viewname: AnyView(v_ScrollView())),
             Sea(name: "ScrollViewReader", viewname: AnyView(v_ScrollViewReader())),
-            Sea(name: "Table", viewname: AnyView(v_Table())),
+            Sea(name: "Table - 表格", viewname: AnyView(v_Table())),
         ]
     ),
     CInfo(
@@ -148,7 +148,7 @@ struct ComponentsView: View {
             .listStyle(.insetGrouped)
             .searchable(text: $searchKeyword, placement: SearchFieldPlacement.automatic, prompt: "搜索")
         }
-        .navigationTitle("SwiftUI")
+        .navigationTitle("SwiftUI组件")
         .navigationBarTitleDisplayMode(.inline)
         .safeAreaInset(edge: .bottom, content: {
             Color.clear.frame(height: 44)
