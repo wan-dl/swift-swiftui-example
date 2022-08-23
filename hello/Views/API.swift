@@ -44,6 +44,7 @@ struct API: View {
                 }
                 
                 Section(header: Text("网络请求")) {
+                    NavigationLink("网络状态", destination: api_network())
                     NavigationLink("URLSession Get", destination: api_URLSession())
                     NavigationLink("URLSession Post", destination: api_URLSession_Post())
                 }

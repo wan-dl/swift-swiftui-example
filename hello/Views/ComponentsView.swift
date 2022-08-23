@@ -111,14 +111,6 @@ private var uiList: [CInfo] = [
         ]
     ),
     CInfo(
-        name: "其它",
-        seas: [
-            Sea(name: "Gradient - 渐变", viewname: AnyView(v_Gradient())),
-            Sea(name: "Shape - 形状", viewname: AnyView(v_shape())),
-            Sea(name: "Gesture - 手势", viewname: AnyView(v_Gesture()))
-        ]
-    ),
-    CInfo(
         name: "Animation - 动画",
         seas: [
             Sea(name: "shadow", viewname: AnyView(Shadow())),
@@ -127,6 +119,14 @@ private var uiList: [CInfo] = [
             Sea(name: "timing", viewname: AnyView(Timing())),
             Sea(name: "Effect", viewname: AnyView(Effect())),
             Sea(name: "withAnimation", viewname: AnyView(a_withAnimation()))
+        ]
+    ),
+    CInfo(
+        name: "形状、手势等",
+        seas: [
+            Sea(name: "Gradient - 渐变", viewname: AnyView(v_Gradient())),
+            Sea(name: "Shape - 形状", viewname: AnyView(v_shape())),
+            Sea(name: "Gesture - 手势", viewname: AnyView(v_Gesture()))
         ]
     )
 ]

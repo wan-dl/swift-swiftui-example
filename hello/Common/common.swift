@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Network
 
 extension UIColor {
     convenience init(hexString: String, alpha: CGFloat = 1.0) {
@@ -47,5 +48,37 @@ func openOSSetting() {
         if let appSettings = NSURL(string: UIApplication.openSettingsURLString) {
             UIApplication.shared.openURL(appSettings as URL)
         }
+    }
+}
+
+
+// 获取网络状态
+class NetworkMonitor: ObservableObject {
+    private let monitor = NWPathMonitor()
+    private let queue = DispatchQueue(label: "Monitor")
+    
+    // 网络是否处于活动状态
+    var isActive = false
+    // 网络是否是蜂窝网络或WiFi
+    var isExpensive = false
+    // 是否受到限制（受低数据模式的限制）
+    var isConstrained = false
+    // 网络连接类型
+    var connectionType = NWInterface.InterfaceType.other
+    
+    init() {
+        monitor.pathUpdateHandler = { path in
+            self.isActive = path.status == .satisfied
+            self.isExpensive = path.isExpensive
+            self.isConstrained = path.isConstrained
+
+            let connectionTypes: [NWInterface.InterfaceType] = [.cellular, .wifi, .wiredEthernet]
+            self.connectionType = connectionTypes.first(where: path.usesInterfaceType) ?? .other
+
+            DispatchQueue.main.async {
+                self.objectWillChange.send()
+            }
+        }
+        monitor.start(queue: queue)
     }
 }
