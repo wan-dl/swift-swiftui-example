@@ -45,11 +45,14 @@ struct HelloSwiftApp: App {
     @Environment(\.scenePhase) var phase
     let quickActionSettings = QuickActionSettings()
     
+    let NetMonitor = NetworkMonitor()
+    
     var body: some Scene {
         
         WindowGroup {
             RootView()
                 .environmentObject(quickActionSettings)
+                .environmentObject(NetMonitor)
         }
         .onChange(of: phase) { (phaseValue) in
             switch phaseValue {

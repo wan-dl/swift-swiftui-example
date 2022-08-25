@@ -8,18 +8,24 @@
 import SwiftUI
 
 struct api_URLSession_Post: View {
+    
+    @EnvironmentObject var network: NetworkMonitor
+    
     @State var errorMsg: String = ""
     @State var reqString: String = ""
     @State var resString: String = ""
     
     @State var showAlert: Bool = false
     
+    @State var isNetworkError: Bool = false
+    @State var isResponsekError: Bool = false
+    @State var responseMessage: String = ""
+    
     var body: some View {
         VStack(alignment: .leading) {
             
             VStack {
                 TextEditor(text: $reqString)
-                    .background(.gray.opacity(0.2))
                     .frame(height: 100)
                     .cornerRadius(10)
                     .onChange(of: reqString, perform: { newValue in
@@ -34,42 +40,44 @@ struct api_URLSession_Post: View {
                     .foregroundColor(.black)
                 
                 TextEditor(text: $resString)
-                    .background(.gray.opacity(0.2))
                     .cornerRadius(10)
                     .frame(height: 100)
             }
             
-            VStack {
-                Button(action: {
-                    let tmp = self.reqString.trimmingCharacters(in: .whitespacesAndNewlines)
-                    if tmp.isEmpty {
-                        self.showAlert.toggle()
+            Button(action: {
+                let tmp = self.reqString.trimmingCharacters(in: .whitespacesAndNewlines)
+                if tmp.isEmpty {
+                    self.showAlert.toggle()
+                } else {
+                    if !network.isActive {
+                        self.isNetworkError.toggle()
                     } else {
                         apiPost()
                     }
-                }, label: {
-                    Label("发起网络请求(POST)", systemImage: "")
-                })
-                .buttonStyle(PrimaryBtnStyle())
-                .alert(isPresented: $showAlert) {
-                    Alert(
-                        title: Text("提示"),
-                        message: Text("转换的内容不能为空"),
-                        dismissButton: .default(Text("我知道了"))
-                    )
                 }
+            }, label: {
+                Label("发起网络请求(POST)", systemImage: "")
+            })
+            .buttonStyle(PrimaryBtnStyle())
+            .alert(isPresented: $showAlert) {
+                Alert(
+                    title: Text("提示"),
+                    message: Text("转换的内容不能为空"),
+                    dismissButton: .default(Text("我知道了"))
+                )
             }
-            .offset(y: 20)
+            .toast(isShow: $isNetworkError, info: "网络不可用，请检查网络连接")
+            .toast(isShow: $isResponsekError, info: responseMessage)
             
             if !(self.errorMsg.isEmpty) {
                 Text(self.errorMsg)
                     .foregroundColor(.pink)
             }
-                
             
             Spacer()
         }
         .padding()
+        .background(.gray.opacity(0.1))
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .navigationBarTitle("URLSession POST", displayMode: .inline)
     }
@@ -95,6 +103,15 @@ struct api_URLSession_Post: View {
         
         session.dataTask(with: request) { (data, response, error) in
             if error != nil {
+                self.isResponsekError.toggle()
+                responseMessage = "网络请求出错, \(String(describing: error))"
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse, (200 ..< 530) ~= response.statusCode else { return }
+            if response.statusCode != 200 {
+                self.isResponsekError.toggle()
+                responseMessage = "Error: HTTP请求失败 \(response.statusCode)"
                 return
             }
             

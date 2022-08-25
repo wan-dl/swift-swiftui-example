@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct api_network: View {
-    @StateObject var network = NetworkMonitor()
+    @EnvironmentObject var network: NetworkMonitor
     
     var body: some View {
         VStack(alignment: .leading, spacing: 40) {
