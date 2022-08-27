@@ -30,6 +30,7 @@
 		6332B64628B3BD0400193C04 /* LifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6332B64528B3BD0400193C04 /* LifeCycle.swift */; };
 		635108062898220A00999B3D /* chart_LineMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635108052898220A00999B3D /* chart_LineMark.swift */; };
 		635108082898260F00999B3D /* chart_PointMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635108072898260F00999B3D /* chart_PointMark.swift */; };
+		6351D3F628B9118600B49EC2 /* urlRequest2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6351D3F528B9118600B49EC2 /* urlRequest2.swift */; };
 		63545EF52897F1450054FFBB /* api_getSystemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63545EF42897F1450054FFBB /* api_getSystemInfo.swift */; };
 		63556DD6289976870020ABDD /* p_ScrollWithRotate3DEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63556DD5289976870020ABDD /* p_ScrollWithRotate3DEffect.swift */; };
 		63556DD8289977AF0020ABDD /* p_loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63556DD7289977AF0020ABDD /* p_loading.swift */; };
@@ -77,6 +78,7 @@
 		63C35C2328A14AFA00AFA350 /* api_CoreLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C35C2228A14AFA00AFA350 /* api_CoreLocation.swift */; };
 		63C35C2528A1618900AFA350 /* api_CoreLocationUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C35C2428A1618900AFA350 /* api_CoreLocationUI.swift */; };
 		63C7776D28B2678400F56321 /* api_WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C7776C28B2678400F56321 /* api_WebView.swift */; };
+		63CB291128B7B70E00693FBB /* urlRequest1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CB291028B7B70E00693FBB /* urlRequest1.swift */; };
 		63CDEB9A28A69879000077E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CDEB9928A69879000077E9 /* ViewController.swift */; };
 		63D8625728A7279F00EC9CCE /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D8625628A7279F00EC9CCE /* UserLogin.swift */; };
 		63D8625D28A76EC300EC9CCE /* api_RecordSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D8625C28A76EC300EC9CCE /* api_RecordSound.swift */; };
@@ -155,6 +157,7 @@
 		6332B64528B3BD0400193C04 /* LifeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCycle.swift; sourceTree = "<group>"; };
 		635108052898220A00999B3D /* chart_LineMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chart_LineMark.swift; sourceTree = "<group>"; };
 		635108072898260F00999B3D /* chart_PointMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chart_PointMark.swift; sourceTree = "<group>"; };
+		6351D3F528B9118600B49EC2 /* urlRequest2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = urlRequest2.swift; sourceTree = "<group>"; };
 		63545EF42897F1450054FFBB /* api_getSystemInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_getSystemInfo.swift; sourceTree = "<group>"; };
 		63556DD5289976870020ABDD /* p_ScrollWithRotate3DEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p_ScrollWithRotate3DEffect.swift; sourceTree = "<group>"; };
 		63556DD7289977AF0020ABDD /* p_loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p_loading.swift; sourceTree = "<group>"; };
@@ -202,6 +205,7 @@
 		63C35C2228A14AFA00AFA350 /* api_CoreLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_CoreLocation.swift; sourceTree = "<group>"; };
 		63C35C2428A1618900AFA350 /* api_CoreLocationUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_CoreLocationUI.swift; sourceTree = "<group>"; };
 		63C7776C28B2678400F56321 /* api_WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_WebView.swift; sourceTree = "<group>"; };
+		63CB291028B7B70E00693FBB /* urlRequest1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = urlRequest1.swift; sourceTree = "<group>"; };
 		63CDEB9928A69879000077E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		63D8625628A7279F00EC9CCE /* UserLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
 		63D8625C28A76EC300EC9CCE /* api_RecordSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_RecordSound.swift; sourceTree = "<group>"; };
@@ -392,6 +396,8 @@
 				63B73569289D517B00CA74C8 /* styles.swift */,
 				63E81B9A289E470B00360F45 /* ToastView.swift */,
 				63050C2228AFCE98004B0D45 /* navigationBarColorForALL.swift */,
+				63CB291028B7B70E00693FBB /* urlRequest1.swift */,
+				6351D3F528B9118600B49EC2 /* urlRequest2.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -517,7 +523,6 @@
 			knownRegions = (
 				en,
 				"zh-Hans",
-				Base,
 			);
 			mainGroup = E5C85278288A51B500BBB795;
 			productRefGroup = E5C85282288A51B500BBB795 /* Products */;
@@ -586,6 +591,7 @@
 				6317D70D2892D86600192E5A /* v_Form.swift in Sources */,
 				63C7776D28B2678400F56321 /* api_WebView.swift in Sources */,
 				6361C5A22897F6C300D32F21 /* API.swift in Sources */,
+				6351D3F628B9118600B49EC2 /* urlRequest2.swift in Sources */,
 				636104DF289654BF000DA851 /* NavigationBar.swift in Sources */,
 				E5CE5CB72892602500BC7FF1 /* v_Stepper.swift in Sources */,
 				63B7356A289D517B00CA74C8 /* styles.swift in Sources */,
@@ -660,6 +666,7 @@
 				63BE461D2894F59400FB9844 /* v_Popover.swift in Sources */,
 				E52ECFBC2893AAC40051D2DE /* v_Maps.swift in Sources */,
 				63E3B2A9289DEF4000EECFC5 /* api_Contacts.swift in Sources */,
+				63CB291128B7B70E00693FBB /* urlRequest1.swift in Sources */,
 				63FEF4182896B18000BC886C /* v_Gesture.swift in Sources */,
 				6373BB2B289367F50002A084 /* v_ScrollViewReader.swift in Sources */,
 				63179027289947B100A45C93 /* api_share.swift in Sources */,
@@ -683,6 +690,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_EMPTY_CONTEXT = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -740,15 +748,18 @@
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
 				INFOPLIST_KEY_NSLocationTemporaryUsageDescriptionDictionary = "";
 				INFOPLIST_KEY_NSLocationUsageDescription = "";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "使用您的位置信息，以便向您更快的找到相应服务";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "该应用需要你的地理位置，以便为你提供当前位置信息";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "获取照片测试";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "获取照片";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -758,6 +769,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_EMPTY_CONTEXT = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -809,14 +821,17 @@
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
 				INFOPLIST_KEY_NSLocationTemporaryUsageDescriptionDictionary = "";
 				INFOPLIST_KEY_NSLocationUsageDescription = "";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "使用您的位置信息，以便向您更快的找到相应服务";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "该应用需要你的地理位置，以便为你提供当前位置信息";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "获取照片测试";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "获取照片";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -839,20 +854,20 @@
 				INFOPLIST_FILE = "HelloSwift-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Hello Swift";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
-				INFOPLIST_KEY_NSCameraUsageDescription = "使用相机，以便为您服务";
-				INFOPLIST_KEY_NSContactsUsageDescription = "获取Contacts，为您找到朋友";
-				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "使用健康数据，以便更好为您服务";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "使用健康数据，以便更好为您服务";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "使用健康数据，以便更好为您服务";
+				INFOPLIST_KEY_NSCameraUsageDescription = "该应用需要使用相机，以便为你演示相机代码功能";
+				INFOPLIST_KEY_NSContactsUsageDescription = "该应用需要读取你的通讯录，以便在当前页面显示数据";
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "该应用需要使用健康，以便在当前页面显示数据";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "该应用需要使用健康，以便在当前页面显示数据";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "该应用需要使用健康，以便在当前页面显示数据";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
 				INFOPLIST_KEY_NSLocationTemporaryUsageDescriptionDictionary = "";
 				INFOPLIST_KEY_NSLocationUsageDescription = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "使用您的位置信息，以便向您更快的找到相应服务";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "使用麦克风，以便录音";
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "使用照片，用于头像";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "使用照片，用于头像";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "该应用需要使用你的麦克风，以便语音播放和录制";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "该应用需要读取你的相册，以便为你演示代码功能";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "该应用需要读取你的相册，以便为你演示代码功能";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -891,20 +906,20 @@
 				INFOPLIST_FILE = "HelloSwift-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Hello Swift";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
-				INFOPLIST_KEY_NSCameraUsageDescription = "使用相机，以便为您服务";
-				INFOPLIST_KEY_NSContactsUsageDescription = "获取Contacts，为您找到朋友";
-				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "使用健康数据，以便更好为您服务";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "使用健康数据，以便更好为您服务";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "使用健康数据，以便更好为您服务";
+				INFOPLIST_KEY_NSCameraUsageDescription = "该应用需要使用相机，以便为你演示相机代码功能";
+				INFOPLIST_KEY_NSContactsUsageDescription = "该应用需要读取你的通讯录，以便在当前页面显示数据";
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "该应用需要使用健康，以便在当前页面显示数据";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "该应用需要使用健康，以便在当前页面显示数据";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "该应用需要使用健康，以便在当前页面显示数据";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
 				INFOPLIST_KEY_NSLocationTemporaryUsageDescriptionDictionary = "";
 				INFOPLIST_KEY_NSLocationUsageDescription = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "使用您的位置信息，以便向您更快的找到相应服务";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "使用麦克风，以便录音";
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "使用照片，用于头像";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "使用照片，用于头像";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "该应用需要使用你的麦克风，以便语音播放和录制";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "该应用需要读取你的相册，以便为你演示代码功能";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "该应用需要读取你的相册，以便为你演示代码功能";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
