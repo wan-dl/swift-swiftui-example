@@ -8,6 +8,8 @@
 		<string>zh</string>
 		<string>zh_TW</string>
 	</array>
+	<key>NSUserNotificationsUsageDescription</key>
+	<string>该应用需要使用通知，以便为你演示相关通知功能</string>
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>

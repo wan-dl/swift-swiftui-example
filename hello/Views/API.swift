@@ -23,7 +23,7 @@ struct API: View {
                 Section(header: Text("")) {
                     NavigationLink("Contacts - 联系人", destination: api_Contacts())
                     NavigationLink("HealthKit - 健康", destination: api_HealthKit())
-
+                    NavigationLink("Notification - 通知", destination: api_Notifications())
                 }
                 
                 Section(header: Text("相册相机")) {
