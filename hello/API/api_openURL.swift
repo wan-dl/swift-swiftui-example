@@ -14,7 +14,7 @@ struct URLInfo: Identifiable {
 }
 
 let URLList: [URLInfo] = [
-    URLInfo(name: "拨打Safari浏览器", url: "https://www.apple.com"),
+    URLInfo(name: "打开Safari浏览器", url: "https://www.apple.com"),
     URLInfo(name: "拨打电话 10086", url: "tel://10086"),
     URLInfo(name: "发送短信 10086", url: "sms://10086"),
     URLInfo(name: "打开Email", url: "mailto://"),
@@ -28,7 +28,12 @@ let URLList: [URLInfo] = [
 
 struct api_openURL: View {
     var body: some View {
-        VStack {
+        ScrollView {
+            
+            Text("简介：本窗口主要代码为：UIApplication.shared.open(url)")
+                .font(.caption)
+                .foregroundColor(.gray)
+                .frame(height: 80)
             
             ForEach(URLList) { item in
                 Button(action: {

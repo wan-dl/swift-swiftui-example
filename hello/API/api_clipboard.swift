@@ -20,10 +20,15 @@ struct api_clipboard: View {
     
     
     var body: some View {
-        VStack() {
+        ScrollView() {
+            
+            Text("说明：本页面功能主要用到了： UIPasteboard.general ")
+                .font(.caption)
+                .foregroundColor(.gray)
+                .frame(height: 80)
+            
             VStack {
                 TextEditor(text: $writeText)
-                    .background(.gray.opacity(0.1))
                     .frame(height: 200)
                     .cornerRadius(10)
                     .focused($focus, equals: .name)
@@ -33,7 +38,6 @@ struct api_clipboard: View {
                         }
                     }
             }
-            .padding()
             
             VStack(alignment: .center) {
                 Button("将输入框内容写入剪贴板", action: {
@@ -55,10 +59,10 @@ struct api_clipboard: View {
                     )
                 }
             }
-            .padding()
             
-            Spacer()
         }
+        .padding(.horizontal, 10)
+        .background(.gray.opacity(0.1))
         .navigationBarTitle("clipboard", displayMode: .inline)
     }
 }

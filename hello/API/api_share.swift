@@ -10,16 +10,21 @@ import SwiftUI
 
 struct api_share: View {
     var body: some View {
-        HStack {
+        VStack {
             Button(action: {
                 shareButton()
             }, label: {
-                Label("分享", systemImage: "")
-                    .frame(maxWidth: .infinity, alignment: .center)
-                    .font(.title3)
-                    .foregroundColor(.white)
+                Label("系统分享", systemImage: "square.and.arrow.up")
+                    .frame(width: 200)
             })
-            .buttonStyle(PrimaryBtnStyle())
+            .tint(.purple)
+            .controlSize(.large)
+            .buttonStyle(.borderedProminent)
+            
+            Text("说明：本页面功能主要用到了： UIApplication.shared.windows ")
+                .font(.caption)
+                .foregroundColor(.gray)
+                .frame(height: 80)
         }
         .padding()
         .navigationBarTitle("Shared - 系统分享", displayMode: .inline)

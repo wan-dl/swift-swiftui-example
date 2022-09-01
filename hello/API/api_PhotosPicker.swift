@@ -17,8 +17,10 @@ struct api_PhotosPicker: View {
         
         ScrollView {
             VStack(alignment: .center) {
-                Text("本示例适用于iOS 16.0+")
-                    .font(.body)
+                
+                Text("本示例适用于iOS 16.0+，用到了PhotosPicker()")
+                    .font(.caption)
+                    .foregroundColor(.gray)
                     .frame(height: 200)
                 
                 if #available(iOS 16.0, *) {

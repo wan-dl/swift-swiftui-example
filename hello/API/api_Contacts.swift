@@ -27,7 +27,12 @@ struct api_Contacts: View {
     @State var isPresented: Bool = false
     
     var body: some View {
-        VStack(alignment: .leading) {
+        ScrollView {
+            
+            Text("说明：本页面示例，使用Contacts库。")
+                .font(.caption)
+                .foregroundColor(.gray)
+                .frame(height: 80)
             
             VStack {
                 Button(action: {
@@ -62,10 +67,6 @@ struct api_Contacts: View {
             Divider()
             
             if !self.contactsList.isEmpty {
-                Text("联系人列表：")
-                    .font(.title3)
-                    .frame(alignment: .leading)
-                
                 ScrollView {
                     VStack(alignment: .leading) {
                         ForEach(contactsList) { item in
@@ -78,12 +79,10 @@ struct api_Contacts: View {
                             .padding(.horizontal, 10)
                         }
                     }
-                    .background(.gray.opacity(0.2))
+                    .background(.gray.opacity(0.1))
                 }
                 .frame(height: 300)
             }
-            
-            Spacer()
         }
         .padding()
         .navigationBarTitle("Contacts - 通讯录", displayMode: .inline)

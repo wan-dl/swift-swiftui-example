@@ -13,10 +13,6 @@ struct api_audio: View {
     
     var body: some View {
         VStack {
-            Text("简介：本页面音频示例，是从 app bundle 中加载的资源。使用AVkit库。\n主要代码为：AVAudioPlayer(contentsOf: URL)")
-                .font(.caption)
-                .foregroundColor(.gray)
-                .frame(height: 80)
             
             Button(action: {
                 playAudio()
@@ -27,6 +23,11 @@ struct api_audio: View {
             .controlSize(.large)
             .buttonStyle(.borderedProminent)
             .padding()
+            
+            Text("说明：本页面音频示例，是从 app bundle 中加载的资源。使用AVkit库。\n主要代码为：AVAudioPlayer(contentsOf: URL)")
+                .font(.caption)
+                .foregroundColor(.gray)
+                .frame(height: 80)
         }
         .navigationBarTitle("Audio", displayMode: .inline)
     }
