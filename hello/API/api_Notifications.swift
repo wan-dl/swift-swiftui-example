@@ -105,6 +105,7 @@ struct api_Notifications: View {
                     HStack {
                         Text("延迟时间(秒)")
                         TextField("", text: $TriggerTimeInterval)
+                            .multilineTextAlignment(.trailing)
                             .keyboardType(.numberPad)
                             .frame(maxWidth: .infinity,alignment: .center)
                     }
