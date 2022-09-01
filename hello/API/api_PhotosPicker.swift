@@ -10,7 +10,7 @@
 
 import SwiftUI
 import PhotosUI
-
+import AVKit
 
 struct api_PhotosPicker: View {
     var body: some View {
@@ -46,9 +46,11 @@ struct choicePhoto: View {
         PhotosPicker(
             selection: $selectedItem,
             matching: .images,
+            preferredItemEncoding: .automatic,
             photoLibrary: .shared()
         ) {
             Label("选择一张照片", systemImage: "photo")
+                .frame(width: 200)
         }
         .tint(.purple)
         .controlSize(.large)
@@ -89,6 +91,7 @@ struct choiceMorePhoto: View {
             photoLibrary: .shared()
         ) {
             Label("选择多张照片", systemImage: "photo")
+                .frame(width: 200)
         }
         .tint(.purple)
         .controlSize(.large)
@@ -133,13 +136,17 @@ struct choiceVideo: View {
     @State private var selectedItem: PhotosPickerItem? = nil
     @State private var selectedVideoData: Data? = nil
     
+    @State private var player = AVPlayer()
+    
     var body: some View {
         PhotosPicker(
             selection: $selectedItem,
-            matching: .videos
-        ) {
-            Label("选择视频", systemImage: "video")
-        }
+            matching: .videos,
+            label: {
+                Label("选择视频", systemImage: "video")
+                    .frame(width: 200)
+            }
+        )
         .tint(.primary)
         .controlSize(.large)
         .buttonStyle(.borderedProminent)
@@ -147,11 +154,14 @@ struct choiceVideo: View {
             Task {
                 if let data = try? await newItem?.loadTransferable(type: Data.self) {
                     selectedVideoData = data
+                    
                 }
             }
         }
+        
+        // todo: play video
         if selectedVideoData != nil {
-//            PHPickerFilter
+            
         }
     }
 }
