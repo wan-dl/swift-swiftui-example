@@ -20,6 +20,11 @@ struct api_video: View {
     var videoUrl: String = "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-0c1fa337-7340-4755-9bec-f766d7d31833/2568a673-d3f7-4e8a-8343-93f7229958fc.MP4"
     var body: some View {
         VStack {
+            Text("简介：本窗口视频是从网络下载，使用了AVkit库。\n主要代码为：AVPlayer(url: URL(string: url)!)")
+                .font(.caption)
+                .foregroundColor(.gray)
+                .frame(height: 80)
+            
             VideoPlayer(player: player)
                 .onAppear() {
                     player = AVPlayer(url: URL(string: videoUrl)!)
