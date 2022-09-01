@@ -17,7 +17,7 @@ $ open HelloSwift.xcworkspace
 
 ## 项目简介
 
-<img src="docs/static/overview.gif" style="zoom: 50%" />
+<img src="https://pic.jitudisk.com/public/2022/08/31/cd9ae29601311.gif" width="280" height="600" />
 
 #### SwiftUI
 
