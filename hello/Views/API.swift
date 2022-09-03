@@ -43,9 +43,16 @@ struct API: View {
                     NavigationLink("URLSession Post", destination: api_URLSession_Post())
                 }
                 
+                Section(header: Text("相册相机")) {
+                    //NavigationLink("PHPicker - 相册", destination: api_PHPicker())
+                    NavigationLink("PhotosPicker - 相册", destination: api_PhotosPicker())
+                    NavigationLink("UIImagePickerController - 相机相册", destination: api_camera_photo())
+                    NavigationLink("保存图片到相册", destination: api_saveImage())
+                }
+                
                 Section(header: Text("媒体")) {
-                    NavigationLink("Video", destination: api_video())
-                    NavigationLink("Audio", destination: api_audio())
+                    NavigationLink("Video - 播放网络视频", destination: api_video())
+                    NavigationLink("Audio - 播放音频", destination: api_audio())
                     NavigationLink("录音", destination: api_RecordSound())
                 }
             }
