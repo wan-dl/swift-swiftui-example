@@ -48,6 +48,7 @@
 		6373BB29289364E50002A084 /* v_ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6373BB28289364E50002A084 /* v_ScrollView.swift */; };
 		6373BB2B289367F50002A084 /* v_ScrollViewReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6373BB2A289367F50002A084 /* v_ScrollViewReader.swift */; };
 		6373BB2D289369B10002A084 /* v_Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6373BB2C289369B10002A084 /* v_Navigation.swift */; };
+		637622CA28C332080090BBBD /* api_WeatherKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637622C928C332080090BBBD /* api_WeatherKit.swift */; };
 		63772DE2289BFB4300BB56AD /* api_URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63772DE1289BFB4300BB56AD /* api_URLSession.swift */; };
 		6384F9E1289C98E1005BDC98 /* api_URLSession_Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6384F9E0289C98E1005BDC98 /* api_URLSession_Post.swift */; };
 		6389EE9928A1683E002B6E4A /* api_HealthKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6389EE9828A1683E002B6E4A /* api_HealthKit.swift */; };
@@ -177,6 +178,7 @@
 		6373BB28289364E50002A084 /* v_ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_ScrollView.swift; sourceTree = "<group>"; };
 		6373BB2A289367F50002A084 /* v_ScrollViewReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_ScrollViewReader.swift; sourceTree = "<group>"; };
 		6373BB2C289369B10002A084 /* v_Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_Navigation.swift; sourceTree = "<group>"; };
+		637622C928C332080090BBBD /* api_WeatherKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_WeatherKit.swift; sourceTree = "<group>"; };
 		63772DE1289BFB4300BB56AD /* api_URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_URLSession.swift; sourceTree = "<group>"; };
 		6384F9E0289C98E1005BDC98 /* api_URLSession_Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_URLSession_Post.swift; sourceTree = "<group>"; };
 		6389EE9828A1683E002B6E4A /* api_HealthKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_HealthKit.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				63168D0428997BF200C7D0DC /* api_video.swift */,
 				63C7776C28B2678400F56321 /* api_WebView.swift */,
 				63CD81E828BB9606003A2C4C /* api_Notifications.swift */,
+				637622C928C332080090BBBD /* api_WeatherKit.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -660,6 +663,7 @@
 				E5C85285288A51B500BBB795 /* HelloSwift.swift in Sources */,
 				63319D8C28AD2FC700980F53 /* api_saveImage.swift in Sources */,
 				63556DD8289977AF0020ABDD /* p_loading.swift in Sources */,
+				637622CA28C332080090BBBD /* api_WeatherKit.swift in Sources */,
 				639BA7B72894229B007C2797 /* v_Canvas.swift in Sources */,
 				63545EF52897F1450054FFBB /* api_getSystemInfo.swift in Sources */,
 				63AAAD592890C65F005F1C20 /* v_Input.swift in Sources */,

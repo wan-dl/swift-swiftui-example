@@ -23,14 +23,8 @@ struct API: View {
                 Section(header: Text("")) {
                     NavigationLink("Contacts - 联系人", destination: api_Contacts())
                     NavigationLink("HealthKit - 健康", destination: api_HealthKit())
-                    NavigationLink("Notification - 通知", destination: api_Notifications())
-                }
-                
-                Section(header: Text("相册相机")) {
-                    //NavigationLink("PHPicker - 相册", destination: api_PHPicker())
-                    NavigationLink("PhotosPicker - 相册", destination: api_PhotosPicker())
-                    NavigationLink("UIImagePickerController - 相机相册", destination: api_camera_photo())
-                    NavigationLink("保存图片到相册", destination: api_saveImage())
+                    NavigationLink("Notification - 本地通知", destination: api_Notifications())
+                    NavigationLink("WeatherKit - 天气", destination: api_WeatherKit())
                 }
                 
                 Section(header: Text("定位")) {
