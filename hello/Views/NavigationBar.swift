@@ -24,9 +24,9 @@ struct NavigationBar: View {
                 Text(title)
                     .font(.largeTitle)
                     .foregroundColor(.primary)
-                    .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading, 20)
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
             
             NavigationLink {
                 HomeSearch()
