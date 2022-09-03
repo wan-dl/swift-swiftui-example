@@ -47,6 +47,12 @@ struct HelloSwiftApp: App {
     
     let NetMonitor = NetworkMonitor()
     
+    init() {
+        UserDefaults.standard.register(defaults: [
+            "name": "你好"
+        ])
+    }
+    
     var body: some Scene {
         
         WindowGroup {

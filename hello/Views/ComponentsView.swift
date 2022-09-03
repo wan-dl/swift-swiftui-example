@@ -36,27 +36,28 @@ private var uiList: [CInfo] = [
     ),
     CInfo(name: "Image - 图片", seas: [Sea(name: "Image", viewname: AnyView(v_Image()))]),
     CInfo(
-        name: "Controls",
-        seas: [
-            Sea(name: "Button - 按钮", viewname: AnyView(v_Button())),
-            Sea(name: "Slider", viewname: AnyView(v_Slider())),
-            Sea(name: "Stepper", viewname: AnyView(v_Stepper())),
-            Sea(name: "Picker - 选择器", viewname: AnyView(v_Picker())),
-            Sea(name: "Toggle", viewname: AnyView(v_Toggle())),
-            Sea(name: "Link - 链接", viewname: AnyView(v_Link())),
-            Sea(name: "Menu", viewname: AnyView(v_Menu())),
-            Sea(name: "Alert", viewname: AnyView(v_Alert())),
-            Sea(name: "ActionSheet", viewname: AnyView(v_ActionSheet())),
-            Sea(name: "SwipeActions", viewname: AnyView(v_swipeActions()))
-        ]
-    ),
-    CInfo(
         name: "Layout Containers",
         seas: [
             Sea(name: "Layout - VStack | HStack | ZStack 布局", viewname: AnyView(v_Layout())),
             Sea(name: "Grid", viewname: AnyView(v_Grid())),
             Sea(name: "Divider", viewname: AnyView(v_Divider())),
             Sea(name: "Spacer", viewname: AnyView(v_Spacer()))
+        ]
+    ),
+    CInfo(
+        name: "Controls",
+        seas: [
+            Sea(name: "Button - 按钮", viewname: AnyView(v_Button())),
+            Sea(name: "PasteButton", viewname: AnyView(v_PasteButton())),
+            Sea(name: "Slider", viewname: AnyView(v_Slider())),
+            Sea(name: "Stepper", viewname: AnyView(v_Stepper())),
+            Sea(name: "Picker - 选择器", viewname: AnyView(v_Picker())),
+            Sea(name: "Toggle", viewname: AnyView(v_Toggle())),
+            Sea(name: "Link - 链接", viewname: AnyView(v_Link())),
+            Sea(name: "Menu & contextMenu", viewname: AnyView(v_Menu())),
+            Sea(name: "Alert", viewname: AnyView(v_Alert())),
+            Sea(name: "ActionSheet", viewname: AnyView(v_ActionSheet())),
+            Sea(name: "SwipeActions", viewname: AnyView(v_swipeActions()))
         ]
     ),
     CInfo(
