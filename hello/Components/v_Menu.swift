@@ -25,18 +25,26 @@ struct v_Menu: View {
                     Button("Share", action: share)
                 }
             } label: {
-                Label("书签管理", systemImage: "book")
+                Label("Menu示例", systemImage: "menucard")
             } primaryAction: {
                 addBookmark()
             }
-            .font(.title)
+            .font(.title3)
             
-            Text("操作：长按以上内容，即可看到菜单列表")
+            Text("contextMenu示例")
+                .font(.title3)
+                .padding()
+                .contextMenu {
+                    Button("♥️ - Hearts", action: {})
+                    Button("♣️ - Clubs", action: {})
+                    Button("♠️ - Spades", action: {})
+                    Button("♦️ - Diamonds", action: {})
+                }
+            
+            Text("说明：长按以上内容，即可看到菜单列表。iOS 16.0，新增了.menuOrder() 可以设置首选项顺序")
                 .font(.caption)
                 .foregroundColor(.gray)
                 .padding(EdgeInsets(top: 50, leading: 10, bottom: 0, trailing: 10))
-            
-            
         }
         .navigationBarTitle(Text("Menu"), displayMode: .inline)
     }
