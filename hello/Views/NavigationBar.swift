@@ -18,10 +18,15 @@ struct NavigationBar: View {
                 .background(.ultraThinMaterial)
                 .blur(radius: 10)
             
-            Text(title)
-                .font(.largeTitle)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.leading, 20)
+            NavigationLink {
+                About()
+            } label: {
+                Text(title)
+                    .font(.largeTitle)
+                    .foregroundColor(.primary)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.leading, 20)
+            }
             
             NavigationLink {
                 HomeSearch()
