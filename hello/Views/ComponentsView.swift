@@ -129,6 +129,12 @@ private var uiList: [CInfo] = [
             Sea(name: "Shape - 形状", viewname: AnyView(v_shape())),
             Sea(name: "Gesture - 手势", viewname: AnyView(v_Gesture()))
         ]
+    ),
+    CInfo(
+        name: "其它",
+        seas: [
+            Sea(name: "statusBar - 状态栏", viewname: AnyView(v_statusBar()))
+        ]
     )
 ]
 
