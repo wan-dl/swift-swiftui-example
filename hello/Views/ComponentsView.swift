@@ -30,7 +30,7 @@ private var uiList: [CInfo] = [
         seas: [
             Sea(name: "Text", viewname: AnyView(v_Text())),
             Sea(name: "Label", viewname: AnyView(v_Label())),
-            Sea(name: "TextField - 文本输入框", viewname: AnyView(v_Input())),
+            Sea(name: "TextField - 文本输入框", viewname: AnyView(v_TextField())),
             Sea(name: "TextEditor - 多行文本框", viewname: AnyView(v_TextEditor())),
         ]
     ),
