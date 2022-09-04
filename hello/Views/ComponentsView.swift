@@ -133,7 +133,8 @@ private var uiList: [CInfo] = [
     CInfo(
         name: "其它",
         seas: [
-            Sea(name: "statusBar - 状态栏", viewname: AnyView(v_statusBar()))
+            Sea(name: "statusBar - 隐藏状态栏", viewname: AnyView(v_statusBar())),
+            Sea(name: "blur - 模糊", viewname: AnyView(v_blur()))
         ]
     )
 ]
