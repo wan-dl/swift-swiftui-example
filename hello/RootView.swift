@@ -72,7 +72,7 @@ struct RootViewForIOS16: View {
                 case .deviceInfo:
                     api_getSystemInfo()
                 case .search:
-                    GotoSearch()
+                    HomeSearch()
                 }
             }
         }

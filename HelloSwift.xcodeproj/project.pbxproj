@@ -91,7 +91,6 @@
 		63D8625D28A76EC300EC9CCE /* api_RecordSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D8625C28A76EC300EC9CCE /* api_RecordSound.swift */; };
 		63DA2555289E950E001EA6B1 /* api_PHPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA2554289E950E001EA6B1 /* api_PHPicker.swift */; };
 		63DA2557289E9674001EA6B1 /* api_PhotosPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA2556289E9674001EA6B1 /* api_PhotosPicker.swift */; };
-		63DB829228AF0A4800356E0D /* GotoSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DB829128AF0A4800356E0D /* GotoSearch.swift */; };
 		63E3B2A9289DEF4000EECFC5 /* api_Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E3B2A8289DEF4000EECFC5 /* api_Contacts.swift */; };
 		63E584A2289033AB00750F00 /* v_Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E584A1289033AB00750F00 /* v_Text.swift */; };
 		63E81B9B289E470B00360F45 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E81B9A289E470B00360F45 /* ToastView.swift */; };
@@ -228,7 +227,6 @@
 		63D8625C28A76EC300EC9CCE /* api_RecordSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_RecordSound.swift; sourceTree = "<group>"; };
 		63DA2554289E950E001EA6B1 /* api_PHPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_PHPicker.swift; sourceTree = "<group>"; };
 		63DA2556289E9674001EA6B1 /* api_PhotosPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_PhotosPicker.swift; sourceTree = "<group>"; };
-		63DB829128AF0A4800356E0D /* GotoSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GotoSearch.swift; sourceTree = "<group>"; };
 		63E3B2A8289DEF4000EECFC5 /* api_Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_Contacts.swift; sourceTree = "<group>"; };
 		63E584A1289033AB00750F00 /* v_Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_Text.swift; sourceTree = "<group>"; usesTabs = 0; };
 		63E81B9A289E470B00360F45 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
@@ -418,7 +416,6 @@
 				636104DE289654BF000DA851 /* NavigationBar.swift */,
 				E59233F1288FB50C001714F5 /* TabbarDefault.swift */,
 				63D8625628A7279F00EC9CCE /* UserLogin.swift */,
-				63DB829128AF0A4800356E0D /* GotoSearch.swift */,
 				63699F0D28B9BFC800D72836 /* HomeSearch.swift */,
 				637622CB28C37D4E0090BBBD /* About.swift */,
 			);
@@ -681,7 +678,6 @@
 				E5CE5CB528925DFD00BC7FF1 /* v_Menu.swift in Sources */,
 				63D8625728A7279F00EC9CCE /* UserLogin.swift in Sources */,
 				E57E0ABD2892931500B86669 /* v_Picker.swift in Sources */,
-				63DB829228AF0A4800356E0D /* GotoSearch.swift in Sources */,
 				6309715228950FCC00138FAD /* Home.swift in Sources */,
 				E5D7EA9D288A814A0021B6E6 /* todoMainPageView.swift in Sources */,
 				639BA7BC28942D5F007C2797 /* p_navigationBar.swift in Sources */,
