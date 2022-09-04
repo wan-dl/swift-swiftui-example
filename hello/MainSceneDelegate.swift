@@ -36,18 +36,39 @@ final class MainSceneDelegate: UIResponder, UIWindowSceneDelegate {
         completionHandler: ((Bool) -> Void)? = nil
     ) {
         print("App shortcutItem: -> \(shortcutItem)")
-                
-//        if shortcutItem.type == "openGithub" {
-//            openURL(URL(string: "https://github.com/yi-heng/hello-swift")!) { completed in
-//                completionHandler!(completed)
-//            }
-//        }
-//        if shortcutItem.type == "ViewDeviceInfo" {
-//            if let window = UIApplication.shared.windows.first {
-//                window.rootViewController = UIHostingController(rootView: api_getSystemInfo())
-//                window.makeKeyAndVisible()
-//            }
-//        }
     }
-    
+}
+
+
+class UYLNotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
+
+    func userNotificationCenter(
+        _ center: UNUserNotificationCenter,
+        willPresent notification: UNNotification,
+        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void
+    ) {
+        completionHandler([.sound])
+    }
+
+  func userNotificationCenter(_ center: UNUserNotificationCenter,
+       didReceive response: UNNotificationResponse,
+       withCompletionHandler completionHandler: @escaping () -> Void
+  ) {
+      switch response.actionIdentifier {
+      case UNNotificationDismissActionIdentifier:
+          print("Dismiss Action")
+      case UNNotificationDefaultActionIdentifier:
+          print("Default")
+          if #available(iOS 16.0, *) {
+              center.setBadgeCount(0)
+          }
+      case "Snooze":
+          print("Snooze")
+      case "Delete":
+          print("Delete")
+      default:
+          print("Unknown action")
+      }
+      completionHandler()
+    }
 }

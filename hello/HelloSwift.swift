@@ -12,6 +12,7 @@ class QuickActionSettings: ObservableObject {
 }
 
 var shortcutItemToProcess: UIApplicationShortcutItem?
+let notificationDelegate = UYLNotificationDelegate()
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     
@@ -25,6 +26,10 @@ class AppDelegate: NSObject, UIApplicationDelegate {
               name: "Main Scene",
               sessionRole: connectingSceneSession.role
         )
+        
+        // 本地通知
+        let center = UNUserNotificationCenter.current()
+        center.delegate = notificationDelegate
         
         configuration.delegateClass = MainSceneDelegate.self      
         return configuration

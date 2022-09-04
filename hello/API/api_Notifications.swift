@@ -61,6 +61,7 @@ struct api_Notifications: View {
             UI_NotificationType
                 
             Button("开始推送", action: {
+                closeKeyBoard()
                 let checkResult = check()
                 if (checkResult) {
                     requestNotificatoin()
@@ -114,7 +115,6 @@ struct api_Notifications: View {
             .padding(.horizontal, 15).frame(height: 50).background(.white).cornerRadius(5)
         }
     }
-    
     
     func check() -> Bool {
         if (self.NotificationTitle.isBlank || self.NotificationBody.isBlank) {
@@ -188,7 +188,7 @@ struct api_Notifications: View {
         
         // 通知提示音
         content.sound = UNNotificationSound.defaultCritical
-        var uuid = UUID().uuidString
+        let uuid = UUID().uuidString
         let request = UNNotificationRequest(identifier: uuid, content: content, trigger: trigger)
         
         //将通知添加到UNUserNotificationCenter队列中
