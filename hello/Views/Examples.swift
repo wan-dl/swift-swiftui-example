@@ -34,8 +34,9 @@ struct Examples: View {
                     NavigationLink("视图之间数据传递", destination: p_environment().environmentObject(envMedicine))
                 }
                 
-                Section(header: Text("动画")) {
+                Section(header: Text("动画以及手势等")) {
                     NavigationLink("Tap Animation with Delay", destination: TapDelay())
+                    NavigationLink("Shake - 设备摇动", destination: p_Shake())
                 }
             }
             .listStyle(.insetGrouped)
