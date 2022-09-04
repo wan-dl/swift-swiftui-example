@@ -60,6 +60,8 @@ struct p_Shake: View {
             Text("摇动手机")
                 .font(.callout)
         }
+        .navigationTitle("Shake - 摇动")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

@@ -28,6 +28,7 @@ struct Examples: View {
                     NavigationLink("轮播图示例", destination: p_tabview())
                     NavigationLink("滚动视图", destination: p_ScrollWithRotate3DEffect())
                     NavigationLink("Markdown AttributedString", destination: p_markdownWithAttributedString())
+                    NavigationLink("控制视图点击区域", destination: p_contentShape())
                 }
                 
                 Section(header: Text("数据")) {
