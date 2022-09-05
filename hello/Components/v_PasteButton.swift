@@ -16,7 +16,7 @@ struct v_PasteButton: View {
     }
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Text("说明：PasteButton 适用于iOS 16.0+。PasteButton会接收符合Transferable协议的任何类型的数据，例如String和Data。")
                 .font(.caption)
                 .foregroundColor(.gray)
@@ -35,6 +35,8 @@ struct v_PasteButton: View {
                 }
                 .buttonBorderShape(.capsule)
             }
+            
+            Spacer()
         }
         .padding()
         .frame(maxHeight: .infinity)
