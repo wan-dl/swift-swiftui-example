@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-let test1: String = """
+let testCode: String = """
 HStack {
     Image(systemName: "checkmark")
     Spacer()
@@ -20,31 +20,33 @@ struct v_Spacer: View {
     var body: some View {
         VStack(alignment: .center) {
             
-            Text("Spacer用法和示例")
+            Text("Spacer()示例代码")
                 .font(.title)
             
-            Divider()
-            
-            Section() {
-                
-                VStack(alignment: .leading) {
-                    Text(test1)
-                        .font(.body)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                }
-                .background(.gray.opacity(0.2))
-                
-                HStack {
-                    Image(systemName: "checkmark")
-                    Spacer()
-                    Text("Test")
-                }
-                .border(.green.opacity(0.3))
-                .padding(.vertical, 50)
+            VStack(alignment: .leading) {
+                Text(testCode)
+                    .font(.body)
+                    .padding()
+                    .frame(maxWidth: .infinity)
             }
+            .background(.gray.opacity(0.1))
+            
+            Text("示例代码效果")
+                .font(.title)
+                .offset(y: 50)
+            
+            HStack {
+                Image(systemName: "checkmark")
+                Spacer()
+                Text("Test")
+            }
+            .border(.gray.opacity(0.1))
+            .padding(.vertical, 50)
+            
         }
         .padding()
+        .navigationTitle("Spacer()")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
