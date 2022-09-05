@@ -15,10 +15,14 @@ struct v_Divider: View {
             
             Divider()
             
-            Text("A visual element that can be used to separate other content.")
-                .font(.body)
+            Text("如上所示，分割线 即为 Divider() 效果。")
+                .font(.caption)
+                .foregroundColor(.gray)
+                .frame(height: 80)
         }
-        .navigationBarTitle(Text("Divider"), displayMode: .inline)
+        .padding()
+        .navigationTitle("Divider")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
