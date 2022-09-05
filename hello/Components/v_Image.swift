@@ -83,7 +83,7 @@ struct exampleNetWorkImageUseURLSession: View {
     }
     
     func fetchRemoteImage() {
-        guard let url = URL(string: "https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png2") else {return}
+        guard let url = URL(string: "https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png") else {return}
         
         let config = URLSessionConfiguration.default
         config.allowsExpensiveNetworkAccess = false
