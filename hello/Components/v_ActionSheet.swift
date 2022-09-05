@@ -13,7 +13,12 @@ struct v_ActionSheet: View {
     var body: some View {
         
         VStack {
-            Button("Tap to show action sheel") {
+            Text("简介：actionSheet iOS 13.0–16.0 Deprecated。iOS 15.0+，建议使用confirmationDialog")
+                .font(.caption)
+                .foregroundColor(.gray)
+                .frame(height: 80)
+            
+            Button("点击显示 actionSheet") {
                 showActionSheet = true
             }
             .actionSheet(isPresented: $showActionSheet) {
@@ -31,7 +36,9 @@ struct v_ActionSheet: View {
                 )
             }
         }
-        .navigationBarTitle(Text("ActionSheet"), displayMode: .inline)
+        .padding()
+        .navigationTitle("ActionSheet")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

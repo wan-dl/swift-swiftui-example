@@ -13,18 +13,20 @@ struct v_confirmationDialog: View {
     
     var body: some View {
         VStack {
-            Button("Empty Trash") {
+            Text("简介：confirmationDialog, 仅适用于 iOS 15.0+")
+                .font(.caption)
+                .foregroundColor(.gray)
+                .frame(height: 80)
+            
+            Button("是否删除？") {
                 self.isShowDialog = true
             }
-            .confirmationDialog(
-                "Permanently erase the items in the Trash?",
-                isPresented: $isShowDialog
-            ) {
-                Button("Empty Trash", role: .destructive) {
-                    
-                }
+            .confirmationDialog( "是否删除？", isPresented: $isShowDialog ) {
+                Button("确认", role: .destructive) {}
+                Button("取消", role: .cancel) {}
             }
         }
+        .padding()
         .navigationTitle("confirmationDialog")
         .navigationBarTitleDisplayMode(.inline)
     }

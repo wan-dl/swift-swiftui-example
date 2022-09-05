@@ -56,8 +56,14 @@ private var uiList: [CInfo] = [
             Sea(name: "Link - 链接", viewname: AnyView(v_Link())),
             Sea(name: "Menu & contextMenu", viewname: AnyView(v_Menu())),
             Sea(name: "Alert", viewname: AnyView(v_Alert())),
-            Sea(name: "ActionSheet", viewname: AnyView(v_ActionSheet())),
             Sea(name: "SwipeActions", viewname: AnyView(v_swipeActions()))
+        ]
+    ),
+    CInfo(
+        name: "",
+        seas: [
+            Sea(name: "ActionSheet", viewname: AnyView(v_ActionSheet())),
+            Sea(name: "confirmationDialog", viewname: AnyView(v_confirmationDialog()))
         ]
     ),
     CInfo(
@@ -87,8 +93,7 @@ private var uiList: [CInfo] = [
             Sea(name: "ProgressView", viewname: AnyView(v_ProgressView())),
             Sea(name: "Sheet", viewname: AnyView(v_Sheet())),
             Sea(name: "fullScreenCover", viewname: AnyView(v_fullScreenCover())),
-            Sea(name: "Popover", viewname: AnyView(v_Popover())),
-            Sea(name: "confirmationDialog", viewname: AnyView(v_confirmationDialog())),
+            Sea(name: "Popover", viewname: AnyView(v_Popover()))
         ]
     ),
     CInfo(
