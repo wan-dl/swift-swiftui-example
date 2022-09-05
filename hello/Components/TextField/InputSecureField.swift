@@ -12,7 +12,12 @@ struct InputSecureField: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-
+            
+            Text("简介：本页面示例，主要用到了SecureField()")
+                .font(.caption)
+                .foregroundColor(.gray)
+                .frame(height: 80)
+            
             Section(header: Text("密码输入框 SecureField").padding(.horizontal, 5)) {
                 SecureField("密码输入框", text: $password)
                     .textContentType(.password)

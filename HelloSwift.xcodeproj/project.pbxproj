@@ -365,11 +365,11 @@
 		63AFF204289AAE8B00C949E3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				63CD856D28C4F0AA004FDEFA /* TextField */,
-				63808AFD28C39DCB00023081 /* Other */,
 				6361C5A32898177A00D32F21 /* chart_BarMark.swift */,
 				635108052898220A00999B3D /* chart_LineMark.swift */,
 				635108072898260F00999B3D /* chart_PointMark.swift */,
+				63808AFD28C39DCB00023081 /* Other */,
+				63CD856D28C4F0AA004FDEFA /* TextField */,
 				E52ECFB82893A8860051D2DE /* v_ActionSheet.swift */,
 				E52ECFB62893A7AE0051D2DE /* v_Alert.swift */,
 				63AC4B0C28916D71004B4A45 /* v_Button.swift */,
@@ -384,7 +384,6 @@
 				63F76BD22899DFF40028A4D4 /* v_Grid.swift */,
 				6317D70E2892DA1E00192E5A /* v_GroupBox.swift */,
 				E52ECFB42893A4360051D2DE /* v_Image.swift */,
-				63AAAD582890C65F005F1C20 /* v_TextField.swift */,
 				63AC4B0E289177C3004B4A45 /* v_Label.swift */,
 				635DB8802891819E0019BC3B /* v_Layout.swift */,
 				E5CE5CB228925B0600BC7FF1 /* v_Link.swift */,
@@ -393,6 +392,7 @@
 				E5CE5CB428925DFD00BC7FF1 /* v_Menu.swift */,
 				6373BB2C289369B10002A084 /* v_Navigation.swift */,
 				6317D7102892DDA700192E5A /* v_OutlineGroup.swift */,
+				637622CD28C38DA00090BBBD /* v_PasteButton.swift */,
 				E57E0ABC2892931500B86669 /* v_Picker.swift */,
 				63BE461C2894F59400FB9844 /* v_Popover.swift */,
 				639BA7B2289420C4007C2797 /* v_ProgressView.swift */,
@@ -408,9 +408,9 @@
 				6317D7142892DE8000192E5A /* v_Table.swift */,
 				63E584A1289033AB00750F00 /* v_Text.swift */,
 				635DB87928917CBE0019BC3B /* v_TextEditor.swift */,
+				63AAAD582890C65F005F1C20 /* v_TextField.swift */,
 				6317D7162892E03700192E5A /* v_TimelineView.swift */,
 				E5CE5CAD289252B800BC7FF1 /* v_Toggle.swift */,
-				637622CD28C38DA00090BBBD /* v_PasteButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";

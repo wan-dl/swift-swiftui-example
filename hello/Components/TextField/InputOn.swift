@@ -12,6 +12,11 @@ struct InputOn: View {
         
     var body: some View {
         VStack(alignment: .leading) {
+            Text("简介：本页面示例，主要用到了.onEditingChanged() 和 .onCommit()")
+                .font(.caption)
+                .foregroundColor(.gray)
+                .frame(height: 80)
+            
             TextField(
                 "昵称",
                 text: $nickname,

@@ -7,11 +7,18 @@
 
 import SwiftUI
 
+private let intro: String = "简介: iOS上，textFieldStyle, 有3种样式: .automation、.plain、.roundedBorder。当然，您也可以自定义Style。遵行TextFieldStyle协议，重写_body方法即可"
+
 struct InputStyle: View {
     @State var inputText: String = ""
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
+            
+            Text(intro)
+                .font(.caption)
+                .foregroundColor(.gray)
+                .frame(height: 80)
             
             Section(".automatic") {
                 TextField("placeholder", text: $inputText)

@@ -44,20 +44,6 @@ struct v_TextField: View {
         }
         .navigationTitle("TextField")
         .navigationBarTitleDisplayMode(.inline)
-        
-    }
-   
-}
-
-// 定制height=40, 背景为白色的输入框
-struct InputCustomStyle: TextFieldStyle {
-    func _body(configuration: TextField<Self._Label>) -> some View {
-        HStack {
-            Text("")
-                .padding(.horizontal, 2)
-            configuration
-                .frame(height: 40)
-        }.background(.white)
     }
 }
 

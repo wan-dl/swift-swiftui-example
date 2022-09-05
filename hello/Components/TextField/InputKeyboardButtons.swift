@@ -12,8 +12,14 @@ struct InputKeyboardButtons: View {
     
     var body: some View {
         ScrollView {
+            
+            Text("简介：本页面示例，主要用到了.submitLabel()")
+                .font(.caption)
+                .foregroundColor(.gray)
+                .frame(height: 80)
+            
             VStack(alignment: .leading, spacing: 20) {
-                
+
                 Section("键盘右下角显示继续 .continue") {
                     TextField("placeholder", text: $user)
                         .submitLabel(.continue)

@@ -22,6 +22,11 @@ struct InputKeyboardType: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
                 
+                Text("简介：本页面示例，主要用到了.keyboardType() 和 .textContentType()")
+                    .font(.caption)
+                    .foregroundColor(.gray)
+                    .frame(height: 80)
+                
                 Section("默认键盘 .default") {
                     TextField("默认键盘, 显示标准ASCII字符的键盘", text: $inputDefault)
                         .keyboardType(.default)
