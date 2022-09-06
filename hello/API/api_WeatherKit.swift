@@ -10,30 +10,50 @@ import WeatherKit
 import CoreLocation
 
 struct api_WeatherKit: View {
+    @State var errorMsg: String = ""
+    
     var body: some View {
-        VStack {
-            Button("获取天气信息", action: {
-                if #available(iOS 16.0, *) {
+        VStack(alignment: .center) {
+            Text("简介：本页面使用了WeatherKit，仅适用于iOS 16.0+")
+                .font(.callout)
+                .foregroundColor(.gray)
+            
+            if #available(iOS 16.0, *) {
+                Button("获取天气信息", action: {
                     getWeather()
-                } else {
-                    Text("简介：本页面使用了WeatherKit，仅适用于iOS 16.0+")
-                        .font(.callout)
-                        .foregroundColor(.gray)
-                }
-            })
+                })
+                .buttonStyle(.borderedProminent)
+                .font(.body)
+            }
+            
+            if errorMsg != "" {
+                Text(errorMsg)
+                    .font(.caption2)
+                    .offset(y: 40)
+            }
+            
+            Spacer()
         }
+        .padding()
+        .navigationTitle("WeatherKit")
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     @available (iOS 16.0, *)
     func getWeather() {
         Task {
-            let weatherService = WeatherService()
+            do {
+                let weatherService = WeatherService()
 
-            let syracuse = CLLocation(latitude: 43, longitude: -76)
-            let weather = try! await weatherService.weather(for: syracuse)
-            let temperature = weather.currentWeather.temperature
-            print(temperature)
-            let uvIndex = weather.currentWeather.uvIndex
+                let syracuse = CLLocation(latitude: 43, longitude: -76)
+                let weather = try await weatherService.weather(for: syracuse)
+                let temperature = weather.currentWeather.temperature
+                print("------------\(temperature)")
+                let uvIndex = weather.currentWeather.uvIndex
+            } catch let error {
+                errorMsg = "::代码执行，异常错误 -> \(error)"
+                print(errorMsg)
+            }
         }
     }
 }
