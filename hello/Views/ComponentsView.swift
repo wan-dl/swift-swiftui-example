@@ -162,7 +162,7 @@ struct ComponentsView: View {
             .listStyle(.insetGrouped)
             .searchable(text: $searchKeyword, placement: SearchFieldPlacement.automatic, prompt: "搜索")
         }
-        .navigationTitle("SwiftUI组件")
+        .navigationTitle("SwiftUI")
         .navigationBarTitleDisplayMode(.inline)
         .safeAreaInset(edge: .bottom, content: {
             Color.clear.frame(height: 44)

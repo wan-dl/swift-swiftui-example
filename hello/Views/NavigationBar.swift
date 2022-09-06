@@ -21,9 +21,12 @@ struct NavigationBar: View {
             NavigationLink {
                 About()
             } label: {
-                Text(title)
-                    .font(.largeTitle)
-                    .foregroundColor(.primary)
+//                Text(title)
+//                    .font(.largeTitle)
+//                    .foregroundColor(.primary)
+//                    .padding(.leading, 20)
+                Image(systemName: "slider.horizontal.3")
+                    .font(.title)
                     .padding(.leading, 20)
             }
             .frame(maxWidth: .infinity, alignment: .leading)

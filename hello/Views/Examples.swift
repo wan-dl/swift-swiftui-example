@@ -20,8 +20,7 @@ struct Examples: View {
                 Section(header: Text("导航栏和Tabber").textCase(.none)) {
                     NavigationLink("自定义导航栏样式", destination: p_navigationBar())
                     NavigationLink("自定义Tabbar", destination: p_tabbar())
-                    NavigationLink("Loading", destination: p_loading())
-                    NavigationLink("toolbar", destination: p_toolbar())
+                    NavigationLink("toolbar示例", destination: p_toolbar())
                 }
                 
                 Section(header: Text("其它")) {
@@ -29,9 +28,6 @@ struct Examples: View {
                     NavigationLink("滚动视图", destination: p_ScrollWithRotate3DEffect())
                     NavigationLink("Markdown AttributedString", destination: p_markdownWithAttributedString())
                     NavigationLink("控制视图点击区域", destination: p_contentShape())
-                }
-                
-                Section(header: Text("数据")) {
                     NavigationLink("视图之间数据传递", destination: p_environment().environmentObject(envMedicine))
                 }
                 
