@@ -191,6 +191,7 @@
 		6327FA6328958B740091BB9B /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		63319D8B28AD2FC700980F53 /* api_saveImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_saveImage.swift; sourceTree = "<group>"; };
 		6332B64528B3BD0400193C04 /* LifeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCycle.swift; sourceTree = "<group>"; };
+		6334F9DB28C7767000DBEA18 /* HelloSwiftRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HelloSwiftRelease.entitlements; sourceTree = "<group>"; };
 		6350BF3828C640EA00EE3F95 /* v_DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_DatePicker.swift; sourceTree = "<group>"; };
 		6350BF3A28C6412800EE3F95 /* v_ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_ColorPicker.swift; sourceTree = "<group>"; };
 		6350BF3C28C6418900EE3F95 /* v_MultiPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_MultiPicker.swift; sourceTree = "<group>"; };
@@ -396,12 +397,9 @@
 		63AFF204289AAE8B00C949E3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				6350BF3728C640A400EE3F95 /* Picker */,
 				6361C5A32898177A00D32F21 /* chart_BarMark.swift */,
 				635108052898220A00999B3D /* chart_LineMark.swift */,
 				635108072898260F00999B3D /* chart_PointMark.swift */,
-				63808AFD28C39DCB00023081 /* Other */,
-				63CD856D28C4F0AA004FDEFA /* TextField */,
 				E52ECFB82893A8860051D2DE /* v_ActionSheet.swift */,
 				E52ECFB62893A7AE0051D2DE /* v_Alert.swift */,
 				63AC4B0C28916D71004B4A45 /* v_Button.swift */,
@@ -443,6 +441,9 @@
 				63AAAD582890C65F005F1C20 /* v_TextField.swift */,
 				6317D7162892E03700192E5A /* v_TimelineView.swift */,
 				E5CE5CAD289252B800BC7FF1 /* v_Toggle.swift */,
+				63808AFD28C39DCB00023081 /* Other */,
+				6350BF3728C640A400EE3F95 /* Picker */,
+				63CD856D28C4F0AA004FDEFA /* TextField */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -547,6 +548,7 @@
 		E5C85278288A51B500BBB795 = {
 			isa = PBXGroup;
 			children = (
+				6334F9DB28C7767000DBEA18 /* HelloSwiftRelease.entitlements */,
 				6327DE3D28A532300097F3BF /* HelloSwift-Info.plist */,
 				6300703728A1F83100EE378D /* HelloSwift.entitlements */,
 				E5C85283288A51B500BBB795 /* hello */,
@@ -984,11 +986,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"hello/Preview Content\"";
-				DEVELOPMENT_TEAM = X68C7W9NCM;
+				DEVELOPMENT_TEAM = 9RN855T24F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "HelloSwift-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Hello Swift";
+				INFOPLIST_KEY_CFBundleDisplayName = "从零学习Swift";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSCameraUsageDescription = "该应用需要使用相机，以便为你演示相机代码功能";
 				INFOPLIST_KEY_NSContactsUsageDescription = "该应用需要读取你的通讯录，以便在当前页面显示数据";
@@ -1000,7 +1002,7 @@
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
 				INFOPLIST_KEY_NSLocationTemporaryUsageDescriptionDictionary = "";
 				INFOPLIST_KEY_NSLocationUsageDescription = "";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "使用您的位置信息，以便向您更快的找到相应服务";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "使用您的位置信息，以便向您演示相关功能";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "该应用需要使用你的麦克风，以便语音播放和录制";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "该应用需要读取你的相册，以便为你演示代码功能";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "该应用需要读取你的相册，以便为你演示代码功能";
@@ -1017,8 +1019,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.hello.swift;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.from-cratch.swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1033,15 +1035,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = HelloSwift.entitlements;
+				CODE_SIGN_ENTITLEMENTS = HelloSwiftRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"hello/Preview Content\"";
-				DEVELOPMENT_TEAM = X68C7W9NCM;
+				DEVELOPMENT_TEAM = 9RN855T24F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "HelloSwift-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Hello Swift";
+				INFOPLIST_KEY_CFBundleDisplayName = "从零学习Swift";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSCameraUsageDescription = "该应用需要使用相机，以便为你演示相机代码功能";
 				INFOPLIST_KEY_NSContactsUsageDescription = "该应用需要读取你的通讯录，以便在当前页面显示数据";
@@ -1053,7 +1055,7 @@
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
 				INFOPLIST_KEY_NSLocationTemporaryUsageDescriptionDictionary = "";
 				INFOPLIST_KEY_NSLocationUsageDescription = "";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "使用您的位置信息，以便向您更快的找到相应服务";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "使用您的位置信息，以便向您演示相关功能";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "该应用需要使用你的麦克风，以便语音播放和录制";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "该应用需要读取你的相册，以便为你演示代码功能";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "该应用需要读取你的相册，以便为你演示代码功能";
@@ -1070,8 +1072,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.hello.swift;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.from-cratch.swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
