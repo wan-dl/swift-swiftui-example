@@ -30,17 +30,24 @@ struct About: View {
             
             VStack(alignment:.leading, spacing: 20) {
                 HStack {
-                    Text("去评分")
+                    Text("去评分")  
                     Spacer()
                     Image(systemName: "chevron.right")
                         .foregroundColor(.gray)
                 }
+                .onTapGesture {
+                    gotoStore()
+                }
+                
                 Divider()
                 HStack {
                     Text("版本更新")
                     Spacer()
                     Image(systemName: "chevron.right")
                         .foregroundColor(.gray)
+                }
+                .onTapGesture {
+                    gotoStore()
                 }
             }
             .padding()
@@ -52,7 +59,18 @@ struct About: View {
         let BundleInfo = Bundle.main.infoDictionary!
         self.appVersion = BundleInfo["CFBundleShortVersionString"] as! String
         self.appDisplayName = BundleInfo["CFBundleDisplayName"] as! String
-        // let appBuild = BundleInfo["CFBundleVersion"] as! String
+    }
+    
+    func gotoStore() {
+        let url = URL(string: "itms-apps://itunes.apple.com/app/")!
+        
+        if !UIApplication.shared.canOpenURL(url) {
+             return
+        }
+        
+        UIApplication.shared.open(url) { (success) in
+            print("跳转状态: \(success)")
+        }
     }
 }
 
