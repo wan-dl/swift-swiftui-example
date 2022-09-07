@@ -28,7 +28,7 @@ struct Home: View {
     var card: some View {
         VStack(alignment: .leading, spacing: 8.0) {
             Spacer()
-            Image("Logo 2")
+            Image("Logo2")
                 .resizable(resizingMode: .stretch)
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 36,height: 36)
@@ -62,11 +62,11 @@ struct Home: View {
         .shadow(radius: 10, x: 0, y: 10)
         .padding(.horizontal, 20)
         .background(
-            Image("Blob 1")
+            Image("Blob1")
                 .offset(x: 250, y: -100)
         )
         .overlay(
-            Image("Illustration 5")
+            Image("Illustration")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 230)
