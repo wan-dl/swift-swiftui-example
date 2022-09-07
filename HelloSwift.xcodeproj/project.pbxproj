@@ -215,6 +215,7 @@
 		63808AFE28C39DD900023081 /* v_blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_blur.swift; sourceTree = "<group>"; };
 		6384F9E0289C98E1005BDC98 /* api_URLSession_Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_URLSession_Post.swift; sourceTree = "<group>"; };
 		6389EE9828A1683E002B6E4A /* api_HealthKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_HealthKit.swift; sourceTree = "<group>"; };
+		639276E628C8D640007A1D6F /* HelloSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6393F4B128C3974700CBD1DA /* v_statusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_statusBar.swift; sourceTree = "<group>"; };
 		639BA7AE28941789007C2797 /* v_Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_Divider.swift; sourceTree = "<group>"; };
 		639BA7B028941C1D007C2797 /* v_Spacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_Spacer.swift; sourceTree = "<group>"; };
@@ -280,7 +281,6 @@
 		E57E0ABC2892931500B86669 /* v_Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_Picker.swift; sourceTree = "<group>"; };
 		E586EC062892324100360671 /* v_Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_Slider.swift; sourceTree = "<group>"; };
 		E59233F1288FB50C001714F5 /* TabbarDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarDefault.swift; sourceTree = "<group>"; };
-		E5C85281288A51B500BBB795 /* HelloSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = HelloSwift.app; path = "/Users/a1/Documents/swift/study_swift/build/Debug-iphoneos/HelloSwift.app"; sourceTree = "<absolute>"; };
 		E5C85284288A51B500BBB795 /* HelloSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloSwift.swift; sourceTree = "<group>"; };
 		E5C85288288A51B700BBB795 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5CE5CAD289252B800BC7FF1 /* v_Toggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_Toggle.swift; sourceTree = "<group>"; };
@@ -511,6 +511,7 @@
 				6327DE3D28A532300097F3BF /* HelloSwift-Info.plist */,
 				6300703728A1F83100EE378D /* HelloSwift.entitlements */,
 				E5C85283288A51B500BBB795 /* hello */,
+				639276E628C8D640007A1D6F /* HelloSwift.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -554,7 +555,7 @@
 			);
 			name = HelloSwift;
 			productName = format;
-			productReference = E5C85281288A51B500BBB795 /* HelloSwift.app */;
+			productReference = 639276E628C8D640007A1D6F /* HelloSwift.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -906,13 +907,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "HelloSwift-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "从零学习Swift";
+				INFOPLIST_KEY_CFBundleDisplayName = "Swift达人";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSCameraUsageDescription = "该应用需要使用相机，以便为你演示相关功能";
 				INFOPLIST_KEY_NSContactsUsageDescription = "该应用需要读取你的通讯录，以便为您演示相关功能";
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "该应用需要使用健康，以便在当前页面显示数据";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "该应用需要使用健康，以便在当前页面显示数据";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "该应用需要使用健康，以便在当前页面显示数据";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "使用您的位置信息，以便向您演示相关功能";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "使用您的位置信息，以便向您演示相关功能";
 				INFOPLIST_KEY_NSLocationTemporaryUsageDescriptionDictionary = "使用您的位置信息，以便向您演示相关功能";
@@ -935,7 +937,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "io.from-scratch.swift";
+				PRODUCT_BUNDLE_IDENTIFIER = io.swift.expert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -957,13 +959,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "HelloSwift-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "从零学习Swift";
+				INFOPLIST_KEY_CFBundleDisplayName = "Swift达人";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSCameraUsageDescription = "该应用需要使用相机，以便为你演示相关功能";
 				INFOPLIST_KEY_NSContactsUsageDescription = "该应用需要读取你的通讯录，以便为您演示相关功能";
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "该应用需要使用健康，以便在当前页面显示数据";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "该应用需要使用健康，以便在当前页面显示数据";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "该应用需要使用健康，以便在当前页面显示数据";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "使用您的位置信息，以便向您演示相关功能";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "使用您的位置信息，以便向您演示相关功能";
 				INFOPLIST_KEY_NSLocationTemporaryUsageDescriptionDictionary = "使用您的位置信息，以便向您演示相关功能";
@@ -986,7 +989,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "io.from-scratch.swift";
+				PRODUCT_BUNDLE_IDENTIFIER = io.swift.expert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
