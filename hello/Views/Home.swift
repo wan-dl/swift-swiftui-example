@@ -9,21 +9,21 @@ import SwiftUI
 
 struct elment: Identifiable {
     let id = UUID()
+    var docId: String
     var desc: String
     var icon: String
 }
 
 var startList: [elment] = [
-    elment(desc: "简介", icon: ""),
-    elment(desc: "新建项目", icon: ""),
-    elment(desc: "申请\n开发者账号", icon: ""),
-    elment(desc: "JavaScript", icon: "")
+    elment(docId: "introduce", desc: "简介", icon: "doc.viewfinder"),
+    elment(docId: "CreateProject", desc: "新建项目", icon: "plus.square"),
+    elment(docId: "Account", desc: "开发者账号", icon: "person.badge.shield.checkmark")
 ]
 
 var tutorialList: [elment] = [
-    elment(desc: "Swift语言\n官方教程中文版", icon: "icon_swift"),
-    elment(desc: "SwiftUI\n构建用户界面", icon: "icon_swiftui"),
-    elment(desc: "iOS\nFramework", icon: "icon_sdk")
+    elment(docId: "Swift", desc: "Swift语言\n官方教程中文版", icon: "icon_swift"),
+    elment(docId: "SwiftUI", desc: "SwiftUI\n构建用户界面", icon: "icon_swiftui"),
+    elment(docId: "Framework", desc: "iOS\nFramework", icon: "icon_sdk")
 ]
 
 struct Home: View {
@@ -64,23 +64,7 @@ struct Home: View {
                     NavigationLink(destination: {
                         API()
                     }, label: {
-                        VStack(alignment: .center){
-                            Image(item.icon)
-                                .resizable(resizingMode: .stretch)
-                                .aspectRatio(contentMode: .fit)
-                                .frame(maxWidth: .infinity)
-                                .frame(width: 28, height: 28)
-                                .offset(y: 10)
-                            Text(item.desc)
-                                .font(.subheadline)
-                                .foregroundColor(.black)
-                                .frame(height: 50)
-                                .frame(maxWidth:.infinity)
-                                .padding()
-                        }
-                        .frame(width: 110, height: 110, alignment: .bottomLeading)
-                        .background(.white)
-                        .cornerRadius(10)
+                        HomeBlockUI_1(icon: item.icon, desc: item.desc)
                     })
                 }
             }
@@ -92,29 +76,67 @@ struct Home: View {
             HStack() {
                 ForEach(tutorialList) { item in
                     NavigationLink(destination: {
-                        API()
-                    }, label: {
-                        VStack(alignment: .center){
-                            Image(item.icon)
-                                .resizable(resizingMode: .stretch)
-                                .aspectRatio(contentMode: .fit)
-                                .frame(maxWidth: .infinity)
-                                .frame(width: 64, height: 64)
-                                .offset(y: 10)
-                            Text(item.desc)
-                                .font(.subheadline)
-                                .foregroundColor(.black)
-                                .frame(height: 50)
-                                .frame(maxWidth:.infinity)
-                                .padding()
+                        switch item.docId {
+                            case "Swift":
+                                TutorialSwiftLanguage()
+                            default:
+                                API()
                         }
-                        .frame(width: 150, height: 180, alignment: .bottomLeading)
-                        .background(.white)
-                        .cornerRadius(10)
+                    }, label: {
+                        HomeBlockUI_2(icon: item.icon, desc: item.desc)
                     })
                 }
             }
         }
+    }
+}
+
+struct HomeBlockUI_1: View {
+    @State var icon: String = ""
+    @State var desc: String = ""
+    
+    var body: some View {
+        VStack(alignment: .center){
+            Image(systemName: icon)
+                .foregroundColor(.black.opacity(0.8))
+                .frame(maxWidth: .infinity)
+                .frame(width: 25, height: 25)
+                .offset(y: 10)
+            Text(desc)
+                .font(.footnote)
+                .frame(height: 40)
+                .frame(maxWidth:.infinity)
+        }
+        .padding()
+        .frame(width: 110, height: 110, alignment: .bottomLeading)
+        .background(.white)
+        .foregroundColor(.black)
+        .cornerRadius(10)
+    }
+}
+
+struct HomeBlockUI_2: View {
+    @State var icon: String = ""
+    @State var desc: String = ""
+    
+    var body: some View {
+        VStack(alignment: .center){
+            Image(icon)
+                .resizable(resizingMode: .stretch)
+                .aspectRatio(contentMode: .fit)
+                .frame(maxWidth: .infinity)
+                .frame(width: 64, height: 64)
+                .offset(y: 10)
+            Text(desc)
+                .font(.footnote)
+                .frame(height: 50)
+                .frame(maxWidth:.infinity)
+                .padding()
+        }
+        .frame(width: 150, height: 180, alignment: .bottomLeading)
+        .background(.white)
+        .foregroundColor(.black)
+        .cornerRadius(10)
     }
 }
 
