@@ -46,7 +46,6 @@ struct Home: View {
                 Spacer()
             }
             .padding()
-            .frame(maxWidth: .infinity)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.gray.opacity(0.1))
@@ -99,8 +98,8 @@ struct HomeBlockUI_1: View {
         VStack(alignment: .center){
             Image(systemName: icon)
                 .foregroundColor(.black.opacity(0.8))
-                .frame(maxWidth: .infinity)
-                .frame(width: 25, height: 25)
+                .font(.system(size: 22))
+                .frame(width: 35, height: 28)
                 .offset(y: 10)
             Text(desc)
                 .font(.footnote)
