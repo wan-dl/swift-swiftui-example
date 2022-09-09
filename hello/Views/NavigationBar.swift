@@ -32,7 +32,7 @@ struct NavigationBar: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             
             NavigationLink {
-                HomeSearch()
+                GlobalSearch()
             } label: {
                 Image(systemName: "magnifyingglass")
                     .foregroundColor(.black)

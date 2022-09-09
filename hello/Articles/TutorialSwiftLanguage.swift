@@ -28,6 +28,10 @@ struct TutorialSwiftLanguage: View {
                             API()
                         }, label: {
                             Text(item.name)
+                            Text(item.en)
+                                .font(.footnote)
+                                .foregroundColor(.gray)
+                                .lineLimit(1)
                         })
                     }
                 }
@@ -165,11 +169,11 @@ struct SwiftSyntaxSearch: View {
         .ignoresSafeArea(edges:.bottom)
     }
     
-    var LangSwiftSyntaxListResults: [LangSwift] {
+    var LangSwiftSyntaxListResults: [LangSwiftItem] {
         if searchKeyword.isEmpty {
             return []
         }
-        var result: [LangSwift] = []
+        var result: [LangSwiftItem] = []
         let word = searchKeyword.lowercased()
         for i in LangSwiftSyntaxList {
             let i_name: String = i.name

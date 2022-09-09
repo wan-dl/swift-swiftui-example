@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+enum Tab: String {
+    case home
+    case view
+    case api
+    case search
+}
+
 struct TabItem: Identifiable {
     let id = UUID()
     let name: String
@@ -15,18 +22,12 @@ struct TabItem: Identifiable {
 }
 
 var tabItems = [
-    TabItem(name: "Home", icon: "house", tab: .home),
+    TabItem(name: "探索", icon: "house", tab: .home),
     TabItem(name: "SwiftUI", icon: "viewfinder", tab: .view),
     TabItem(name: "API", icon: "textformat", tab: .api),
-    TabItem(name: "Example", icon: "pencil.and.outline", tab: .example)
+    TabItem(name: "搜索", icon: "magnifyingglass", tab: .search)
 ]
 
-enum Tab: String {
-    case home
-    case view
-    case api
-    case example
-}
 
 @available (iOS 16.0, *)
 class PathManager: ObservableObject {
@@ -72,7 +73,7 @@ struct RootViewForIOS16: View {
                 case .deviceInfo:
                     api_getSystemInfo()
                 case .search:
-                    HomeSearch()
+                    GlobalSearch()
                 }
             }
         }
@@ -104,8 +105,8 @@ struct BasicView: View {
                 ComponentsView()
             case .api:
                 API()
-            case .example:
-                Examples()
+            case .search:
+                GlobalSearch()
             }
             
             HStack {
