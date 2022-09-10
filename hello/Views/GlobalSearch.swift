@@ -93,12 +93,12 @@ struct GlobalSearch: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .navigationTitle("搜索")
         .navigationBarTitleDisplayMode(.large)
-//        .onAppear() {
-//            getDataFromUsersDefaults()
-//        }
-//        .onDisappear() {
-//            saveDataToUserDefaults()
-//        }
+        .task() {
+            await getDataFromUsersDefaults()
+        }
+        .onDisappear() {
+            saveDataToUserDefaults()
+        }
     }
     
     // 搜索
@@ -140,7 +140,7 @@ struct GlobalSearch: View {
     }
     
     // 从UserDefaults读取数据
-    func getDataFromUsersDefaults() {
+    func getDataFromUsersDefaults() async {
         if !LastQueryList.isEmpty {
             return
         }
@@ -156,13 +156,15 @@ struct GlobalSearch: View {
     
     // 保存搜索历史数据到UserDefaults
     func saveDataToUserDefaults() {
-        let tmpList = LastQueryList.map { (obj) -> String in
-            return obj.name
+        task {
+            let tmpList = LastQueryList.map { (obj) -> String in
+                return obj.name
+            }
+            if tmpList.isEmpty {
+                return
+            }
+            UserDefaults.standard.set(tmpList, forKey: "LastQueryList")
         }
-        if tmpList.isEmpty {
-            return
-        }
-        UserDefaults.standard.set(tmpList, forKey: "LastQueryList")
     }
 }
 

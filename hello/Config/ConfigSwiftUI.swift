@@ -21,7 +21,7 @@ struct CInfo: Identifiable {
     var seas: [LangSwiftUIItem]
 }
 
-var SwiftUIComponentsList: [CInfo] = [
+let SwiftUIComponentsList: [CInfo] = [
     CInfo(
         name: "Text Input and Output",
         seas: [
@@ -63,7 +63,7 @@ var SwiftUIComponentsList: [CInfo] = [
         ]
     ),
     CInfo(
-        name: "",
+        name: "ActionSheet",
         seas: [
             LangSwiftUIItem(name: "ActionSheet", searchKeyword: "", viewname: AnyView(v_ActionSheet())),
             LangSwiftUIItem(name: "confirmationDialog", searchKeyword: "", viewname: AnyView(v_confirmationDialog()))
