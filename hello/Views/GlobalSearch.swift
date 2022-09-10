@@ -19,6 +19,8 @@ struct GlobalSearch: View {
     
     @State private var searchResultForSwift: [LangSwiftItem] = []
     @State private var searchResultForSwiftUI: [LangSwiftUIItem] = []
+    @State private var searchResultForApi: [ApiItem] = []
+    
     @FocusState var isFocused: Bool
     
     var body: some View {
@@ -28,10 +30,12 @@ struct GlobalSearch: View {
                 .onChange(of: queryString) { value in
                     self.searchResultForSwift = []
                     self.searchResultForSwiftUI = []
+                    self.searchResultForApi = []
                 }
                 .onSubmit(of: [.text, .search]) {
                     self.searchResultForSwift = []
                     self.searchResultForSwiftUI = []
+                    self.searchResultForApi = []
                     gotoSearch()
                 }
                 
@@ -60,24 +64,32 @@ struct GlobalSearch: View {
                 .foregroundColor(.gray)
             }
             
-            if !searchResultForSwift.isEmpty || !searchResultForSwiftUI.isEmpty {
+            if !searchResultForSwift.isEmpty || !searchResultForSwiftUI.isEmpty || !searchResultForApi.isEmpty {
                 VStack(alignment: .leading, spacing: 20) {
                     List {
                         if !searchResultForSwift.isEmpty {
                             Section(header: Text("Swift Language").textCase(.none)) {
                                 ForEach(searchResultForSwift) { item in
-                                    NavigationLink(destination: {
-                                        //readMarkDownFile(mdDir: "swift/\(item.ndir)", mdPath: item.nid, mdTitle: item.name)
+                                    NavigationLink(item.name, destination: {
                                         loadLocalHtml(pageTitle: item.name, filedir: "swift/\(item.ndir)", filename: item.nid)
-                                    }, label: {
+                                    })
+                                }
+                            }
+                        }
+                        
+                        if !searchResultForSwiftUI.isEmpty {
+                            Section(header: Text("SwiftUI").textCase(.none)) {
+                                ForEach(searchResultForSwiftUI) { item in
+                                    NavigationLink(destination: item.viewname, label: {
                                         Text(item.name)
                                     })
                                 }
                             }
                         }
-                        if !searchResultForSwiftUI.isEmpty {
-                            Section(header: Text("SwiftUI").textCase(.none)) {
-                                ForEach(searchResultForSwiftUI) { item in
+                        
+                        if !searchResultForApi.isEmpty {
+                            Section(header: Text("框架").textCase(.none)) {
+                                ForEach(searchResultForApi) { item in
                                     NavigationLink(destination: item.viewname, label: {
                                         Text(item.name)
                                     })
@@ -126,6 +138,17 @@ struct GlobalSearch: View {
             let i_searchKeyword : String = (i.searchKeyword).lowercased()
             if i_name.contains(word) || i_en.contains(word) || i_searchKeyword.contains(word) {
                 searchResultForSwift.append(i)
+            }
+        }
+        
+        // 在API示例中中搜索
+        for x1 in ApiList {
+            for x2 in x1.seas {
+                let x_name: String = x2.name
+                let x_searchKeyword : String = (x2.searchKeyword).lowercased()
+                if x_name.contains(word) || x_searchKeyword.contains(word) {
+                    searchResultForApi.append(x2)
+                }
             }
         }
         

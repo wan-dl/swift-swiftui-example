@@ -13,7 +13,7 @@ struct API: View {
         VStack {
             showApiListView2
         }
-        .navigationTitle("API")
+        .navigationTitle("API 示例")
         .navigationBarTitleDisplayMode(.inline)
         .safeAreaInset(edge: .bottom, content: {
             Color.clear.frame(height: 44)
