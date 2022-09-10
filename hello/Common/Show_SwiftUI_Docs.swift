@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct Show_SwiftUI_Docs: View {
-    @State var available_versions: String = ""
+    @State var available_versions: [String] = []
     @State var desc: String = ""
     @State var declaration: String = ""
     
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
-            Text(available_versions)
+            Text(available_versions[0])
                 .font(.callout)
                 .padding(.horizontal, 10)
                 .foregroundColor(.gray)

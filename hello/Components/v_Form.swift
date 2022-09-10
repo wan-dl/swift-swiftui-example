@@ -10,6 +10,7 @@ import SwiftUI
 struct v_Form: View {
     @State private var username: String = ""
     @State private var password: String = ""
+    @State private var isRemember: Bool = false
     
     var body: some View {
         VStack {
@@ -18,6 +19,8 @@ struct v_Form: View {
                     TextField("username", text: $username)
                     
                     SecureField("password", text: $password)
+                    
+                    Toggle("是否记住密码", isOn: $isRemember)
                 }
                 
                 Button("登录", action: {
