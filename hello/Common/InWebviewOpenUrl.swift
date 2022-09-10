@@ -8,7 +8,7 @@
 import SwiftUI
 import WebKit
 
-struct ShowWebView: UIViewRepresentable {
+fileprivate struct loadRemoteURL: UIViewRepresentable {
     var url: URL
     
     func makeUIView(context: Context) -> WKWebView {
@@ -22,12 +22,13 @@ struct ShowWebView: UIViewRepresentable {
     }
 }
 
+// 在webview打开远程地址URL
 struct InWebviewOpenUrl: View {
     @State var url: String = ""
     @State var title: String = ""
     
     var body: some View {
-        WebView(url: URL(string: self.url)!)
+        loadRemoteURL(url: URL(string: self.url)!)
             .edgesIgnoringSafeArea([.bottom])
             .navigationTitle(title)
             .navigationBarTitleDisplayMode(.inline)

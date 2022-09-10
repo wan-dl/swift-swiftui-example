@@ -1,0 +1,680 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit; background-repeat: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit; background-repeat: inherit; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; padding-bottom: 0px !important; }
+  .typora-export * { print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571429rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right-width: 1px; border-right-style: solid; border-right-color: rgb(221, 221, 221); background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; white-space: nowrap; background-position: inherit; background-repeat: inherit; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; outline: 0px; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: auto hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 10px; z-index: 3; overflow-y: hidden; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; border: none !important; background-position: 0px 0px !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; word-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; background-position: 0px 0px; }
+.CodeMirror-wrap pre { word-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right-width: 30px; border-right-style: solid; border-right-color: transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right-style: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; inset: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right-style: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background-color: rgba(255, 255, 0, 0.4); }
+span.cm-underlined { text-decoration: underline; }
+span.cm-strikethrough { text-decoration: line-through; }
+.cm-tw-syntaxerror { color: rgb(255, 255, 255); background-color: rgb(153, 0, 0); }
+.cm-tw-deleted { text-decoration: line-through; }
+.cm-tw-header5 { font-weight: 700; }
+.cm-tw-listitem:first-child { padding-left: 10px; }
+.cm-tw-box { border-style: solid; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-color: inherit; border-top-width: 0px !important; }
+.cm-tw-underline { text-decoration: underline; }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+ @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
+</style><title>Lexical_Structure</title>
+</head>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'><p><span>Swift 的</span><em><span>“词法结构（lexical structure）”</span></em><span> 描述了能构成该语言中有效符号（token）的字符序列。这些合法符号组成了语言中最底层的构建基块，并在之后的章节中用于描述语言的其他部分。一个合法符号由一个标识符（identifier）、关键字（keyword）、标点符号（punctuation）、字面量（literal）或运算符（operator）组成。</span></p><p><span>通常情况下，符号是考虑了输入文本中最长可能的子字符串，并被随后将介绍的语法约束，根据 Swift 源文件的字符生成的。这种方法称为</span><em><span>“最长匹配（longest match）”</span></em><span>，或者</span><em><span>“最大适合（maximal munch）”</span></em><span>。</span></p><h2 id='空白与注释'><span>空白与注释</span></h2><p><span>空白（whitespace）有两个用途：分隔源文件中的符号和区分前缀、后缀和二元运算符（参见 </span><a href='#operators'><span>运算符</span></a><span>），在其他情况下空白则会被忽略。以下的字符会被当作空白：空格（U+0020）、换行符（U+000A）、回车符（U+000D）、水平制表符（U+0009）、垂直制表符（U+000B）、换页符（U+000C）以及空字符（U+0000）。</span></p><p><span>注释被编译器当作空白处理。单行注释由 </span><code>//</code><span> 开始直至遇到换行符（U+000A）或者回车符（U+000D）。多行注释由 </span><code>/*</code><span> 开始，以 </span><code>*/</code><span> 结束。多行注释允许嵌套，但注释标记必须成对出现。</span></p><p><span>注释可以包含其他的格式和标记，如 </span><a href='https://developer.apple.com/library/archive/documentation/Xcode/Reference/xcode_markup_formatting_ref/index.html'><span>标记格式参考</span></a><span>中所述。</span></p><blockquote><p><span>空白语法</span></p><p><em><span>空白</span></em><span> → </span><a href='#whitespace-item'><span>空白项</span></a><span> </span><a href='#whitespace'><span>空白</span></a><sub><span>可选</span></sub></p></blockquote><h4 id='whitespace-item'><span>whitespace-item</span></h4><blockquote><p><em><span>空白项</span></em><span> → </span><a href='#line-break'><span>断行符</span></a></p><p><em><span>空白项</span></em><span> → </span><a href='#comment'><span>注释</span></a></p><p><em><span>空白项</span></em><span> → </span><a href='#multiline-comment'><span>多行注释</span></a></p><p><em><span>空白项</span></em><span> → U+0000，U+0009，U+000B，U+000C 或者 U+0020</span></p></blockquote><h4 id='line-break'><span>line-break</span></h4><blockquote><p><em><span>断行符</span></em><span> → U+000A</span></p><p><em><span>断行符</span></em><span> → U+000D</span></p><p><em><span>断行符</span></em><span> → U+000D 接着是 U+000A</span></p></blockquote><h4 id='comment'><span>comment</span></h4><blockquote><p><em><span>注释</span></em><span> → // </span><a href='#comment-text'><span>注释内容</span></a><span> </span><a href='#line-break'><span>断行符</span></a></p></blockquote><h4 id='multiline-comment'><span>multiline-comment</span></h4><blockquote><p><em><span>多行注释</span></em><span> → </span><code>/*</code><span> </span><a href='#multiline-commnet-text'><span>多行注释内容</span></a><span> </span><code>*/</code></p></blockquote><h4 id='comment-text'><span>comment-text</span></h4><blockquote><p><em><span>注释内容</span></em><span> → </span><a href='#comment-text-item'><span>注释内容项</span></a><span> </span><a href='#comment-text'><span>注释内容</span></a><sub><span>可选</span></sub></p></blockquote><h4 id='comment-text-item'><span>comment-text-item</span></h4><blockquote><p><em><span>注释内容项</span></em><span> → 任何 Unicode 标量值，除了 U+000A 或者 U+000D</span></p></blockquote><h4 id='multiline-commnet-text'><span>multiline-commnet-text</span></h4><blockquote><p><em><span>多行注释内容</span></em><span> → </span><a href='#multiline-comment-text-item'><span>多行注释内容项</span></a><span> </span><a href='#multiline-comment-text'><span>多行注释内容</span></a><sub><span>可选</span></sub></p><p><em><span>多行注释内容项</span></em><span> → </span><a href='#multiline-comment'><span>多行注释</span></a><span>.</span></p><p><em><span>多行注释内容项</span></em><span> → </span><a href='#comment-text-item'><span>注释内容项</span></a></p><p><em><span>多行注释内容项</span></em><span> → 任何 Unicode 标量值，除了 </span><code>/*</code><span> 或者 </span><code>*/</code></p></blockquote><h2 id='标识符'><span>标识符</span></h2><p><em><span>标识符（identifier）</span></em><span> 可以由以下的字符开始：大写或小写的字母 </span><code>A</code><span> 到 </span><code>Z</code><span>、下划线（</span><code>_</code><span>）、基本多文种平面（Basic Multilingual Plane）中非字符数字组合的 Unicode 字符以及基本多文种平面以外的非个人专用区字符。在首字符之后，允许使用数字和组合 Unicode 字符。</span></p><p><span>以下划线开头的标识视为内部标识符，即使声明了 </span><code>public</code><span> 访问级别。这个约定允许框架作者标记一部分不能被使用方调用或依赖的 API，即便因为某些限制原因导致它的声明必须是公开的。另外，双下划线开头的标识符是为 Swift 编译器和标准库预留的。</span></p><p><span>使用保留字作为标识符，需要在其前后增加反引号（</span><code>`</code><span>）。例如，</span><code>class</code><span> 不是合法的标识符，但可以使用 </span><code>`class`</code><span>。反引号不属于标识符的一部分，</span><code>`x`</code><span> 和 </span><code>x</code><span> 表示同一标识符。</span></p><p><span>闭包中如果没有明确指定参数名称，参数将被隐式命名为 </span><code>$0</code><span>、</span><code>$1</code><span>、</span><code>$2</code><span> 等等。这些命名在闭包作用域范围内是合法的标识符。</span></p><p><span>编译器给含有属性包装器呈现值的属性自动合成以美元符号（</span><em><span>$</span></em><span>）开头的标识符。你的代码可以与这些标识符进行交互，，但是不能使用该前缀声明标识符。更详细的介绍，请查看 </span><a href='./07_Attributes.md'><span>特性</span></a><span> 章节中的 </span><a href='./07_Attributes.md#propertywrapper'><span>属性包装器</span></a><span> 部分。</span></p><blockquote><p><span>标识符语法</span></p><h4 id='identifier'><span>identifier</span></h4><p><em><span>标识符</span></em><span> → </span><a href='#identifier-head'><span>头部标识符</span></a><span> </span><a href='#identifier-characters'><span>标识符字符组</span></a><sub><span>可选</span></sub></p><p><em><span>标识符</span></em><span> → </span><span>`</span><a href='#identifier-head'><span>头部标识符</span></a><span> </span><a href='#identifier-characters'><span>标识符字符组</span></a><sub><span>可选</span></sub><span>`</span></p><p><em><span>标识符</span></em><span> → </span><a href='#implicit-parameter-name'><span>隐式参数名</span></a></p><h4 id='identifier-list'><span>identifier-list</span></h4><p><em><span>标识符列表</span></em><span> → </span><a href='#identifier'><span>标识符</span></a><span> | </span><a href='#identifier'><span>标识符</span></a><span> </span><strong><span>,</span></strong><span> </span><a href='#identifier'><span>标识符列表</span></a></p></blockquote><h4 id='identifier-head'><span>identifier-head</span></h4><blockquote><p><em><span>头部标识符</span></em><span> → 大写或小写字母 A - Z</span></p><p><em><span>头部标识符</span></em><span> → </span><strong><span>_</span></strong></p><p><em><span>头部标识符</span></em><span> → U+00A8，U+00AA，U+00AD，U+00AF，U+00B2–U+00B5，或者 U+00B7–U+00BA</span></p><p><em><span>头部标识符</span></em><span> → U+00BC–U+00BE，U+00C0–U+00D6，U+00D8–U+00F6，或者 U+00F8–U+00FF</span></p><p><em><span>头部标识符</span></em><span> → U+0100–U+02FF，U+0370–U+167F，U+1681–U+180D，或者 U+180F–U+1DBF</span></p><p><em><span>头部标识符</span></em><span> → U+1E00–U+1FFF</span></p><p><em><span>头部标识符</span></em><span> → U+200B–U+200D，U+202A–U+202E，U+203F–U+2040，U+2054，或者 U+2060–U+206F</span></p><p><em><span>头部标识符</span></em><span> → U+2070–U+20CF，U+2100–U+218F，U+2460–U+24FF，或者 U+2776–U+2793</span></p><p><em><span>头部标识符</span></em><span> → U+2C00–U+2DFF 或者 U+2E80–U+2FFF</span></p><p><em><span>头部标识符</span></em><span> → U+3004–U+3007，U+3021–U+302F，U+3031–U+303F，或者 U+3040–U+D7FF</span></p><p><em><span>头部标识符</span></em><span> → U+F900–U+FD3D，U+FD40–U+FDCF，U+FDF0–U+FE1F，或者 U+FE30–U+FE44</span></p><p><em><span>头部标识符</span></em><span> → U+FE47–U+FFFD</span></p><p><em><span>头部标识符</span></em><span> → U+10000–U+1FFFD，U+20000–U+2FFFD，U+30000–U+3FFFD，或者 U+40000–U+4FFFD</span></p><p><em><span>头部标识符</span></em><span> → U+50000–U+5FFFD，U+60000–U+6FFFD，U+70000–U+7FFFD，或者 U+80000–U+8FFFD</span></p><p><em><span>头部标识符</span></em><span> → U+90000–U+9FFFD，U+A0000–U+AFFFD，U+B0000–U+BFFFD，或者 U+C0000–U+CFFFD</span></p><p><em><span>头部标识符</span></em><span> → U+D0000–U+DFFFD 或者 U+E0000–U+EFFFD</span></p></blockquote><h4 id='identifier-character'><span>identifier-character</span></h4><blockquote><p><em><span>标识符字符</span></em><span> → 数值 0 - 9</span></p><p><em><span>标识符字符</span></em><span> → U+0300–U+036F，U+1DC0–U+1DFF，U+20D0–U+20FF，或者 U+FE20–U+FE2F</span></p><p><em><span>标识符字符</span></em><span> → </span><a href='#identifier-head'><span>头部标识符</span></a></p></blockquote><h4 id='identifier-characters'><span>identifier-characters</span></h4><blockquote><p><em><span>标识符字符组</span></em><span> → </span><a href='#identifier-character'><span>标识符字符</span></a><span> </span><a href='#identifier-characters'><span>标识符字符组</span></a><sub><span>可选</span></sub></p></blockquote><h4 id='implicit-parameter-name'><span>implicit-parameter-name</span></h4><blockquote><p><em><span>隐式参数名</span></em><span> → </span><strong><span>$</span></strong><span> </span><a href='#decimal-digit'><span>十进制数字列表</span></a></p></blockquote><h4 id='property-wrapper-projection'><span>property-wrapper-projection</span></h4><blockquote><p><em><span>属性包装器呈现值</span></em><span> → </span><strong><span>$</span></strong><span> </span><a href='#identifier-characters'><span>标识符字符组</span></a></p></blockquote><h2 id='关键字和标点符号'><span>关键字和标点符号</span></h2><p><span>下面这些被保留的关键字不允许用作标识符，除非使用反引号转义，具体描述请参考 </span><a href='#identifiers'><span>标识符</span></a><span>。除了 </span><code>inout</code><span>、</span><code>var</code><span> 以及 </span><code>let</code><span> 之外的关键字可以用作某个函数声明或者函数调用当中的外部参数名，无需添加反引号转义。当一个成员与一个关键字具有相同的名称时，不需要使用反引号来转义对该成员的引用，除非在引用该成员和使用该关键字之间存在歧义 - 例如，</span><code>self</code><span>，</span><code>Type</code><span> 和 </span><code>Protocol</code><span> 在显式的成员表达式中具有特殊的含义，因此它们必须在该上下文中使用反引号进行转义。</span></p><ul><li><span>用在声明中的关键字：</span><code>associatedtype</code><span>、</span><code>class</code><span>、</span><code>deinit</code><span>、</span><code>enum</code><span>、</span><code>extension</code><span>、</span><code>fileprivate</code><span>、</span><code>func</code><span>、</span><code>import</code><span>、</span><code>init</code><span>、</span><code>inout</code><span>、</span><code>internal</code><span>、</span><code>let</code><span>、</span><code>open</code><span>、</span><code>operator</code><span>、</span><code>private</code><span>、</span><code>precedencegroup</code><span>、</span><code>protocol</code><span>、</span><code>public</code><span>、</span><code>rethrows</code><span>、</span><code>static</code><span>、</span><code>struct</code><span>、</span><code>subscript</code><span>、</span><code>typealias</code><span> 以及 </span><code>var</code><span>。</span></li><li><span>用在语句中的关键字：</span><code>break</code><span>、</span><code>case</code><span>、</span><code>continue</code><span>、</span><code>default</code><span>、</span><code>defer</code><span>、</span><code>do</code><span>、</span><code>else</code><span>、</span><code>fallthrough</code><span>、</span><code>for</code><span>、</span><code>guard</code><span>、</span><code>if</code><span>、</span><code>in</code><span>、</span><code>repeat</code><span>、</span><code>return</code><span>、</span><code>throw</code><span>、</span><code>switch</code><span>、</span><code>where</code><span> 以及 </span><code>while</code><span>。</span></li><li><span>用在表达式和类型中的关键字：</span><code>Any</code><span>、</span><code>as</code><span>、</span><code>catch</code><span>、</span><code>false</code><span>、</span><code>is</code><span>、</span><code>nil</code><span>、</span><code>rethrows</code><span>、</span><code>self</code><span>、</span><code>Self</code><span>、</span><code>super</code><span>、</span><code>throw</code><span>、</span><code>throws</code><span>、</span><code>true</code><span> 以及 </span><code>try</code><span>。</span></li><li><span>用在模式中的关键字：</span><code>_</code><span>。</span></li><li><span>以井字号（</span><code>#</code><span>）开头的关键字：</span><code>#available</code><span>、</span><code>#colorLiteral</code><span>、</span><code>#column</code><span>、</span><code>#dsohandle</code><span>、</span><code>#elseif</code><span>、</span><code>#else</code><span>、</span><code>#endif</code><span>、</span><code>#error</code><span>、</span><code>#fileID</code><span>、</span><code>#fileLiteral</code><span>、</span><code>#filePath</code><span>、</span><code>#file</code><span>、</span><code>#function</code><span>、</span><code>#if</code><span>、</span><code>#imageLiteral</code><span>、</span><code>#keyPath</code><span>、</span><code>#line</code><span>、</span><code>#selector</code><span>、</span><code>#sourceLocation</code><span> 以及 </span><code>#warning</code><span>。</span></li><li><span>特定上下文中被保留的关键字：</span><code>associativity</code><span>、</span><code>convenience</code><span>、</span><code>didSet</code><span>、</span><code>dynamic</code><span>、</span><code>final</code><span>、</span><code>get</code><span>、</span><code>indirect</code><span>、</span><code>infix</code><span>、</span><code>lazy</code><span>、</span><code>left</code><span>、</span><code>mutating</code><span>、</span><code>none</code><span>、</span><code>nonmutating</code><span>、</span><code>optional</code><span>、</span><code>override</code><span>、</span><code>postfix</code><span>、</span><code>precedence</code><span>、</span><code>prefix</code><span>、</span><code>Protocol</code><span>、</span><code>required</code><span>、</span><code>right</code><span>、</span><code>set</code><span>、</span><code>some</code><span>、</span><code>Type</code><span>、</span><code>unowned</code><span>、</span><code>weak</code><span> 以及 </span><code>willSet</code><span>。这些关键字在特定上下文之外可以被用做标识符。</span></li></ul><p><span>以下符号被保留为标点符号，不能用于自定义运算符：</span><code>(</code><span>、</span><code>)</code><span>、</span><code>{</code><span>、</span><code>}</code><span>、</span><code>[</code><span>、</span><code>]</code><span>、</span><code>.</code><span>、</span><code>,</code><span>、</span><code>:</code><span>、</span><code>;</code><span>、</span><code>=</code><span>、</span><code>@</code><span>、</span><code>#</code><span>、</span><code>&amp;</code><span>（作为前缀运算符）、</span><code>-&gt;</code><span>、</span><code>`</code><span>、</span><code>?</code><span>、以及 </span><code>!</code><span>（作为后缀运算符）。</span></p><h2 id='字面量'><span>字面量</span></h2><p><em><span>字面量（literal）</span></em><span> 用来表示源码中某种特定类型的值，比如一个数字或字符串。</span></p><p><span>下面是字面量的一些示例：</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="swift"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="swift"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-number">42</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">// 整数字面量</span></span></pre></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-number">3.14159</span> &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-comment">// 浮点数字面量</span></span></pre><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-string">"Hello, world!"</span> <span class="cm-comment">// 字符串字面量</span></span></pre><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">true</span><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tab" role="presentation" cm-text="	">  </span> &nbsp; &nbsp;<span class="cm-comment">// 布尔值字面量</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 88px;"></div><div class="CodeMirror-gutters" style="display: none; height: 88px;"></div></div></div></pre><p><span>字面量本身并不包含类型信息。事实上，一个字面量会被解析为拥有无限的精度，然后 Swift 的类型推导会尝试去推导出这个字面量的类型。比如，在 </span><code>let x: Int8 = 42</code><span> 这个声明中，Swift 使用了显式类型注解（</span><code>: Int8</code><span>）来推导出 </span><code>42</code><span> 这个整数字面量的类型是 </span><code>Int8</code><span>。如果没有可用的类型信息，Swift 则会从标准库中定义的字面量类型中推导出一个默认的类型。整数字面量的默认类型是 </span><code>Int</code><span>，浮点数字面量的默认类型是 </span><code>Double</code><span>，字符串字面量的默认类型是 </span><code>String</code><span>，布尔值字面量的默认类型是 </span><code>Bool</code><span>。比如，在 </span><code>let str = &quot;Hello, world&quot;</code><span> 这个声明中，字符串 </span><code>&quot;Hello, world&quot;</code><span> 的默认推导类型就是 </span><code>String</code><span>。</span></p><p><span>当为一个字面量值指定了类型注解的时候，这个注解类型必须能通过这个字面量值实例化。也就是说，这个类型必须符合这些 Swift 标准库协议中的一个：整数字面量的 </span><code>ExpressibleByIntegerLiteral</code><span> 协议、浮点数字面量的 </span><code>ExpressibleByFloatLiteral</code><span> 协议、字符串字面量的 </span><code>ExpressibleByStringLiteral</code><span> 协议、布尔值字面量的 </span><code>ExpressibleByBooleanLiteral</code><span> 协议、只包含单个 Unicode 标量字符串文本的 </span><code>ExpressibleByUnicodeScalarLiteral</code><span> 协议以及只包含单个扩展字形簇（grapheme cluster）字符串文字的 </span><code>ExpressibleByExtendedGraphemeClusterLiteral</code><span> 协议。比如，</span><code>Int8</code><span> 符合 </span><code>ExpressibleByIntegerLiteral</code><span> 协议，因此它能在 </span><code>let x: Int8 = 42</code><span> 这个声明中作为整数字面量 </span><code>42</code><span> 的类型注解。</span></p><blockquote><p><span>字面量语法</span></p><p><em><span>字面量</span></em><span> → </span><a href='#integer-literal'><span>数值字面量</span></a><span> | </span><a href='#string-literal'><span>字符串字面量</span></a><span> | </span><a href='#integer-literal'><span>布尔值字面量</span></a><span> | </span><a href='#integer-literal'><span>nil 字面量</span></a></p><p><em><span>数值字面量</span></em><span> → </span><strong><span>-</span></strong><sub><span>可选</span></sub><span> </span><a href='#integer-literal'><span>整数字面量</span></a><span> | </span><strong><span>-</span></strong><sub><span>可选</span></sub><span> </span><a href='#floating-point-literal'><span>浮点数字面量</span></a></p><p><em><span>布尔值字面量</span></em><span> → </span><strong><span>true</span></strong><span> | </span><strong><span>false</span></strong></p><p><em><span>nil 字面量</span></em><span> → </span><strong><span>nil</span></strong></p></blockquote><h3 id='整数字面量'><span>整数字面量</span></h3><p><em><span>整数字面量（Integer Literals）</span></em><span> 表示未指定精度的整数值。整数字面量默认用十进制表示；可以加前缀来指定其他的进制。二进制字面量加 </span><code>0b</code><span>，八进制字面量加 </span><code>0o</code><span>，十六进制字面量加 </span><code>0x</code><span>。</span></p><p><span>十进制字面量包含数字 </span><code>0</code><span> 至 </span><code>9</code><span>。二进制字面量包含 </span><code>0</code><span> 和 </span><code>1</code><span>，八进制字面量包含数字 </span><code>0</code><span> 至 </span><code>7</code><span>，十六进制字面量包含数字 </span><code>0</code><span> 至 </span><code>9</code><span> 以及字母 </span><code>A</code><span> 至 </span><code>F</code><span>（大小写均可）。</span></p><p><span>负整数字面量的表示方式为在整数字面量前加负号 </span><code>-</code><span>，比如 </span><code>-42</code><span>。</span></p><p><span>整型字面面可以使用下划线（</span><code>_</code><span>）来增加数字的可读性，下划线会被系统忽略，因此不会影响字面量的值。同样地，也可以在数字前加 </span><code>0</code><span>，这同样也会被系统所忽略，并不会影响字面量的值。</span></p><p><span>除非特别指定，整数字面量的默认推导类型为 Swift 标准库类型中的 </span><code>Int</code><span>。Swift 标准库还定义了其他不同长度以及是否带符号的整数类型，请参考 </span><a href='../02_language_guide/01_The_Basics.md#integers'><span>整数</span></a><span>。</span></p><blockquote><p><span>整数字面量语法</span></p></blockquote><h4 id='integer-literal'><span>integer-literal</span></h4><blockquote><p><em><span>整数字面量</span></em><span> → </span><a href='#binary-literal'><span>二进制字面量</span></a></p><p><em><span>整数字面量</span></em><span> → </span><a href='#octal-literal'><span>八进制字面量</span></a></p><p><em><span>整数字面量</span></em><span> → </span><a href='#decimal-literal'><span>十进制字面量</span></a></p><p><em><span>整数字面量</span></em><span> → </span><a href='#hexadecimal-literal'><span>十六进制字面量</span></a></p></blockquote><h4 id='binary-literal'><span>binary-literal</span></h4><blockquote><p><em><span>二进制字面量</span></em><span> → </span><strong><span>0b</span></strong><span> </span><a href='#binary-digit'><span>二进制数字</span></a><span> </span><a href='#binary-literal-characters'><span>二进制字面量字符组</span></a><sub><span>可选</span></sub></p></blockquote><h4 id='binary-digit'><span>binary-digit</span></h4><blockquote><p><em><span>二进制数字</span></em><span> → 数值 0 或 1</span></p><p><em><span>二进制字面量字符</span></em><span> → </span><a href='#binary-digit'><span>二进制数字</span></a><span> | </span><strong><span>_</span></strong></p></blockquote><h4 id='binary-literal-characters'><span>binary-literal-characters</span></h4><blockquote><p><em><span>二进制字面量字符组</span></em><span> → </span><a href='#binary-literal-character'><span>二进制字面量字符</span></a><span> </span><a href='#binary-literal-characters'><span>二进制字面量字符组</span></a><sub><span>可选</span></sub></p></blockquote><h4 id='octal-literal'><span>octal-literal</span></h4><blockquote><p><em><span>八进制字面量</span></em><span> → </span><strong><span>0o</span></strong><span> </span><a href='#octal-digit'><span>八进字数字</span></a><span> </span><a href='#octal-literal-characters'><span>八进制字符组</span></a><sub><span>可选</span></sub></p></blockquote><h4 id='octal-digit'><span>octal-digit</span></h4><blockquote><p><em><span>八进字数字</span></em><span> → 数值 0 到 7</span></p><p><em><span>八进制字符</span></em><span> → </span><a href='#octal-digit'><span>八进字数字</span></a><span> | </span><strong><span>_</span></strong></p></blockquote><h4 id='octal-literal-characters'><span>octal-literal-characters</span></h4><blockquote><p><em><span>八进制字符组</span></em><span> → </span><a href='#octal-literal-character'><span>八进制字符</span></a><span> </span><a href='#octal-literal-characters'><span>八进制字符组</span></a><sub><span>可选</span></sub></p></blockquote><h4 id='decimal-literal'><span>decimal-literal</span></h4><blockquote><p><em><span>十进制字面量</span></em><span> → </span><a href='#decimal-digit'><span>十进制数字</span></a><span> </span><a href='#decimal-literal-characters'><span>十进制字符组</span></a><sub><span>可选</span></sub></p></blockquote><h4 id='decimal-digit'><span>decimal-digit</span></h4><blockquote><p><em><span>十进制数字</span></em><span> → 数值 0 到 9</span></p></blockquote><h4 id='decimal-literal-characters'><span>decimal-literal-characters</span></h4><blockquote><p><em><span>十进制数字组</span></em><span> → </span><a href='#decimal-digit'><span>十进制数字</span></a><span> </span><a href='#decimal-literal-characters'><span>十进制数字组</span></a><sub><span>可选</span></sub></p><p><em><span>十进制字符</span></em><span> → </span><a href='#decimal-digit'><span>十进制数字</span></a><span> | </span><strong><span>_</span></strong></p><p><em><span>十进制字符组</span></em><span> → </span><a href='#decimal-literal-characters'><span>十进制字符</span></a><span> </span><a href='#decimal-literal-characters'><span>十进制字符组</span></a><sub><span>可选</span></sub></p></blockquote><h4 id='hexadecimal-literal'><span>hexadecimal-literal</span></h4><blockquote><p><em><span>十六进制字面量</span></em><span> → </span><strong><span>0x</span></strong><span> </span><a href='#hexadecimal-digit'><span>十六进制数字</span></a><span> </span><a href='#hexadecimal-literal-characters'><span>十六进制字面量字符组</span></a><sub><span>可选</span></sub></p></blockquote><h4 id='hexadecimal-digit'><span>hexadecimal-digit</span></h4><blockquote><p><em><span>十六进制数字</span></em><span> → 数值 0 到 9, 字母 a 到 f, 或 A 到 F</span></p><p><em><span>十六进制字符</span></em><span> → </span><a href='#hexadecimal-digit'><span>十六进制数字</span></a><span> | </span><strong><span>-</span></strong></p></blockquote><h4 id='hexadecimal-literal-characters'><span>hexadecimal-literal-characters</span></h4><blockquote><p><em><span>十六进制字面量字符组</span></em><span> → </span><a href='#hexadecimal-literal-characters'><span>十六进制字符</span></a><span> </span><a href='#hexadecimal-literal-characters'><span>十六进制字面量字符组</span></a><sub><span>可选</span></sub></p></blockquote><h3 id='浮点数字面量'><span>浮点数字面量</span></h3><p><em><span>浮点数字面量（Floating-point literals）</span></em><span>表示未指定精度浮点数的值。</span></p><p><span>浮点数字面量默认用十进制表示（无前缀），也可以用十六进制表示（加前缀 </span><code>0x</code><span>）。</span></p><p><span>十进制浮点数字面量由十进制数字串后跟十进制小数部分或十进制指数部分（或两者皆有）组成。十进制小数部分由小数点（</span><code>.</code><span>）后跟十进制数字串组成。指数部分由大写或小写字母 </span><code>e</code><span> 为前缀后跟十进制数字串组成，这串数字表示 </span><code>e</code><span> 之前的数值乘以 10 的几次方。例如：</span><code>1.25e2</code><span> 表示 1.25 x 10²，也就是 </span><code>125.0</code><span>。同样，</span><code>1.25e－2</code><span> 表示 1.25 x 10¯²，也就是 </span><code>0.0125</code><span>。</span></p><p><span>十六进制浮点数字面量由前缀 </span><code>0x</code><span> 后跟可选的十六进制小数部分以及十六进制指数部分组成。十六进制小数部分由小数点后跟十六进制数字串组成。指数部分由大写或小写字母 </span><code>p</code><span> 为前缀后跟十进制数字串组成，这串数字表示 </span><code>p</code><span> 之前的数量乘以 2 的几次方。例如：</span><code>0xFp2</code><span> 表示 15 x 2²，也就是 </span><code>60</code><span>。同样，</span><code>0xFp-2</code><span> 表示 15 x 2¯²，也就是 </span><code>3.75</code><span>。</span></p><p><span>负数的浮点数字面量由负号（</span><code>-</code><span>）和浮点数字面量组成，例如 </span><code>-42.5</code><span>。</span></p><p><span>浮点数字面量允许使用下划线（</span><code>_</code><span>）来增强数字的可读性，下划线会被系统忽略，因此不会影响字面量的值。同样地，也可以在数字前加 </span><code>0</code><span>，并不会影响字面量的值。</span></p><p><span>除非特别指定，浮点数字面量的默认推导类型为 Swift 标准库类型中的 </span><code>Double</code><span>，表示 64 位浮点数。Swift 标准库也定义了 </span><code>Float</code><span> 类型，表示 32 位浮点数。</span></p><blockquote><p><span>浮点数字面量语法</span></p></blockquote><h4 id='floating-point-literal'><span>floating-point-literal</span></h4><blockquote><p><em><span>浮点数字面量</span></em><span> → </span><a href='#decimal-literal'><span>十进制字面量</span></a><span> </span><a href='#decimal-fraction'><span>十进制分数</span></a><sub><span>可选</span></sub><span> </span><a href='#decimal-exponent'><span>十进制指数</span></a><sub><span>可选</span></sub></p><p><em><span>浮点数字面量</span></em><span> → </span><a href='#hexadecimal-literal'><span>十六进制字面量</span></a><span> </span><a href='#hexadecimal-fraction'><span>十六进制分数</span></a><sub><span>可选</span></sub><span> </span><a href='#hexadecimal-exponent'><span>十六进制指数</span></a></p></blockquote><h4 id='decimal-fraction'><span>decimal-fraction</span></h4><blockquote><p><em><span>十进制分数</span></em><span> → </span><strong><span>.</span></strong><span> </span><a href='#decimal-literal'><span>十进制字面量</span></a></p></blockquote><h4 id='decimal-exponent'><span>decimal-exponent</span></h4><blockquote><p><em><span>十进制指数</span></em><span> → </span><a href='#floating-point-e'><span>十进制指数 e</span></a><span> </span><a href='#sign'><span>正负号</span></a><sub><span>可选</span></sub><span> </span><a href='#decimal-literal'><span>十进制字面量</span></a></p></blockquote><h4 id='hexadecimal-fraction'><span>hexadecimal-fraction</span></h4><blockquote><p><em><span>十六进制分数</span></em><span> → </span><strong><span>.</span></strong><span> </span><a href='#hexadecimal-digit'><span>十六进制数字</span></a><span> </span><a href='#hexadecimal-literal-characters'><span>十六进制字面量字符组</span></a><sub><span>可选</span></sub></p></blockquote><h4 id='hexadecimal-exponent'><span>hexadecimal-exponent</span></h4><blockquote><p><em><span>十六进制指数</span></em><span> → </span><a href='#floating-point-p'><span>十六进制指数 p</span></a><span> </span><a href='#sign'><span>正负号</span></a><sub><span>可选</span></sub><span> </span><a href='#decimal-literal'><span>十进制字面量</span></a></p></blockquote><h4 id='floating-point-e'><span>floating-point-e</span></h4><blockquote><p><em><span>十进制指数 e</span></em><span> → </span><strong><span>e</span></strong><span> | </span><strong><span>E</span></strong></p></blockquote><h4 id='floating-point-p'><span>floating-point-p</span></h4><blockquote><p><em><span>十六进制指数 p</span></em><span> → </span><strong><span>p</span></strong><span> | </span><strong><span>P</span></strong></p></blockquote><h4 id='sign'><span>sign</span></h4><blockquote><p><em><span>正负号</span></em><span> → </span><strong><span>+</span></strong><span> | </span><strong><span>-</span></strong></p></blockquote><h3 id='字符串字面量'><span>字符串字面量</span></h3><p><span>字符串字面量是被引号包括的一串字符组成。单行字符串字面量是被包在双引号中的一串字符组成，形式如下：</span></p><blockquote><p><span>&quot;</span><code>字符</code><span>&quot;</span></p></blockquote><p><span>字符串字面量中不能包含未转义的双引号（</span><code>&quot;</code><span>）、未转义的反斜线（</span><code>\</code><span>）、回车符、换行符。</span></p><p><span>多行字符串字面量被包在三个双引号中的一串字符组成，形式如下：</span></p><blockquote><p><span>&quot;&quot;&quot;</span>
+<code>字符</code>
+<span>&quot;&quot;&quot;</span></p></blockquote><p><span>与单行字符串字面量不同的是，多行字符串字面量可以包含不转义的双引号（&quot;），回车以及换行。它不能包含三个未转义的连续双引号。</span></p><p><code>&quot;&quot;&quot;</code><span> 之后的回车或者换行开始多行字符串字面量，它们不是字符串的一部分。结束部分的 </span><code>&quot;&quot;&quot;</code><span> 以及它之前的回车或者换行，也不是字符串的一部分。要让多行字符串字面量的开始或结束带有换行，就在第一行或者最后一行写一个空行。</span></p><p><span>多行字符串字面量可以使用任何空格或制表符组合进行缩进；这些缩进不会包含在字符串中。</span><code>&quot;&quot;&quot;</code><span> 的结束符号决定了缩进：字面量中的每一个非空行开头都必须与结束符 </span><code>&quot;&quot;&quot;</code><span> 之前出现的缩进完全一致；空格和制表符不会被转换。你可以在缩进后包含额外的空格和制表符；这些空格和制表符会在字符串中出现。</span></p><p><span>多行字符串字面量中的一行结束使用规范化的换行符号。尽管你的源代码混用了回车和换行符，字符串中所有的行结束都必须一样.</span></p><p><span>在多行字符串字面量里，在行末用反斜线（</span><code>\</code><span>）可以省略字符串行间中断。反斜线和换行符之间的空白也将被忽略。你可以在你的代码里用这种语法硬包裹多行字符串字面量，而不改变结果字符串的值。</span></p><p><span>可以在字符串字面量中使用的转义特殊符号如下：</span></p><ul><li><span>空字符 （</span><code>\0</code><span>）</span></li><li><span>反斜线 （</span><code>\\</code><span>）</span></li><li><span>水平制表符 （</span><code>\t</code><span>）</span></li><li><span>换行符 （</span><code>\n</code><span>）</span></li><li><span>回车符 （</span><code>\r</code><span>）</span></li><li><span>双引号 （</span><code>\&quot;</code><span>）</span></li><li><span>单引号 （</span><code>\&#39;</code><span>）</span></li><li><span>Unicode 标量 （</span><code>\u{</code><span>n</span><code>}</code><span>），n 为一到八位的十六进制数字</span></li></ul><p><span>字符串字面量允许在反斜杠（</span><code>\</code><span>）后的括号 </span><code>()</code><span> 中插入表达式的值。插入表达式可以包含字符串字面量，但不能包含未转义的反斜线（</span><code>\</code><span>）、回车符以及换行符。</span></p><p><span>例如，以下所有字符串字面量的值都是相同的：</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="swift"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="swift"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-string">"1 2 3"</span></span></pre></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-string">"1 2 \("3")"</span></span></pre><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-string">"1 2 \(</span><span class="cm-number">3</span><span class="cm-string">)"</span></span></pre><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-string">"1 2 \(</span><span class="cm-number">1</span> <span class="cm-operator">+</span> <span class="cm-number">2</span><span class="cm-string">)"</span></span></pre><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">let</span> <span class="cm-def">x</span> <span class="cm-operator">=</span> <span class="cm-number">3</span><span class="cm-punctuation">;</span> <span class="cm-string">"1 2 \(</span><span class="cm-variable">x</span><span class="cm-string">)"</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 110px;"></div><div class="CodeMirror-gutters" style="display: none; height: 110px;"></div></div></div></pre><p><span>由扩展分隔符包裹的字符串，它是由引号以及成对出现的数字符号（</span><code>#</code><span>）包裹的字符串序列。由扩展分隔符包裹的字符串形式如下所示：</span></p><blockquote><p><span>#</span><span>&quot;</span><code>characters</code><span>&quot;#</span></p><p><span>#</span><span>&quot;&quot;&quot;</span></p><p><code>characters</code></p><p><span>&quot;&quot;&quot;#</span></p></blockquote><p><span>特殊字符在被扩展分隔符分隔的结果字符串中会展示为普通字符，而不是特殊字符。你可以使用扩展分隔符来创建一些通常情况下具有特殊效果的字符串。例如，生成字符串插值，启动转义序列或终止字符串。</span></p><p><span>以下所示，由字符串字面量和扩展分隔符所创建的字符串是等价的:</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="swift"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="swift"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">let</span> <span class="cm-def">string</span> <span class="cm-operator">=</span> #<span class="cm-string">"\(</span><span class="cm-variable">x</span><span class="cm-string">) \ "</span> \<span class="cm-variable">u</span><span class="cm-punctuation">{</span><span class="cm-number">2603</span><span class="cm-punctuation">}</span><span class="cm-string">"#</span></span></pre></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">let</span> <span class="cm-def">escaped</span> <span class="cm-operator">=</span> <span class="cm-string">"\\(x) \\ \" \\u{2603}"</span></span></pre><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">print</span><span class="cm-punctuation">(</span><span class="cm-variable">string</span><span class="cm-punctuation">)</span></span></pre><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// Prints "\(x) \ " \u{2603}"</span></span></pre><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">print</span><span class="cm-punctuation">(</span><span class="cm-variable">string</span> <span class="cm-operator">==</span> <span class="cm-variable">escaped</span><span class="cm-punctuation">)</span></span></pre><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// Prints "true"</span></span></pre><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 154px;"></div><div class="CodeMirror-gutters" style="display: none; height: 154px;"></div></div></div></pre><p><span>如果在一个字符串中使用多对扩展分隔符，请不要在分隔符之间使用空格。</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="swift"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="swift"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">print</span><span class="cm-punctuation">(</span>###<span class="cm-string">"Line 1\###nLine 2"</span>###<span class="cm-punctuation">)</span> <span class="cm-comment">// OK</span></span></pre></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">print</span><span class="cm-punctuation">(</span># # #<span class="cm-string">"Line 1\# # #nLine 2"</span># # #<span class="cm-punctuation">)</span> <span class="cm-comment">// Error</span></span></pre><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 66px;"></div><div class="CodeMirror-gutters" style="display: none; height: 66px;"></div></div></div></pre><p><span>使用扩展分隔符创建的多行字符串字面量与普通多行字符串字面量具有相同的缩进要求。</span></p><p><span>字符串字面量的默认推导类型为 </span><code>String</code><span>。更多有关 </span><code>String</code><span> 类型的信息请参考 </span><a href='../02_language_guide/03_Strings_and_Characters.md'><span>字符串和字符</span></a><span> 以及 </span><a href='https://developer.apple.com/documentation/swift/string'><em><span>字符串结构参考</span></em></a><span>。</span></p><p><span>用 </span><code>＋</code><span> 操作符连接的字符型字面量是在编译时进行连接的。比如下面的 </span><code>textA</code><span> 和 </span><code>textB</code><span> 是完全一样的，</span><code>textA</code><span> 没有任何运行时的连接操作。</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="swift"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="swift"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">let</span> <span class="cm-def">textA</span> <span class="cm-operator">=</span> <span class="cm-string">"Hello "</span> <span class="cm-operator">+</span> <span class="cm-string">"world"</span></span></pre></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">let</span> <span class="cm-def">textB</span> <span class="cm-operator">=</span> <span class="cm-string">"Hello world"</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 44px;"></div><div class="CodeMirror-gutters" style="display: none; height: 44px;"></div></div></div></pre><blockquote><p><span>字符串字面量语法</span></p><p><em><span>字符串字面量</span></em><span> → </span><a href='#static-string-literal'><span>静态字符串字面量</span></a><span> | </span><a href='#interpolated-string-literal'><span>插值字符串字面量</span></a></p><p><em><span>字符串开分隔定界符</span></em><span> → </span><a href='#extended-string-literal-delimiter'><span>字符串扩展分隔符</span></a><span> </span><strong><span>&quot;</span></strong></p><p><em><span>字符串闭分隔定界符</span></em><span> → </span><strong><span>&quot;</span></strong><span> </span><a href='#extended-string-literal-delimiter'><span>字符串扩展分隔符</span></a><sub><span>可选</span></sub></p></blockquote><h4 id='static-string-literal'><span>static-string-literal</span></h4><blockquote><p><em><span>静态字符串字面量</span></em><span> → </span><a href='#extended-string-literal-delimiter'><span>字符串开分隔定界符</span></a><span> </span><a href='#quoted-text'><span>引用文本</span></a><sub><span>可选</span></sub><span> </span><a href='#extended-string-literal-delimiter'><span>字符串闭分隔定界符</span></a></p><p><em><span>静态字符串字面量</span></em><span> → </span><a href='#extended-string-literal-delimiter'><span>多行字符串开分隔定界符</span></a><span> </span><a href='#multiline-quoted-text'><span>多行引用文本</span></a><sub><span>可选</span></sub><span> </span><a href='#extended-string-literal-delimiter'><span>多行字符串闭分隔定界符</span></a></p><p><em><span>多行字符串开分隔定界符</span></em><span> → </span><a href='#extended-string-literal-delimiter'><span>字符串扩展分隔符</span></a><span> </span><strong><span>&quot;&quot;&quot;</span></strong></p><p><em><span>多行字符串闭分隔定界符</span></em><span> → </span><strong><span>&quot;&quot;&quot;</span></strong><span> </span><a href='#extended-string-literal-delimiter'><span>字符串扩展分隔符</span></a></p></blockquote><h4 id='extended-string-literal-delimiter'><span>extended-string-literal-delimiter</span></h4><blockquote><p><em><span>字符串扩展分隔符</span></em><span> → </span><strong><span>#</span></strong><span> </span><a href='#extended-string-literal-delimiter'><span>字符串扩展分隔符</span></a><sub><span>可选</span></sub></p></blockquote><h4 id='quoted-text'><span>quoted-text</span></h4><blockquote><p><em><span>引用文本</span></em><span> → </span><a href='#quoted-text-item'><span>引用文本项</span></a><span> </span><a href='#quoted-text'><span>引用文本</span></a><sub><span>可选</span></sub></p></blockquote><h4 id='quoted-text-item'><span>quoted-text-item</span></h4><blockquote><p><em><span>引用文本项</span></em><span> → </span><a href='#escaped-character'><span>转义字符</span></a></p><p><em><span>引用文本项</span></em><span> → 除了 </span><strong><span>&quot;</span></strong><span>、</span><strong><span>\</span></strong><span>、U+000A、U+000D 以外的所有 Unicode 字符</span></p></blockquote><h4 id='multiline-quoted-text-1'><span>multiline-quoted-text</span></h4><blockquote><p><em><span>多行引用文本</span></em><span> → </span><a href='#multiline-quoted-text-item'><span>多行引用文本项</span></a><span> </span><a href='#multiline-quoted-text'><span>多行引用文本</span></a><sub><span>可选</span></sub></p></blockquote><h4 id='multiline-quoted-text-item'><span>multiline-quoted-text-item</span></h4><blockquote><p><em><span>多行引用文本项</span></em><span> </span><a href='#escaped-character'><span>转义字符</span></a><sub><span>可选</span></sub></p></blockquote><h4 id='multiline-quoted-text-2'><span>multiline-quoted-text</span></h4><blockquote><p><em><span>多行引用文本</span></em><span> → 除了 </span><strong><span>\</span></strong><span> 以外的任何 Unicode 标量值</span></p><p><em><span>多行引用文本</span></em><span> → </span><a href='#escaped-newline'><span>转义换行</span></a></p></blockquote><h4 id='interpolated-string-literal'><span>interpolated-string-literal</span></h4><blockquote><p><em><span>插值字符串字面量</span></em><span> → </span><a href='#extended-string-literal-delimiter'><span>字符串开分隔定界符</span></a><span> </span><a href='#interpolated-text'><span>插值文本</span></a><sub><span>可选</span></sub><span> </span><a href='#extended-string-literal-delimiter'><span>字符串闭分隔定界符</span></a></p><p><em><span>插值字符串字面量</span></em><span> → </span><a href='#extended-string-literal-delimiter'><span>多行字符串开分隔定界符</span></a><span> </span><a href='#interpolated-text'><span>插值文本</span></a><sub><span>可选</span></sub><span> </span><a href='#extended-string-literal-delimiter'><span>多行字符串闭分隔定界符</span></a></p></blockquote><h4 id='interpolated-text'><span>interpolated-text</span></h4><blockquote><p><em><span>插值文本</span></em><span> → </span><a href='#interpolated-text-item'><span>插值文本项</span></a><span> </span><a href='#interpolated-text'><span>插值文本</span></a><sub><span>可选</span></sub></p></blockquote><h4 id='interpolated-text-item'><span>interpolated-text-item</span></h4><blockquote><p><em><span>插值文本项</span></em><span> → </span><strong><span>\</span><span>(</span></strong><a href='./04_Expressions.md'><span> 表达式 </span></a><strong><span>)</span></strong><span> | </span><a href='#quoted-text-item'><span>引用文本项</span></a></p><p><em><span>多行插值文本</span></em><span> → </span><a href='#multiline-quoted-text-item'><span>多行插值文本项</span></a><span> </span><a href='#multiline-quoted-text'><span>多行插值文本</span></a><sub><span>可选</span></sub></p><p><em><span>多行插值文本项</span></em><span> → </span><strong><span>\</span><span>(</span></strong><span> </span><a href='./04_Expressions.md'><span>表达式</span></a><span> </span><strong><span>)</span></strong><span> | </span><a href='#multiline-quoted-text-item'><span>多行引用文本项</span></a></p></blockquote><h4 id='escape-sequence'><span>escape-sequence</span></h4><blockquote><p><em><span>转义序列</span></em><span> → </span><strong><span>\</span></strong><span> </span><a href='#extended-string-literal-delimiter'><span>字符串扩展分隔符</span></a></p></blockquote><h4 id='escaped-character'><span>escaped-character</span></h4><blockquote><p><em><span>转义字符</span></em><span> → </span><a href='#escape-sequence'><span>转义序列</span></a><span> </span><strong><span>0</span></strong><span> | </span><a href='#escape-sequence'><span>转义序列</span></a><span> </span><strong><span>\</span></strong><span> | </span><a href='#escape-sequence'><span>转义序列</span></a><span> </span><strong><span>t</span></strong><span> | </span><a href='#escape-sequence'><span>转义序列</span></a><span> </span><strong><span>n</span></strong><span> | </span><a href='#escape-sequence'><span>转义序列</span></a><span> </span><strong><span>r</span></strong><span> | </span><a href='#escape-sequence'><span>转义序列</span></a><span> </span><strong><span>&quot;</span></strong><span> | </span><a href='#escape-sequence'><span>转义序列</span></a><span> </span><strong><span>&#39;</span></strong></p><p><em><span>转义字符</span></em><span> → </span><a href='#escape-sequence'><span>转义序列</span></a><span> </span><strong><span>u {</span></strong><span> </span><a href='#unicode-scalar-digits'><span>unicode 标量数字</span></a><span> </span><strong><span>}</span></strong></p></blockquote><h4 id='unicode-scalar-digits'><span>unicode-scalar-digits</span></h4><blockquote><p><em><span>unicode 标量数字</span></em><span> → 一到八位的十六进制数字</span></p></blockquote><h4 id='escaped-newline'><span>escaped-newline</span></h4><blockquote><p><em><span>转义换行符</span></em><span> → </span><a href='#escape-sequence'><span>转义序列</span></a><span> </span><a href='#whitespace'><span>空白</span></a><sub><span>可选</span></sub><span> </span><a href='#line-break'><span>断行符</span></a></p></blockquote><h2 id='运算符'><span>运算符</span></h2><p><span>Swift 标准库定义了许多可供使用的运算符，其中大部分在 </span><a href='../02_language_guide/02_Basic_Operators.md'><span>基础运算符</span></a><span> 和 </span><a href='../02_language_guide/27_Advanced_Operators.md'><span>高级运算符</span></a><span> 中进行了阐述。这一小节将描述哪些字符能用于自定义运算符。</span></p><p><span>自定义运算符可以由以下其中之一的 ASCII 字符 </span><code>/</code><span>、</span><code>=</code><span>、</span><code>-</code><span>、</span><code>+</code><span>、</span><code>!</code><span>、</span><code>*</code><span>、</span><code>%</code><span>、</span><code>&lt;</code><span>、</span><code>&gt;</code><span>、</span><code>&amp;</code><span>、</span><code>|</code><span>、</span><code>^</code><span>、</span><code>?</code><span> 以及 </span><code>~</code><span>，或者后面语法中规定的任一个 Unicode 字符（其中包含了</span><em><span>数学运算符</span></em><span>、</span><em><span>零散符号（Miscellaneous Symbols）</span></em><span> 以及</span><em><span>印刷符号（Dingbats）</span></em><span>之类的 Unicode 块）开始。在第一个字符之后，允许使用组合型 Unicode 字符。</span></p><p><span>您也可以以点号（</span><code>.</code><span>）开头来定义自定义运算符。这些运算符可以包含额外的点。例如 </span><code>.+.</code><span> 会被看作一个单独的运算符。如果某个运算符不是以点号开头的，那么它就无法再包含另外的点号了。例如，</span><code>+.+</code><span> 就会被看作为一个 </span><code>+</code><span> 运算符后面跟着一个 </span><code>.+</code><span> 运算符。</span></p><p><span>虽然您可以用问号 </span><code>（?）</code><span> 来自定义运算符，但是这个运算符不能只包含单独的一个问号。此外，虽然运算符可以包含一个惊叹号 </span><code>（!）</code><span>，但是前缀运算符不能够以问号或者惊叹号开头。</span></p><blockquote><p><span>注意</span></p><p><span>以下这些标记 </span><code>=</code><span>、</span><code>-&gt;</code><span>、</span><code>//</code><span>、</span><code>/*</code><span>、</span><code>*/</code><span>、</span><code>.</code><span>，前缀运算符 </span><code>&lt;</code><span>、</span><code>&amp;</code><span> 和 </span><code>?</code><span>，中缀运算符 </span><code>?</code><span>，后缀运算符 </span><code>&gt;</code><span>、</span><code>!</code><span> 和 </span><code>?</code><span> 是被系统保留的。这些符号不能被重载，也不能用作自定义运算符。</span></p></blockquote><p><span>运算符两侧的空白被用来区分该运算符是否为前缀运算符、后缀运算符或二元运算符。规则总结如下：</span></p><ul><li><span>如果运算符两侧都有空白或两侧都无空白，将被看作二元运算符。例如：</span><code>a+++b</code><span> 和 </span><code>a +++ b</code><span> 当中的 </span><code>+++</code><span> 运算符会被看作二元运算符。</span></li><li><span>如果运算符只有左侧空白，将被看作一元前缀运算符。例如 </span><code>a +++b</code><span> 中的 </span><code>+++</code><span> 运算符会被看做是一元前缀运算符。</span></li><li><span>如果运算符只有右侧空白，将被看作一元后缀运算符。例如 </span><code>a+++ b</code><span> 中的 </span><code>+++</code><span> 运算符会被看作是一元后缀运算符。</span></li><li><span>如果运算符左侧没有空白并紧跟 </span><code>（.）</code><span>，将被看作一元后缀运算符。例如 </span><code>a+++.b</code><span> 中的 </span><code>+++</code><span> 运算符会被视为一元后缀运算符（即上式被视为 </span><code>a+++ .b</code><span> 而不是 </span><code>a +++ .b</code><span>）。</span></li></ul><p><span>鉴于这些规则，</span><code>(</code><span>、</span><code>[</code><span> 和 </span><code>{</code><span> 是在运算符前面，</span><code>)</code><span>、</span><code>]</code><span> 和 </span><code>}</code><span> 是在运算符后面，以及字符 </span><code>,</code><span>、</span><code>;</code><span> 和 </span><code>:</code><span> 都被视为空白。</span></p><p><span>以上规则需注意一点。如果预定义运算符 </span><code>!</code><span> 或 </span><code>?</code><span> 左侧没有空白，则不管右侧是否有空白都将被看作后缀运算符。如果将 </span><code>?</code><span> 用作可选链式调用运算符，左侧必须无空白。如果用于条件运算符 </span><code>（? :）</code><span>，必须两侧都有空白。</span></p><p><span>在某些特定的设计中，以 </span><code>&lt;</code><span> 或 </span><code>&gt;</code><span> 开头的运算符会被分离成两个或多个符号。剩余部分可能会以同样的方式被再次分离。因此，在 </span><code>Dictionary&lt;String, Array&lt;Int&gt;&gt;</code><span> 中没有必要添加空白来消除闭合字符 </span><code>&gt;</code><span> 的歧义。在这个例子中，闭合字符 </span><code>&gt;</code><span> 不会被视为单独的符号，因而不会被错误解析为 </span><code>&gt;&gt;</code><span> 运算符。</span></p><p><span>要学习如何自定义运算符，请参考 </span><a href='../02_language_guide/27_Advanced_Operators.md#custom-operators'><span>自定义运算符</span></a><span> 和 </span><a href='./06_Declarations.md#operator-declaration'><span>运算符声明</span></a><span>。要学习如何重载运算符，请参考 </span><a href='../02_language_guide/27_Advanced_Operators.md#operator-functions'><span>运算符函数</span></a><span>。</span></p><blockquote><p><span>运算符语法</span></p><p><em><span>运算符</span></em><span> → </span><a href='#operator-head'><span>头部运算符</span></a><span> </span><a href='#operator-characters'><span>运算符字符组</span></a><sub><span>可选</span></sub></p><p><em><span>运算符</span></em><span> → </span><a href='#dot-operator-head'><span>头部点运算符</span></a><span> </span><a href='#dot-operator-characters'><span>点运算符字符组</span></a></p></blockquote><h4 id='operator-head'><span>operator-head</span></h4><blockquote><p><em><span>头部运算符</span></em><span> → </span><strong><span>/</span></strong><span> | </span><strong><span>=</span></strong><span> | </span><strong><span>-</span></strong><span> | </span><strong><span>+</span></strong><span> | </span><strong><span>!</span></strong><span> | </span><strong><span>*</span></strong><span> | </span><strong><span>%</span></strong><span> | </span><strong><span>&lt;</span></strong><span> | </span><strong><span>&gt;</span></strong><span> | </span><strong><span>&amp;</span></strong><span> | </span><strong><span>|</span></strong><span> | </span><strong><span>^</span></strong><span> | </span><strong><span>~</span></strong><span> | </span><strong><span>?</span></strong></p><p><em><span>头部运算符</span></em><span> → U+00A1–U+00A7</span></p><p><em><span>头部运算符</span></em><span> → U+00A9 或 U+00AB</span></p><p><em><span>头部运算符</span></em><span> → U+00AC 或 U+00AE</span></p><p><em><span>头部运算符</span></em><span> → U+00B0–U+00B1</span></p><p><em><span>头部运算符</span></em><span> → U+00B6，U+00BB，U+00BF，U+00D7，或 U+00F7</span></p><p><em><span>头部运算符</span></em><span> → U+2016–U+2017</span></p><p><em><span>头部运算符</span></em><span> → U+2020–U+2027</span></p><p><em><span>头部运算符</span></em><span> → U+2030–U+203E</span></p><p><em><span>头部运算符</span></em><span> → U+2041–U+2053</span></p><p><em><span>头部运算符</span></em><span> → U+2055–U+205E</span></p><p><em><span>头部运算符</span></em><span> → U+2190–U+23FF</span></p><p><em><span>头部运算符</span></em><span> → U+2500–U+2775</span></p><p><em><span>头部运算符</span></em><span> → U+2794–U+2BFF</span></p><p><em><span>头部运算符</span></em><span> → U+2E00–U+2E7F</span></p><p><em><span>头部运算符</span></em><span> → U+3001–U+3003</span></p><p><em><span>头部运算符</span></em><span> → U+3008–U+3020</span></p><p><em><span>头部运算符</span></em><span> → U+3030</span></p></blockquote><h4 id='operator-character'><span>operator-character</span></h4><blockquote><p><em><span>运算符字符</span></em><span> → </span><a href='#operator-head'><span>头部运算符</span></a></p><p><em><span>运算符字符</span></em><span> → U+0300–U+036F</span></p><p><em><span>运算符字符</span></em><span> → U+1DC0–U+1DFF</span></p><p><em><span>运算符字符</span></em><span> → U+20D0–U+20FF</span></p><p><em><span>运算符字符</span></em><span> → U+FE00–U+FE0F</span></p><p><em><span>运算符字符</span></em><span> → U+FE20–U+FE2F</span></p><p><em><span>运算符字符</span></em><span> → U+E0100–U+E01EF</span></p></blockquote><h4 id='operator-characters'><span>operator-characters</span></h4><blockquote><p><em><span>运算符字符组</span></em><span> → </span><a href='#operator-character'><span>运算符字符</span></a><span> </span><a href='#operator-characters'><span>运算符字符组</span></a><sub><span>可选</span></sub></p></blockquote><h4 id='dot-operator-head'><span>dot-operator-head</span></h4><blockquote><p><em><span>头部点运算符</span></em><span> → </span><strong><span>.</span></strong></p></blockquote><h4 id='dot-operator-character'><span>dot-operator-character</span></h4><blockquote><p><em><span>点运算符字符</span></em><span> → </span><strong><span>.</span></strong><span> | </span><a href='#operator-character'><span>运算符字符</span></a></p></blockquote><h4 id='dot-operator-characters'><span>dot-operator-characters</span></h4><blockquote><p><em><span>点运算符字符组</span></em><span> → </span><a href='#dot-operator-character'><span>点运算符字符</span></a><span> </span><a href='#dot-operator-characters'><span>点运算符字符组</span></a><sub><span>可选</span></sub></p><p><em><span>二元运算符</span></em><span> → </span><a href='#operator'><span>运算符</span></a></p><p><em><span>前缀运算符</span></em><span> → </span><a href='#operator'><span>运算符</span></a></p><p><em><span>后缀运算符</span></em><span> → </span><a href='#operator'><span>运算符</span></a></p></blockquote></div></div>
+</body>
+</html>

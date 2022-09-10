@@ -22,73 +22,88 @@ struct TutorialSwiftLanguage: View {
             List {
                 headView
                 
-                Section(header: Text("Swift教程").textCase(.none)) {
-                    ForEach(LangSwiftSyntaxList, id: \.id) { item in
-                        NavigationLink(destination: {
-                            API()
-                        }, label: {
-                            Text(item.name)
-                            Text(item.en)
-                                .font(.footnote)
-                                .foregroundColor(.gray)
-                                .lineLimit(1)
-                        })
-                    }
-                }
+                SwiftWelcomeView
+                SwiftSyntaxView
+                SwfitReferenceView
                 
                 footView
-                if isOpenSearch {
-                    TextField("",text: $searchKeyword)
-                        .toolbar {
-                            ToolbarItemGroup(placement: .status) {
-                                Text("恭喜")
-                            }
-                        }
-                }
             }
             .listStyle(.insetGrouped)
-            //.searchable(text: $searchKeyword, placement: SearchFieldPlacement.sidebar, prompt: "搜索Swift语法")
-            
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink(destination: {
+                        SwiftSyntaxSearch()
+                    }, label: {
+                        Image(systemName: "magnifyingglass")
+                            .foregroundColor(.black)
+                    })
+                }
+            }
         }
         .navigationTitle("Swift")
         .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
+    }
+    
+    var headView: some View {
+        HStack() {
+            Image("icon_swift")
+                .resizable(resizingMode: .stretch)
+                .frame(width: 25, height: 25)
+                .offset(y: -10)
+            VStack(alignment: .leading) {
+                Text(pageDesc)
+                    .lineSpacing(6)
+            }
+        }
+        .font(.callout)
+    }
+    
+    var SwiftWelcomeView: some View {
+        Section(header: Text("Welcome to Swift").textCase(.none)) {
+            NavigationLink("Swift 5.7英文文档", destination: {
+                InWebviewOpenUrl(url: swiftOfficialWebsite, title: "Swift")
+            })
+            ForEach(LangSwiftWelcomeList, id: \.id) { item in
                 NavigationLink(destination: {
-                    SwiftSyntaxSearch()
+                    //readMarkDownFile(mdDir: "swift/welcome", mdPath: item.nid, mdTitle: item.name)
+                    loadLocalHtml(pageTitle: item.name, filedir: "swift/welcome", filename: item.nid)
                 }, label: {
-                    Image(systemName: "magnifyingglass")
-                        .foregroundColor(.black)
+                    Text(item.name)
                 })
             }
         }
     }
     
-    var headView: some View {
-        Group {
-            HStack() {
-                Image("icon_swift")
-                    .resizable(resizingMode: .stretch)
-                    .frame(width: 25, height: 25)
-                    .offset(y: -10)
-                VStack(alignment: .leading) {
-                    Text(pageDesc)
-                        .lineSpacing(6)
-                }
-            }
-            .font(.callout)
-            
-            Section(header: Text("Welcome to Swift").textCase(.none)) {
-                NavigationLink("Swift 5.7英文文档", destination: {
-                    InWebviewOpenUrl(url: swiftOfficialWebsite, title: "Swift")
+    var SwiftSyntaxView: some View {
+        Section(header: Text("Swift教程").textCase(.none)) {
+            ForEach(LangSwiftSyntaxList, id: \.id) { item in
+                NavigationLink(destination: {
+                    //readMarkDownFile(mdDir: "swift/guide", mdPath: item.nid, mdTitle: item.name)
+                    loadLocalHtml(pageTitle: item.name, filedir: "swift/guide", filename: item.nid)
+                }, label: {
+                    Text(item.name)
+                    Text(item.en)
+                        .font(.footnote)
+                        .foregroundColor(.gray)
+                        .lineLimit(1)
                 })
-                ForEach(LangSwiftWelcomeList, id: \.id) { item in
-                    NavigationLink(destination: {
-                        API()
-                    }, label: {
-                        Text(item.name)
-                    })
-                }
+            }
+        }
+    }
+    
+    var SwfitReferenceView: some View {
+        Section(header: Text("Swift语言参考").textCase(.none)) {
+            ForEach(LangSwiftReferenceList, id: \.id) { item in
+                NavigationLink(destination: {
+                    //readMarkDownFile(mdDir: "swift/reference", mdPath: item.nid, mdTitle: item.name)
+                    loadLocalHtml(pageTitle: item.name, filedir: "swift/reference", filename: item.nid)
+                }, label: {
+                    Text(item.name)
+                    Text(item.en)
+                        .font(.footnote)
+                        .foregroundColor(.gray)
+                        .lineLimit(1)
+                })
             }
         }
     }

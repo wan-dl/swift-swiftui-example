@@ -56,7 +56,6 @@ struct GlobalSearch: View {
                     Text("无最近搜索")
                         .font(.title3)
                     Text("在您搜索文章等内容时，会自动添加到最近的搜索。")
-                    
                 }
                 .foregroundColor(.gray)
             }
@@ -67,7 +66,12 @@ struct GlobalSearch: View {
                         if !searchResultForSwift.isEmpty {
                             Section(header: Text("Swift Language").textCase(.none)) {
                                 ForEach(searchResultForSwift) { item in
-                                    Text(item.name)
+                                    NavigationLink(destination: {
+                                        //readMarkDownFile(mdDir: "swift/\(item.ndir)", mdPath: item.nid, mdTitle: item.name)
+                                        loadLocalHtml(pageTitle: item.name, filedir: "swift/\(item.ndir)", filename: item.nid)
+                                    }, label: {
+                                        Text(item.name)
+                                    })
                                 }
                             }
                         }
@@ -89,6 +93,12 @@ struct GlobalSearch: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .navigationTitle("搜索")
         .navigationBarTitleDisplayMode(.large)
+        .onAppear() {
+            getDataFromUsersDefaults()
+        }
+        .onDisappear() {
+            saveDataToUserDefaults()
+        }
     }
     
     // 搜索
@@ -109,7 +119,7 @@ struct GlobalSearch: View {
         }
         
         // 在Swift语言中文文档中搜索
-        let AllSwift: [LangSwiftItem] = LangSwiftSyntaxList + LangSwiftWelcomeList
+        let AllSwift: [LangSwiftItem] = LangSwiftSyntaxList + LangSwiftWelcomeList + LangSwiftReferenceList
         for i in AllSwift {
             let i_name: String = i.name
             let i_en: String = (i.en).lowercased()
@@ -124,9 +134,35 @@ struct GlobalSearch: View {
             return obj.name
         }
         if !tmpList.contains(word) {
-            self.LastQueryList.append(QueryItem(name: self.queryString))
+            self.LastQueryList.insert(QueryItem(name: self.queryString), at: 0)
+            //self.LastQueryList.append(QueryItem(name: self.queryString))
         }
-        
+    }
+    
+    // 从UserDefaults读取数据
+    func getDataFromUsersDefaults() {
+        if !LastQueryList.isEmpty {
+            return
+        }
+        do {
+            let historyData = UserDefaults.standard.array(forKey: "LastQueryList")
+            if historyData != nil {
+                for i in historyData! as Array {
+                    self.LastQueryList.append(QueryItem(name: i as! String))
+                }
+            }
+        } catch {}
+    }
+    
+    // 保存搜索历史数据到UserDefaults
+    func saveDataToUserDefaults() {
+        let tmpList = LastQueryList.map { (obj) -> String in
+            return obj.name
+        }
+        if tmpList.isEmpty {
+            return
+        }
+        UserDefaults.standard.set(tmpList, forKey: "LastQueryList")
     }
 }
 
