@@ -26,6 +26,9 @@ struct ComponentsView: View {
                         NavigationLink(destination: item2.viewname, label: {
                             Text(item2.name)
                                 .lineLimit(1)
+                            Text(item2.available)
+                                .font(.caption)
+                                .foregroundColor(.gray)
                         })
                     }
                 }
