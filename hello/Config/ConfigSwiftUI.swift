@@ -74,6 +74,7 @@ let SwiftUIComponentsList: [CInfo] = [
         seas: [
             LangSwiftUIItem(name: "List - 列表", searchKeyword: "", viewname: AnyView(v_List())),
             LangSwiftUIItem(name: "Form - 表单", searchKeyword: "", viewname: AnyView(v_Form())),
+            LangSwiftUIItem(name: "LabeledContent", searchKeyword: "", viewname: AnyView(v_LabeledContent())),
             LangSwiftUIItem(name: "GroupBox", searchKeyword: "", viewname: AnyView(v_GroupBox())),
             LangSwiftUIItem(name: "ScrollView", searchKeyword: "", viewname: AnyView(v_ScrollView())),
             LangSwiftUIItem(name: "ScrollViewReader", searchKeyword: "", viewname: AnyView(v_ScrollViewReader())),

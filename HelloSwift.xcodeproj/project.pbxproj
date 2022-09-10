@@ -46,6 +46,7 @@
 		63428E1528CC5C5300BFFCF0 /* loadLocalHtml.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63428E1428CC5C5300BFFCF0 /* loadLocalHtml.swift */; };
 		634D680F28CCC40200B8C9D1 /* ConfigSwiftUI_Desc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634D680E28CCC40200B8C9D1 /* ConfigSwiftUI_Desc.swift */; };
 		634D681128CCC5F900B8C9D1 /* Show_SwiftUI_Docs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634D681028CCC5F900B8C9D1 /* Show_SwiftUI_Docs.swift */; };
+		634D681328CCD67300B8C9D1 /* v_LabeledContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634D681228CCD67300B8C9D1 /* v_LabeledContent.swift */; };
 		6350BF3928C640EA00EE3F95 /* v_DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6350BF3828C640EA00EE3F95 /* v_DatePicker.swift */; };
 		6350BF3B28C6412800EE3F95 /* v_ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6350BF3A28C6412800EE3F95 /* v_ColorPicker.swift */; };
 		6350BF3D28C6418900EE3F95 /* v_MultiPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6350BF3C28C6418900EE3F95 /* v_MultiPicker.swift */; };
@@ -209,6 +210,7 @@
 		63428E1428CC5C5300BFFCF0 /* loadLocalHtml.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loadLocalHtml.swift; sourceTree = "<group>"; };
 		634D680E28CCC40200B8C9D1 /* ConfigSwiftUI_Desc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigSwiftUI_Desc.swift; sourceTree = "<group>"; };
 		634D681028CCC5F900B8C9D1 /* Show_SwiftUI_Docs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show_SwiftUI_Docs.swift; sourceTree = "<group>"; };
+		634D681228CCD67300B8C9D1 /* v_LabeledContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_LabeledContent.swift; sourceTree = "<group>"; };
 		6350BF3828C640EA00EE3F95 /* v_DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_DatePicker.swift; sourceTree = "<group>"; };
 		6350BF3A28C6412800EE3F95 /* v_ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_ColorPicker.swift; sourceTree = "<group>"; };
 		6350BF3C28C6418900EE3F95 /* v_MultiPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_MultiPicker.swift; sourceTree = "<group>"; };
@@ -441,6 +443,7 @@
 				63808AFD28C39DCB00023081 /* Other */,
 				6350BF3728C640A400EE3F95 /* Picker */,
 				63CD856D28C4F0AA004FDEFA /* TextField */,
+				634D681228CCD67300B8C9D1 /* v_LabeledContent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -680,6 +683,7 @@
 				6317D7092892D32E00192E5A /* v_fullScreenCover.swift in Sources */,
 				63C0954A2899620F00498562 /* Shadow.swift in Sources */,
 				63CD857128C4F105004FDEFA /* InputAutoFocus.swift in Sources */,
+				634D681328CCD67300B8C9D1 /* v_LabeledContent.swift in Sources */,
 				639D2A1A289833B200B3AEF3 /* p_tmp.swift in Sources */,
 				635108062898220A00999B3D /* chart_LineMark.swift in Sources */,
 				63C0955728996B1400498562 /* TapDelay.swift in Sources */,
