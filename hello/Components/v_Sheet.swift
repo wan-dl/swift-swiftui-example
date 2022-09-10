@@ -15,17 +15,25 @@ struct v_Sheet: View {
     @State private var query = ""
 
     var body: some View {
-        VStack {
-            Button("Display bottom sheet") {
+        VStack() {
+            
+            Show_SwiftUI_Docs(available_versions: ui_sheet_available_versions, desc: ui_sheet_desc, declaration: ui_sheet_declaration)
+            
+            Button("点击显示底部sheet") {
                 sheetShown = true
             }
+            .buttonStyle(.bordered)
             .sheet(isPresented: $sheetShown) {
                 NavigationView {
                     Text("You query: \(query)")
                         .searchable(text: $query)
                         .navigationTitle("Search")
                 }
+                // iOS 16.0 增加.presentationDetents() 修饰符，可以控制sheet大小
+                // .presentationDetents([.medium])
             }
+            
+            Spacer()
         }
         .navigationTitle(".sheet")
         .navigationBarTitleDisplayMode(.inline)

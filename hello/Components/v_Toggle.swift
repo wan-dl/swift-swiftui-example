@@ -62,8 +62,6 @@ struct CheckBoxForStyle: ToggleStyle {
                     configuration.isOn.toggle()
                 }
                 Spacer()
-                
-            
         }
     }
 }

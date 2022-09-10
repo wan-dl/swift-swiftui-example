@@ -44,6 +44,8 @@
 		63428E1128CC477A00BFFCF0 /* TutorialDeveloperAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63428E1028CC477A00BFFCF0 /* TutorialDeveloperAccount.swift */; };
 		63428E1328CC496E00BFFCF0 /* ConfigApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63428E1228CC496E00BFFCF0 /* ConfigApi.swift */; };
 		63428E1528CC5C5300BFFCF0 /* loadLocalHtml.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63428E1428CC5C5300BFFCF0 /* loadLocalHtml.swift */; };
+		634D680F28CCC40200B8C9D1 /* ConfigSwiftUI_Desc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634D680E28CCC40200B8C9D1 /* ConfigSwiftUI_Desc.swift */; };
+		634D681128CCC5F900B8C9D1 /* Show_SwiftUI_Docs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634D681028CCC5F900B8C9D1 /* Show_SwiftUI_Docs.swift */; };
 		6350BF3928C640EA00EE3F95 /* v_DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6350BF3828C640EA00EE3F95 /* v_DatePicker.swift */; };
 		6350BF3B28C6412800EE3F95 /* v_ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6350BF3A28C6412800EE3F95 /* v_ColorPicker.swift */; };
 		6350BF3D28C6418900EE3F95 /* v_MultiPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6350BF3C28C6418900EE3F95 /* v_MultiPicker.swift */; };
@@ -205,6 +207,8 @@
 		63428E1028CC477A00BFFCF0 /* TutorialDeveloperAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialDeveloperAccount.swift; sourceTree = "<group>"; };
 		63428E1228CC496E00BFFCF0 /* ConfigApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigApi.swift; sourceTree = "<group>"; };
 		63428E1428CC5C5300BFFCF0 /* loadLocalHtml.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loadLocalHtml.swift; sourceTree = "<group>"; };
+		634D680E28CCC40200B8C9D1 /* ConfigSwiftUI_Desc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigSwiftUI_Desc.swift; sourceTree = "<group>"; };
+		634D681028CCC5F900B8C9D1 /* Show_SwiftUI_Docs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show_SwiftUI_Docs.swift; sourceTree = "<group>"; };
 		6350BF3828C640EA00EE3F95 /* v_DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_DatePicker.swift; sourceTree = "<group>"; };
 		6350BF3A28C6412800EE3F95 /* v_ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_ColorPicker.swift; sourceTree = "<group>"; };
 		6350BF3C28C6418900EE3F95 /* v_MultiPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_MultiPicker.swift; sourceTree = "<group>"; };
@@ -483,6 +487,7 @@
 				6351D3F528B9118600B49EC2 /* urlRequest2.swift */,
 				63FF4F8A28CA243900F44E01 /* InWebviewOpenUrl.swift */,
 				63428E1428CC5C5300BFFCF0 /* loadLocalHtml.swift */,
+				634D681028CCC5F900B8C9D1 /* Show_SwiftUI_Docs.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -572,6 +577,7 @@
 				E5E5AA5328C9CCA600C95A00 /* ConfigSwift.swift */,
 				E5E8B01C28CB160200E70AA2 /* ConfigSwiftUI.swift */,
 				63428E1228CC496E00BFFCF0 /* ConfigApi.swift */,
+				634D680E28CCC40200B8C9D1 /* ConfigSwiftUI_Desc.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -702,6 +708,7 @@
 				E586EC072892324100360671 /* v_Slider.swift in Sources */,
 				637622CE28C38DA00090BBBD /* v_PasteButton.swift in Sources */,
 				E52ECFB72893A7AE0051D2DE /* v_Alert.swift in Sources */,
+				634D680F28CCC40200B8C9D1 /* ConfigSwiftUI_Desc.swift in Sources */,
 				63AFF201289AAE5100C949E3 /* p_markdownWithAttributedString.swift in Sources */,
 				63FF4F8B28CA243900F44E01 /* InWebviewOpenUrl.swift in Sources */,
 				63C0954E2899644B00498562 /* a_withAnimation.swift in Sources */,
@@ -741,6 +748,7 @@
 				63D8625728A7279F00EC9CCE /* UserLogin.swift in Sources */,
 				E57E0ABD2892931500B86669 /* v_Picker.swift in Sources */,
 				6309715228950FCC00138FAD /* Home.swift in Sources */,
+				634D681128CCC5F900B8C9D1 /* Show_SwiftUI_Docs.swift in Sources */,
 				639BA7BC28942D5F007C2797 /* p_navigationBar.swift in Sources */,
 				E52ECFB92893A8860051D2DE /* v_ActionSheet.swift in Sources */,
 				635DB87E2891801C0019BC3B /* SwiftUIComponents.swift in Sources */,

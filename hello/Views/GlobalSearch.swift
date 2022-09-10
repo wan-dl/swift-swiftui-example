@@ -21,7 +21,8 @@ struct GlobalSearch: View {
     @State private var searchResultForSwiftUI: [LangSwiftUIItem] = []
     @State private var searchResultForApi: [ApiItem] = []
     
-    @FocusState var isFocused: Bool
+//    @FocusState var isFocused: Bool
+//    @AccessibilityFocusState private var isFocused2: Bool
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -38,8 +39,9 @@ struct GlobalSearch: View {
                     self.searchResultForApi = []
                     gotoSearch()
                 }
-                
-            
+//                .focused($isFocused)
+//                .accessibilityFocused($isFocused2)
+
             if !LastQueryList.isEmpty && queryString.isEmpty {
                 List {
                     Section(header: Text("最近搜索").font(.subheadline)) {
@@ -47,6 +49,8 @@ struct GlobalSearch: View {
                             Text(item.name)
                                 .onTapGesture {
                                     self.queryString = item.name
+//                                    self.isFocused = true
+//                                    self.isFocused2 = true
                                 }
                         }
                     }
@@ -179,15 +183,13 @@ struct GlobalSearch: View {
     
     // 保存搜索历史数据到UserDefaults
     func saveDataToUserDefaults() {
-        task {
-            let tmpList = LastQueryList.map { (obj) -> String in
-                return obj.name
-            }
-            if tmpList.isEmpty {
-                return
-            }
-            UserDefaults.standard.set(tmpList, forKey: "LastQueryList")
+        let tmpList = LastQueryList.map { (obj) -> String in
+            return obj.name
         }
+        if tmpList.isEmpty {
+            return
+        }
+        UserDefaults.standard.set(tmpList, forKey: "LastQueryList")
     }
 }
 
