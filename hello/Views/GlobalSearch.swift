@@ -93,12 +93,12 @@ struct GlobalSearch: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .navigationTitle("搜索")
         .navigationBarTitleDisplayMode(.large)
-        .onAppear() {
-            getDataFromUsersDefaults()
-        }
-        .onDisappear() {
-            saveDataToUserDefaults()
-        }
+//        .onAppear() {
+//            getDataFromUsersDefaults()
+//        }
+//        .onDisappear() {
+//            saveDataToUserDefaults()
+//        }
     }
     
     // 搜索

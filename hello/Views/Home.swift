@@ -16,7 +16,7 @@ struct elment: Identifiable {
 }
 
 var startList: [elment] = [
-    elment(docId: "introduce", title: "", desc: "简介", icon: "doc.viewfinder"),
+    elment(docId: "introduce", title: "", desc: "入门", icon: "doc.viewfinder"),
     elment(docId: "CreateProject", title: "", desc: "新建项目", icon: "plus.square"),
     elment(docId: "Account", title: "", desc: "开发者账号", icon: "person.badge.shield.checkmark")
 ]

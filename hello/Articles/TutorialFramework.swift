@@ -9,7 +9,11 @@ import SwiftUI
 
 struct TutorialFramework: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Hello World!")
+        }
+        .navigationTitle("入门")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

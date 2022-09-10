@@ -9,7 +9,11 @@ import SwiftUI
 
 struct TutorialDeveloperAccount: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        }
+        .navigationTitle("Apple开发者账户")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

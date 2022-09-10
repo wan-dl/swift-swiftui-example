@@ -6,16 +6,15 @@
 //
 
 import SwiftUI
-import WebKit
 
 struct TutorialIntroduction: View {
     
-    
     var body: some View {
         VStack {
-            Text("换行")
-            
+            Text("Hello World!")
         }
+        .navigationTitle("入门")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

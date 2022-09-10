@@ -9,7 +9,11 @@ import SwiftUI
 
 struct TutorialSwiftUI: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        }
+        .navigationTitle("SwiftUI介绍")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
