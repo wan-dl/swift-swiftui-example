@@ -34,7 +34,7 @@ struct Home: View {
                 startView
                 
                 Group {
-                    Text("进阶")
+                    Text("教程")
                         .font(.title2)
                     tutorialView
                 }
@@ -131,17 +131,23 @@ struct HomeBlockUI_2: View {
     
     var body: some View {
         HStack(alignment: .center) {
-            Image(icon)
-                .resizable(resizingMode: .stretch)
-                .frame(width: 40, height: 40)
-                .offset(x: 15)
+            VStack(alignment:.center) {
+                Image(icon)
+                    .resizable(resizingMode: .stretch)
+                    .frame(width: 35, height: 35)
+                    .offset(x: 5)
+            }
+            .frame(width: 55, height: 110, alignment: .center)
+            
             VStack(alignment: .leading) {
                 Text(title)
                 Text(desc)
                     .font(.footnote)
                     .foregroundColor(.secondary)
+                    .offset(y: 6)
             }
-            .frame(width: 140)
+            
+            Spacer()
         }
         .frame(width: 180, height: 110)
         .background(.white)
