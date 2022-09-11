@@ -51,3 +51,35 @@ struct RadioButton: View {
     }
 }
 
+// 左图右文
+struct Image_Text_View: View {
+    @State var icon: String = ""
+    @State var title: String = ""
+    @State var desc: String = ""
+    
+    var body: some View {
+        HStack() {
+            VStack() {
+                Image(systemName: icon)
+                    .resizable(resizingMode: .stretch)
+                    .frame(width: 35, height: 35)
+            }
+            .frame(width: 60, height: 110, alignment: .center)
+            
+            VStack(alignment: .leading) {
+                Text(title)
+                    .font(.title3)
+                Text(desc)
+                    .font(.footnote)
+                    .foregroundColor(.secondary)
+                    .offset(y: 5)
+            }
+            Spacer()
+        }
+        .padding()
+        .frame(height: 110)
+        .background(.white)
+        .foregroundColor(.black)
+        .cornerRadius(10)
+    }
+}

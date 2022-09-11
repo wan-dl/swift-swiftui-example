@@ -84,7 +84,7 @@ struct TutorialSwiftLanguage: View {
                     Text(item.name)
                     Text(item.en)
                         .font(.footnote)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.secondary)
                         .lineLimit(1)
                 })
             }
