@@ -26,9 +26,12 @@ struct ComponentsView: View {
                         NavigationLink(destination: item2.viewname, label: {
                             Text(item2.name)
                                 .lineLimit(1)
-                            Text(item2.available)
-                                .font(.caption)
-                                .foregroundColor(.secondary)
+                            if item2.available != "iOS 13.0+" && !item2.available.isEmpty {
+                                Text(item2.available)
+                                    .font(.caption)
+                                    .foregroundColor(.secondary)
+                            }
+                            
                         })
                     }
                 }

@@ -67,6 +67,7 @@ struct TutorialCreateProject: View {
                 }
             }
             .padding()
+            .lineSpacing(6.0)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.gray.opacity(0.1))
