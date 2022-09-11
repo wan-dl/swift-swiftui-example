@@ -28,7 +28,7 @@ struct ComponentsView: View {
                                 .lineLimit(1)
                             Text(item2.available)
                                 .font(.caption)
-                                .foregroundColor(.gray)
+                                .foregroundColor(.secondary)
                         })
                     }
                 }

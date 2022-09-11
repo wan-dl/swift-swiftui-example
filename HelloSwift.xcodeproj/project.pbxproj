@@ -78,6 +78,7 @@
 		6384F9E1289C98E1005BDC98 /* api_URLSession_Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6384F9E0289C98E1005BDC98 /* api_URLSession_Post.swift */; };
 		6389EE9928A1683E002B6E4A /* api_HealthKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6389EE9828A1683E002B6E4A /* api_HealthKit.swift */; };
 		6393F4B228C3974700CBD1DA /* v_statusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6393F4B128C3974700CBD1DA /* v_statusBar.swift */; };
+		639A97B228CD927B0044027D /* v_contextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639A97B128CD927B0044027D /* v_contextMenu.swift */; };
 		639BA7AF28941789007C2797 /* v_Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639BA7AE28941789007C2797 /* v_Divider.swift */; };
 		639BA7B128941C1D007C2797 /* v_Spacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639BA7B028941C1D007C2797 /* v_Spacer.swift */; };
 		639BA7B3289420C4007C2797 /* v_ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639BA7B2289420C4007C2797 /* v_ProgressView.swift */; };
@@ -243,6 +244,7 @@
 		6389EE9828A1683E002B6E4A /* api_HealthKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_HealthKit.swift; sourceTree = "<group>"; };
 		639276E628C8D640007A1D6F /* HelloSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6393F4B128C3974700CBD1DA /* v_statusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_statusBar.swift; sourceTree = "<group>"; };
+		639A97B128CD927B0044027D /* v_contextMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_contextMenu.swift; sourceTree = "<group>"; };
 		639BA7AE28941789007C2797 /* v_Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_Divider.swift; sourceTree = "<group>"; };
 		639BA7B028941C1D007C2797 /* v_Spacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_Spacer.swift; sourceTree = "<group>"; };
 		639BA7B2289420C4007C2797 /* v_ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_ProgressView.swift; sourceTree = "<group>"; };
@@ -444,6 +446,7 @@
 				6350BF3728C640A400EE3F95 /* Picker */,
 				63CD856D28C4F0AA004FDEFA /* TextField */,
 				634D681228CCD67300B8C9D1 /* v_LabeledContent.swift */,
+				639A97B128CD927B0044027D /* v_contextMenu.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -687,6 +690,7 @@
 				639D2A1A289833B200B3AEF3 /* p_tmp.swift in Sources */,
 				635108062898220A00999B3D /* chart_LineMark.swift in Sources */,
 				63C0955728996B1400498562 /* TapDelay.swift in Sources */,
+				639A97B228CD927B0044027D /* v_contextMenu.swift in Sources */,
 				63168D0528997BF200C7D0DC /* api_video.swift in Sources */,
 				6317D70D2892D86600192E5A /* v_Form.swift in Sources */,
 				63C7776D28B2678400F56321 /* api_WebView.swift in Sources */,

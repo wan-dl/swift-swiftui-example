@@ -23,6 +23,7 @@ struct InputAccentColor: View {
                     TextField("光标显示显示红色", text: $inputText)
                         .textFieldStyle(.roundedBorder)
                         .gaugeStyle(.linearCapacity)
+                        .accentColor(.red)
                         .tint(.red)
                 } else {
                     TextField("光标显示显示红色", text: $inputText)

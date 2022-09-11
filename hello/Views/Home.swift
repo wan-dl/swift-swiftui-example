@@ -137,10 +137,9 @@ struct HomeBlockUI_2: View {
                 .offset(x: 15)
             VStack(alignment: .leading) {
                 Text(title)
-                    .font(.body)
                 Text(desc)
                     .font(.footnote)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.secondary)
             }
             .frame(width: 140)
         }
