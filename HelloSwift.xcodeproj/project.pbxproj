@@ -36,6 +36,13 @@
 		6327FA6228957E440091BB9B /* p_tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6327FA6128957E440091BB9B /* p_tabbar.swift */; };
 		6327FA6428958B740091BB9B /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6327FA6328958B740091BB9B /* RootView.swift */; };
 		63286E4428CF28B200C03024 /* ConfigFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63286E4328CF28B200C03024 /* ConfigFramework.swift */; };
+		63286E4728CF7F1C00C03024 /* v_onTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63286E4628CF7F1C00C03024 /* v_onTapGesture.swift */; };
+		63286E4928CF810500C03024 /* v_onLongPressGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63286E4828CF810500C03024 /* v_onLongPressGesture.swift */; };
+		63286E4B28CF824E00C03024 /* v_gesture_LongPressGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63286E4A28CF824E00C03024 /* v_gesture_LongPressGesture.swift */; };
+		63286E4D28CF833900C03024 /* v_DragGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63286E4C28CF833900C03024 /* v_DragGesture.swift */; };
+		63286E4F28CF83A700C03024 /* v_MagnificationGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63286E4E28CF83A700C03024 /* v_MagnificationGesture.swift */; };
+		63286E5128CF840800C03024 /* v_RotationGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63286E5028CF840800C03024 /* v_RotationGesture.swift */; };
+		63286E5328CF889B00C03024 /* v_SpatialTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63286E5228CF889B00C03024 /* v_SpatialTapGesture.swift */; };
 		63319D8C28AD2FC700980F53 /* api_saveImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63319D8B28AD2FC700980F53 /* api_saveImage.swift */; };
 		6332B64628B3BD0400193C04 /* LifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6332B64528B3BD0400193C04 /* LifeCycle.swift */; };
 		63428E0928CC462700BFFCF0 /* TutorialSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63428E0828CC462700BFFCF0 /* TutorialSwiftUI.swift */; };
@@ -201,6 +208,13 @@
 		6327FA6128957E440091BB9B /* p_tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p_tabbar.swift; sourceTree = "<group>"; };
 		6327FA6328958B740091BB9B /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		63286E4328CF28B200C03024 /* ConfigFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigFramework.swift; sourceTree = "<group>"; };
+		63286E4628CF7F1C00C03024 /* v_onTapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_onTapGesture.swift; sourceTree = "<group>"; };
+		63286E4828CF810500C03024 /* v_onLongPressGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_onLongPressGesture.swift; sourceTree = "<group>"; };
+		63286E4A28CF824E00C03024 /* v_gesture_LongPressGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_gesture_LongPressGesture.swift; sourceTree = "<group>"; };
+		63286E4C28CF833900C03024 /* v_DragGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_DragGesture.swift; sourceTree = "<group>"; };
+		63286E4E28CF83A700C03024 /* v_MagnificationGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_MagnificationGesture.swift; sourceTree = "<group>"; };
+		63286E5028CF840800C03024 /* v_RotationGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_RotationGesture.swift; sourceTree = "<group>"; };
+		63286E5228CF889B00C03024 /* v_SpatialTapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_SpatialTapGesture.swift; sourceTree = "<group>"; };
 		63319D8B28AD2FC700980F53 /* api_saveImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_saveImage.swift; sourceTree = "<group>"; };
 		6332B64528B3BD0400193C04 /* LifeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCycle.swift; sourceTree = "<group>"; };
 		6334F9DB28C7767000DBEA18 /* HelloSwiftRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HelloSwiftRelease.entitlements; sourceTree = "<group>"; };
@@ -342,6 +356,20 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		63286E4528CF7ED500C03024 /* Gesture */ = {
+			isa = PBXGroup;
+			children = (
+				63286E4628CF7F1C00C03024 /* v_onTapGesture.swift */,
+				63286E4828CF810500C03024 /* v_onLongPressGesture.swift */,
+				63286E4A28CF824E00C03024 /* v_gesture_LongPressGesture.swift */,
+				63286E4C28CF833900C03024 /* v_DragGesture.swift */,
+				63286E4E28CF83A700C03024 /* v_MagnificationGesture.swift */,
+				63286E5028CF840800C03024 /* v_RotationGesture.swift */,
+				63286E5228CF889B00C03024 /* v_SpatialTapGesture.swift */,
+			);
+			path = Gesture;
+			sourceTree = "<group>";
+		};
 		6350BF3728C640A400EE3F95 /* Picker */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,6 +436,7 @@
 				63AC4B0C28916D71004B4A45 /* v_Button.swift */,
 				639BA7B62894229B007C2797 /* v_Canvas.swift */,
 				63BE461E2894FE1000FB9844 /* v_confirmationDialog.swift */,
+				639A97B128CD927B0044027D /* v_contextMenu.swift */,
 				6317D7122892DE1C00192E5A /* v_DisclosureGroup.swift */,
 				639BA7AE28941789007C2797 /* v_Divider.swift */,
 				6317D70C2892D86600192E5A /* v_Form.swift */,
@@ -418,6 +447,7 @@
 				6317D70E2892DA1E00192E5A /* v_GroupBox.swift */,
 				E52ECFB42893A4360051D2DE /* v_Image.swift */,
 				63AC4B0E289177C3004B4A45 /* v_Label.swift */,
+				634D681228CCD67300B8C9D1 /* v_LabeledContent.swift */,
 				635DB8802891819E0019BC3B /* v_Layout.swift */,
 				E5CE5CB228925B0600BC7FF1 /* v_Link.swift */,
 				6373BB262893595C0002A084 /* v_List.swift */,
@@ -444,11 +474,10 @@
 				63AAAD582890C65F005F1C20 /* v_TextField.swift */,
 				6317D7162892E03700192E5A /* v_TimelineView.swift */,
 				E5CE5CAD289252B800BC7FF1 /* v_Toggle.swift */,
+				63286E4528CF7ED500C03024 /* Gesture */,
 				63808AFD28C39DCB00023081 /* Other */,
 				6350BF3728C640A400EE3F95 /* Picker */,
 				63CD856D28C4F0AA004FDEFA /* TextField */,
-				634D681228CCD67300B8C9D1 /* v_LabeledContent.swift */,
-				639A97B128CD927B0044027D /* v_contextMenu.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -687,12 +716,15 @@
 				636104E128966A7E000DA851 /* p_tabview.swift in Sources */,
 				63FF7DDF28C476D8005908BE /* p_Shake.swift in Sources */,
 				6317D7092892D32E00192E5A /* v_fullScreenCover.swift in Sources */,
+				63286E4D28CF833900C03024 /* v_DragGesture.swift in Sources */,
 				63C0954A2899620F00498562 /* Shadow.swift in Sources */,
 				63CD857128C4F105004FDEFA /* InputAutoFocus.swift in Sources */,
 				634D681328CCD67300B8C9D1 /* v_LabeledContent.swift in Sources */,
 				639D2A1A289833B200B3AEF3 /* p_tmp.swift in Sources */,
 				635108062898220A00999B3D /* chart_LineMark.swift in Sources */,
+				63286E4B28CF824E00C03024 /* v_gesture_LongPressGesture.swift in Sources */,
 				63C0955728996B1400498562 /* TapDelay.swift in Sources */,
+				63286E5328CF889B00C03024 /* v_SpatialTapGesture.swift in Sources */,
 				639A97B228CD927B0044027D /* v_contextMenu.swift in Sources */,
 				63168D0528997BF200C7D0DC /* api_video.swift in Sources */,
 				6317D70D2892D86600192E5A /* v_Form.swift in Sources */,
@@ -729,6 +761,7 @@
 				63F2526B28995BD60055BCF0 /* p_toolbar.swift in Sources */,
 				636104E328967CCA000DA851 /* v_Gradient.swift in Sources */,
 				63E81B9B289E470B00360F45 /* ToastView.swift in Sources */,
+				63286E4728CF7F1C00C03024 /* v_onTapGesture.swift in Sources */,
 				6373BB29289364E50002A084 /* v_ScrollView.swift in Sources */,
 				63FD9555289F91440069F691 /* api_camera_photo.swift in Sources */,
 				63808AFF28C39DD900023081 /* v_blur.swift in Sources */,
@@ -761,6 +794,7 @@
 				E57E0ABD2892931500B86669 /* v_Picker.swift in Sources */,
 				6309715228950FCC00138FAD /* Home.swift in Sources */,
 				634D681128CCC5F900B8C9D1 /* Show_SwiftUI_Docs.swift in Sources */,
+				63286E4F28CF83A700C03024 /* v_MagnificationGesture.swift in Sources */,
 				639BA7BC28942D5F007C2797 /* p_navigationBar.swift in Sources */,
 				E52ECFB92893A8860051D2DE /* v_ActionSheet.swift in Sources */,
 				635DB87E2891801C0019BC3B /* SwiftUIComponents.swift in Sources */,
@@ -798,6 +832,7 @@
 				63428E0B28CC46A400BFFCF0 /* TutorialFramework.swift in Sources */,
 				63CB291128B7B70E00693FBB /* urlRequest1.swift in Sources */,
 				63FEF4182896B18000BC886C /* v_Gesture.swift in Sources */,
+				63286E4928CF810500C03024 /* v_onLongPressGesture.swift in Sources */,
 				63D4E13C28C644EB00A988E1 /* v_pickerStyle_segmented.swift in Sources */,
 				6373BB2B289367F50002A084 /* v_ScrollViewReader.swift in Sources */,
 				6350BF3D28C6418900EE3F95 /* v_MultiPicker.swift in Sources */,
@@ -817,6 +852,7 @@
 				63BE461F2894FE1000FB9844 /* v_confirmationDialog.swift in Sources */,
 				635108082898260F00999B3D /* chart_PointMark.swift in Sources */,
 				63C35C2528A1618900AFA350 /* api_CoreLocationUI.swift in Sources */,
+				63286E5128CF840800C03024 /* v_RotationGesture.swift in Sources */,
 				635DB87A28917CBE0019BC3B /* v_TextEditor.swift in Sources */,
 				6314548128C4F99C001136EF /* InputKeyboardType.swift in Sources */,
 			);
