@@ -13,7 +13,7 @@ struct p_markdownWithAttributedString: View {
 ```javascript
 let abc = "xxx"
 ```
-Visit [Design Code](https://designcode.io) to learn how to `code` and _design_.
+访问 [Baidu](https://www.baidu.com) 搜索
 """
     
     var body: some View {
