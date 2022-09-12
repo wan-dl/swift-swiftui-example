@@ -24,7 +24,7 @@ var startList: [elment] = [
 var tutorialList: [elment] = [
     elment(docId: "Swift", title: "Swift语言", desc: "官方教程中文版", icon: "icon_swift"),
     elment(docId: "SwiftUI", title: "SwiftUI", desc: "构建用户界面", icon: "icon_swiftui"),
-    elment(docId: "Framework", title: "iOS", desc: "Framework", icon: "icon_sdk")
+    elment(docId: "Framework", title: "iOS", desc: "系统Framework", icon: "icon_sdk")
 ]
 
 struct Home: View {
