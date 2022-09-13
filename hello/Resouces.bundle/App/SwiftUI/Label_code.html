@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
+import SwiftUI
+
+struct v_Label: View {
+    var body: some View {
+        VStack(alignment: .center, spacing: 30) {
+            
+            Section(header: Text("默认语法，文本 + 图标").textCallout()) {
+                Label("Lightning", systemImage: "bolt.fill")
+                
+                Label("Lightning", systemImage: "cloud.bolt.fill")
+                    .labelStyle(.titleAndIcon)
+            }
+            
+            Section(header: Text(".iconOnly 仅显示图标").textCallout()) {
+                HStack(spacing: 20) {
+                    Label("Rain", systemImage: "cloud.rain")
+                    Label("Snow", systemImage: "snow")
+                }
+                .labelStyle(.iconOnly)
+            }
+        }
+    }
+}
+\`\`\`
+`
+
+            
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>

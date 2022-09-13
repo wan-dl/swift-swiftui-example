@@ -20,12 +20,6 @@ struct PrimaryBtnStyle: ButtonStyle {
     }
 }
 
-extension View {
-    func backgroundColor(_ color: Color) -> some View {
-        return self.background(color)
-    }
-}
-
 struct RadioButton: View {
     let id: String
     let selectedID: String

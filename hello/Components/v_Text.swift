@@ -127,7 +127,9 @@ struct v_Text: View {
                 }
             }
         }
-        .navigationBarTitle(Text("Text"), displayMode: .inline)
+        .navigationBarTitle("Text")
+        .navigationBarTitleDisplayMode(.inline)
+//        .modifier(navBarViewCodeAndDocs(pageID: "Text"))
     }
 }
 

@@ -10,20 +10,25 @@ import SwiftUI
 struct v_Label: View {
     var body: some View {
         VStack(alignment: .center, spacing: 30) {
-            Section(header: Text("Label: 图标 + 文本").font(.title3).foregroundColor(.gray)) {
+            
+            Section(header: Text("默认语法，文本 + 图标").textCallout()) {
                 Label("Lightning", systemImage: "bolt.fill")
+                
+                Label("Lightning", systemImage: "cloud.bolt.fill")
+                    .labelStyle(.titleAndIcon)
             }
             
-            Section(header: Text("Label: .iconOnly 仅图标").font(.title3).foregroundColor(.gray)) {
+            Section(header: Text(".iconOnly 仅显示图标").textCallout()) {
                 HStack(spacing: 20) {
                     Label("Rain", systemImage: "cloud.rain")
                     Label("Snow", systemImage: "snow")
-                    Label("Sun", systemImage: "sun.max")
                 }
                 .labelStyle(.iconOnly)
             }
         }
-        .navigationBarTitle(Text("Label"), displayMode: .inline)
+        .navigationBarTitle("Label")
+        .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "Label"))
     }
 }
 

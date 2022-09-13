@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+Label: 用户界面标准组件，由标题和图标组成。
+
+最常见的是图标和文本的组合，多用于 列表（list）、菜单操作项（menus of action) 等。
+
+您可以通过提供图像的标题和名称（例如 SF Symbols 集合中的图标）以最简单的形式创建标签。
+
+\`\`\`swift
+Label("Lightning", systemImage: "bolt.fill")
+\`\`\`
+`
+
+            
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="./static/github.min.css" />
+        <script src="./static/marked.min.js"></script>
+        <script src="./static/highlight.min.js"></script>
+        <script src="./static/swift.min.js"></script>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+            var urlHash = window.location.hash;
+            var filename = urlHash.split("#")[1]
+            function load(name) {
+                let xhr = new XMLHttpRequest(),
+                    okStatus = document.location.protocol === "file:" ? 0 : 200;
+                xhr.open('GET', name, false);
+                xhr.overrideMimeType("text/html;charset=utf-8"); 
+                xhr.send(null);
+                return xhr.status === okStatus ? xhr.responseText : null;
+            };
+            
+            if (filename.length > 5) {
+                hljs.highlightAll();
+                let md = load(filename);
+                document.getElementById('content').innerHTML = md
+                document.getElementById('content').innerHTML = marked.parse(md);
+            };
+        </script>
+    </body>
+</html>
