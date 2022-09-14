@@ -11,17 +11,19 @@ struct api_network: View {
     @EnvironmentObject var network: NetworkMonitor
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 40) {
+        VStack(spacing: 40) {
             Text(network.isActive ? "网络状态：在线" : "网络状态：无网络或App无网络访问权限")
             
-            HStack {
-                Text("网络类型：")
-                Text(verbatim: "\(network.connectionType)")
-                    .font(.title)
-            }
+            Text("网络类型：") + Text(verbatim: "\(network.connectionType)")
+                .font(.title)
+            
+            Text("试试切换蜂窝网络、WIFI、或关闭网络，此处会自动刷新")
+                .font(.caption)
+                .foregroundColor(.gray)
         }
         .navigationTitle("获取网络状态")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "API",pageID: "NetMonitor"))
     }
 }
 

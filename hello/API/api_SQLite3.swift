@@ -250,60 +250,46 @@ struct api_SQLite3: View {
     var body: some View {
         ScrollView {
             
-            Button(action: {
+            Button("打开数据库") {
                 self.message = Database().openDataBase()
                 showConsoleMessage(Actions.openDB)
-            }, label: {
-                Label("打开数据库", systemImage: isOpenDB ? "lock.open" : "lock")
-            })
+            }
             .buttonStyle(PrimaryBtnStyle())
             
-            Button(action: {
+            Button("创建数据库表") {
                 self.message = Database().createTable()
                 showConsoleMessage(Actions.createTable)
-            }, label: {
-                Label("创建数据库表", systemImage: "tablecells")
-            })
+            }
             .buttonStyle(PrimaryBtnStyle())
             
-            Button(action: {
+            Button("删除数据库表") {
                 self.message = Database().dropTable()
                 showConsoleMessage(Actions.dropTable)
-            }, label: {
-                Label("删除数据库表", systemImage: "tablecells")
-            })
+            }
             .buttonStyle(PrimaryBtnStyle())
             
-            Button(action: {
+            Button("在数据库表插入一条数据") {
                 self.message = Database().insert()
                 showConsoleMessage(Actions.insert)
-            }, label: {
-                Label("在数据库表插入一条数据", systemImage: "tablecells")
-            })
+            }
             .buttonStyle(PrimaryBtnStyle())
             
-            Button(action: {
+            Button("查询数据库表") {
                 self.message = Database().query()
                 showConsoleMessage(Actions.query)
-            }, label: {
-                Label("查询数据库表", systemImage: "tablecells")
-            })
+            }
             .buttonStyle(PrimaryBtnStyle())
             
-            Button(action: {
+            Button("更新数据库表") {
                 self.message = Database().update()
                 showConsoleMessage(Actions.update)
-            }, label: {
-                Label("更新数据库表", systemImage: "tablecells")
-            })
+            }
             .buttonStyle(PrimaryBtnStyle())
             
-            Button(action: {
+            Button("从数据库表删除一条记录") {
                 self.message = Database().delete()
                 showConsoleMessage(Actions.delete)
-            }, label: {
-                Label("从数据库表删除一条记录", systemImage: "tablecells")
-            })
+            }
             .buttonStyle(PrimaryBtnStyle())
             
             if self.message != "" {
@@ -331,7 +317,9 @@ struct api_SQLite3: View {
             Spacer()
         }
         .padding()
-        .navigationBarTitle("SQLite3", displayMode: .inline)
+        .navigationBarTitle("SQLite3")
+        .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "API",pageID: "SQLite3"))
     }
     
     func showConsoleMessage(_ param: Actions) {

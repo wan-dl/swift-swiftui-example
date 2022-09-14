@@ -57,6 +57,7 @@ struct api_URLSession: View {
     }
     
     func getUserInfo() {
+        // 检查网络是否处于可用
         if !network.isActive {
             self.isNetworkError.toggle()
             return
