@@ -1,0 +1,71 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
+import SwiftUI
+
+struct api_UserDefaults: View {
+    @State var username: String = ""
+    @State var password: String = ""
+    
+    var body: some View {
+        
+        List {
+            Section(header: Text("备注：离开此视图时，输入框中的内容会自动保存到UserDefaults中").textCase(.none)) {
+                TextField("用户名", text: $username)
+                    .keyboardType(.asciiCapable)
+                    .onAppear(perform: setData)
+                
+                SecureField("密码", text: $password)
+                    .keyboardType(.numberPad)
+            }
+            
+            Button("清除UserDefaults数据") {
+                clearData()
+            }
+        }
+        .onDisappear() {
+            UserDefaults.standard.set(self.username, forKey: "username")
+            UserDefaults.standard.set(self.password, forKey: "password")
+        }
+    }
+    
+    func setData() {
+        let u = UserDefaults.standard.string(forKey: "username")
+        if u != nil {
+            self.username = u!
+        }
+        let p = UserDefaults.standard.string(forKey: "password")
+        if p != nil {
+            self.password = p!
+        }
+    }
+    
+    func clearData() {
+        UserDefaults.standard.removeObject(forKey: "username")
+        UserDefaults.standard.removeObject(forKey: "password")
+        
+        self.username = ""
+        self.password = ""
+    }
+}
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>
