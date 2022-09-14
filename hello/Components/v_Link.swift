@@ -31,7 +31,7 @@ struct v_Link: View {
                 }
             }
         }
-        .navigationBarTitle("Link")
+        .navigationTitle("Link")
         .navigationBarTitleDisplayMode(.inline)
         .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "Link"))
     }

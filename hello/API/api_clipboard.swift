@@ -50,7 +50,7 @@ struct api_clipboard: View {
         }
         .padding(.horizontal, 10)
         .background(.gray.opacity(0.1))
-        .navigationBarTitle("clipboard", displayMode: .inline)
+        .navigationTitle("clipboard")
         .modifier(navBarViewCodeAndDocs(pageType: "API",pageID: "clipboard"))
     }
 }

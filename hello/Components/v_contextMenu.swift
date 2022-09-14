@@ -24,7 +24,7 @@ struct v_contextMenu: View {
                 .font(.callout)
                 .foregroundColor(.gray)
         }
-        .navigationBarTitle("contextMenu")
+        .navigationTitle("contextMenu")
         .navigationBarTitleDisplayMode(.inline)
         .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "contextMenu"))
     }

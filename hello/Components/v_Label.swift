@@ -26,7 +26,7 @@ struct v_Label: View {
                 .labelStyle(.iconOnly)
             }
         }
-        .navigationBarTitle("Label")
+        .navigationTitle("Label")
         .navigationBarTitleDisplayMode(.inline)
         .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "Label"))
     }

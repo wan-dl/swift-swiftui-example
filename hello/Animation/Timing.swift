@@ -19,7 +19,7 @@ struct Timing: View {
             
             exampleTiming
         }
-        .navigationBarTitle("Modifier and Tinming")
+        .navigationTitle("Modifier and Tinming")
         .navigationBarTitleDisplayMode(.inline)
         .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "AnimationTimingCurve"))
     }

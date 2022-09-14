@@ -162,7 +162,7 @@ struct api_HealthKit: View {
             }
         }
         .padding()
-        .navigationBarTitle("HealthKit - 健康", displayMode: .inline)
+        .navigationTitle("HealthKit - 健康")
     }
     
     func getHealthData() {

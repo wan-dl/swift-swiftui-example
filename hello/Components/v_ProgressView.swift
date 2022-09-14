@@ -33,7 +33,7 @@ struct v_ProgressView: View {
             }
         }
         .padding()
-        .navigationBarTitle("ProgressView")
+        .navigationTitle("ProgressView")
         .navigationBarTitleDisplayMode(.inline)
         .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "ProgressView"))
     }

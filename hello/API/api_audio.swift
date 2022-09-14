@@ -29,7 +29,7 @@ struct api_audio: View {
                 .foregroundColor(.gray)
                 .frame(height: 80)
         }
-        .navigationBarTitle("Audio")
+        .navigationTitle("Audio")
         .navigationBarTitleDisplayMode(.inline)
         .modifier(navBarViewCodeAndDocs(pageType: "API",pageID: "Audio"))
     }

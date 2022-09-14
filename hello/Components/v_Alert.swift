@@ -39,7 +39,7 @@ struct v_Alert: View {
                 )
             }
         }
-        .navigationBarTitle("Alert")
+        .navigationTitle("Alert")
         .navigationBarTitleDisplayMode(.inline)
         .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "Alert"))
     }

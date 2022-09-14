@@ -18,7 +18,7 @@ struct v_Navigation: View {
                 Label("跳转到Image页面", systemImage: "photo")
             }
         }
-        .navigationBarTitle("NavigationLink")
+        .navigationTitle("NavigationLink")
         .navigationBarTitleDisplayMode(.inline)
         .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "NavigationLink"))
     }

@@ -40,7 +40,7 @@ struct api_getSystemInfo: View {
         .onAppear() {
             getDeviceInfo()
         }
-        .navigationBarTitle("设备信息")
+        .navigationTitle("设备信息")
         .navigationBarTitleDisplayMode(.inline)
         .modifier(navBarViewCodeAndDocs(pageType: "API",pageID: "getSystemInfo"))
     }

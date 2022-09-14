@@ -23,7 +23,7 @@ struct v_Maps: View {
             Map(coordinateRegion: $region)
                 .frame(height: 300)
         }
-        .navigationBarTitle("Map")
+        .navigationTitle("Map")
         .navigationBarTitleDisplayMode(.inline)
         .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "Map"))
     }

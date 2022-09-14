@@ -36,7 +36,7 @@ struct v_Menu: View {
                 .foregroundColor(.gray)
                 .padding(EdgeInsets(top: 50, leading: 10, bottom: 0, trailing: 10))
         }
-        .navigationBarTitle("Menu")
+        .navigationTitle("Menu")
         .navigationBarTitleDisplayMode(.inline)
         .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "Menu"))
     }

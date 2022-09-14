@@ -85,7 +85,7 @@ struct api_Contacts: View {
             }
         }
         .padding()
-        .navigationBarTitle("Contacts - 通讯录", displayMode: .inline)
+        .navigationTitle("Contacts - 通讯录")
     }
     
     // 检查是否有权限访问联系人

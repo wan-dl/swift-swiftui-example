@@ -32,7 +32,7 @@ let abc = "xxx"
                 .foregroundColor(.black)
                 .font(.body)
         }
-        .navigationBarTitle("MarkDown渲染", displayMode: .inline)
+        .navigationTitle("MarkDown渲染")
     }
 }
 

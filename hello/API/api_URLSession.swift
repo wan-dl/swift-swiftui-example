@@ -53,7 +53,7 @@ struct api_URLSession: View {
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.gray.opacity(0.1))
-        .navigationBarTitle("URLSession", displayMode: .inline)
+        .navigationTitle("URLSession")
     }
     
     func getUserInfo() {

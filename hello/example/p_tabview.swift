@@ -37,7 +37,8 @@ struct p_tabview: View {
             
             Text("备注：轮播图示例，主要用了TabView")
         }
-        .navigationBarTitle("轮播图示例", displayMode: .inline)
+        .navigationTitle("轮播图示例")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

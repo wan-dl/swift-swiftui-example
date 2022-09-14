@@ -38,7 +38,7 @@ struct v_Button: View {
                 .buttonStyle(withScaleEffectButtonStyle())
             
         }
-        .navigationBarTitle("Button")
+        .navigationTitle("Button")
         .navigationBarTitleDisplayMode(.inline)
         .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "Button"))
     }

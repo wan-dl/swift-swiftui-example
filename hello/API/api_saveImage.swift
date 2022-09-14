@@ -42,7 +42,7 @@ struct api_saveImage: View {
                 )
             }
         }
-        .navigationBarTitle("保存图片到相册", displayMode: .inline)
+        .navigationTitle("保存图片到相册")
     }
     
     func saveImage() {

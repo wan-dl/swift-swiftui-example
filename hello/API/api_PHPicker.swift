@@ -82,7 +82,7 @@ struct api_PHPicker: View {
                 PhotoPicker(isPresented: $isPresented, images: images)
             }
         }
-        .navigationBarTitle("PHPickerViewController", displayMode: .inline)
+        .navigationTitle("PHPickerViewController")
     }
 }
 

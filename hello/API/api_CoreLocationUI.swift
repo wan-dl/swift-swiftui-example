@@ -76,7 +76,7 @@ struct api_CoreLocationUI: View {
                 }
                 .padding()
             }
-            .navigationBarTitle("CoreLocationUI", displayMode: .inline)
+            .navigationTitle("CoreLocationUI")
         }
 }
 

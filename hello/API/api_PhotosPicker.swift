@@ -30,7 +30,7 @@ struct api_PhotosPicker: View {
                     choiceVideo()
                 }
             }
-            .navigationBarTitle("PhotosPicker", displayMode: .inline)
+            .navigationTitle("PhotosPicker")
         }
     }
 }

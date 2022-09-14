@@ -42,7 +42,7 @@ struct v_Toggle: View {
                 }
             }
         }
-        .navigationBarTitle("Toggle")
+        .navigationTitle("Toggle")
         .navigationBarTitleDisplayMode(.inline)
         .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "Toggle"))
     }

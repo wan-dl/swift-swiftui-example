@@ -32,7 +32,8 @@ struct p_toolbar: View {
             
             Text("备注：请将光标置于输入框中，然后查看键盘")
         }
-        .navigationBarTitle("toolbar示例", displayMode: .inline)
+        .navigationTitle("toolbar示例")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

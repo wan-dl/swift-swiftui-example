@@ -79,7 +79,7 @@ struct api_URLSession_Post: View {
         .padding()
         .background(.gray.opacity(0.1))
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .navigationBarTitle("URLSession POST", displayMode: .inline)
+        .navigationTitle("URLSession POST")
     }
     
     func apiPost() {

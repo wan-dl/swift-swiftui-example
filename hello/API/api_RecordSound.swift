@@ -155,7 +155,7 @@ struct api_RecordSound: View {
             
         }
         .padding()
-        .navigationBarTitle("录音", displayMode: .inline)
+        .navigationTitle("录音")
     }
 }
 

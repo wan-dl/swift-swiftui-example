@@ -32,7 +32,7 @@ struct v_Slider: View {
             }
         }
         .padding()
-        .navigationBarTitle("Slider")
+        .navigationTitle("Slider")
         .navigationBarTitleDisplayMode(.inline)
         .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "Slider"))
     }

@@ -37,7 +37,7 @@ struct api_camera_photo: View {
             selectPhoto
         }
         .padding()
-        .navigationBarTitle("camera - 相机相册", displayMode: .inline)
+        .navigationTitle("camera - 相机相册")
     }
     
     var openCamera: some View {

@@ -29,7 +29,7 @@ struct v_Tab: View {
                     }
             }
         }
-        .navigationBarTitle("TabView")
+        .navigationTitle("TabView")
         .navigationBarTitleDisplayMode(.inline)
         .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "TabView"))
     }

@@ -134,7 +134,8 @@ struct p_tabbar: View {
             .frame(maxHeight: .infinity, alignment: .bottom)
             .ignoresSafeArea()
         }
-        .navigationBarTitle("自定义Tabbar", displayMode: .inline)
+        .navigationTitle("自定义Tabbar")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

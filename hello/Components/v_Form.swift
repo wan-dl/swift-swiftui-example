@@ -29,7 +29,7 @@ struct v_Form: View {
                 .frame(alignment: .center)
             }
         }
-        .navigationBarTitle("Form")
+        .navigationTitle("Form")
         .navigationBarTitleDisplayMode(.inline)
         .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "Form"))
     }

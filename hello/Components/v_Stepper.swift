@@ -22,7 +22,7 @@ struct v_Stepper: View {
                 }
             }
         }
-        .navigationBarTitle("Stepper")
+        .navigationTitle("Stepper")
         .navigationBarTitleDisplayMode(.inline)
         .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "Stepper"))
     }

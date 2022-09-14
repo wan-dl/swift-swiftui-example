@@ -37,7 +37,7 @@ struct v_ActionSheet: View {
             }
         }
         .padding()
-        .navigationBarTitle("ActionSheet")
+        .navigationTitle("ActionSheet")
         .navigationBarTitleDisplayMode(.inline)
         .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "ActionSheet"))
     }

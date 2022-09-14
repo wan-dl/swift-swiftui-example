@@ -60,7 +60,7 @@ struct v_swipeActions: View {
                 }
             }
         }
-        .navigationBarTitle("swipeActions")
+        .navigationTitle("swipeActions")
         .navigationBarTitleDisplayMode(.inline)
         .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "swipeActions"))
     }

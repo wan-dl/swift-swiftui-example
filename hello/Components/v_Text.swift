@@ -123,7 +123,7 @@ struct v_Text: View {
                 }
             }
         }
-        .navigationBarTitle("Text")
+        .navigationTitle("Text")
         .navigationBarTitleDisplayMode(.inline)
         .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI", pageID: "Text"))
     }

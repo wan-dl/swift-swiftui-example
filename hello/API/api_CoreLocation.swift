@@ -178,7 +178,7 @@ struct api_CoreLocation: View {
             
         }
         .padding()
-        .navigationBarTitle("Core Location")
+        .navigationTitle("Core Location")
     }
 }
 

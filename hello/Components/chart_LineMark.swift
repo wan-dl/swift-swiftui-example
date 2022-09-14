@@ -41,7 +41,7 @@ struct chart_LineMark: View {
                     .font(.body)
             }
         }
-        .navigationBarTitle("LineMark - 线图")
+        .navigationTitle("LineMark - 线图")
         .navigationBarTitleDisplayMode(.inline)
         .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "LineMark"))
     }

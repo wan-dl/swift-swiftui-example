@@ -317,7 +317,7 @@ struct api_SQLite3: View {
             Spacer()
         }
         .padding()
-        .navigationBarTitle("SQLite3")
+        .navigationTitle("SQLite3")
         .navigationBarTitleDisplayMode(.inline)
         .modifier(navBarViewCodeAndDocs(pageType: "API",pageID: "SQLite3"))
     }
