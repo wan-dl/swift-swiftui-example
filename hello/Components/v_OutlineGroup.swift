@@ -51,6 +51,7 @@ struct v_OutlineGroup: View {
         }
         .navigationTitle("OutlineGroup")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "OutlineGroup"))
     }
 }
 

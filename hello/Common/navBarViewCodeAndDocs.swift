@@ -9,6 +9,8 @@ import SwiftUI
 import WebKit
 
 struct navBarViewCodeAndDocs: ViewModifier {
+    //@Environment(\.dismiss) private var dismiss
+    
     @State var pageType: String = ""
     @State var pageID: String = ""
     
@@ -17,21 +19,24 @@ struct navBarViewCodeAndDocs: ViewModifier {
     
     @State var sourceCode: String = ""
     
+    @Environment (\.presentationMode) var presentationMode
+    @State var disable = true
+    
     func body(content: Content) -> some View {
         content
             .navigationBarItems(
                 trailing:
                     Menu {
-                        Button(action: {
-                            isPresentedForDoc.toggle()
-                        }, label: {
-                            Label("查看文档", systemImage: "doc.viewfinder")
-                        })
+//                        Button(action: {
+//                            isPresentedForDoc.toggle()
+//                        }, label: {
+//                            Label("查看文档", systemImage: "doc.viewfinder")
+//                        })
                         
                         Button(action: {
                             isPresentedForSource.toggle()
                         }, label: {
-                            Label("查看当前页面源码 ", systemImage: "text.viewfinder")
+                            Label("查看当前源码 ", systemImage: "text.viewfinder")
                         })
                     } label: {
                         Label("More", systemImage: "ellipsis.circle")
@@ -44,17 +49,32 @@ struct navBarViewCodeAndDocs: ViewModifier {
                         Text("源码")
                             .font(.title2)
                         Spacer()
+                        
+                        Button(action: {
+                            //self.presentationMode.wrappedValue.dismiss()
+                            self.isPresentedForSource = false
+                        }, label: {
+                            Image(systemName: "xmark")
+                                .foregroundColor(.primary)
+                                .font(.title2)
+                        })
+                        // swiftUI 3.0, 新增 interactiveDismissDisabled, 通过代码控制是否允许手势取消Sheet
+                        //.interactiveDismissDisabled(disable)
                     }
                     .padding()
                     
                     showMarkDownText(filedir: pageType, filename: "\(pageID)_code")
+                        
                 }
+                .ignoresSafeArea(edges: .bottom)
             }
             .sheet(isPresented: $isPresentedForDoc) {
                 VStack {
                     showMarkDownText(filedir: pageType, filename: "\(pageID)_doc")
+                        .ignoresSafeArea()
                 }
                 .padding()
+                .ignoresSafeArea(edges: .bottom)
             }
     }
 }
@@ -70,7 +90,6 @@ struct showMarkDownText: UIViewRepresentable {
     func updateUIView(_ uiView: WKWebView, context: Context) {
         let subDir = filedir.isEmpty ? "/Resouces.bundle/App/" : "/Resouces.bundle/App/\(filedir)/"
         let fileURL = Bundle.main.url(forResource: filename, withExtension: ".html", subdirectory: subDir)
-        print(fileURL)
         if fileURL == nil {
             return
         }

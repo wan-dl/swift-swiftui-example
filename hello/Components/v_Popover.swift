@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-@available (iOS 13.0, *)
 struct v_Popover: View {
     @State var isShowPopover: Bool = false
     
@@ -22,6 +21,7 @@ struct v_Popover: View {
         }
         .navigationTitle(".popover")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "popover"))
     }
 }
 

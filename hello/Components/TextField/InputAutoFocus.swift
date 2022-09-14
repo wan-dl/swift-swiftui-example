@@ -39,6 +39,7 @@ struct InputAutoFocus: View {
         .padding()
         .navigationTitle(".focused")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI", pageID: "InputAutoFocus"))
     }
 }
 

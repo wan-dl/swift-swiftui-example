@@ -1,0 +1,68 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
+import SwiftUI
+
+struct Timing: View {
+    @State var show: Bool = false
+    
+    var body: some View {
+        VStack {
+            Text("Animation Modifier and Tinming")
+                .font(.title)
+                .offset(y: 120)
+                .foregroundColor(.red)
+            
+            exampleTiming
+        }
+    }
+    
+    var exampleTiming: some View {
+        ZStack {
+            Color.black.ignoresSafeArea()
+                .opacity(show ? 0.8 : 0.2)
+                .animation(.easeOut(duration: 0.8), value: show)
+            
+            RoundedRectangle(cornerRadius: 40)
+                .foregroundColor(.white)
+                .frame(height: 300)
+                .opacity(show ? 1 : 0.5)
+                .padding(show ? 16 : 32)
+                .offset(y: show ? 0 : 30)
+                .animation(.spring(response: 0.5, dampingFraction: 0.4), value: show)
+            
+            RoundedRectangle(cornerRadius: 40)
+                .frame(height: 300)
+                .offset(y: show ? 600 : 0)
+                .foregroundColor(.white)
+                .shadow(radius: 40)
+                .padding()
+                .animation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 0.8), value: show)
+        }
+        .onTapGesture {
+            show.toggle()
+        }
+    }
+}
+
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>

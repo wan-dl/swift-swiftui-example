@@ -22,6 +22,7 @@ struct v_pickerStyle_menu: View {
         }
         .navigationTitle(".menu")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "pickerStyleMenu"))
     }
 }
 

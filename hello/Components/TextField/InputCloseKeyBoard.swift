@@ -36,6 +36,7 @@ struct InputCloseKeyBoard: View {
         }
         .navigationTitle("关闭键盘")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI", pageID: "InputCloseKeyBoard"))
     }
     
     // 方法1: 关闭键盘

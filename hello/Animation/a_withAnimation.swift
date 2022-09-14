@@ -33,6 +33,7 @@ struct a_withAnimation: View {
         }
         .navigationTitle("withAnimation")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "withAnimation"))
     }
 }
 

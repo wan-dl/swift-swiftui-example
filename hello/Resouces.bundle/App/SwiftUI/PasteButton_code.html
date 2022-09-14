@@ -1,0 +1,60 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
+import SwiftUI
+
+struct v_PasteButton: View {
+    @State private var username = "小明同学"
+    
+    init() {
+        UITextView.appearance().backgroundColor = .clear
+    }
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text("说明：PasteButton 适用于iOS 16.0+。PasteButton会接收符合Transferable协议的任何类型的数据，例如String和Data。")
+                .font(.caption)
+                .foregroundColor(.gray)
+                .frame(height: 80)
+            
+            TextEditor(text: $username)
+                .frame(height: 200)
+                .cornerRadius(3.0)
+            
+            
+            if #available (iOS 16.0, *) {
+                PasteButton(payloadType: String.self) { strings in
+                    guard let first = strings.first else { return }
+                    username = first
+                }
+                .buttonBorderShape(.capsule)
+            }
+            
+            Spacer()
+        }
+        .padding()
+        .frame(maxHeight: .infinity)
+        .background(.gray.opacity(0.1))
+    }
+}
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>

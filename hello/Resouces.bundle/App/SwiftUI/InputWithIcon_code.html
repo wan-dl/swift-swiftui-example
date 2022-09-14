@@ -1,0 +1,87 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
+import SwiftUI
+
+struct InputWithIcon: View {
+    @State var searchText:String = ""
+    @State var text2: String = ""
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 30) {
+            Section("带有图标的输入框") {
+                TextField("placeholder", text: $searchText)
+                    .textFieldStyle(WithInputIconStyle())
+                    .background(.white)
+            }
+            
+            Section("输入框尾部带有清除图标") {
+                TextField("placeholder", text: $text2)
+                   .textFieldStyle(InputWithClearIcon(text: $text2))
+            }
+            
+            Spacer()
+        }
+        .padding()
+        .frame(maxHeight: .infinity)
+        .background(.gray.opacity(0.1))
+    }
+}
+
+// 输入框图标
+struct WithInputIconStyle: TextFieldStyle {
+    func _body(configuration: TextField<Self._Label>) -> some View {
+        HStack {
+            Image(systemName: "magnifyingglass")
+                .foregroundColor(.gray)
+                .padding(.horizontal, 3)
+            configuration
+                .frame(height: 40)
+        }
+        .cornerRadius(20)
+    }
+}
+
+// 带有清除按钮的输入框
+struct InputWithClearIcon: TextFieldStyle {
+    @Binding var text: String
+
+    func _body(configuration: TextField<Self._Label>) -> some View {
+        HStack {
+            configuration
+                .padding(.horizontal, 10)
+                .frame(height: 40)
+
+            if !text.isEmpty {
+                Button(action: {
+                    self.text = ""
+                }, label: {
+                    Image(systemName: "xmark.circle.fill")
+                        .foregroundColor(.gray)
+                })
+                .padding(.trailing, 10)
+            }
+        }.background(.white)
+    }
+}
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>

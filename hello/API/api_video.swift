@@ -10,13 +10,13 @@ import AVKit
 
 @available (iOS 14.0, *)
 struct api_video: View {
-    @State var player = AVPlayer()
-    
-    @State var videoStartTime: CMTime = CMTimeMake(value: 10, timescale: 1)
-    
-    @State var isPlaying: Bool = false
     
     var videoUrl: String = "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-0c1fa337-7340-4755-9bec-f766d7d31833/2568a673-d3f7-4e8a-8343-93f7229958fc.MP4"
+    
+    @State var player = AVPlayer()
+    @State var videoStartTime: CMTime = CMTimeMake(value: 10, timescale: 1)
+    @State var isPlaying: Bool = false
+    
     var body: some View {
         VStack {
             Text("简介：本窗口视频是从网络下载，使用了AVkit库。\n主要代码为：AVPlayer(url: URL(string: url)!)")
@@ -43,7 +43,9 @@ struct api_video: View {
             .padding()
             .offset(y: 20)
         }
-        .navigationBarTitle("Video", displayMode: .inline)
+        .navigationTitle("Video")
+        .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "API",pageID: "VideoPlayer"))
     }
 }
 

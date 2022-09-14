@@ -5,8 +5,6 @@
 //  Created by 1 on 7/28/22.
 //
 
-// docs: https://swiftwithmajid.com/2022/05/18/mastering-timelineview-in-swiftui/
-
 import SwiftUI
 
 @available (iOS 15.0, *)
@@ -34,6 +32,7 @@ struct v_TimelineView: View {
         }
         .navigationTitle("TimelineView")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "TimelineView"))
    }
 
    private func secondsValue(for date: Date) -> Double {

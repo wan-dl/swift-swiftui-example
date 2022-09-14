@@ -48,7 +48,9 @@ struct chart_BarMark: View {
                 Text("图表仅支持iOS 16.0系统")
             }
         }
-        .navigationBarTitle("柱状图", displayMode: .inline)
+        .navigationBarTitle("BarMark - 柱状图")
+        .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "BarMark"))
     }
     
     @available(iOS 16.0, *)

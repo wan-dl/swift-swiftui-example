@@ -1,0 +1,42 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
+import SwiftUI
+
+struct v_image_AsyncImage: View {
+    var body: some View {
+        VStack {
+            AsyncImage(url: URL(string: "https://ydlunacommon-cdn.nosdn.127.net/abc2e00ba59ece4101a89a01cce818da.png")) { image in
+                image.resizable()
+            } placeholder: {
+                ProgressView()
+            }
+            .frame(width: 100, height: 100)
+            
+            Text("备注：本图片是采用AsyncImage从网络下载, AsyncImage适用于iOS 15.0+")
+                .font(.footnote)
+                .padding()
+        }
+    }
+}
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>

@@ -43,6 +43,7 @@ struct v_DragGesture: View {
         .padding()
         .navigationTitle("拖曳 - DragGesture")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "DragGesture"))
     }
 }
 

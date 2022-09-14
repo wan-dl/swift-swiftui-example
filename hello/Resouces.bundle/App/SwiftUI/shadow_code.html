@@ -1,0 +1,47 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
+import SwiftUI
+
+struct Shadow: View {
+    var body: some View {
+        VStack {
+            VStack {
+                Text("hello")
+                    .font(.title.bold())
+                    .foregroundColor(.white)
+                    .shadow(radius: 20)
+            }
+            .frame(width: 300,height: 400)
+            .background(.pink)
+            .cornerRadius(20)
+            .shadow(color: .black.opacity(0.3), radius: 5, x:0, y: 2)
+            .shadow(color: .pink.opacity(0.3), radius: 20, x:0, y:10)
+            
+            Text("备注：本页面主要运用了.shadow")
+                .font(.footnote)
+                .offset(y: 20)
+        }
+    }
+}
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>

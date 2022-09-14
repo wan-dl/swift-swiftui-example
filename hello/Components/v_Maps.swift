@@ -2,7 +2,7 @@
 //  PagesMaps.swift
 //  format
 //
-//  Created by hx on 7/29/22.
+//  Created by 1 on 7/29/22.
 //
 
 import SwiftUI
@@ -23,6 +23,9 @@ struct v_Maps: View {
             Map(coordinateRegion: $region)
                 .frame(height: 300)
         }
+        .navigationBarTitle("Map")
+        .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "Map"))
     }
 }
 

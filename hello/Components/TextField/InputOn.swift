@@ -42,6 +42,7 @@ struct InputOn: View {
         .padding()
         .navigationTitle("TextField on")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI", pageID: "InputOn"))
     }
 }
 

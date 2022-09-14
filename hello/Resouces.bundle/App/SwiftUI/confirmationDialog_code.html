@@ -1,0 +1,48 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
+import SwiftUI
+
+@available (iOS 15.0, *)
+struct v_confirmationDialog: View {
+    @State var isShowDialog: Bool = false
+    
+    var body: some View {
+        VStack {
+            Text("简介：confirmationDialog, 仅适用于 iOS 15.0+")
+                .font(.caption)
+                .foregroundColor(.gray)
+                .frame(height: 80)
+            
+            Button("是否删除？") {
+                self.isShowDialog = true
+            }
+            .confirmationDialog( "是否删除？", isPresented: $isShowDialog ) {
+                Button("确认", role: .destructive) {}
+                Button("取消", role: .cancel) {}
+            }
+        }
+        .padding()
+    }
+}
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>

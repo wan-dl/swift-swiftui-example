@@ -5,8 +5,6 @@
 //  Created by 1 on 7/27/22.
 //
 
-// https://zhuanlan.zhihu.com/p/423878795
-
 import SwiftUI
 
 struct v_TextEditor: View {
@@ -24,7 +22,9 @@ struct v_TextEditor: View {
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 200, maxHeight: 300)
             }
         }
-        .navigationBarTitle(Text("TextEditor"), displayMode: .inline)
+        .navigationTitle("TextEditor")
+        .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "TextEditor"))
     }
 }
 

@@ -27,6 +27,7 @@ struct InputBorder: View {
         .padding()
         .navigationTitle(".border()")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI", pageID: "InputBorder"))
     }
     
     // 输入框编辑状态 边框颜色

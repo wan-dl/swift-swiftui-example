@@ -28,7 +28,9 @@ struct v_GroupBox: View {
                 }
             }
         }
-        .navigationBarTitle(Text("GroupBox"), displayMode: .inline)
+        .navigationTitle("GroupBox")
+        .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "GroupBox"))
     }
 }
 

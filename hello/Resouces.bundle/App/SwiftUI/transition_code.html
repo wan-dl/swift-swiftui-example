@@ -1,0 +1,56 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
+import SwiftUI
+
+struct Transitions: View {
+    @State var show = false
+
+    var body: some View {
+        VStack {
+            ZStack {
+                if !show {
+                    Text("View Transition")
+                        .padding()
+                        .background(Capsule().stroke())
+                    
+                    Text("备注：本页面主要用到了 .transition(.move(edge: .top))")
+                        .font(.footnote)
+                        .offset(y: 60)
+                } else {
+                    RoundedRectangle(cornerRadius: 30)
+                        .fill(Color.blue)
+                        .padding()
+                        .transition(.move(edge: .top))
+                        .zIndex(1)
+                }
+            }
+            .onTapGesture {
+                withAnimation(.spring()) {
+                    show.toggle()
+                }
+            }
+        }
+    }
+}
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>

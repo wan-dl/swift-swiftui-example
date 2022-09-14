@@ -64,7 +64,9 @@ struct v_shape: View {
             .frame(height: 50)
             .padding()
         }
-        .navigationBarTitle("形状", displayMode: .inline)
+        .navigationBarTitle("形状")
+        .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "ShapeSet"))
     }
 }
 

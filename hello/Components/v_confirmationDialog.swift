@@ -29,6 +29,7 @@ struct v_confirmationDialog: View {
         .padding()
         .navigationTitle("confirmationDialog")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "confirmationDialog"))
     }
 }
 

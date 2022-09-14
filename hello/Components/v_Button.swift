@@ -11,12 +11,12 @@ struct v_Button: View {
     var body: some View {
         VStack(alignment: .center, spacing: 20) {
             
-            Button("Plain Style Button", action: {})
+            Button("Plain 样式按钮", action: {})
                 .buttonStyle(PlainButtonStyle())
             
-            Button("Default Style Button", action: {})
+            Button("默认 样式按钮", action: {})
             
-            Button("带有边框的按钮", action: {})
+            Button(".bordered 样式按钮", action: {})
                 .buttonStyle(.bordered)
             
             Button("蓝色背景按钮", action: {})
@@ -26,7 +26,7 @@ struct v_Button: View {
                 Button(action: {}, label: {
                     HStack {
                        Image(systemName: "star")
-                       Text("带有系统图标的按钮")
+                       Text("带有SF符号的按钮")
                     }.padding(8)
                 })
                 .background(.blue)
@@ -38,7 +38,9 @@ struct v_Button: View {
                 .buttonStyle(withScaleEffectButtonStyle())
             
         }
-        .navigationBarTitle(Text("Button"), displayMode: .inline)
+        .navigationBarTitle("Button")
+        .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "Button"))
     }
 }
 

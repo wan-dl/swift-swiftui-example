@@ -50,6 +50,7 @@ struct v_DatePicker: View {
         }
         .navigationTitle("DatePicker")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "DatePicker"))
     }
 }
 

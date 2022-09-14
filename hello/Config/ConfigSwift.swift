@@ -2,7 +2,7 @@
 //  TutorialConfig.swift
 //  HelloSwift
 //
-//  Created by hx on 9/8/22.
+//  Created by 1 on 9/8/22.
 //
 
 import Foundation

@@ -14,57 +14,40 @@ struct DeviceItem: Identifiable {
     let value: String
 }
 
-//var DeviceInfo: [DeviceItem] = []
-//
-//extension UIDevice {
-//    func all() {
-//        let systemName = UIDevice.current.systemName
-//        DeviceInfo.append(DeviceItem(name: "System", desc: "系统版本", value: systemName))
-//    }
-//}
-
-extension Array where Element == UInt8 {
-    var hexString: String {
-        return self.compactMap { String(format: "%02x", $0).uppercased() }
-        .joined(separator: "")
-    }
-}
-
 struct api_getSystemInfo: View {
     @State var DeviceInfo:[DeviceItem] = []
     
     var body: some View {
-        VStack {
-            List {
-                Section() {
-                    ForEach(DeviceInfo) { item in
-                        HStack() {
-                            Text(item.desc)
-                                .frame(width: 100)
-                            Text(item.value)
-                                .font(.body)
-                                .lineLimit(1)
-                        }
+        List {
+            Section() {
+                ForEach(DeviceInfo) { item in
+                    HStack() {
+                        Text(item.desc)
+                            .frame(width: 100)
+                        Text(item.value)
+                            .font(.body)
+                            .lineLimit(1)
                     }
                 }
-                
-                Button(action: {
-                    self.DeviceInfo = []
-                    getDeviceInfo()
-                }, label: {
-                    Text("重新获取")
-                })
-                .frame(maxWidth: .infinity,alignment: .center)
             }
-            .listStyle(.grouped)
+            
+            Button("重新获取", action: {
+                getDeviceInfo()
+            })
+            .frame(maxWidth: .infinity,alignment: .center)
         }
+        .listStyle(.grouped)
         .onAppear() {
             getDeviceInfo()
         }
-        .navigationBarTitle("设备信息", displayMode: .inline)
+        .navigationBarTitle("设备信息")
+        .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "API",pageID: "getSystemInfo"))
     }
     
     func getDeviceInfo() {
+        self.DeviceInfo = []
+        
         let deviceName = UIDevice.current.name
         self.DeviceInfo.append(DeviceItem(name: "name", desc: "设备名称", value: deviceName))
         

@@ -37,6 +37,7 @@ struct v_fullScreenCover: View {
         }
         .navigationTitle(".fullScreenCover")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "fullScreenCover"))
     }
     
     func didDismiss() {

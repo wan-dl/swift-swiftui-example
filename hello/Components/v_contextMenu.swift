@@ -19,9 +19,14 @@ struct v_contextMenu: View {
                     Button("♠️ - Spades", action: {})
                     Button("♦️ - Diamonds", action: {})
                 }
+            
+            Text("长按即可看到效果")
+                .font(.callout)
+                .foregroundColor(.gray)
         }
-        .navigationTitle("contextMenu")
+        .navigationBarTitle("contextMenu")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "contextMenu"))
     }
 }
 

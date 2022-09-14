@@ -12,7 +12,7 @@ struct api_URLSession_Post: View {
     @EnvironmentObject var network: NetworkMonitor
     
     @State var errorMsg: String = ""
-    @State var reqString: String = ""
+    @State var reqString: String = "简体字"
     @State var resString: String = ""
     
     @State var showAlert: Bool = false
@@ -83,14 +83,14 @@ struct api_URLSession_Post: View {
     }
     
     func apiPost() {
-        let url:String = "https://fformat.com/api/zh/convert"
+        let url:String = "https://0c1fa337-7340-4755-9bec-f766d7d31833.bspapp.com/swift_URLSession"
         
         let session = URLSession(configuration: .default)
         var request = URLRequest(url: URL(string: url)!)
         
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("identity_id=6ec449b87898412abf21c2fbbb8dd14b; sign=MTY4NDU0NTQ4NC43MjQ1OTM2OmM3NDNlYTMxODQyYWJiZWZlODI5MDA3NTE2N2NkZjE0NjUxMDQzZGYxNmQ1MzhiYTcxNzQ4NGJmZjYwZTE1Zjg=", forHTTPHeaderField: "Cookie")
+//        request.setValue("identity_id=6ec449b87898412abf21c2fbbb8dd14b; sign=MTY4NDU0NTQ4NC43MjQ1OTM2OmM3NDNlYTMxODQyYWJiZWZlODI5MDA3NTE2N2NkZjE0NjUxMDQzZGYxNmQ1MzhiYTcxNzQ4NGJmZjYwZTE1Zjg=", forHTTPHeaderField: "Cookie")
         
         var body = ["content": "恭喜发财", "language": "繁体", "data_type": "content"]
         body.updateValue(self.reqString, forKey: "content")

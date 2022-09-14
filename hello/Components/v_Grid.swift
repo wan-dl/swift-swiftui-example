@@ -38,6 +38,7 @@ struct v_Grid: View {
         .padding()
         .navigationTitle("Grid")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "Grid"))
     }
 }
 

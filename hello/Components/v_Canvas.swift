@@ -19,7 +19,9 @@ struct v_Canvas: View {
             .frame(width: 300, height: 200)
             .border(Color.blue)
         }
-        .navigationBarTitle(Text("Canvas"), displayMode: .inline)
+        .navigationBarTitle("Canvas")
+        .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "Canvas"))
     }
 }
 

@@ -1,0 +1,54 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
+import SwiftUI
+
+@available (iOS 13.0, *)
+struct v_Sheet: View {
+    @State private var sheetShown = false
+    @State private var query = ""
+
+    var body: some View {
+        VStack() {
+            
+            Show_SwiftUI_Docs(available_versions: ui_sheet_available_versions, desc: ui_sheet_desc, declaration: ui_sheet_declaration)
+            
+            Button("点击显示底部sheet") {
+                sheetShown = true
+            }
+            .buttonStyle(.bordered)
+            .sheet(isPresented: $sheetShown) {
+                NavigationView {
+                    Text("You query: \(query)")
+                        .searchable(text: $query)
+                        .navigationTitle("Search")
+                }
+                // iOS 16.0 增加.presentationDetents() 修饰符，可以控制sheet大小
+                // .presentationDetents([.medium])
+            }
+            
+            Spacer()
+        }
+    }
+}
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>

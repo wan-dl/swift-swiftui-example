@@ -1,0 +1,62 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
+import SwiftUI
+
+struct v_DragGesture: View {
+    @State var viewState = CGSize.zero
+    
+    var drag: some Gesture {
+        DragGesture()
+            .onChanged { value in
+                viewState = value.translation
+            }
+            .onEnded { value in
+                withAnimation(.spring()) {
+                    viewState = .zero
+                }
+            }
+    }
+    
+    var body: some View {
+        VStack(spacing: 30) {
+            
+            RoundedRectangle(cornerRadius: 30)
+                .fill(Color.pink)
+                .frame(width: 50, height: 50)
+                .offset(x: viewState.width, y: viewState.height)
+                .gesture(
+                    drag
+                )
+            
+            Text("将手指放到图标上，然后拖到其它地方试试。")
+                .font(.body)
+            
+            Text("本示例主要演示 DragGesture() 的用法。")
+                .font(.callout)
+                .foregroundColor(.secondary)
+        }
+        .padding()
+    }
+}
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>

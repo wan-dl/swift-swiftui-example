@@ -45,6 +45,7 @@ struct v_gesture_LongPressGesture: View {
         .padding()
         .navigationTitle("onLongPressGesture")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "onLongPressGesture2"))
     }
 }
 

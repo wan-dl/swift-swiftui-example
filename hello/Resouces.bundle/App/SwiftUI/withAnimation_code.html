@@ -1,0 +1,52 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
+import SwiftUI
+
+struct a_withAnimation: View {
+    @State var show: Bool = false
+    
+    var body: some View {
+        VStack {
+            VStack {
+                Text("hello")
+                    .font(.title.bold())
+                    .foregroundColor(.white)
+            }
+            .frame(width: show ? 150: 200, height: show ? 50 : 80)
+            .background(.blue)
+            .cornerRadius(30)
+            .shadow(color: .blue.opacity(0.3), radius: 20)
+            .onTapGesture {
+                withAnimation(.spring()) {
+                    show.toggle()
+                }
+            }
+            
+            Text("备注：本页面主要展示withAnimation()的使用")
+                .font(.footnote)
+                .offset(y: 30)
+        }
+    }
+}
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>

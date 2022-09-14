@@ -13,7 +13,6 @@ struct InputWithIcon: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 30) {
-            // 带有图标的输入框
             Section("带有图标的输入框") {
                 TextField("placeholder", text: $searchText)
                     .textFieldStyle(WithInputIconStyle())
@@ -32,6 +31,7 @@ struct InputWithIcon: View {
         .background(.gray.opacity(0.1))
         .navigationTitle("带有图标的输入框")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI", pageID: "InputWithIcon"))
     }
 }
 

@@ -2,7 +2,7 @@
 //  v_Slider.swift
 //  format
 //
-//  Created by hx on 7/28/22.
+//  Created by 1 on 7/28/22.
 //
 
 import SwiftUI
@@ -14,9 +14,10 @@ struct v_Slider: View {
     @State private var isEditing: Bool = false
     
     var body: some View {
-        VStack() {
+        VStack {
             Section(header: Text("Slider 默认风格")) {
                 DefaultSilder(speed: $speed1, isEditingStatus: $isEditing)
+                
                 Text("\(speed1, specifier: "%.2f")")
                         .foregroundColor(isEditing ? .red : .blue)
                         .padding(EdgeInsets(top: 10, leading: 0, bottom: 100, trailing: 0))
@@ -25,12 +26,15 @@ struct v_Slider: View {
             Section(header: Text("Slider 自定义风格")) {
                 CustomSlider(percentage: $speed2)
                     .frame(height: 20)
+                
                 Text("\(speed2, specifier: "%.2f")")
                         .foregroundColor(isEditing ? .red : .blue)
             }
         }
         .padding()
-        .navigationBarTitle(Text("Slider"), displayMode: .inline)
+        .navigationBarTitle("Slider")
+        .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "Slider"))
     }
 }
 

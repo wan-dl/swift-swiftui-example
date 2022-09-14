@@ -10,7 +10,6 @@ import SwiftUI
 struct v_statusBar: View {
     @State private var hideStatusBar = false
     
-    
     var body: some View {
         VStack {
             
@@ -28,6 +27,7 @@ struct v_statusBar: View {
             .statusBarHidden(true)
 
         }
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "statusBarSwitch"))
     }
 }
 

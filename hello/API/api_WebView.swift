@@ -23,7 +23,6 @@ fileprivate struct WebView: UIViewRepresentable {
 }
 
 struct api_WebView: View {
-    
     @State var urlSite:String = "https://www.baidu.com"
     
     var body: some View {
@@ -31,8 +30,8 @@ struct api_WebView: View {
             .edgesIgnoringSafeArea([.bottom])
             .navigationTitle("WebView")
             .navigationBarTitleDisplayMode(.inline)
+            .modifier(navBarViewCodeAndDocs(pageType: "API",pageID: "WebView"))
     }
-    
 }
 
 struct api_WebView_Previews: PreviewProvider {

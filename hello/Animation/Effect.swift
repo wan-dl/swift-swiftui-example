@@ -25,6 +25,7 @@ struct Effect: View {
         }
         .navigationTitle("Effect")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "Effect"))
     }
     
     var exampleTa: some View {

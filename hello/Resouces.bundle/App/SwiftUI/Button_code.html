@@ -1,0 +1,76 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
+import SwiftUI
+
+struct v_Button: View {
+    var body: some View {
+        VStack(alignment: .center, spacing: 20) {
+            
+            Button("Plain 样式按钮", action: {})
+                .buttonStyle(PlainButtonStyle())
+            
+            Button("默认 样式按钮", action: {})
+            
+            Button(".bordered 样式按钮", action: {})
+                .buttonStyle(.bordered)
+            
+            Button("蓝色背景按钮", action: {})
+                .buttonStyle(.borderedProminent)
+            
+            Group {
+                Button(action: {}, label: {
+                    HStack {
+                       Image(systemName: "star")
+                       Text("带有SF符号的按钮")
+                    }.padding(8)
+                })
+                .background(.blue)
+                .foregroundColor(.white)
+                .cornerRadius(10)
+            }
+            
+            Button("带有缩放效果的按钮", action: {})
+                .buttonStyle(withScaleEffectButtonStyle())
+            
+        }
+        .navigationBarTitle("Button")
+        .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "Button"))
+    }
+}
+
+// 点击带有缩放效果的按钮
+struct withScaleEffectButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        HStack {
+            configuration.label
+                .foregroundColor(.white)
+                .padding(10)
+        }
+        .background(.blue)
+        .cornerRadius(10)
+        .scaleEffect(configuration.isPressed ? 0.9 : 1.0)
+    }
+}
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>

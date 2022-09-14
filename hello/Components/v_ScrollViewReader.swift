@@ -44,7 +44,9 @@ struct v_ScrollViewReader: View {
             }
         }
         .padding()
-        .navigationBarTitle(Text("ScrollViewReader"), displayMode: .inline)
+        .navigationTitle("ScrollViewReader")
+        .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "ScrollViewReader"))
     }
 
     func color(fraction: Double) -> Color {

@@ -23,6 +23,7 @@ struct v_pickerStyle_wheel: View {
         }
         .navigationTitle(".wheel")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "pickerStyleWheel"))
     }
 }
 

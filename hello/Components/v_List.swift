@@ -45,7 +45,9 @@ struct v_List: View {
             }
             .frame(height: 40)
         }
-        .navigationBarTitle(Text("List - 列表"), displayMode: .inline)
+        .navigationBarTitle("List - 列表")
+        .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "List"))
     }
     
     func addItem() {

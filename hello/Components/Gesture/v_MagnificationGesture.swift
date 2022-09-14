@@ -39,6 +39,7 @@ struct v_MagnificationGesture: View {
         .padding()
         .navigationTitle("MagnificationGesture")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "MagnificationGesture"))
     }
 }
 

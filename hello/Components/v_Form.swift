@@ -29,7 +29,9 @@ struct v_Form: View {
                 .frame(alignment: .center)
             }
         }
-        .navigationBarTitle(Text("Form"), displayMode: .inline)
+        .navigationBarTitle("Form")
+        .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "Form"))
     }
 }
 

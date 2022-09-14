@@ -37,6 +37,7 @@ struct Transitions: View {
         }
         .navigationTitle(".transition")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "transition"))
     }
 }
 

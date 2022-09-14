@@ -29,10 +29,13 @@ struct api_audio: View {
                 .foregroundColor(.gray)
                 .frame(height: 80)
         }
-        .navigationBarTitle("Audio", displayMode: .inline)
+        .navigationBarTitle("Audio")
+        .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "API",pageID: "Audio"))
     }
     
     func playAudio() {
+        // abc.mp3音频文件是项目下Resouces下的文件
         let FilePath = Bundle.main.url(forResource: "abc.mp3", withExtension: nil, subdirectory: "/Resouces.bundle")
         if let BDURL = FilePath {
             do {

@@ -22,6 +22,7 @@ struct v_pickerStyle_segmented: View {
         }
         .navigationTitle(".segmented")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "pickerStyleSegmented"))
     }
 }
 

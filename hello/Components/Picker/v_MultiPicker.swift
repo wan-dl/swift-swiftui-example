@@ -40,6 +40,7 @@ struct v_MultiPicker: View {
         }
         .navigationTitle("多列选择器")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "MultiPicker"))
     }
 }
 

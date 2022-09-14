@@ -22,6 +22,8 @@ struct v_LabeledContent: View {
         }
         .navigationTitle("LabeledContent")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "LabeledContent"))
+
     }
     
     @available (iOS 16.0, *)

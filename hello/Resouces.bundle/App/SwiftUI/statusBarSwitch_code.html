@@ -1,0 +1,48 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
+import SwiftUI
+
+struct v_statusBar: View {
+    @State private var hideStatusBar = false
+    
+    var body: some View {
+        VStack {
+            
+            Text("简介：切换状态栏, 使用 .statusBarHidden(true)")
+                .font(.caption)
+                .foregroundColor(.gray)
+                .frame(height: 80)
+            
+            Button("切换状态栏") {
+                withAnimation {
+                    hideStatusBar.toggle()
+                }
+            }
+            .buttonStyle(.borderedProminent)
+            .statusBarHidden(true)
+
+        }
+    }
+}
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>

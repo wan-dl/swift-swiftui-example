@@ -2,7 +2,7 @@
 //  api_UserDefaults.swift
 //  HelloSwift
 //
-//  Created by hx on 8/3/22.
+//  Created by 1 on 8/3/22.
 //
 
 import SwiftUI
@@ -54,10 +54,7 @@ struct api_UserDefaults: View {
             .background(.blue)
             .padding()
             
-            
             Spacer()
-            
-            // Color.init(uiColor: UIColor(hexString: "#F2F2F6")).ignoresSafeArea()
             
         }
         .frame(maxWidth: .infinity)

@@ -44,6 +44,7 @@ struct v_RotationGesture: View {
         .frame(maxWidth: .infinity)
         .navigationTitle("旋转 - RotationGesture")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "RotationGesture"))
     }
 }
 

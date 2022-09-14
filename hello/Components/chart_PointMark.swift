@@ -37,7 +37,9 @@ struct chart_PointMark: View {
                     .font(.body)
             }
         }
-        .navigationBarTitle("散点图", displayMode: .inline)
+        .navigationBarTitle("PointMark - 散点图")
+        .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "PointMark"))
     }
     
     @available(iOS 16.0, *)

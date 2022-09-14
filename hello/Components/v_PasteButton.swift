@@ -23,7 +23,6 @@ struct v_PasteButton: View {
                 .frame(height: 80)
             
             TextEditor(text: $username)
-                //.scrollContentBackground(.hidden)
                 .frame(height: 200)
                 .cornerRadius(3.0)
             
@@ -43,6 +42,7 @@ struct v_PasteButton: View {
         .background(.gray.opacity(0.1))
         .navigationTitle("PasteButton")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "PasteButton"))
     }
 }
 

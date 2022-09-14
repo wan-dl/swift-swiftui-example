@@ -41,6 +41,7 @@ struct v_Layout: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .navigationTitle("布局")
             .navigationBarTitleDisplayMode(.inline)
+            .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "Layout"))
         }
     }
     

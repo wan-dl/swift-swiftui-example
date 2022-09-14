@@ -33,6 +33,7 @@ struct Mask: View {
         }
         .navigationTitle(".mask")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "mask"))
     }
 }
 

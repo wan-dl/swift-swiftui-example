@@ -7,17 +7,13 @@
 
 import SwiftUI
 
-enum FocusedField:Hashable{
-   case name,password
-}
+//enum FocusedField:Hashable{
+//   case name,password
+//}
 
 struct api_clipboard: View {
-    @State var writeText:String = ""
-    @State var readText:String = ""
-    
-    @FocusState var focus: FocusedField?
-    @State var showAlert: Bool = false
-    
+    @State var inputText:String = ""
+    @FocusState var isFocused: Bool
     
     var body: some View {
         ScrollView() {
@@ -28,42 +24,34 @@ struct api_clipboard: View {
                 .frame(height: 80)
             
             VStack {
-                TextEditor(text: $writeText)
+                TextEditor(text: $inputText)
                     .frame(height: 200)
                     .cornerRadius(10)
-                    .focused($focus, equals: .name)
+                    .focused($isFocused)
                     .onAppear(){
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
-                            focus = .name
+                            self.isFocused = true
                         }
                     }
-            }
-            
-            VStack(alignment: .center) {
+                
                 Button("将输入框内容写入剪贴板", action: {
-                    UIPasteboard.general.string = self.writeText
+                    UIPasteboard.general.string = self.inputText
                 })
                 .buttonStyle(PrimaryBtnStyle())
                 
-                Button("读取剪切板", action: {
+                Button("读取剪切板到输入框", action: {
                     if UIPasteboard.general.hasStrings {
-                        self.readText = UIPasteboard.general.string ?? ""
-                        self.showAlert.toggle()
+                        self.inputText = UIPasteboard.general.string ?? ""
                     }
                 })
                 .buttonStyle(PrimaryBtnStyle())
-                .alert(isPresented: $showAlert) {
-                    Alert(
-                        title: Text("剪切板内容"),
-                        message: Text(self.readText)
-                    )
-                }
             }
             
         }
         .padding(.horizontal, 10)
         .background(.gray.opacity(0.1))
         .navigationBarTitle("clipboard", displayMode: .inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "API",pageID: "clipboard"))
     }
 }
 

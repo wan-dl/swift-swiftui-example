@@ -1,0 +1,68 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
+import SwiftUI
+
+struct v_Menu: View {
+    var body: some View {
+        VStack {
+            
+            Menu {
+                Button(action: addCurrentTabToReadingList) {
+                    Label("添加列表", systemImage: "eyeglasses")
+                }
+                Button(action: bookmarkAll) {
+                    Label("添加书签", systemImage: "book")
+                }
+                Button(action: show) {
+                    Label("显示所有书签", systemImage: "books.vertical")
+                }
+                Menu("二级菜单") {
+                    Button("Share", action: share)
+                }
+            } label: {
+                Label("Menu示例", systemImage: "menucard")
+            } primaryAction: {
+                addBookmark()
+            }
+            .font(.title3)
+            
+            Text("说明：长按以上内容，即可看到菜单列表。iOS 16.0，新增了.menuOrder() 可以设置首选项顺序")
+                .font(.caption)
+                .foregroundColor(.gray)
+                .padding(EdgeInsets(top: 50, leading: 10, bottom: 0, trailing: 10))
+        }
+    }
+        
+    
+    func addCurrentTabToReadingList() {}
+    
+    func addBookmark() {}
+    
+    func bookmarkAll() {}
+    
+    func show() {}
+    
+    func share() {}
+}
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>

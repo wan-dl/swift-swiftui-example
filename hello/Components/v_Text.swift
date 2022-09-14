@@ -33,10 +33,6 @@ struct v_Text: View {
     
     var body: some View {
         
-//        ZStack {
-//            Color.gray.opacity(0.2).ignoresSafeArea()
-//        }
-        
         VStack {
             List {
                 Section(header: Text("Text Font").textCase(.lowercase)) {
@@ -129,7 +125,7 @@ struct v_Text: View {
         }
         .navigationBarTitle("Text")
         .navigationBarTitleDisplayMode(.inline)
-//        .modifier(navBarViewCodeAndDocs(pageID: "Text"))
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI", pageID: "Text"))
     }
 }
 

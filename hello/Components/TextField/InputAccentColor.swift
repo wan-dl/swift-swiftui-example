@@ -37,6 +37,7 @@ struct InputAccentColor: View {
         .padding()
         .navigationTitle("accentColor")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI", pageID: "InputAccentColor"))
     }
 }
 

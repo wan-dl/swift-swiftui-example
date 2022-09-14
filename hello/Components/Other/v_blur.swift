@@ -24,6 +24,7 @@ struct v_blur: View {
         }
         .navigationTitle(".blur")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "blur"))
     }
 }
 

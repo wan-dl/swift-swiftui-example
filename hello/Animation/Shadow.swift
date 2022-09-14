@@ -28,6 +28,7 @@ struct Shadow: View {
         }
         .navigationTitle(".shadow")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "shadow"))
     }
 }
 

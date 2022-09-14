@@ -38,6 +38,9 @@ struct v_Table: View {
                 }
             }
         }
+        .navigationTitle("Table")
+        .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "Table"))
     }
 }
 

@@ -5,7 +5,6 @@
 //  Created by 1 on 7/28/22.
 //
 
-// docs: https://swiftwithmajid.com/2022/07/19/bottom-sheet-api-in-swiftui/
 
 import SwiftUI
 
@@ -37,6 +36,7 @@ struct v_Sheet: View {
         }
         .navigationTitle(".sheet")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "sheet"))
     }
 }
 

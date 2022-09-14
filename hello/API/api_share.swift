@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct api_share: View {
     var body: some View {
         VStack {
@@ -27,11 +26,13 @@ struct api_share: View {
                 .frame(height: 80)
         }
         .padding()
-        .navigationBarTitle("Shared - 系统分享", displayMode: .inline)
+        .navigationTitle("Shared - 系统分享")
+        .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "API",pageID: "Shared"))
     }
     
     func shareButton() {
-        let url = URL(string: "https://www.fformat.com")
+        let url = URL(string: "itms-apps://itunes.apple.com/app/")
         let activityController = UIActivityViewController(
             activityItems: [url!],
             applicationActivities: nil
@@ -43,7 +44,6 @@ struct api_share: View {
             completion: nil
         )
     }
-    
 }
 
 struct api_share_Previews: PreviewProvider {

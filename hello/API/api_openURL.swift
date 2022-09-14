@@ -49,7 +49,9 @@ struct api_openURL: View {
             
         }
         .padding()
-        .navigationBarTitle("openURL", displayMode: .inline)
+        .navigationBarTitle("openURL")
+        .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "API",pageID: "openURL"))
     }
 }
 

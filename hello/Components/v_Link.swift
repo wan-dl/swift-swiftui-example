@@ -2,7 +2,7 @@
 //  ViewLink.swift
 //  format
 //
-//  Created by hx on 7/28/22.
+//  Created by 1 on 7/28/22.
 //
 
 import SwiftUI
@@ -31,7 +31,9 @@ struct v_Link: View {
                 }
             }
         }
-        .navigationBarTitle(Text("Link"), displayMode: .inline)
+        .navigationBarTitle("Link")
+        .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "Link"))
     }
 }
 

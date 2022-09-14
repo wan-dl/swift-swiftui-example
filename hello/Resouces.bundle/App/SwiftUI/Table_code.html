@@ -1,0 +1,59 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
+import SwiftUI
+
+struct Person: Identifiable {
+    let givenName: String
+    let familyName: String
+    let emailAddress: String
+    let id = UUID()
+}
+private var people = [
+    Person(givenName: "Juan", familyName: "Chavez", emailAddress: "juanchavez@icloud.com"),
+    Person(givenName: "Mei", familyName: "Chen", emailAddress: "meichen@icloud.com"),
+    Person(givenName: "Tom", familyName: "Clark", emailAddress: "tomclark@icloud.com"),
+    Person(givenName: "Gita", familyName: "Kumar", emailAddress: "gitakumar@icloud.com")
+]
+
+struct v_Table: View {
+    
+    var body: some View {
+        VStack {
+            
+            Text("说明: table，仅适用于iOS 16.0+")
+                .font(.caption)
+                .foregroundColor(.gray)
+                .frame(height: 80)
+            
+            if #available(iOS 16.0, *) {
+                Table(people) {
+                    TableColumn("Given", value: \.givenName)
+                    TableColumn("Family", value: \.familyName)
+                    TableColumn("E-Mail", value: \.emailAddress)
+                }
+            }
+        }
+    }
+}
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>

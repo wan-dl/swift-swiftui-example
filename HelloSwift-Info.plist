@@ -8,6 +8,15 @@
 		<string>zh</string>
 		<string>zh_TW</string>
 	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoadsForMedia</key>
+		<true/>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSAllowsArbitraryLoadsInWebContent</key>
+		<true/>
+	</dict>
 	<key>NSUserNotificationsUsageDescription</key>
 	<string>该应用需要使用通知，以便为你演示相关功能</string>
 	<key>UIApplicationShortcutItems</key>

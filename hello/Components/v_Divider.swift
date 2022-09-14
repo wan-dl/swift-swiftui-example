@@ -23,6 +23,7 @@ struct v_Divider: View {
         .padding()
         .navigationTitle("Divider")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "Divider"))
     }
 }
 

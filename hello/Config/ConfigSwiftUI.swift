@@ -2,7 +2,7 @@
 //  Config.swift
 //  HelloSwift
 //
-//  Created by hx on 9/9/22.
+//  Created by 1 on 9/9/22.
 //
 
 import Foundation
@@ -56,12 +56,12 @@ let SwiftUIComponentsList: [CInfo] = [
             LangSwiftUIItem(name: "Stepper", searchKeyword: "", available: "iOS 13.0+", viewname: AnyView(v_Stepper())),
             LangSwiftUIItem(name: "Picker - 选择器", searchKeyword: "", available: "iOS 13.0+", viewname: AnyView(v_Picker())),
             LangSwiftUIItem(name: "Toggle", searchKeyword: "", available: "iOS 13.0+", viewname: AnyView(v_Toggle())),
-            LangSwiftUIItem(name: "Link - 链接", searchKeyword: "", available: "iOS 14.0+", viewname: AnyView(v_Link())),
-            LangSwiftUIItem(name: "Menu", searchKeyword: ".menuOrder,", available: "iOS 14.0+", viewname: AnyView(v_Menu())),
-            LangSwiftUIItem(name: "contextMenu", searchKeyword: "", available: "iOS 13.0–16.0", viewname: AnyView(v_contextMenu())),
-            LangSwiftUIItem(name: "Alert", searchKeyword: "", available: "", viewname: AnyView(v_Alert())),
+            LangSwiftUIItem(name: "Link | ShareLink - 链接", searchKeyword: "", available: "iOS 14.0+", viewname: AnyView(v_Link())),
+            LangSwiftUIItem(name: "Menu", searchKeyword: ".menuOrder,目录", available: "iOS 14.0+", viewname: AnyView(v_Menu())),
+            LangSwiftUIItem(name: "contextMenu", searchKeyword: "目录", available: "iOS 13.0–16.0", viewname: AnyView(v_contextMenu())),
+            LangSwiftUIItem(name: "Alert", searchKeyword: "弹窗", available: "", viewname: AnyView(v_Alert())),
             LangSwiftUIItem(name: "SwipeActions", searchKeyword: "", available: "iOS 15.0+", viewname: AnyView(v_swipeActions())),
-            LangSwiftUIItem(name: "ProgressView", searchKeyword: "", available: "iOS 14.0+", viewname: AnyView(v_ProgressView())),
+            LangSwiftUIItem(name: "ProgressView", searchKeyword: "loading,进度条", available: "iOS 14.0+", viewname: AnyView(v_ProgressView())),
         ]
     ),
     CInfo(

@@ -1,0 +1,50 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
+import SwiftUI
+
+struct v_Form: View {
+    @State private var username: String = ""
+    @State private var password: String = ""
+    @State private var isRemember: Bool = false
+    
+    var body: some View {
+        VStack {
+            Form {
+                Section() {
+                    TextField("username", text: $username)
+                    
+                    SecureField("password", text: $password)
+                    
+                    Toggle("是否记住密码", isOn: $isRemember)
+                }
+                
+                Button("登录", action: {
+                    print("您输入的内容：\(username) \(password)")
+                })
+                .frame(alignment: .center)
+            }
+        }
+    }
+}
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>

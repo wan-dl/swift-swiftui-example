@@ -1,0 +1,52 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
+import SwiftUI
+
+struct v_Link: View {
+    
+    var body: some View {
+        
+        VStack(spacing: 20) {
+            Link("点击apple.com在浏览器打开",
+                 destination: URL(string: "https://www.apple.com")!)
+            
+            Divider()
+            
+            Link("Visit Our Site", destination: URL(string: "https://www.example.com")!)
+                .environment(\.openURL, OpenURLAction { url in
+                    print("您点击的URL是： \(url)")
+                    return .handled
+                })
+            
+            Divider()
+            
+            if #available(iOS 16.0, *) {
+                ShareLink(item: URL(string: "https://developer.apple.com/xcode/swiftui/")!) {
+                    Label("ShareLink示例", image: "square.and.arrow.up")
+                }
+            }
+        }
+    }
+}
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>

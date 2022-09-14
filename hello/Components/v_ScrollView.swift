@@ -17,7 +17,9 @@ struct v_ScrollView: View {
             }
             .frame(maxWidth: .infinity)
         }
-        .navigationBarTitle(Text("ScrollView"), displayMode: .inline)
+        .navigationTitle("ScrollView")
+        .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "ScrollView"))
     }
 }
 

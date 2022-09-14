@@ -70,6 +70,7 @@ struct v_fileExporter: View {
         }
         .navigationTitle("fileExporter")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "fileExporter"))
     }
 }
 

@@ -58,7 +58,9 @@ struct v_Gradient: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             .padding()
-            .navigationBarTitle("Gradient - 渐变", displayMode: .inline)
+            .navigationBarTitle("Gradient - 渐变")
+            .navigationBarTitleDisplayMode(.inline)
+            .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "Gradient"))
         }
     }
     

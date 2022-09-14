@@ -80,6 +80,7 @@ struct InputKeyboardButtons: View {
         }
         .navigationTitle(".submitLabel")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI", pageID: "InputSubmitLabel"))
     }
 }
 

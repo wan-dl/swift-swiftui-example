@@ -25,6 +25,7 @@ struct v_ColorPicker: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .navigationTitle("ColorPicker")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "ColorPicker"))
     }
 }
 

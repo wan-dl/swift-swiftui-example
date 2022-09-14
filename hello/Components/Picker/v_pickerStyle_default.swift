@@ -22,6 +22,7 @@ struct v_pickerStyle_default: View {
         }
         .navigationTitle("默认样式")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "pickerStyleDefault"))
     }
 }
 

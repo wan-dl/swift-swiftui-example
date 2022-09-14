@@ -42,6 +42,7 @@ struct v_SpatialTapGesture: View {
         .padding()
         .navigationTitle("SpatialTapGesture")
         .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "SpatialTapGesture"))
     }
 }
 

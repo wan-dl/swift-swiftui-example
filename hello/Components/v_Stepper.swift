@@ -2,7 +2,7 @@
 //  ViewStepper.swift
 //  format
 //
-//  Created by hx on 7/28/22.
+//  Created by 1 on 7/28/22.
 //
 
 import SwiftUI
@@ -22,7 +22,9 @@ struct v_Stepper: View {
                 }
             }
         }
-        .navigationBarTitle(Text("Stepper"), displayMode: .inline)
+        .navigationBarTitle("Stepper")
+        .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "Stepper"))
     }
 }
 

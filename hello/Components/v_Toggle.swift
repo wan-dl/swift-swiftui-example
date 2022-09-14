@@ -2,7 +2,7 @@
 //  v_Toggle.swift
 //  format
 //
-//  Created by hx on 7/28/22.
+//  Created by 1 on 7/28/22.
 //
 
 import SwiftUI
@@ -18,27 +18,33 @@ struct v_Toggle: View {
             Form {
                 Toggle("是否共享", isOn: $isShare)
                 
-                Toggle(isOn: $checked1, label: {
-                    if checked1 {
-                        Text("晚上撸串吧").strikethrough()
-                    } else {
-                        Text("晚上撸串吧")
-                    }
-                })
-                .toggleStyle(CheckBoxForStyle(stype: "circle"))
+                Section() {
+                    Toggle(isOn: $checked1, label: {
+                        if checked1 {
+                            Text("单选样式").strikethrough()
+                        } else {
+                            Text("单选样式")
+                        }
+                    })
+                    .toggleStyle(CheckBoxForStyle(stype: "circle"))
+                }
                 
                 
-                Toggle(isOn: $checked2, label: {
-                    if checked2 {
-                        Text("晚上喝酒吧").strikethrough()
-                    } else {
-                        Text("晚上喝酒吧")
-                    }
-                })
-                .toggleStyle(CheckBoxForStyle(stype: "square"))
+                Section() {
+                    Toggle(isOn: $checked2, label: {
+                        if checked2 {
+                            Text("复选框样式").strikethrough()
+                        } else {
+                            Text("复选框样式")
+                        }
+                    })
+                    .toggleStyle(CheckBoxForStyle(stype: "square"))
+                }
             }
         }
-        .navigationBarTitle(Text("Toggle"), displayMode: .inline)
+        .navigationBarTitle("Toggle")
+        .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "Toggle"))
     }
 }
 

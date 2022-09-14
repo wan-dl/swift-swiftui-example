@@ -1,0 +1,60 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
+import SwiftUI
+
+struct v_LabeledContent: View {
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text("LabeledContent, 仅适用于iOS 16.0+。示例效果如下：")
+                .font(.footnote)
+                .padding()
+            
+            if #available(iOS 16.0, *) {
+                exampleForLabeledContent
+            }
+            
+            Spacer()
+        }
+    }
+    
+    @available (iOS 16.0, *)
+    var exampleForLabeledContent: some View {
+        Form {
+            // 示例1
+            LabeledContent("Label", value: "Content")
+            
+            // 示例2
+            LabeledContent {
+                EmptyView()
+            } label: {
+                Text("Custom Value")
+            }
+            
+            // 示例3
+            LabeledContent("Number", value: 100.0, format: .number.precision(.fractionLength(0)) )
+        }
+        .frame(height: 200)
+    }
+}
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>

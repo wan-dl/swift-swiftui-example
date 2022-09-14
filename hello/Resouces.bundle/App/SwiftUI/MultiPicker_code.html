@@ -1,0 +1,59 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
+import SwiftUI
+
+struct v_MultiPicker: View {
+    let provList: Array = ["山西省"]
+    let cityList: Array = ["临汾市", "长治市", "大同市", "运城市"]
+    
+    @State private var selectedProv: String = "山西省"
+    @State private var selectedCity: String = "大同市"
+    
+    var body: some View {
+        VStack {
+            GeometryReader { geometry in
+                HStack(spacing: 0) {
+                    Picker("selecte prov", selection: $selectedProv) {
+                        ForEach(provList, id: \.self) { item in
+                            Text(item)
+                        }
+                    }
+                    .pickerStyle(.wheel)
+                    .frame(width: geometry.size.width / 2, alignment: .center)
+                    .clipped()
+                    
+                    Picker("selecte prov", selection: $selectedCity) {
+                        ForEach(cityList, id: \.self) { item in
+                            Text(item)
+                        }
+                    }
+                    .pickerStyle(.wheel)
+                    .frame(width: geometry.size.width / 2, alignment: .center)
+                    .clipped()
+                }
+            }
+        }
+    }
+}
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>
