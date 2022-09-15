@@ -1,10 +1,19 @@
-//
-//  api_Contacts.swift
-//  HelloSwift
-//
-//  Created by 1 on 8/5/22.
-//
 
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
 import SwiftUI
 import Contacts
 
@@ -79,7 +88,6 @@ struct api_Contacts: View {
         }
         .padding()
         .navigationTitle("Contacts - 通讯录")
-        .modifier(navBarViewCodeAndDocs(pageType: "API",pageID: "Contacts"))
     }
     
     // 检查是否有权限访问联系人
@@ -135,25 +143,31 @@ struct api_Contacts: View {
             self.contactsList = contactsData
         }
     }
-    
-    // 读取通讯录特定姓名联系人 - 暂时未用到
-    func readContacts() {
-        let store = CNContactStore()
-        let name = "王小二"
-        do {
-            let predicate = CNContact.predicateForContacts(matchingName: name)
-            let keysToFetch = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey] as [CNKeyDescriptor]
-            let contacts = try store.unifiedContacts(matching: predicate, keysToFetch: keysToFetch)
-            print("Fetched contacts: \(contacts)")
-        } catch {
-            print("Failed to fetch contact, error: \(error)")
-        }
-    }
 }
 
+struct PrimaryBtnStyle: ButtonStyle {
+    @State var bgColor = Color.blue
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .frame(height: 50)
+            .frame(maxWidth: .infinity)
+            .background(bgColor)
+            .foregroundColor(.white)
+            .cornerRadius(10)
+            .scaleEffect(configuration.isPressed ? 0.9 : 1.0)
+    }
+}
 
 struct api_Contacts_Previews: PreviewProvider {
     static var previews: some View {
         api_Contacts()
     }
 }
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>
