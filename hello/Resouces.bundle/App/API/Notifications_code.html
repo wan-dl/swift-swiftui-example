@@ -1,10 +1,19 @@
-//
-//  api_Notifications.swift
-//  HelloSwift
-//
-//  Created by 1 on 8/28/22.
-//
 
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
 import SwiftUI
 import UserNotifications
 
@@ -84,9 +93,6 @@ struct api_Notifications: View {
                 Button("OK", role: .cancel) { }
             }
         }
-        .navigationTitle("通知")
-        .navigationBarTitleDisplayMode(.inline)
-        .modifier(navBarViewCodeAndDocs(pageType: "API",pageID: "Notifications"))
     }
     
     var UINotificationTime: some View {
@@ -256,3 +262,12 @@ struct api_Notifications_Previews: PreviewProvider {
         api_Notifications()
     }
 }
+
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>
