@@ -1,12 +1,19 @@
-//
-//  api_CoreLocation.swift
-//  HelloSwift
-//
-//  Created by 1 on 8/8/22.
-//
 
-// 感谢：https://juejin.cn/post/7002433492562739207
-
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
 import SwiftUI
 import CoreLocation
 
@@ -114,6 +121,18 @@ extension EPLocationManager: CLLocationManagerDelegate {
     }
 }
 
+struct PrimaryBtnStyle: ButtonStyle {
+    @State var bgColor = Color.blue
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .frame(height: 50)
+            .frame(maxWidth: .infinity)
+            .background(bgColor)
+            .foregroundColor(.white)
+            .cornerRadius(10)
+            .scaleEffect(configuration.isPressed ? 0.9 : 1.0)
+    }
+}
 
 struct api_CoreLocation: View {
     @State var LocationPermissionNoteEnabled: Bool = false
@@ -161,7 +180,6 @@ struct api_CoreLocation: View {
         }
         .padding()
         .navigationTitle("Core Location")
-        .modifier(navBarViewCodeAndDocs(pageType: "API",pageID: "CoreLocation"))
     }
     
     // 检查定位权限
@@ -205,3 +223,11 @@ struct api_CoreLocation_Previews: PreviewProvider {
         api_CoreLocation()
     }
 }
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>

@@ -291,6 +291,9 @@ struct api_SQLite3: View {
             Spacer()
         }
         .padding()
+        .navigationBarTitle("SQLite3")
+        .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "API",pageID: "SQLite3"))
     }
     
     func showConsoleMessage(_ param: Actions) {
