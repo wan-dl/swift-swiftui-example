@@ -1,10 +1,19 @@
-//
-//  api_saveImage.swift 保存图片到相机
-//  HelloSwift
-//
-//  Created by 1 on 8/17/22.
-//
 
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
 import SwiftUI
 import PhotosUI
 
@@ -47,6 +56,19 @@ struct api_saveImage: View {
         .padding()
         .navigationTitle("保存图片到相册")
         .modifier(navBarViewCodeAndDocs(pageType: "API",pageID: "saveImage"))
+    }
+    
+    // 打开手机系统设置
+    func openOSSetting() {
+        if #available(iOS 10, *) {
+            if let url = URL(string: UIApplication.openSettingsURLString) {
+                UIApplication.shared.open(url)
+            }
+        } else {
+            if let appSettings = NSURL(string: UIApplication.openSettingsURLString) {
+                UIApplication.shared.openURL(appSettings as URL)
+            }
+        }
     }
     
     // 保存操作
@@ -95,3 +117,11 @@ struct api_saveImage_Previews: PreviewProvider {
         api_saveImage()
     }
 }
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>
