@@ -155,13 +155,13 @@ struct api_HealthKit: View {
             }, label: {
                 Label("获取运动健康数据", systemImage: "figure.run")
             })
-            .buttonStyle(PrimaryBtnStyle())
-            .alert("未获取到运行数据权限", isPresented: $isPresented) {
+            .controlSize(.large)
+            .buttonStyle(.borderedProminent)
+            .alert("未获取到【健康】数据权限", isPresented: $isPresented) {
                 Button("关闭") {}
                 Button("去设置") {}
             }
         }
-        .padding()
         .navigationTitle("HealthKit - 健康")
     }
     
