@@ -36,7 +36,7 @@ struct api_audio: View {
     
     func playAudio() {
         // abc.mp3音频文件是项目下Resouces下的文件
-        let FilePath = Bundle.main.url(forResource: "abc.mp3", withExtension: nil, subdirectory: "/Resouces.bundle")
+        let FilePath = Bundle.main.url(forResource: "example_audio.m4a", withExtension: nil, subdirectory: "/Resouces.bundle/media")
         if let BDURL = FilePath {
             do {
                 try self.BDPlayer = AVAudioPlayer(contentsOf: BDURL)

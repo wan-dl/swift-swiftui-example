@@ -11,7 +11,7 @@ import AVKit
 @available (iOS 14.0, *)
 struct api_video: View {
     
-    var videoUrl: String = "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-0c1fa337-7340-4755-9bec-f766d7d31833/2568a673-d3f7-4e8a-8343-93f7229958fc.MP4"
+    var videoUrl: String = "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-0c1fa337-7340-4755-9bec-f766d7d31833/93216998-b76e-405c-8067-eec00d7fad99.mp4"
     
     @State var player = AVPlayer()
     @State var videoStartTime: CMTime = CMTimeMake(value: 10, timescale: 1)
@@ -29,7 +29,8 @@ struct api_video: View {
                     player = AVPlayer(url: URL(string: videoUrl)!)
                     player.rate = 1.5
                 }
-                .frame(height: 300)
+                .frame(height: 215)
+                .frame(maxWidth: .infinity)
             
             HStack {
                 Button(action: { player.play() }, label: {
