@@ -1,15 +1,25 @@
-//
-//  api_URLSession_Post.swift
-//  HelloSwift
-//
-//  Created by 1 on 8/5/22.
-//
 
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
 import SwiftUI
 
 struct api_URLSession_Post: View {
     
-    @EnvironmentObject var network: NetworkMonitor
+    // NetworkMonitor 可以请参考 【API示例】【网络状态】
+    // @EnvironmentObject var network: NetworkMonitor
     
     @State var errorMsg: String = ""
     @State var reqString: String = "简体字"
@@ -45,7 +55,7 @@ struct api_URLSession_Post: View {
                 apiPost()
             }
             .alert("转换的内容不能为空",isPresented: $showAlertForCheck) { }
-            .alert("网络不可用，请检查网络连接",isPresented: $isNetworkError) { }
+            // .alert("网络不可用，请检查网络连接",isPresented: $isNetworkError) { }
             .alert(resErrorMessage,isPresented: $isResError) { }
             
             if !(self.errorMsg.isEmpty) {
@@ -137,3 +147,12 @@ struct api_URLSession_Post_Previews: PreviewProvider {
         api_URLSession_Post()
     }
 }
+
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>
