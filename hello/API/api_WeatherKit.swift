@@ -45,7 +45,7 @@ struct api_WeatherKit: View {
             do {
                 let weatherService = WeatherService()
 
-                let syracuse = CLLocation(latitude: 43, longitude: -76)
+                let syracuse = CLLocation(latitude: 39.92, longitude: 116.46)
                 let weather = try await weatherService.weather(for: syracuse)
                 let temperature = weather.currentWeather.temperature
                 print("------------\(temperature)")
