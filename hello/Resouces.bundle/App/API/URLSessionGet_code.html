@@ -1,11 +1,19 @@
-//
-//  api_URLSession.swift
-//  HelloSwift
-//
-//  Created by 1 on 8/4/22.
-//
 
-
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
 import SwiftUI
 
 struct UserData: Codable {
@@ -17,7 +25,8 @@ struct UserData: Codable {
 
 struct api_URLSession: View {
     
-    @EnvironmentObject var network: NetworkMonitor
+    // NetworkMonitor 可以请参考 【API示例】【网络状态】
+    // @EnvironmentObject var network: NetworkMonitor
     
     @State var res = UserData(name: "", age: 0, createTime: "")
     @State var resString = ""
@@ -42,15 +51,14 @@ struct api_URLSession: View {
             .alert(responseMessage, isPresented: $isResponsekError) {}
         }
         .navigationTitle("URLSession")
-        .modifier(navBarViewCodeAndDocs(pageType: "API",pageID: "URLSessionGet"))
     }
     
     func getRequests() {
         // 检查网络是否处于可用
-        if !network.isActive {
-            self.isNetworkError.toggle()
-            return
-        }
+        // if !network.isActive {
+        //     self.isNetworkError.toggle()
+        //     return
+        // }
         
         guard let url = URL(string: self.url) else {return}
         let config = URLSessionConfiguration.default
@@ -95,3 +103,11 @@ struct api_URLSession_Previews: PreviewProvider {
         api_URLSession()
     }
 }
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>
