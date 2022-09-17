@@ -1065,9 +1065,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSCameraUsageDescription = "该应用需要使用相机，以便为你演示相关功能";
 				INFOPLIST_KEY_NSContactsUsageDescription = "该应用需要读取你的通讯录，以便为您演示相关功能";
-				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "该应用需要使用健康，以便在当前页面显示数据";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "该应用需要使用健康，以便在当前页面显示数据";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "该应用需要使用健康，以便在当前页面显示数据";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "该应用需要使用健康，以便为您演示相关代码功能";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "使用您的位置信息，以便向您演示相关功能";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "使用您的位置信息，以便向您演示相关功能";
@@ -1121,9 +1119,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSCameraUsageDescription = "该应用需要使用相机，以便为你演示相关功能";
 				INFOPLIST_KEY_NSContactsUsageDescription = "该应用需要读取你的通讯录，以便为您演示相关功能";
-				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "该应用需要使用健康，以便在当前页面显示数据";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "该应用需要使用健康，以便在当前页面显示数据";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "该应用需要使用健康，以便在当前页面显示数据";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "该应用需要使用健康，以便为您演示相关代码功能";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "使用您的位置信息，以便向您演示相关功能";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "使用您的位置信息，以便向您演示相关功能";

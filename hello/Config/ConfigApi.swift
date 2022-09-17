@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct ApiItem: Identifiable {
-    var id = UUID()
+    let id = UUID()
     var name: String
     var available: String
     var searchKeyword: String
@@ -17,7 +17,7 @@ struct ApiItem: Identifiable {
 }
 
 struct ApiInfo: Identifiable {
-    var id: UUID = UUID()
+    let id: UUID = UUID()
     var name: String
     var seas: [ApiItem]
 }

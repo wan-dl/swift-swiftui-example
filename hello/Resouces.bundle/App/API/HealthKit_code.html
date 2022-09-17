@@ -1,10 +1,19 @@
-//
-//  api_HealthKit.swift
-//  HelloSwift
-//
-//  Created by 1 on 8/8/22.
-//
 
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
 import SwiftUI
 import HealthKit
 import HealthKitUI
@@ -55,7 +64,6 @@ struct api_HealthKit: View {
             }
         }
         .navigationTitle("HealthKit - 健康")
-        .modifier(navBarViewCodeAndDocs(pageType: "API",pageID: "HealthKit"))
     }
     
     func getHealthData() {
@@ -127,33 +135,10 @@ class HealthStoreUsage {
         }
     }
     
-    // 获取应用程序授权状态
-    func getHealthAuthorizationStatus(_ NSObject: HKObjectType) -> Bool{
-        let authorizationStatus = healthStore?.authorizationStatus(for: NSObject)
-        var result: Bool = false
-        switch authorizationStatus {
-        case .notDetermined:
-            // 用户尚未选择授权访问指定的数据类型。
-            result = false
-        case .sharingAuthorized:
-            // 用户已明确授权您的应用保存指定类型的数据。
-            result = true
-        case .sharingDenied:
-            // 用户已明确拒绝您的应用保存指定类型数据的权限。
-            result = false
-        default:
-            result = false
-        }
-        return result
-    }
-    
     // 请求保存和读取，健康数据类型的权限
     func requestAuthorization(completion: @escaping(Bool) -> Void) {
         
         let workoutType = HKObjectType.workoutType()
-        
-//        let authResult = getHealthAuthorizationStatus(workoutType)
-//        print("::应用授权状态 -> \(authResult)")
         
         // 获取运行步数
         let readTypes = Set([
@@ -210,3 +195,12 @@ struct api_HealthKit_Previews: PreviewProvider {
         api_HealthKit()
     }
 }
+
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>
