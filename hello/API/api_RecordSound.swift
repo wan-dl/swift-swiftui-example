@@ -77,8 +77,8 @@ struct RecordButton: View {
     @State var iconName = ""
     var body: some View {
         Image(systemName: iconName)
-            .resizable()
-            .frame(width: 50, height: 50)
+            .font(.largeTitle)
+            .imageScale(.large)
     }
 }
 
