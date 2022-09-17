@@ -1,11 +1,19 @@
-//
-//  api_PhotosUI.swift
-//  HelloSwift
-//
-//  Created by 1 on 8/6/22.
-//
 
-// PhontosPicker文档
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
 // matching 可以选择相册照片类型。常用的值：.images .videos  .any(of: [.images, .videos])  .any(of: [.images, .not(.livePhotos)])
 
 import SwiftUI
@@ -23,10 +31,7 @@ struct api_PhotosPicker: View {
                     .frame(height: 200)
                 
                 if #available(iOS 16.0, *) {
-                    
                     choicePhoto(selectedNum: 3)
-                    
-//                    choiceVideo()
                 }
             }
             .navigationTitle("PhotosPicker")
@@ -35,7 +40,7 @@ struct api_PhotosPicker: View {
     }
 }
 
-// 选择图片
+// 选择多张图片
 @available (iOS 16.0, *)
 struct choicePhoto: View {
     // 选择的照片数量，最多只能选9
@@ -90,44 +95,16 @@ struct choicePhoto: View {
     }
 }
 
-
-@available (iOS 16.0, *)
-struct choiceVideo: View {
-    
-    @State private var selectedItem: PhotosPickerItem? = nil
-    @State private var selectedVideoData: Data? = nil
-    
-    @State private var player = AVPlayer()
-    
-    var body: some View {
-        // todo: play video
-        if selectedVideoData != nil {
-            
-        }
-        
-        PhotosPicker(
-            selection: $selectedItem,
-            matching: .videos,
-            label: {
-                Label("选择视频", systemImage: "video")
-            }
-        )
-        .tint(.primary)
-        .controlSize(.large)
-        .buttonStyle(.borderedProminent)
-        .onChange(of: selectedItem) { newItem in
-            Task {
-                if let data = try? await newItem?.loadTransferable(type: Data.self) {
-                    print(data)
-                    selectedVideoData = data
-                }
-            }
-        }
-    }
-}
-
 struct api_PhotosPicker_Previews: PreviewProvider {
     static var previews: some View {
         api_PhotosPicker()
     }
 }
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>
