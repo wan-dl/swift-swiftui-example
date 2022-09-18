@@ -9,8 +9,8 @@ import SwiftUI
 
 enum Tab: String {
     case home
-    case view
-    case api
+//    case view
+//    case api
     case search
 }
 
@@ -23,8 +23,8 @@ struct TabItem: Identifiable {
 
 var tabItems = [
     TabItem(name: "探索", icon: "house", tab: .home),
-    TabItem(name: "SwiftUI", icon: "viewfinder", tab: .view),
-    TabItem(name: "API", icon: "textformat", tab: .api),
+//    TabItem(name: "SwiftUI", icon: "viewfinder", tab: .view),
+//    TabItem(name: "API", icon: "textformat", tab: .api),
     TabItem(name: "搜索", icon: "magnifyingglass", tab: .search)
 ]
 
@@ -101,10 +101,10 @@ struct BasicView: View {
             switch selectedTab {
             case .home:
                 Home()
-            case .view:
-                ComponentsView()
-            case .api:
-                API()
+//            case .view:
+//                SwiftUIComponentsView()
+//            case .api:
+//                API()
             case .search:
                 GlobalSearch()
             }
@@ -130,7 +130,6 @@ struct BasicView: View {
             }
             .padding(.horizontal, 8)
             .padding(.top, screenHeight > 667 ? 14 : 3)
-            
             .frame(height: screenHeight > 667 ? 88 : 60, alignment: .top)
             .background(
                 .ultraThinMaterial

@@ -29,16 +29,6 @@
 			<key>UIApplicationShortcutItemType</key>
 			<string>Search</string>
 		</dict>
-		<dict>
-			<key>UIApplicationShortcutItemIconType</key>
-			<string>UIApplicationShortcutIconTypeCompose</string>
-			<key>UIApplicationShortcutItemSubtitle</key>
-			<string>查看当前设备信息</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>设备</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>ViewDeviceInfo</string>
-		</dict>
 	</array>
 </dict>
 </plist>

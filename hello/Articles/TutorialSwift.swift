@@ -163,7 +163,7 @@ struct SwiftSyntaxSearch: View {
                     Section(header: Text("搜索结果").font(.subheadline)) {
                         ForEach(LangSwiftSyntaxListResults, id: \.id) { item in
                             NavigationLink(destination: {
-                                API()
+                                loadLocalHtml(pageTitle: item.name, filedir: "swift/\(item.ndir)", filename: item.nid)
                             }, label: {
                                 Text(item.name)
                                     .font(.body)

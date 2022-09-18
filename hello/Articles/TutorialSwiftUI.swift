@@ -74,9 +74,9 @@ struct TutorialSwiftUI: View {
                     }
                     .frame(maxWidth: .infinity, alignment: .center)
                     
-                    Text(currentPageDesc)
-                        .foregroundColor(Color.init(uiColor: UIColor(hexString: "#8053B5")))
-                        .fontWeight(.medium)
+//                    Text(currentPageDesc)
+//                        .foregroundColor(Color.init(uiColor: UIColor(hexString: "#8053B5")))
+//                        .fontWeight(.medium)
                 }
                 
                 Group {

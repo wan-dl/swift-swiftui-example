@@ -34,7 +34,7 @@ struct TutorialFramework: View {
         }
         
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.init(uiColor: UIColor(hexString: "#F2F2F6")))
+        .background(Color.init(uiColor: UIColor(hexString: "#F2F6FE")))
         .navigationTitle("Framework")
         .navigationBarTitleDisplayMode(.inline)
     }

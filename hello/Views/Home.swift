@@ -13,36 +13,33 @@ struct elment: Identifiable {
     var title: String
     var desc: String
     var icon: String
+    var viewName: AnyView
 }
 
-var startList: [elment] = [
-    elment(docId: "introduce", title: "", desc: "初见", icon: "doc.viewfinder"),
-    elment(docId: "CreateProject", title: "", desc: "新建项目", icon: "plus.square"),
-    elment(docId: "Account", title: "", desc: "开发者账号", icon: "person.badge.shield.checkmark")
-]
-
 var tutorialList: [elment] = [
-    elment(docId: "Swift", title: "Swift语言", desc: "官方教程中文版", icon: "icon_swift"),
-    elment(docId: "SwiftUI", title: "SwiftUI", desc: "构建用户界面", icon: "icon_swiftui"),
-//    elment(docId: "Framework", title: "iOS", desc: "系统Framework", icon: "icon_sdk")
+    elment(docId: "firstSight", title: "初见", desc: "希望每一个 “Hello, World!” 之后都能开启一段圆满，每一个初见都能成为最美！", icon: "firstSight", viewName: AnyView(TutorialFirst())),
+    elment(docId: "SwiftUI", title: "SwiftUI 组件", desc: "展示大多数SwiftUI组件效果及示例代码", icon: "icon_swiftui", viewName: AnyView(SwiftUIComponentsView())),
+    elment(docId: "Swift", title: "Swift 官方教程中文版", desc: "The Swift Programming Language", icon: "icon_swift", viewName: AnyView(TutorialSwiftLanguage())),
+    elment(docId: "Framework", title: "iOS Framework", desc: "包含常用库使用示例及示例代码", icon: "icon_sdk", viewName: AnyView(API()))
 ]
 
 struct Home: View {
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                startView
-                
                 Group {
-                    Text("教程")
-                        .font(.title2)
-                    tutorialView
+                    ForEach(tutorialList) { item in
+                        NavigationLink(destination: {
+                            item.viewName
+                        }, label: {
+                            shapeStyleForTutorial(icon: item.icon, title: item.title, desc: item.desc)
+                        })
+                    }
                 }
-                .offset(y: 40)
-                
-                Spacer()
+                .padding(.horizontal)
+                .offset(y: 20)
             }
-            .padding()
             .navigationBarItems(
                 trailing:
                     NavigationLink(destination: {
@@ -58,112 +55,53 @@ struct Home: View {
         .navigationTitle("探索")
         .navigationBarTitleDisplayMode(.large)
         .safeAreaInset(edge: .bottom, content: {
-            Color.clear.frame(height: 44)
+            Color.clear.frame(height: 88)
         })
     }
-    
-    var startView: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack {
-                ForEach(startList) { item in
-                    NavigationLink(destination: {
-                        switch item.docId {
-                        case "introduce":
-                            TutorialIntroduction()
-                        case "CreateProject":
-                            TutorialCreateProject()
-                        case "Account":
-                            TutorialDeveloperAccount()
-                        default:
-                            GlobalSearch()
-                        }
-                    }, label: {
-                        HomeBlockUI_1(icon: item.icon, desc: item.desc)
-                    })
-                }
-            }
-        }
-    }
-    
-    var tutorialView: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack() {
-                ForEach(tutorialList) { item in
-                    NavigationLink(destination: {
-                        switch item.docId {
-                        case "Swift":
-                            TutorialSwiftLanguage()
-                        case "SwiftUI":
-                            TutorialSwiftUI()
-                        case "Framework":
-                            TutorialFramework()
-                        default:
-                            GlobalSearch()
-                        }
-                    }, label: {
-                        HomeBlockUI_2(icon: item.icon, title: item.title, desc: item.desc)
-                    })
-                }
-            }
-        }
-    }
 }
 
-struct HomeBlockUI_1: View {
-    @State var icon: String = ""
-    @State var desc: String = ""
-    
-    var body: some View {
-        VStack(alignment: .center){
-            Image(systemName: icon)
-                .foregroundColor(.black.opacity(0.8))
-                .font(.system(size: 22))
-                .frame(width: 35, height: 28)
-                .offset(y: 10)
-            Text(desc)
-                .font(.footnote)
-                .frame(height: 40)
-                .frame(maxWidth:.infinity)
-        }
-        .padding()
-        .frame(width: 110, height: 110, alignment: .bottomLeading)
-        .background(.white)
-        .foregroundColor(.black)
-        .cornerRadius(10)
-    }
-}
-
-struct HomeBlockUI_2: View {
+struct shapeStyleForTutorial: View {
     @State var icon: String = ""
     @State var title: String = ""
     @State var desc: String = ""
     
     var body: some View {
-        HStack(alignment: .center) {
-            VStack(alignment:.center) {
-                Image(icon)
-                    .resizable(resizingMode: .stretch)
-                    .frame(width: 35, height: 35)
-                    .offset(x: 5)
+        HStack {
+            VStack(alignment: .center) {
+                if icon == "firstSight" {
+                    Image(systemName: "swift")
+                        .symbolRenderingMode(.multicolor)
+                        .font(.title)
+                        .foregroundColor(.black)
+                } else {
+                    Image(icon)
+                        .resizable(resizingMode: .stretch)
+                        .frame(width: 35, height: 35)
+                        .offset(x: 5)
+                }
+                
             }
             .frame(width: 55, height: 110, alignment: .center)
             
             VStack(alignment: .leading) {
                 Text(title)
-                Text(desc)
+                    .foregroundColor(.black)
+                
+                Label(desc, systemImage: "")
                     .font(.footnote)
                     .foregroundColor(.secondary)
-                    .offset(y: 6)
+                    .lineLimit(2)
+                    .padding(.leading, -8)
             }
             
             Spacer()
         }
-        .frame(width: 180, height: 110)
+        .frame(height: 110)
         .background(.white)
-        .foregroundColor(.black)
         .cornerRadius(10)
     }
 }
+
 
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
