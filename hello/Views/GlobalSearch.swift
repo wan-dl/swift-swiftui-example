@@ -17,10 +17,14 @@ struct GlobalSearch: View {
     @State private var LastQueryList: [QueryItem] = []
     @State private var isSearchHistory: Bool = false
     
+    // 历史搜索填充
+    @State private var historySearchFill: Bool = true
+    
     @State private var searchResultForSwift: [LangSwiftItem] = []
     @State private var searchResultForSwiftUI: [LangSwiftUIItem] = []
     @State private var searchResultForApi: [ApiItem] = []
     
+    @State var isStartSearch: Bool = false
     @FocusState var isFocused: Bool
     
     var body: some View {
@@ -32,13 +36,16 @@ struct GlobalSearch: View {
                     self.searchResultForSwiftUI = []
                     self.searchResultForApi = []
                 }
+                .onChange(of: historySearchFill) { value in
+                    gotoSearch()
+                }
                 .onSubmit(of: [.text, .search]) {
                     self.searchResultForSwift = []
                     self.searchResultForSwiftUI = []
                     self.searchResultForApi = []
                     gotoSearch()
                 }
-//                .focused($isFocused)
+                .focused($isFocused)
 
             if !LastQueryList.isEmpty && queryString.isEmpty {
                 ScrollView {
@@ -61,7 +68,8 @@ struct GlobalSearch: View {
                                 .font(.callout)
                                 .onTapGesture {
                                     self.queryString = item.name
-    //                                    self.isFocused = true
+                                    self.historySearchFill.toggle()
+                                    self.isFocused = true
                                 }
                             
                             Divider()
@@ -139,6 +147,7 @@ struct GlobalSearch: View {
             return
         }
         let word = queryString.lowercased()
+        self.isStartSearch = true
         
         // 在SwiftUI中搜索
         for i1 in SwiftUIComponentsList {
