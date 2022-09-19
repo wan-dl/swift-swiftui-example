@@ -21,13 +21,12 @@ struct GlobalSearch: View {
     @State private var searchResultForSwiftUI: [LangSwiftUIItem] = []
     @State private var searchResultForApi: [ApiItem] = []
     
-//    @FocusState var isFocused: Bool
-//    @AccessibilityFocusState private var isFocused2: Bool
+    @FocusState var isFocused: Bool
     
     var body: some View {
         VStack(alignment: .leading) {
             Text("")
-                .searchable(text: $queryString, prompt: "搜索", suggestions: {})
+                .searchable(text: $queryString, placement: SearchFieldPlacement.navigationBarDrawer(displayMode: .always), prompt: "搜索", suggestions: {})
                 .onChange(of: queryString) { value in
                     self.searchResultForSwift = []
                     self.searchResultForSwiftUI = []
@@ -40,32 +39,49 @@ struct GlobalSearch: View {
                     gotoSearch()
                 }
 //                .focused($isFocused)
-//                .accessibilityFocused($isFocused2)
 
             if !LastQueryList.isEmpty && queryString.isEmpty {
-                List {
-                    Section(header: Text("最近搜索").font(.subheadline)) {
+                ScrollView {
+                    HStack {
+                        Text("最近搜索").font(.headline)
+                        Spacer()
+                        Label("清除", systemImage: "trash")
+                            .labelStyle(.iconOnly)
+                            .foregroundColor(.gray)
+                            .onTapGesture {
+                                clearLastQueryList()
+                            }
+                    }
+                    Divider()
+                    VStack(alignment: .leading) {
                         ForEach(LastQueryList) {item in
                             Text(item.name)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .frame(height: 30)
+                                .font(.callout)
                                 .onTapGesture {
                                     self.queryString = item.name
-//                                    self.isFocused = true
-//                                    self.isFocused2 = true
+    //                                    self.isFocused = true
                                 }
+                            
+                            Divider()
                         }
                     }
                 }
-                .listStyle(.plain)
+                .padding()
+                
             }
             
             
-            if !isSearchHistory && queryString.isEmpty && LastQueryList.isEmpty {
+            if !isSearchHistory && queryString.isEmpty && LastQueryList.isEmpty{
                 VStack(alignment: .center) {
                     Text("无最近搜索")
-                        .font(.title3)
+                        .font(.headline)
+                        .padding()
                     Text("在您搜索文章等内容时，会自动添加到最近的搜索。")
+                        .foregroundColor(.gray)
                 }
-                .foregroundColor(.gray)
+                .offset(y: -50)
             }
             
             if !searchResultForSwift.isEmpty || !searchResultForSwiftUI.isEmpty || !searchResultForApi.isEmpty {
@@ -157,13 +173,24 @@ struct GlobalSearch: View {
         }
         
         // 添加到最近搜索
-        let tmpList = LastQueryList.map { (obj) -> String in
+        addLastQueryList(name: word)
+    }
+    
+    // 添加到最近搜索
+    func addLastQueryList(name: String) {
+        let tmpList = self.LastQueryList.map { (obj) -> String in
             return obj.name
         }
-        if !tmpList.contains(word) {
-            self.LastQueryList.insert(QueryItem(name: self.queryString), at: 0)
+        if !tmpList.contains(name) {
+            self.LastQueryList.insert(QueryItem(name: name), at: 0)
             //self.LastQueryList.append(QueryItem(name: self.queryString))
         }
+    }
+    
+    // 清除搜索
+    func clearLastQueryList() {
+        self.LastQueryList = []
+        UserDefaults.standard.removeObject(forKey: "LastQueryList")
     }
     
     // 从UserDefaults读取数据
