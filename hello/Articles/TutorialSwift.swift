@@ -53,9 +53,9 @@ struct TutorialSwiftLanguage: View {
             VStack(alignment: .leading) {
                 Text(pageDesc)
                     .lineSpacing(6)
+                    .font(.callout)
             }
         }
-        .font(.callout)
     }
     
     var SwiftWelcomeView: some View {

@@ -19,8 +19,8 @@ struct elm: Identifiable {
 
 
 var startList: [elm] = [
-    elm(sn: "1", docId: "introduce", title: "初见", desc: "学习前的准备", icon: "doc.viewfinder", viewName: AnyView(TutorialIntroduction())),
-    elm(sn: "2", docId: "CreateProject", title: "新建项目", desc: "使用Xcode创建Swift和SwiftUI项目", icon: "plus.square", viewName: AnyView(TutorialCreateProject())),
+    elm(sn: "1", docId: "introduce", title: "准备", desc: "学习前的准备", icon: "doc.viewfinder", viewName: AnyView(TutorialIntroduction())),
+    elm(sn: "2", docId: "CreateProject", title: "新建并运行项目", desc: "使用Xcode创建Swift和SwiftUI项目", icon: "plus.square", viewName: AnyView(TutorialCreateProject())),
     elm(sn: "3", docId: "Account", title: "申请Apple开发者账号", desc: "用于App真机调试、签名、分发应用到App Store", icon: "person.badge.shield.checkmark", viewName: AnyView(TutorialDeveloperAccount()))
 ]
 

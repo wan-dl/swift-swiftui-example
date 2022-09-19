@@ -17,7 +17,7 @@ struct elment: Identifiable {
 }
 
 var tutorialList: [elment] = [
-    elment(docId: "firstSight", title: "初见", desc: "希望每一个 “Hello, World!” 之后都能开启一段圆满，每一个初见都能成为最美！", icon: "firstSight", viewName: AnyView(TutorialFirst())),
+    elment(docId: "firstSight", title: "初见", desc: "希望每一个 “Hello, World!” 之后都能开启一段圆满", icon: "firstSight", viewName: AnyView(TutorialFirst())),
     elment(docId: "SwiftUI", title: "SwiftUI 组件", desc: "展示大多数SwiftUI组件效果及示例代码", icon: "icon_swiftui", viewName: AnyView(SwiftUIComponentsView())),
     elment(docId: "Swift", title: "Swift 官方教程中文版", desc: "The Swift Programming Language", icon: "icon_swift", viewName: AnyView(TutorialSwiftLanguage())),
     elment(docId: "Framework", title: "iOS Framework", desc: "包含常用库使用示例及示例代码", icon: "icon_sdk", viewName: AnyView(API()))
