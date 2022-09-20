@@ -27,6 +27,12 @@ var startList: [elm] = [
 struct TutorialFirst: View {
     var body: some View {
         ScrollView {
+            NavigationLink(destination: {
+                loadLocalHtmlForMarkdown()
+            }, label: {
+                Text("条案")
+                    .font(.title)
+            })
             VStack {
                 ForEach(startList, id: \.id) {item in
                     NavigationLink(destination: item.viewName, label: {

@@ -2,32 +2,41 @@
 <html>
     <head>
         <meta charset='UTF-8'>
-        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <link type="text/css" rel="stylesheet" href="./static/github.min.css" />
         <script src="./static/marked.min.js"></script>
         <script src="./static/highlight.min.js"></script>
         <script src="./static/swift.min.js"></script>
     </head>
     <body>
-        <div id="content"></div>
+        <h1>xxx</h1>
+        <pre><code class="language-swift" id="content"></code></pre>
         <script>
             var urlHash = window.location.hash;
-            var filename = urlHash.split("#")[1]
-            function load(name) {
-                let xhr = new XMLHttpRequest(),
-                    okStatus = document.location.protocol === "file:" ? 0 : 200;
-                xhr.open('GET', name, false);
-                xhr.overrideMimeType("text/html;charset=utf-8"); 
-                xhr.send(null);
-                return xhr.status === okStatus ? xhr.responseText : null;
-            };
-            
-            if (filename.length > 5) {
-                hljs.highlightAll();
-                let md = load(filename);
-                document.getElementById('content').innerHTML = md
-                document.getElementById('content').innerHTML = marked.parse(md);
-            };
+            var filename = urlHash.replace("#", "")+".md";
+            document.getElementById('content').innerHTML = urlHash
+            if (filename == "" || filename.length < 4) {
+                return
+            }
+            fetch(`./${filename}`)
+                .then(response => {
+                    document.getElementById('content').innerHTML = response
+                    if (response.status != 200) {
+                        throw Error(`请求状态 ${response.status}`);
+                    };
+                    return response.text()
+                })
+                .then(data => {
+                    var fileContent = data;
+                    if (filename.length > 5 && fileContent != "") {
+                        hljs.highlightAll();
+                        document.getElementById('content').innerHTML = marked.parse(fileContent);
+                    };
+                    
+                })
+                .catch(error=> {
+                    document.getElementById('content').innerHTML = error
+                })
         </script>
     </body>
 </html>

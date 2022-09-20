@@ -56,6 +56,7 @@
 		634D680F28CCC40200B8C9D1 /* ConfigSwiftUI_Desc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634D680E28CCC40200B8C9D1 /* ConfigSwiftUI_Desc.swift */; };
 		634D681128CCC5F900B8C9D1 /* Show_SwiftUI_Docs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634D681028CCC5F900B8C9D1 /* Show_SwiftUI_Docs.swift */; };
 		634D681328CCD67300B8C9D1 /* v_LabeledContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634D681228CCD67300B8C9D1 /* v_LabeledContent.swift */; };
+		634F735228D93C6800ACB6C8 /* loadMarkDownInHtml.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634F735128D93C6800ACB6C8 /* loadMarkDownInHtml.swift */; };
 		6350BF3928C640EA00EE3F95 /* v_DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6350BF3828C640EA00EE3F95 /* v_DatePicker.swift */; };
 		6350BF3B28C6412800EE3F95 /* v_ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6350BF3A28C6412800EE3F95 /* v_ColorPicker.swift */; };
 		6350BF3D28C6418900EE3F95 /* v_MultiPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6350BF3C28C6418900EE3F95 /* v_MultiPicker.swift */; };
@@ -237,6 +238,7 @@
 		634D680E28CCC40200B8C9D1 /* ConfigSwiftUI_Desc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigSwiftUI_Desc.swift; sourceTree = "<group>"; };
 		634D681028CCC5F900B8C9D1 /* Show_SwiftUI_Docs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show_SwiftUI_Docs.swift; sourceTree = "<group>"; };
 		634D681228CCD67300B8C9D1 /* v_LabeledContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_LabeledContent.swift; sourceTree = "<group>"; };
+		634F735128D93C6800ACB6C8 /* loadMarkDownInHtml.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loadMarkDownInHtml.swift; sourceTree = "<group>"; };
 		6350BF3828C640EA00EE3F95 /* v_DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_DatePicker.swift; sourceTree = "<group>"; };
 		6350BF3A28C6412800EE3F95 /* v_ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_ColorPicker.swift; sourceTree = "<group>"; };
 		6350BF3C28C6418900EE3F95 /* v_MultiPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_MultiPicker.swift; sourceTree = "<group>"; };
@@ -531,18 +533,19 @@
 		63AFF207289AAF3900C949E3 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				631E4B5028CBA3F900A0901D /* readMarkDownFile.swift */,
 				63E8CFD3288AEFEC00550E52 /* common.swift */,
+				63428E1428CC5C5300BFFCF0 /* loadLocalHtml.swift */,
+				634F735128D93C6800ACB6C8 /* loadMarkDownInHtml.swift */,
+				63FF4F8A28CA243900F44E01 /* loadOpenUrl.swift */,
+				63B6BD1728D0C6D9000803FE /* navBarViewCodeAndDocs.swift */,
+				63050C2228AFCE98004B0D45 /* navigationBarColorForALL.swift */,
+				631E4B5028CBA3F900A0901D /* readMarkDownFile.swift */,
+				634D681028CCC5F900B8C9D1 /* Show_SwiftUI_Docs.swift */,
 				63B73569289D517B00CA74C8 /* styles.swift */,
 				63E81B9A289E470B00360F45 /* ToastView.swift */,
-				63050C2228AFCE98004B0D45 /* navigationBarColorForALL.swift */,
 				63CB291028B7B70E00693FBB /* urlRequest1.swift */,
 				6351D3F528B9118600B49EC2 /* urlRequest2.swift */,
-				63FF4F8A28CA243900F44E01 /* loadOpenUrl.swift */,
-				63428E1428CC5C5300BFFCF0 /* loadLocalHtml.swift */,
-				634D681028CCC5F900B8C9D1 /* Show_SwiftUI_Docs.swift */,
 				E562570A28D029D500B1C868 /* viewExtension.swift */,
-				63B6BD1728D0C6D9000803FE /* navBarViewCodeAndDocs.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -857,6 +860,7 @@
 				6327FA6428958B740091BB9B /* RootView.swift in Sources */,
 				E5CE5CAE289252B800BC7FF1 /* v_Toggle.swift in Sources */,
 				63DA2555289E950E001EA6B1 /* api_PHPicker.swift in Sources */,
+				634F735228D93C6800ACB6C8 /* loadMarkDownInHtml.swift in Sources */,
 				63CDEB9A28A69879000077E9 /* ViewController.swift in Sources */,
 				63428E0F28CC476A00BFFCF0 /* TutorialCreateProject.swift in Sources */,
 				63C1F78F28AA7DF000AD8B48 /* api_SQLite3.swift in Sources */,
