@@ -7,23 +7,12 @@
 
 import SwiftUI
 
-fileprivate let steps_1_cp = """
-iOS开发之前，您首先需要1台Mac电脑。
-
-在电脑上，打开App Store.app，搜索Xcode，点击获取安装。
-Xcode软件体积很大，安装速度取决于您的网络。安装完成后，在电脑上找到Xcode，点击启动。
-"""
-
 fileprivate let steps_2_cp = ""
 
 struct TutorialCreateProject: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
-                Group {
-                    Text(steps_1_cp)
-                }
-                
                 Group {
                     Divider()
                     Text("第一步：如下图所示，点击:") + Text("Create a new Xcode Project").bold()

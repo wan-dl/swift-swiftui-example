@@ -443,6 +443,16 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
+		63ABC77828D9E46500270B20 /* firstSight */ = {
+			isa = PBXGroup;
+			children = (
+				63428E0E28CC476A00BFFCF0 /* TutorialCreateProject.swift */,
+				63428E1028CC477A00BFFCF0 /* TutorialDeveloperAccount.swift */,
+				63428E0C28CC475B00BFFCF0 /* TutorialIntroduction.swift */,
+			);
+			path = firstSight;
+			sourceTree = "<group>";
+		};
 		63AFF204289AAE8B00C949E3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -655,12 +665,10 @@
 		E5E8B01F28CB18D500E70AA2 /* Articles */ = {
 			isa = PBXGroup;
 			children = (
+				63ABC77828D9E46500270B20 /* firstSight */,
 				63428E0A28CC46A400BFFCF0 /* TutorialFramework.swift */,
 				E5E5AA4F28C9C9A400C95A00 /* TutorialSwift.swift */,
 				63428E0828CC462700BFFCF0 /* TutorialSwiftUI.swift */,
-				63428E0C28CC475B00BFFCF0 /* TutorialIntroduction.swift */,
-				63428E0E28CC476A00BFFCF0 /* TutorialCreateProject.swift */,
-				63428E1028CC477A00BFFCF0 /* TutorialDeveloperAccount.swift */,
 				63B711B528D619570034C112 /* TutorialFirst.swift */,
 				63946B0528D6D0FE000AA29C /* ArticleList.swift */,
 				63397FE228D7716A009FA7A0 /* SwiftUIView.swift */,
