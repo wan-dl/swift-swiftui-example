@@ -99,7 +99,7 @@ struct p_navigationBar: View {
                         Label("分享", systemImage: "square.and.arrow.up").foregroundColor(navBarFgColor)
                     }
             )
-//            .toolbar(.hidden, for: .navigationBar)
+            .toolbar(.hidden, for: .navigationBar)
     }
 }
 

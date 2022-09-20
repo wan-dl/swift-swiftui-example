@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-let pageDesc = "本中文文档，为Swift 5.5 版本翻译。当前Swift最新版本是 5.7. "
-let license = "本教程基于开源协议 Creative Commons Attribution 4.0 International (CC BY 4.0) License。地址:"
-let githubURLName = "Github the-swift-programming-language-in-chinese"
-let githubURL = "https://github.com/SwiftGGTeam/the-swift-programming-language-in-chinese"
-let swiftOfficialWebsite = "https://docs.swift.org/swift-book"
+fileprivate let pageDesc = "本中文文档，为Swift 5.5 版本翻译。当前Swift最新版本是 5.7. "
+fileprivate let license = "本教程基于开源协议 Creative Commons Attribution 4.0 International (CC BY 4.0) License。地址:"
+fileprivate let githubURLName = "Github the-swift-programming-language-in-chinese"
+fileprivate let githubURL = "https://github.com/SwiftGGTeam/the-swift-programming-language-in-chinese"
+fileprivate let swiftOfficialWebsite = "https://docs.swift.org/swift-book"
 
 struct TutorialSwiftLanguage: View {
     @State var searchKeyword: String = ""

@@ -72,6 +72,13 @@ let SwiftUIComponentsList: [CInfo] = [
         ]
     ),
     CInfo(
+        name: "导航栏|工具栏",
+        seas: [
+            LangSwiftUIItem(name: "toolbar", searchKeyword: "导航栏,工具栏", available: "iOS 14.0+", viewname: AnyView(v_toolbar())),
+            LangSwiftUIItem(name: "navigationBarItems", searchKeyword: "导航栏", available: "iOS 13.0–16.0 ", viewname: AnyView(v_navigationBarItems()))
+        ]
+    ),
+    CInfo(
         name: "Conllection Containers",
         seas: [
             LangSwiftUIItem(name: "List - 列表", searchKeyword: "", available: "iOS 13.0+", viewname: AnyView(v_List())),

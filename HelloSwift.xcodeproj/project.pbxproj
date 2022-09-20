@@ -73,6 +73,20 @@
 		636104DF289654BF000DA851 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636104DE289654BF000DA851 /* NavigationBar.swift */; };
 		636104E128966A7E000DA851 /* p_tabview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636104E028966A7E000DA851 /* p_tabview.swift */; };
 		636104E328967CCA000DA851 /* v_Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636104E228967CCA000DA851 /* v_Gradient.swift */; };
+		63619D0128D9FE9700335762 /* v_toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63619D0028D9FE9700335762 /* v_toolbar.swift */; };
+		63619D0328DA008800335762 /* v_navigationBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63619D0228DA008800335762 /* v_navigationBarItems.swift */; };
+		63619D0628DA05F800335762 /* v_toolbar_bottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63619D0528DA05F800335762 /* v_toolbar_bottomBar.swift */; };
+		63619D0828DA074100335762 /* v_toolbar_navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63619D0728DA074100335762 /* v_toolbar_navigation.swift */; };
+		63619D0A28DA07BF00335762 /* v_toolbar_navigationBarTrailing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63619D0928DA07BF00335762 /* v_toolbar_navigationBarTrailing.swift */; };
+		63619D0C28DA082500335762 /* v_toolbar_navigationBarLeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63619D0B28DA082500335762 /* v_toolbar_navigationBarLeading.swift */; };
+		63619D0E28DA08CE00335762 /* v_toolbar_keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63619D0D28DA08CE00335762 /* v_toolbar_keyboard.swift */; };
+		63619D1028DA0A8F00335762 /* v_toolbar_principal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63619D0F28DA0A8F00335762 /* v_toolbar_principal.swift */; };
+		63619D1228DA0C6E00335762 /* v_toolbar_automatic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63619D1128DA0C6E00335762 /* v_toolbar_automatic.swift */; };
+		63619D1428DA0D0C00335762 /* v_toolbar_status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63619D1328DA0D0C00335762 /* v_toolbar_status.swift */; };
+		63619D1628DA0E7200335762 /* v_toolbar_primaryAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63619D1528DA0E7200335762 /* v_toolbar_primaryAction.swift */; };
+		63619D1828DA107A00335762 /* v_toolbar_cancellationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63619D1728DA107A00335762 /* v_toolbar_cancellationAction.swift */; };
+		63619D1A28DA10C100335762 /* v_toolbar_destructiveAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63619D1928DA10C100335762 /* v_toolbar_destructiveAction.swift */; };
+		63619D1C28DA110700335762 /* v_toolbar_secondaryAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63619D1B28DA110700335762 /* v_toolbar_secondaryAction.swift */; };
 		6361C5A22897F6C300D32F21 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6361C5A12897F6C300D32F21 /* API.swift */; };
 		6361C5A42898177A00D32F21 /* chart_BarMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6361C5A32898177A00D32F21 /* chart_BarMark.swift */; };
 		63699F0E28B9BFC800D72836 /* GlobalSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63699F0D28B9BFC800D72836 /* GlobalSearch.swift */; };
@@ -255,6 +269,20 @@
 		636104DE289654BF000DA851 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		636104E028966A7E000DA851 /* p_tabview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p_tabview.swift; sourceTree = "<group>"; };
 		636104E228967CCA000DA851 /* v_Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_Gradient.swift; sourceTree = "<group>"; };
+		63619D0028D9FE9700335762 /* v_toolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_toolbar.swift; sourceTree = "<group>"; };
+		63619D0228DA008800335762 /* v_navigationBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_navigationBarItems.swift; sourceTree = "<group>"; };
+		63619D0528DA05F800335762 /* v_toolbar_bottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_toolbar_bottomBar.swift; sourceTree = "<group>"; };
+		63619D0728DA074100335762 /* v_toolbar_navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_toolbar_navigation.swift; sourceTree = "<group>"; };
+		63619D0928DA07BF00335762 /* v_toolbar_navigationBarTrailing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_toolbar_navigationBarTrailing.swift; sourceTree = "<group>"; };
+		63619D0B28DA082500335762 /* v_toolbar_navigationBarLeading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_toolbar_navigationBarLeading.swift; sourceTree = "<group>"; };
+		63619D0D28DA08CE00335762 /* v_toolbar_keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_toolbar_keyboard.swift; sourceTree = "<group>"; };
+		63619D0F28DA0A8F00335762 /* v_toolbar_principal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_toolbar_principal.swift; sourceTree = "<group>"; };
+		63619D1128DA0C6E00335762 /* v_toolbar_automatic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_toolbar_automatic.swift; sourceTree = "<group>"; };
+		63619D1328DA0D0C00335762 /* v_toolbar_status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_toolbar_status.swift; sourceTree = "<group>"; };
+		63619D1528DA0E7200335762 /* v_toolbar_primaryAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_toolbar_primaryAction.swift; sourceTree = "<group>"; };
+		63619D1728DA107A00335762 /* v_toolbar_cancellationAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_toolbar_cancellationAction.swift; sourceTree = "<group>"; };
+		63619D1928DA10C100335762 /* v_toolbar_destructiveAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_toolbar_destructiveAction.swift; sourceTree = "<group>"; };
+		63619D1B28DA110700335762 /* v_toolbar_secondaryAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_toolbar_secondaryAction.swift; sourceTree = "<group>"; };
 		6361C5A12897F6C300D32F21 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		6361C5A32898177A00D32F21 /* chart_BarMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chart_BarMark.swift; sourceTree = "<group>"; };
 		63699F0D28B9BFC800D72836 /* GlobalSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalSearch.swift; sourceTree = "<group>"; };
@@ -433,6 +461,25 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		63619D0428DA05E500335762 /* toolbar */ = {
+			isa = PBXGroup;
+			children = (
+				63619D0528DA05F800335762 /* v_toolbar_bottomBar.swift */,
+				63619D0728DA074100335762 /* v_toolbar_navigation.swift */,
+				63619D0928DA07BF00335762 /* v_toolbar_navigationBarTrailing.swift */,
+				63619D0B28DA082500335762 /* v_toolbar_navigationBarLeading.swift */,
+				63619D0D28DA08CE00335762 /* v_toolbar_keyboard.swift */,
+				63619D0F28DA0A8F00335762 /* v_toolbar_principal.swift */,
+				63619D1128DA0C6E00335762 /* v_toolbar_automatic.swift */,
+				63619D1328DA0D0C00335762 /* v_toolbar_status.swift */,
+				63619D1528DA0E7200335762 /* v_toolbar_primaryAction.swift */,
+				63619D1728DA107A00335762 /* v_toolbar_cancellationAction.swift */,
+				63619D1928DA10C100335762 /* v_toolbar_destructiveAction.swift */,
+				63619D1B28DA110700335762 /* v_toolbar_secondaryAction.swift */,
+			);
+			path = toolbar;
+			sourceTree = "<group>";
+		};
 		63808AFD28C39DCB00023081 /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -456,9 +503,15 @@
 		63AFF204289AAE8B00C949E3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				63619D0428DA05E500335762 /* toolbar */,
 				6361C5A32898177A00D32F21 /* chart_BarMark.swift */,
 				635108052898220A00999B3D /* chart_LineMark.swift */,
 				635108072898260F00999B3D /* chart_PointMark.swift */,
+				63286E4528CF7ED500C03024 /* Gesture */,
+				E58522DF28D17C8600582B50 /* Image */,
+				63808AFD28C39DCB00023081 /* Other */,
+				6350BF3728C640A400EE3F95 /* Picker */,
+				63CD856D28C4F0AA004FDEFA /* TextField */,
 				E52ECFB82893A8860051D2DE /* v_ActionSheet.swift */,
 				E52ECFB62893A7AE0051D2DE /* v_Alert.swift */,
 				63AC4B0C28916D71004B4A45 /* v_Button.swift */,
@@ -502,11 +555,8 @@
 				63AAAD582890C65F005F1C20 /* v_TextField.swift */,
 				6317D7162892E03700192E5A /* v_TimelineView.swift */,
 				E5CE5CAD289252B800BC7FF1 /* v_Toggle.swift */,
-				63286E4528CF7ED500C03024 /* Gesture */,
-				E58522DF28D17C8600582B50 /* Image */,
-				63808AFD28C39DCB00023081 /* Other */,
-				6350BF3728C640A400EE3F95 /* Picker */,
-				63CD856D28C4F0AA004FDEFA /* TextField */,
+				63619D0028D9FE9700335762 /* v_toolbar.swift */,
+				63619D0228DA008800335762 /* v_navigationBarItems.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -776,11 +826,13 @@
 				6361C5A22897F6C300D32F21 /* API.swift in Sources */,
 				6314548328C4FC3F001136EF /* InputSecureField.swift in Sources */,
 				6351D3F628B9118600B49EC2 /* urlRequest2.swift in Sources */,
+				63619D0328DA008800335762 /* v_navigationBarItems.swift in Sources */,
 				63CD857328C4F364004FDEFA /* InputWithIcon.swift in Sources */,
 				636104DF289654BF000DA851 /* NavigationBar.swift in Sources */,
 				E5CE5CB72892602500BC7FF1 /* v_Stepper.swift in Sources */,
 				E58522EA28D17EAB00582B50 /* v_image_AsyncImage.swift in Sources */,
 				63B7356A289D517B00CA74C8 /* styles.swift in Sources */,
+				63619D1828DA107A00335762 /* v_toolbar_cancellationAction.swift in Sources */,
 				E5E5AA5428C9CCA600C95A00 /* ConfigSwift.swift in Sources */,
 				63D8625D28A76EC300EC9CCE /* api_RecordSound.swift in Sources */,
 				63AC4B0D28916D71004B4A45 /* v_Button.swift in Sources */,
@@ -788,6 +840,7 @@
 				63DA2557289E9674001EA6B1 /* api_PhotosPicker.swift in Sources */,
 				E5CE5CB328925B0600BC7FF1 /* v_Link.swift in Sources */,
 				63AC4B0F289177C3004B4A45 /* v_Label.swift in Sources */,
+				63619D0628DA05F800335762 /* v_toolbar_bottomBar.swift in Sources */,
 				6384F9E1289C98E1005BDC98 /* api_URLSession_Post.swift in Sources */,
 				636104DA289631FA000DA851 /* v_swipeActions.swift in Sources */,
 				639BA7B3289420C4007C2797 /* v_ProgressView.swift in Sources */,
@@ -812,6 +865,7 @@
 				63FD9555289F91440069F691 /* api_camera_photo.swift in Sources */,
 				63808AFF28C39DD900023081 /* v_blur.swift in Sources */,
 				63428E0928CC462700BFFCF0 /* TutorialSwiftUI.swift in Sources */,
+				63619D0828DA074100335762 /* v_toolbar_navigation.swift in Sources */,
 				63AF99D128B51427002A87F8 /* api_network.swift in Sources */,
 				63F76BD52899E6EA0028A4D4 /* api_audio.swift in Sources */,
 				63C0954C2899628D00498562 /* Mask.swift in Sources */,
@@ -826,13 +880,18 @@
 				6361C5A42898177A00D32F21 /* chart_BarMark.swift in Sources */,
 				63F3F7EA2898B6BA008FEC16 /* p_environment.swift in Sources */,
 				E58522E428D17D9400582B50 /* v_image_SF.swift in Sources */,
+				63619D0E28DA08CE00335762 /* v_toolbar_keyboard.swift in Sources */,
+				63619D1428DA0D0C00335762 /* v_toolbar_status.swift in Sources */,
 				6314548728C4FF70001136EF /* InputAccentColor.swift in Sources */,
+				63619D0A28DA07BF00335762 /* v_toolbar_navigationBarTrailing.swift in Sources */,
 				63D4E13828C643F600A988E1 /* v_pickerStyle_default.swift in Sources */,
 				639BA7B128941C1D007C2797 /* v_Spacer.swift in Sources */,
 				63FF7DE128C47FEF005908BE /* p_contentShape.swift in Sources */,
+				63619D0128D9FE9700335762 /* v_toolbar.swift in Sources */,
 				635DB8812891819E0019BC3B /* v_Layout.swift in Sources */,
 				6317D70F2892DA1E00192E5A /* v_GroupBox.swift in Sources */,
 				6317D7132892DE1C00192E5A /* v_DisclosureGroup.swift in Sources */,
+				63619D1C28DA110700335762 /* v_toolbar_secondaryAction.swift in Sources */,
 				63772DE2289BFB4300BB56AD /* api_URLSession.swift in Sources */,
 				E5CE5CB528925DFD00BC7FF1 /* v_Menu.swift in Sources */,
 				63428E1528CC5C5300BFFCF0 /* loadLocalHtml.swift in Sources */,
@@ -841,6 +900,7 @@
 				6309715228950FCC00138FAD /* Home.swift in Sources */,
 				634D681128CCC5F900B8C9D1 /* Show_SwiftUI_Docs.swift in Sources */,
 				63286E4F28CF83A700C03024 /* v_MagnificationGesture.swift in Sources */,
+				63619D1A28DA10C100335762 /* v_toolbar_destructiveAction.swift in Sources */,
 				639BA7BC28942D5F007C2797 /* p_navigationBar.swift in Sources */,
 				E52ECFB92893A8860051D2DE /* v_ActionSheet.swift in Sources */,
 				635DB87E2891801C0019BC3B /* SwiftUIComponentsView.swift in Sources */,
@@ -888,19 +948,23 @@
 				6350BF3D28C6418900EE3F95 /* v_MultiPicker.swift in Sources */,
 				63CD81E928BB9606003A2C4C /* api_Notifications.swift in Sources */,
 				63179027289947B100A45C93 /* api_share.swift in Sources */,
+				63619D1228DA0C6E00335762 /* v_toolbar_automatic.swift in Sources */,
 				6350BF3928C640EA00EE3F95 /* v_DatePicker.swift in Sources */,
 				63397FE328D7716A009FA7A0 /* SwiftUIView.swift in Sources */,
 				E562570B28D029D500B1C868 /* viewExtension.swift in Sources */,
 				63F76BD32899DFF40028A4D4 /* v_Grid.swift in Sources */,
 				63F48C7028C5082E00B84680 /* InputOn.swift in Sources */,
 				6332B64628B3BD0400193C04 /* LifeCycle.swift in Sources */,
+				63619D1028DA0A8F00335762 /* v_toolbar_principal.swift in Sources */,
 				6389EE9928A1683E002B6E4A /* api_HealthKit.swift in Sources */,
 				6317D7072892D20900192E5A /* v_Sheet.swift in Sources */,
 				6350BF3B28C6412800EE3F95 /* v_ColorPicker.swift in Sources */,
 				63428E1128CC477A00BFFCF0 /* TutorialDeveloperAccount.swift in Sources */,
+				63619D1628DA0E7200335762 /* v_toolbar_primaryAction.swift in Sources */,
 				63428E1328CC496E00BFFCF0 /* ConfigApi.swift in Sources */,
 				63E584A2289033AB00750F00 /* v_Text.swift in Sources */,
 				637622CC28C37D4E0090BBBD /* About.swift in Sources */,
+				63619D0C28DA082500335762 /* v_toolbar_navigationBarLeading.swift in Sources */,
 				63BE461F2894FE1000FB9844 /* v_confirmationDialog.swift in Sources */,
 				635108082898260F00999B3D /* chart_PointMark.swift in Sources */,
 				63C35C2528A1618900AFA350 /* api_CoreLocationUI.swift in Sources */,
