@@ -61,7 +61,7 @@ struct TutorialSwiftLanguage: View {
     var SwiftWelcomeView: some View {
         Section(header: Text("Welcome to Swift").textCase(.none)) {
             NavigationLink("Swift 5.7英文文档", destination: {
-                InWebviewOpenUrl(url: swiftOfficialWebsite, title: "Swift")
+                loadOpenUrl(url: swiftOfficialWebsite, title: "Swift")
             })
             ForEach(LangSwiftWelcomeList, id: \.id) { item in
                 NavigationLink(destination: {

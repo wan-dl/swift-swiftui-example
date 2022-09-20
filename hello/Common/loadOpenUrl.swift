@@ -1,5 +1,5 @@
 //
-//  openUrlInWebview.swift
+//  loadOpenUrl.swift
 //  HelloSwift
 //
 //  Created by 1 on 9/8/22.
@@ -23,7 +23,7 @@ fileprivate struct loadRemoteURL: UIViewRepresentable {
 }
 
 // 在webview打开远程地址URL
-struct InWebviewOpenUrl: View {
+struct loadOpenUrl: View {
     @State var url: String = ""
     @State var title: String = ""
     
@@ -35,8 +35,8 @@ struct InWebviewOpenUrl: View {
     }
 }
 
-struct InWebviewOpenUrl_Previews: PreviewProvider {
+struct loadOpenUrl_Previews: PreviewProvider {
     static var previews: some View {
-        InWebviewOpenUrl()
+        loadOpenUrl()
     }
 }
