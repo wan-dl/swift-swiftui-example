@@ -16,7 +16,7 @@ struct v_toolbar: View {
             Section("顶部导航栏") {
                 NavigationLink("顶部导航栏 .navigation", destination: v_toolbar_navigation())
                 NavigationLink("顶部导航栏 .navigationBarTrailing", destination: v_toolbar_navigationBarTrailing())
-                NavigationLink("顶部导航栏 ._navigationBarLeading", destination: v_toolbar_navigationBarLeading())
+                NavigationLink("顶部导航栏 .navigationBarLeading", destination: v_toolbar_navigationBarLeading())
             }
             
             Section("键盘") {

@@ -503,15 +503,9 @@
 		63AFF204289AAE8B00C949E3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				63619D0428DA05E500335762 /* toolbar */,
 				6361C5A32898177A00D32F21 /* chart_BarMark.swift */,
 				635108052898220A00999B3D /* chart_LineMark.swift */,
 				635108072898260F00999B3D /* chart_PointMark.swift */,
-				63286E4528CF7ED500C03024 /* Gesture */,
-				E58522DF28D17C8600582B50 /* Image */,
-				63808AFD28C39DCB00023081 /* Other */,
-				6350BF3728C640A400EE3F95 /* Picker */,
-				63CD856D28C4F0AA004FDEFA /* TextField */,
 				E52ECFB82893A8860051D2DE /* v_ActionSheet.swift */,
 				E52ECFB62893A7AE0051D2DE /* v_Alert.swift */,
 				63AC4B0C28916D71004B4A45 /* v_Button.swift */,
@@ -535,6 +529,7 @@
 				E52ECFBB2893AAC40051D2DE /* v_Maps.swift */,
 				E5CE5CB428925DFD00BC7FF1 /* v_Menu.swift */,
 				6373BB2C289369B10002A084 /* v_Navigation.swift */,
+				63619D0228DA008800335762 /* v_navigationBarItems.swift */,
 				6317D7102892DDA700192E5A /* v_OutlineGroup.swift */,
 				637622CD28C38DA00090BBBD /* v_PasteButton.swift */,
 				E57E0ABC2892931500B86669 /* v_Picker.swift */,
@@ -556,7 +551,12 @@
 				6317D7162892E03700192E5A /* v_TimelineView.swift */,
 				E5CE5CAD289252B800BC7FF1 /* v_Toggle.swift */,
 				63619D0028D9FE9700335762 /* v_toolbar.swift */,
-				63619D0228DA008800335762 /* v_navigationBarItems.swift */,
+				63286E4528CF7ED500C03024 /* Gesture */,
+				E58522DF28D17C8600582B50 /* Image */,
+				63808AFD28C39DCB00023081 /* Other */,
+				6350BF3728C640A400EE3F95 /* Picker */,
+				63CD856D28C4F0AA004FDEFA /* TextField */,
+				63619D0428DA05E500335762 /* toolbar */,
 			);
 			path = Components;
 			sourceTree = "<group>";
