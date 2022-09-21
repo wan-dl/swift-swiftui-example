@@ -77,7 +77,7 @@ struct api_URLSession: View {
             }
             
             do {
-                if let decodedResponse = try JSONDecoder().decode(UserData.self, from: data!)  {
+                if let decodedResponse = try? JSONDecoder().decode(UserData.self, from: data!) {
                     DispatchQueue.main.async {
                         self.res = decodedResponse
                         self.resString = String(data: data!, encoding: String.Encoding.utf8)!
