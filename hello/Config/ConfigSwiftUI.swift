@@ -154,6 +154,12 @@ let SwiftUIComponentsList: [CInfo] = [
             LangSwiftUIItem(name: "blur - 模糊", searchKeyword: "", available: "", viewname: AnyView(v_blur())),
             LangSwiftUIItem(name: "fileExporter - 导出", searchKeyword: "", available: "", viewname: AnyView(v_fileExporter()))
         ]
-    )
+    ),
+    CInfo(
+        name: "安全区域",
+        seas: [
+            LangSwiftUIItem(name: ".ignoresSafeArea()", searchKeyword: "安全区域", available: "iOS 14.0+", viewname: AnyView(v_ignoresSafeArea()))
+        ]
+    ),
 ]
 
