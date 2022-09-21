@@ -24,8 +24,8 @@ struct navBarViewCodeAndDocs: ViewModifier {
     
     func body(content: Content) -> some View {
         content
-            .navigationBarItems(
-                trailing:
+            .toolbar {
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Menu {
 //                        Button(action: {
 //                            isPresentedForDoc.toggle()
@@ -36,17 +36,18 @@ struct navBarViewCodeAndDocs: ViewModifier {
                         Button(action: {
                             isPresentedForSource.toggle()
                         }, label: {
-                            Label("查看当前源码 ", systemImage: "text.viewfinder")
+                            Label("查看源码 ", systemImage: "text.viewfinder")
                         })
                     } label: {
                         Label("More", systemImage: "ellipsis.circle")
                             .labelStyle(.iconOnly)
                     }
-            )
+                }
+            }
             .sheet(isPresented: $isPresentedForSource) {
                 VStack {
                     HStack() {
-                        Text("源码")
+                        Text("当前页面源码")
                             .font(.title2)
                         Spacer()
                         
