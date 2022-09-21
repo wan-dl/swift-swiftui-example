@@ -24,12 +24,13 @@ automatic 系统会根据平台、尺寸等级或其他物品的存在等多种�
 struct v_toolbar_automatic: View {
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
+        VStack(alignment: .leading) {
             
             Text(pageDesc)
                 .font(.callout)
                 .foregroundColor(.gray)
-                .offset(y: 50)
+                .padding()
+                .modifier(buttonViewCodeAndDocs(pageType: "SwiftUI", pageID: "toolbar_automatic"))
             Spacer()
             
             Text("")
@@ -47,7 +48,6 @@ struct v_toolbar_automatic: View {
                     }
                 }
         }
-        .padding()
     }
 }
 

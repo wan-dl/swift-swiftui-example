@@ -10,12 +10,13 @@ import SwiftUI
 struct v_toolbar_destructiveAction: View {
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
+        VStack(alignment: .leading) {
             
             Text("注意页面顶部导航栏。\n\n本页面示例 是对 toolbar placement: .destructiveAction 的应用展示。")
                 .font(.callout)
                 .foregroundColor(.gray)
-            
+                .padding()
+                .modifier(buttonViewCodeAndDocs(pageType: "SwiftUI",pageID: "toolbar_destructiveAction"))
             Spacer()
             
             Text("")
@@ -32,7 +33,6 @@ struct v_toolbar_destructiveAction: View {
                     }
                 }
         }
-        .padding()
     }
 }
 

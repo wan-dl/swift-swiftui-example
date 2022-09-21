@@ -7,7 +7,7 @@
         <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
         <script src="../static/marked.min.js"></script>
         <script src="../static/highlight.min.js"></script>
-        <style>body{font-size: 16px;line-height: 21px;}</style>
+        <style>body{font-size: 16px;line-height: 21px;-webkit-text-size-adjust: none;}</style>
     </head>
     <body>
         <div id="content"></div>
@@ -47,6 +47,9 @@ struct v_Button: View {
                 .buttonStyle(withScaleEffectButtonStyle())
             
         }
+        .navigationBarTitle("Button")
+        .navigationBarTitleDisplayMode(.inline)
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "Button"))
     }
 }
 

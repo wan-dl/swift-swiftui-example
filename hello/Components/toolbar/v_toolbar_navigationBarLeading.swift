@@ -10,12 +10,14 @@ import SwiftUI
 struct v_toolbar_navigationBarLeading: View {
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
+        VStack(alignment: .leading) {
             
             Text("注意页面顶部导航栏前缘部分。\n\n本页面示例 是对 toolbar placement: .navigationBarLeading 的应用展示。")
                 .font(.callout)
                 .foregroundColor(.gray)
-                .offset(y: 50)
+                .padding()
+                .modifier(buttonViewCodeAndDocs(pageType: "SwiftUI",pageID: "toolbar_navigationBarLeading"))
+            Spacer()
             
             Text("")
                 .toolbar {
@@ -31,8 +33,6 @@ struct v_toolbar_navigationBarLeading: View {
                         })
                     }
                 }
-            
-            Spacer()
         }
     }
 }

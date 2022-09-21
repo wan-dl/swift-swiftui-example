@@ -20,19 +20,20 @@ fileprivate let pageDesc: String = """
 struct v_toolbar_primaryAction: View {
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
+        VStack(alignment: .leading) {
             
             Group {
                 Text("注意页面顶部导航栏尾部。\n\n本页面示例 是对 toolbar placement: .primaryAction 的应用展示。")
-                    .font(.body)
-                Divider()
-                
+                    .font(.callout)
+
                 Text("primaryAction介绍")
                     .font(.title2)
                 Text(pageDesc)
                     .font(.callout)
             }
             .foregroundColor(.gray)
+            .padding()
+            .modifier(buttonViewCodeAndDocs(pageType: "SwiftUI", pageID: "toolbar_primaryAction"))
             
             Spacer()
             
@@ -50,7 +51,6 @@ struct v_toolbar_primaryAction: View {
                     }
                 }
         }
-        .padding()
     }
 }
 

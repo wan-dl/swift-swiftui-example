@@ -1,7 +1,7 @@
 //
 //  v_toolbar_bottomBar.swift
 //  HelloSwift
-//
+// 
 //  Created by 1 on 9/20/22.
 //
 
@@ -10,12 +10,14 @@ import SwiftUI
 struct v_toolbar_bottomBar: View {
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
+        VStack(alignment: .leading) {
             
-            Text("注意页面底部工具栏，左右两侧")
+            Text("注意页面底部工具栏，左右两侧图标。\n\n本页面示例 是对 toolbar placement: .bottomBar 的应用展示。 ")
                 .font(.callout)
                 .foregroundColor(.gray)
-                .offset(y: 50)
+                .padding()
+                .modifier(buttonViewCodeAndDocs(pageType: "SwiftUI",pageID: "toolbar_bottomBar"))
+            Spacer()
             
             Text("")
                 .toolbar {
@@ -31,8 +33,6 @@ struct v_toolbar_bottomBar: View {
                         })
                     }
                 }
-            
-            Spacer()
         }
     }
 }

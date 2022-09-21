@@ -14,12 +14,12 @@ struct v_navigationBarItems: View {
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
+        VStack(alignment: .leading) {
             Text("请注意，顶部导航栏左边和右边按钮。\n本示例用到了 .navigationBarItems() 方法。\n此方法适用于iOS 13.0-16.0, iOS 16.0之后，推荐使用 .toolbar() ")
                 .font(.callout)
                 .foregroundColor(.gray)
-                .offset(y: 50)
-            
+                .padding()
+                .modifier(buttonViewCodeAndDocs(pageType: "SwiftUI",pageID: "navigationBarItems"))
             Spacer()
         }
         .navigationBarBackButtonHidden(true)

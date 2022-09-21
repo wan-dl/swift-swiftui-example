@@ -12,11 +12,13 @@ struct v_toolbar_keyboard: View {
     @State var fontType: Font = .body
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
+        VStack(alignment: .leading) {
             
             Text("请将光标置于输入框中，然后查看键盘。\n\n本页面示例 是对 toolbar placement: .keyboard 的应用展示。")
                 .font(.callout)
                 .foregroundColor(.gray)
+                .padding()
+                .modifier(buttonViewCodeAndDocs(pageType: "SwiftUI", pageID: "toolbar_keyboard"))
             
             TextEditor(text: $text)
                 .frame(height: 150)
@@ -36,7 +38,6 @@ struct v_toolbar_keyboard: View {
             
             Spacer()
         }
-        .padding()
     }
 }
 

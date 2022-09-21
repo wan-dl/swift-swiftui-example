@@ -10,12 +10,13 @@ import SwiftUI
 struct v_toolbar_status: View {
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
+        VStack(alignment: .leading) {
             
             Text("注意页面底部中间位置。\n本页面示例 是对 toolbar placement: .status 的应用展示。")
                 .font(.callout)
                 .foregroundColor(.gray)
-                .offset(y: 50)
+                .padding()
+                .modifier(buttonViewCodeAndDocs(pageType: "SwiftUI", pageID: "toolbar_status"))
             Spacer()
             
             Text("")
@@ -33,7 +34,6 @@ struct v_toolbar_status: View {
                     }
                 }
         }
-        .padding()
     }
 }
 

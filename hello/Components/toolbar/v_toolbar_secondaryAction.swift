@@ -18,12 +18,13 @@ fileprivate let pageDesc:String = """
 struct v_toolbar_secondaryAction: View {
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
+        VStack(alignment: .leading) {
             
             Text(pageDesc)
                 .font(.callout)
                 .foregroundColor(.gray)
-            
+                .padding()
+                .modifier(buttonViewCodeAndDocs(pageType: "SwiftUI",pageID: "toolbar_secondaryAction"))
             Spacer()
             
             if #available(iOS 16.0, *) {
@@ -42,7 +43,6 @@ struct v_toolbar_secondaryAction: View {
                     }
             }
         }
-        .padding()
     }
 }
 
