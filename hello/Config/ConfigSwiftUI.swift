@@ -91,6 +91,13 @@ let SwiftUIComponentsList: [CInfo] = [
         ]
     ),
     CInfo(
+        name: "",
+        seas: [
+            LangSwiftUIItem(name: "Section", searchKeyword: "", available: "", viewname: AnyView(v_section())),
+            LangSwiftUIItem(name: "Group", searchKeyword: "", available: "", viewname: AnyView(v_Group()))
+        ]
+    ),
+    CInfo(
         name: "View",
         seas: [
             LangSwiftUIItem(name: ".sheet() - 工作表", searchKeyword: ".sheet()", available: "iOS 13.0+", viewname: AnyView(v_Sheet())),

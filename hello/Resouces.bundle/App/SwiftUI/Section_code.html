@@ -1,0 +1,62 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;-webkit-text-size-adjust: none;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
+import SwiftUI
+
+struct v_section: View {
+    @State var phone: String = ""
+    @State var passwd: String = ""
+    
+    var body: some View {
+        Form {
+            Text("关于Section, 常用来分组。通常在 List、Picker、Form中使用。\n\n如下示例，注意文字: 水果分类、语言分类")
+                .foregroundColor(.gray)
+                .font(.callout)
+                .frame(minHeight: 60)
+            
+            Section("水果分类") {
+                Text("香蕉")
+                Text("苹果")
+            }
+            
+            Section(header: Text("语言分类").foregroundColor(.red)) {
+                Text("Python")
+                Text("JavaScript")
+            }
+            
+            Section("") {
+                TextField("手机号", text: $phone)
+                TextField("密码", text: $passwd)
+            }
+        }
+        .navigationTitle("Section")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct v_section_Previews: PreviewProvider {
+    static var previews: some View {
+        v_section()
+    }
+}
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>
