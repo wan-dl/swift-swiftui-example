@@ -12,7 +12,7 @@ struct v_Gesture: View {
         VStack {
             List {
                 Section("点击") {
-                    NavigationLink("onTapGesture - 点击", destination: v_onTapGesture())
+                    NavigationLink(".onTapGesture() - 点击", destination: v_onTapGesture())
                     NavigationLink(destination: v_SpatialTapGesture(), label: {
                         Text("SpatialTapGesture")
                         Text("iOS 16.0+")
@@ -22,14 +22,14 @@ struct v_Gesture: View {
                 }
                 
                 Section("长按") {
-                    NavigationLink("onLongPressGesture", destination: v_onLongPressGesture())
+                    NavigationLink(".onLongPressGesture()", destination: v_onLongPressGesture())
                     NavigationLink(".gesture( LongPressGesture() )", destination: v_gesture_LongPressGesture())
                 }
                 
                 Section("") {
-                    NavigationLink("DragGesture - 拖拽", destination: v_DragGesture())
-                    NavigationLink("MagnificationGesture - 缩放", destination: v_MagnificationGesture())
-                    NavigationLink("RotationGesture - 旋转", destination: v_RotationGesture())
+                    NavigationLink("DragGesture() - 拖拽", destination: v_DragGesture())
+                    NavigationLink("MagnificationGesture() - 缩放", destination: v_MagnificationGesture())
+                    NavigationLink("RotationGesture() - 旋转", destination: v_RotationGesture())
                 }
             }
         }

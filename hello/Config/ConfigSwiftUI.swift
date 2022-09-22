@@ -60,22 +60,22 @@ let SwiftUIComponentsList: [CInfo] = [
             LangSwiftUIItem(name: "Menu", searchKeyword: ".menuOrder,目录", available: "iOS 14.0+", viewname: AnyView(v_Menu())),
             LangSwiftUIItem(name: "contextMenu", searchKeyword: "目录", available: "iOS 13.0–16.0", viewname: AnyView(v_contextMenu())),
             LangSwiftUIItem(name: "ProgressView", searchKeyword: "loading,进度条", available: "iOS 14.0+", viewname: AnyView(v_ProgressView())),
-            LangSwiftUIItem(name: "Alert", searchKeyword: "弹窗,.alert()", available: "", viewname: AnyView(v_Alert())),
-            LangSwiftUIItem(name: "SwipeActions", searchKeyword: ".swipeActions()", available: "iOS 15.0+", viewname: AnyView(v_swipeActions())),
+            LangSwiftUIItem(name: ".alert() - 弹窗", searchKeyword: "弹窗,.alert()", available: "", viewname: AnyView(v_Alert())),
+            LangSwiftUIItem(name: ".swipeActions()", searchKeyword: ".swipeActions()", available: "iOS 15.0+", viewname: AnyView(v_swipeActions())),
         ]
     ),
     CInfo(
         name: "ActionSheet",
         seas: [
-            LangSwiftUIItem(name: "ActionSheet", searchKeyword: ".actionSheet()", available: "iOS 13.0–16.0", viewname: AnyView(v_ActionSheet())),
-            LangSwiftUIItem(name: "confirmationDialog", searchKeyword: ".confirmationDialog()", available: "iOS 15.0+", viewname: AnyView(v_confirmationDialog()))
+            LangSwiftUIItem(name: ".actionSheet()", searchKeyword: ".actionSheet()", available: "iOS 13.0–16.0", viewname: AnyView(v_ActionSheet())),
+            LangSwiftUIItem(name: ".confirmationDialog()", searchKeyword: ".confirmationDialog()", available: "iOS 15.0+", viewname: AnyView(v_confirmationDialog()))
         ]
     ),
     CInfo(
         name: "导航栏|工具栏",
         seas: [
-            LangSwiftUIItem(name: "toolbar", searchKeyword: ".toolbar(),导航栏,工具栏", available: "iOS 14.0+", viewname: AnyView(v_toolbar())),
-            LangSwiftUIItem(name: "navigationBarItems", searchKeyword: ".navigationBarItems(),导航栏", available: "iOS 13.0–16.0 ", viewname: AnyView(v_navigationBarItems()))
+            LangSwiftUIItem(name: ".toolbar() - 导航栏|工具栏", searchKeyword: ".toolbar(),导航栏,工具栏", available: "iOS 14.0+", viewname: AnyView(v_toolbar())),
+            LangSwiftUIItem(name: ".navigationBarItems() - 导航栏", searchKeyword: ".navigationBarItems(),导航栏", available: "iOS 13.0–16.0 ", viewname: AnyView(v_navigationBarItems()))
         ]
     ),
     CInfo(
@@ -93,9 +93,9 @@ let SwiftUIComponentsList: [CInfo] = [
     CInfo(
         name: "View",
         seas: [
-            LangSwiftUIItem(name: "Sheet - 视图", searchKeyword: "", available: "iOS 13.0+", viewname: AnyView(v_Sheet())),
-            LangSwiftUIItem(name: "fullScreenCover - 全屏视图", searchKeyword: "", available: "iOS 14.0+", viewname: AnyView(v_fullScreenCover())),
-            LangSwiftUIItem(name: "Popover", searchKeyword: "", available: "iOS 13.0+", viewname: AnyView(v_Popover()))
+            LangSwiftUIItem(name: ".sheet() - 工作表", searchKeyword: ".sheet()", available: "iOS 13.0+", viewname: AnyView(v_Sheet())),
+            LangSwiftUIItem(name: ".fullScreenCover() - 全屏视图", searchKeyword: ".fullScreenCover()", available: "iOS 14.0+", viewname: AnyView(v_fullScreenCover())),
+            LangSwiftUIItem(name: ".popover()", searchKeyword: ".popover()", available: "iOS 13.0+", viewname: AnyView(v_Popover()))
         ]
     ),
     CInfo(
@@ -123,28 +123,28 @@ let SwiftUIComponentsList: [CInfo] = [
     CInfo(
         name: "Chart",
         seas: [
-            LangSwiftUIItem(name: "BarMark - 柱状图", searchKeyword: "", available: "iOS 16.0+", viewname: AnyView(chart_BarMark())),
-            LangSwiftUIItem(name: "LinkMark - 线形图", searchKeyword: "", available: "iOS 16.0+", viewname: AnyView(chart_LineMark())),
-            LangSwiftUIItem(name: "PointMark - 散点图", searchKeyword: "", available: "iOS 16.0+", viewname: AnyView(chart_PointMark())),
+            LangSwiftUIItem(name: "BarMark - 柱状图", searchKeyword: "图表,chart", available: "iOS 16.0+", viewname: AnyView(chart_BarMark())),
+            LangSwiftUIItem(name: "LinkMark - 线形图", searchKeyword: "图表,chart", available: "iOS 16.0+", viewname: AnyView(chart_LineMark())),
+            LangSwiftUIItem(name: "PointMark - 散点图", searchKeyword: "图表,chart", available: "iOS 16.0+", viewname: AnyView(chart_PointMark())),
         ]
     ),
     CInfo(
         name: "Animation - 动画",
         seas: [
-            LangSwiftUIItem(name: "shadow", searchKeyword: "", available: "", viewname: AnyView(Shadow())),
-            LangSwiftUIItem(name: "mask", searchKeyword: "", available: "", viewname: AnyView(Mask())),
-            LangSwiftUIItem(name: "transitions", searchKeyword: "", available: "", viewname: AnyView(Transitions())),
+            LangSwiftUIItem(name: ".shadow()", searchKeyword: "", available: "", viewname: AnyView(Shadow())),
+            LangSwiftUIItem(name: ".mask()", searchKeyword: "", available: "", viewname: AnyView(Mask())),
+            LangSwiftUIItem(name: ".transition()", searchKeyword: "", available: "", viewname: AnyView(Transitions())),
             LangSwiftUIItem(name: "timing", searchKeyword: "", available: "", viewname: AnyView(Timing())),
-            LangSwiftUIItem(name: "Effect", searchKeyword: "", available: "", viewname: AnyView(Effect())),
+            LangSwiftUIItem(name: "Effect", searchKeyword: ".rotationEffect(),.rotation3DEffect()", available: "", viewname: AnyView(Effect())),
             LangSwiftUIItem(name: "withAnimation", searchKeyword: "", available: "iOS 13.0+", viewname: AnyView(a_withAnimation()))
         ]
     ),
     CInfo(
         name: "形状、手势等",
         seas: [
-            LangSwiftUIItem(name: "Gradient - 渐变", searchKeyword: "linearGradient", available: "iOS 13.0+", viewname: AnyView(v_Gradient())),
-            LangSwiftUIItem(name: "Shapes - 形状", searchKeyword: "", available: "", viewname: AnyView(v_shape())),
-            LangSwiftUIItem(name: "Gesture - 手势", searchKeyword: "", available: "", viewname: AnyView(v_Gesture()))
+            LangSwiftUIItem(name: "Gradient - 渐变", searchKeyword: ".linearGradient()", available: "iOS 13.0+", viewname: AnyView(v_Gradient())),
+            LangSwiftUIItem(name: "Shapes - 形状", searchKeyword: "Circle(),Rectangle(),RoundedRectangle(),Ellipse(),Capsule(),椭圆,圆形,正方形,长方形,胶囊", available: "", viewname: AnyView(v_shape())),
+            LangSwiftUIItem(name: "Gesture - 手势", searchKeyword: "点击,长按,拖曳,旋转,缩放,.onTapGesture(),.onLongPressGesture(),LongPressGesture(),DragGesture(),MagnificationGesture(),RotationGesture()", available: "", viewname: AnyView(v_Gesture()))
         ]
     ),
     CInfo(
