@@ -116,6 +116,12 @@ let SwiftUIComponentsList: [CInfo] = [
         ]
     ),
     CInfo(
+        name: "定位",
+        seas: [
+            LangSwiftUIItem(name: ".position() - 绝对定位", searchKeyword: "", available: "", viewname: AnyView(v_position()))
+        ]
+    ),
+    CInfo(
         name: "Map",
         seas: [
             LangSwiftUIItem(name: "Map - 地图", searchKeyword: "", available: "iOS 14.0+", viewname: AnyView(v_Maps()))
