@@ -8,26 +8,26 @@
 import SwiftUI
 
 struct v_statusBar: View {
-    @State private var hideStatusBar = false
+    @State var hideStatusBar:Bool = false
     
     var body: some View {
         VStack {
             
-            Text("简介：切换状态栏, 使用 .statusBarHidden(true)")
+            Text("简介：是否隐藏状态栏, 使用 .statusBarHidden(true)")
                 .font(.caption)
                 .foregroundColor(.gray)
                 .frame(height: 80)
             
-            Button("切换状态栏") {
+            Button("是否隐藏状态栏") {
                 withAnimation {
-                    hideStatusBar.toggle()
+                    self.hideStatusBar.toggle()
                 }
             }
             .buttonStyle(.borderedProminent)
-            .statusBarHidden(true)
+            .statusBarHidden(hideStatusBar)
 
         }
-        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "statusBarSwitch"))
+        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "statusBarHidden"))
     }
 }
 

@@ -67,7 +67,7 @@ struct SwiftUIComponentsView: View {
         }
         .navigationTitle("SwiftUI")
         .navigationBarTitleDisplayMode(.inline)
-        .ignoresSafeArea(edges: .bottom)
+//        .ignoresSafeArea(edges: .bottom)
 //        .safeAreaInset(edge: .bottom, content: {
 //            Color.clear.frame(height: 44)
 //        })

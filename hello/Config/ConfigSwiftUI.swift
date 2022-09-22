@@ -59,23 +59,23 @@ let SwiftUIComponentsList: [CInfo] = [
             LangSwiftUIItem(name: "Link | ShareLink - 链接", searchKeyword: "", available: "iOS 14.0+", viewname: AnyView(v_Link())),
             LangSwiftUIItem(name: "Menu", searchKeyword: ".menuOrder,目录", available: "iOS 14.0+", viewname: AnyView(v_Menu())),
             LangSwiftUIItem(name: "contextMenu", searchKeyword: "目录", available: "iOS 13.0–16.0", viewname: AnyView(v_contextMenu())),
-            LangSwiftUIItem(name: "Alert", searchKeyword: "弹窗", available: "", viewname: AnyView(v_Alert())),
-            LangSwiftUIItem(name: "SwipeActions", searchKeyword: "", available: "iOS 15.0+", viewname: AnyView(v_swipeActions())),
             LangSwiftUIItem(name: "ProgressView", searchKeyword: "loading,进度条", available: "iOS 14.0+", viewname: AnyView(v_ProgressView())),
+            LangSwiftUIItem(name: "Alert", searchKeyword: "弹窗,.alert()", available: "", viewname: AnyView(v_Alert())),
+            LangSwiftUIItem(name: "SwipeActions", searchKeyword: ".swipeActions()", available: "iOS 15.0+", viewname: AnyView(v_swipeActions())),
         ]
     ),
     CInfo(
         name: "ActionSheet",
         seas: [
-            LangSwiftUIItem(name: "ActionSheet", searchKeyword: "", available: "iOS 13.0–16.0", viewname: AnyView(v_ActionSheet())),
-            LangSwiftUIItem(name: "confirmationDialog", searchKeyword: "", available: "iOS 15.0+", viewname: AnyView(v_confirmationDialog()))
+            LangSwiftUIItem(name: "ActionSheet", searchKeyword: ".actionSheet()", available: "iOS 13.0–16.0", viewname: AnyView(v_ActionSheet())),
+            LangSwiftUIItem(name: "confirmationDialog", searchKeyword: ".confirmationDialog()", available: "iOS 15.0+", viewname: AnyView(v_confirmationDialog()))
         ]
     ),
     CInfo(
         name: "导航栏|工具栏",
         seas: [
-            LangSwiftUIItem(name: "toolbar", searchKeyword: "导航栏,工具栏", available: "iOS 14.0+", viewname: AnyView(v_toolbar())),
-            LangSwiftUIItem(name: "navigationBarItems", searchKeyword: "导航栏", available: "iOS 13.0–16.0 ", viewname: AnyView(v_navigationBarItems()))
+            LangSwiftUIItem(name: "toolbar", searchKeyword: ".toolbar(),导航栏,工具栏", available: "iOS 14.0+", viewname: AnyView(v_toolbar())),
+            LangSwiftUIItem(name: "navigationBarItems", searchKeyword: ".navigationBarItems(),导航栏", available: "iOS 13.0–16.0 ", viewname: AnyView(v_navigationBarItems()))
         ]
     ),
     CInfo(
@@ -150,15 +150,16 @@ let SwiftUIComponentsList: [CInfo] = [
     CInfo(
         name: "其它",
         seas: [
-            LangSwiftUIItem(name: "statusBar - 隐藏状态栏", searchKeyword: "", available: "", viewname: AnyView(v_statusBar())),
-            LangSwiftUIItem(name: "blur - 模糊", searchKeyword: "", available: "", viewname: AnyView(v_blur())),
-            LangSwiftUIItem(name: "fileExporter - 导出", searchKeyword: "", available: "", viewname: AnyView(v_fileExporter()))
+            LangSwiftUIItem(name: ".statusBarHidden() - 隐藏状态栏", searchKeyword: ".statusBarHidden()", available: "", viewname: AnyView(v_statusBar())),
+            LangSwiftUIItem(name: ".blur() - 模糊", searchKeyword: ".blur()", available: "", viewname: AnyView(v_blur())),
+            LangSwiftUIItem(name: ".fileExporter() - 导出", searchKeyword: "", available: "", viewname: AnyView(v_fileExporter()))
         ]
     ),
     CInfo(
         name: "安全区域",
         seas: [
-            LangSwiftUIItem(name: ".ignoresSafeArea()", searchKeyword: "安全区域", available: "iOS 14.0+", viewname: AnyView(v_ignoresSafeArea()))
+            LangSwiftUIItem(name: ".ignoresSafeArea()", searchKeyword: "安全区域,edges,regions", available: "iOS 14.0+", viewname: AnyView(v_ignoresSafeArea())),
+            LangSwiftUIItem(name: ".safeAreaInset()", searchKeyword: "安全区域,edge,regions", available: "iOS 15.0+", viewname: AnyView(v_safeAreaInset()))
         ]
     ),
 ]
