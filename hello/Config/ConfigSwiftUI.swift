@@ -118,7 +118,8 @@ let SwiftUIComponentsList: [CInfo] = [
     CInfo(
         name: "定位",
         seas: [
-            LangSwiftUIItem(name: ".position() - 绝对定位", searchKeyword: "", available: "", viewname: AnyView(v_position()))
+            LangSwiftUIItem(name: ".position() - 绝对定位", searchKeyword: "", available: "", viewname: AnyView(v_position())),
+            LangSwiftUIItem(name: ".offset() - 偏移", searchKeyword: "", available: "", viewname: AnyView(v_offset()))
         ]
     ),
     CInfo(

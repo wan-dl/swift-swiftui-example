@@ -1,0 +1,52 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;-webkit-text-size-adjust: none;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
+import SwiftUI
+
+struct v_offset: View {
+    var body: some View {
+        VStack {
+            Text("如下示例，中间圆，设置了x和y的偏移量为25。但是视图的原始尺寸没有因为设置offset发生更改，换而言之，offset不会影响布局。")
+                .font(.callout)
+                .foregroundColor(.gray)
+                .padding(20)
+            
+            HStack {
+                Circle().fill(Color.red)
+                Circle().fill(Color.green).offset(x: 25.0, y: 25.0)
+                Circle().fill(Color.yellow)
+            }
+            .frame(width: 210, height: 66)
+            .border(Color.black)
+        }
+        .navigationTitle(".offset()")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct v_offset_Previews: PreviewProvider {
+    static var previews: some View {
+        v_offset()
+    }
+}
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>
