@@ -39,6 +39,12 @@ struct navBarViewCodeAndDocs: ViewModifier {
                         }, label: {
                             Label("查看源码 ", systemImage: "text.viewfinder")
                         })
+                        
+//                        Button(action: {
+//                            AddToFavoriteList(type: pageType, name: "v_\(pageID)")
+//                        }, label: {
+//                            Label("加入收藏", systemImage: "star")
+//                        })
                     } label: {
                         Label("More", systemImage: "ellipsis.circle")
                             .labelStyle(.iconOnly)

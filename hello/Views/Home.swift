@@ -40,15 +40,26 @@ struct Home: View {
                 .padding(.horizontal)
                 .offset(y: 20)
             }
-            .navigationBarItems(
-                trailing:
-                    NavigationLink(destination: {
-                        About()
-                    }, label: {
-                        Label("", systemImage: "ellipsis")
-                            .labelStyle(.iconOnly)
-                    })
-            )
+        }
+        .toolbar {
+            ToolbarItemGroup(placement: .navigationBarTrailing) {
+//                Menu {
+//                    NavigationLink(destination: FavoritesList() , label: {
+//                        Label("我的收藏", systemImage: "star.fill")
+//                    })
+//
+//                    NavigationLink(destination: About() , label: {
+//                        Label("关于", systemImage: "paperplane")
+//                    })
+//                } label: {
+//                    Label("More", systemImage: "ellipsis")
+//                        .labelStyle(.iconOnly)
+//                }
+                
+                NavigationLink(destination: About() , label: {
+                    Label("关于", systemImage: "ellipsis")
+                })
+            }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.init(uiColor: UIColor(hexString: "#F2F2F6")))
