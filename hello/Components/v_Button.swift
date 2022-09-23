@@ -9,7 +9,7 @@ import SwiftUI
 
 // 设置 section header样式
 extension View {
-    func sectionTitle() -> some View {
+    fileprivate func sectionTitle() -> some View {
         self.font(.title3.bold())
             .frame(maxWidth: .infinity)
             .frame(height: 66, alignment: .bottomLeading)

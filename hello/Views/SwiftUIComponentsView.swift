@@ -160,7 +160,7 @@ struct SwiftUISearch: View {
             return []
         }
         var result: [LangSwiftUIItem] = []
-        for i1 in SwiftUIComponentsList {
+        for i1 in SwiftUIAllIComponentsList {
             for i2 in i1.seas {
                 let viewname: String = i2.name.lowercased()
                 if viewname.contains(searchKeyword.lowercased()) {

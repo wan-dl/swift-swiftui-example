@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+// 设置 section header样式
+extension View {
+    fileprivate func sectionTitle() -> some View {
+        self.textCase(.none).font(.headline).foregroundColor(.black)
+    }
+}
+
 struct QueryItem: Identifiable {
     let id = UUID()
     let name: String
@@ -30,7 +37,12 @@ struct GlobalSearch: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("")
-                .searchable(text: $queryString, placement: SearchFieldPlacement.navigationBarDrawer(displayMode: .always), prompt: "搜索", suggestions: {})
+                .searchable(
+                    text: $queryString,
+                    placement: SearchFieldPlacement.navigationBarDrawer(displayMode: .always),
+                    prompt: "搜索",
+                    suggestions: {}
+                )
                 .onChange(of: queryString) { value in
                     self.searchResultForSwift = []
                     self.searchResultForSwiftUI = []
@@ -95,18 +107,9 @@ struct GlobalSearch: View {
             if !searchResultForSwift.isEmpty || !searchResultForSwiftUI.isEmpty || !searchResultForApi.isEmpty {
                 VStack(alignment: .leading, spacing: 20) {
                     List {
-                        if !searchResultForSwift.isEmpty {
-                            Section(header: Text("Swift Language").textCase(.none)) {
-                                ForEach(searchResultForSwift) { item in
-                                    NavigationLink(item.name, destination: {
-                                        loadLocalHtml(pageTitle: item.name, filedir: "swift/\(item.ndir)", filename: item.nid)
-                                    })
-                                }
-                            }
-                        }
                         
                         if !searchResultForSwiftUI.isEmpty {
-                            Section(header: Text("SwiftUI").textCase(.none)) {
+                            Section(header: Text("SwiftUI").sectionTitle()) {
                                 ForEach(searchResultForSwiftUI) { item in
                                     NavigationLink(destination: item.viewname, label: {
                                         Text(item.name)
@@ -115,8 +118,18 @@ struct GlobalSearch: View {
                             }
                         }
                         
+                        if !searchResultForSwift.isEmpty {
+                            Section(header: Text("Swift Language").sectionTitle()) {
+                                ForEach(searchResultForSwift) { item in
+                                    NavigationLink(item.name, destination: {
+                                        loadLocalHtml(pageTitle: item.name, filedir: "swift/\(item.ndir)", filename: item.nid)
+                                    })
+                                }
+                            }
+                        }
+                        
                         if !searchResultForApi.isEmpty {
-                            Section(header: Text("框架").textCase(.none)) {
+                            Section(header: Text("框架").sectionTitle()) {
                                 ForEach(searchResultForApi) { item in
                                     NavigationLink(destination: item.viewname, label: {
                                         Text(item.name)
@@ -150,7 +163,7 @@ struct GlobalSearch: View {
         self.isStartSearch = true
         
         // 在SwiftUI中搜索
-        for i1 in SwiftUIComponentsList {
+        for i1 in SwiftUIAllIComponentsList {
             for i2 in i1.seas {
                 let viewname: String = i2.name.lowercased()
                 if viewname.contains(word.lowercased()) {

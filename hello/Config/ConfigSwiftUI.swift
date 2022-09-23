@@ -178,3 +178,35 @@ let SwiftUIComponentsList: [CInfo] = [
     ),
 ]
 
+let SwiftUIComponentsChildList: [CInfo] = [
+    CInfo(
+        name: "",
+        seas: [
+            LangSwiftUIItem(name: "TextField - 输入框样式", searchKeyword: "TextField,input", available: "", viewname: AnyView(InputStyle())),
+            LangSwiftUIItem(name: "TextField - 自动获取焦点的输入框", searchKeyword: "TextField,input", available: "", viewname: AnyView(InputAutoFocus())),
+            LangSwiftUIItem(name: "TextField - 收起键盘", searchKeyword: "TextField,input,输入框", available: "", viewname: AnyView(InputCloseKeyBoard())),
+            LangSwiftUIItem(name: "TextField - 带有图标的输入框", searchKeyword: "TextField,input", available: "", viewname: AnyView(InputWithIcon())),
+            LangSwiftUIItem(name: "TextField - 键盘右下角按钮", searchKeyword: "TextField,input,输入框", available: "", viewname: AnyView(InputKeyboardButtons())),
+            LangSwiftUIItem(name: "TextField - 输入框显示不同的键盘类型", searchKeyword: "TextField,input", available: "", viewname: AnyView(InputKeyboardType())),
+            LangSwiftUIItem(name: "TextField - 密码输入框", searchKeyword: "TextField,input", available: "", viewname: AnyView(InputSecureField())),
+            LangSwiftUIItem(name: "TextField - 格式化输入内容 - formatter", searchKeyword: "TextField,input,输入框", available: "", viewname: AnyView(InputFormatter())),
+            LangSwiftUIItem(name: "TextField - onEditingChanged & onCommit", searchKeyword: "TextField,input,输入框", available: "", viewname: AnyView(InputOn())),
+            LangSwiftUIItem(name: "TextField - 输入框光标颜色", searchKeyword: "TextField,input", available: "", viewname: AnyView(InputAccentColor())),
+            LangSwiftUIItem(name: "TextField - 输入框边框颜色", searchKeyword: "TextField,input", available: "", viewname: AnyView(InputBorder())),
+            LangSwiftUIItem(name: "Image - SF符号", searchKeyword: "图片", available: "", viewname: AnyView(v_image_SF())),
+            LangSwiftUIItem(name: "Image - Assets图片", searchKeyword: "", available: "", viewname: AnyView(v_image_local())),
+            LangSwiftUIItem(name: "Image - 使用URLSession下载图片", searchKeyword: "", available: "", viewname: AnyView(v_image_URLSession())),
+            LangSwiftUIItem(name: "Image - 使用AsyncImage下载图片", searchKeyword: "", available: "", viewname: AnyView(v_image_AsyncImage())),
+            LangSwiftUIItem(name: ".onTapGesture() - 点击", searchKeyword: ".gesture()", available: "", viewname: AnyView(v_onTapGesture())),
+            LangSwiftUIItem(name: "SpatialTapGesture", searchKeyword: ".gesture()", available: "iOS 16.0+", viewname: AnyView(v_SpatialTapGesture())),
+            LangSwiftUIItem(name: ".onLongPressGesture()", searchKeyword: ".gesture()", available: "", viewname: AnyView(v_onLongPressGesture())),
+            LangSwiftUIItem(name: ".gesture( LongPressGesture() )", searchKeyword: ".gesture()", available: "", viewname: AnyView(v_gesture_LongPressGesture())),
+            LangSwiftUIItem(name: "DragGesture() - 拖拽", searchKeyword: ".gesture()", available: "", viewname: AnyView(v_DragGesture())),
+            LangSwiftUIItem(name: "MagnificationGesture() - 缩放", searchKeyword: ".gesture()", available: "", viewname: AnyView(v_MagnificationGesture())),
+            LangSwiftUIItem(name: "RotationGesture() - 旋转", searchKeyword: ".gesture()", available: "", viewname: AnyView(v_RotationGesture()))
+        ]
+    )
+]
+
+
+let SwiftUIAllIComponentsList = SwiftUIComponentsList + SwiftUIComponentsChildList
