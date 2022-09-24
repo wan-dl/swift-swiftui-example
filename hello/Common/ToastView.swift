@@ -61,3 +61,51 @@ extension View {
         }
     }
 }
+
+extension View {
+    func showToast(isShow:Binding<Bool>, isSuccess:Binding<Bool>) -> some View {
+        ZStack {
+            self
+            if isShow.wrappedValue {
+                Toast(isShow: isShow, isSuccess: isSuccess)
+            }
+        }
+    }
+}
+
+struct Toast: View {
+    
+    @Binding var isShow: Bool
+    @Binding var isSuccess: Bool
+    
+    @State private var isShowAnimation: Bool = true
+    
+    var body: some View {
+        VStack(alignment: .center) {
+            Image(systemName: isSuccess ? "checkmark" : "xmark")
+                .font(.largeTitle)
+            Text(isSuccess ? "成功" : "错误")
+        }
+        .zIndex(100.0)
+        .frame(width: 120, height: 120, alignment: .center)
+        .foregroundColor(.white)
+        .background(
+            RoundedRectangle(cornerRadius: 12)
+                .foregroundColor(.black)
+                .opacity(0.6)
+        )
+        .opacity(isShowAnimation ? 1 : 0)
+        .animation(.easeIn(duration: 0.9))
+        .edgesIgnoringSafeArea(.all)
+        .onAppear() {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                isShowAnimation = false
+            }
+        }
+        .onChange(of: isShowAnimation) { e in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.isShow = false
+            }
+        }
+    }
+}

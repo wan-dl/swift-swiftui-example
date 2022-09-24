@@ -176,6 +176,12 @@ let SwiftUIComponentsList: [CInfo] = [
             LangSwiftUIItem(name: ".safeAreaInset()", searchKeyword: "安全区域,edge,regions", available: "iOS 15.0+", viewname: AnyView(v_safeAreaInset()))
         ]
     ),
+    CInfo(
+        name: "拓展",
+        seas: [
+            LangSwiftUIItem(name: "extension View 协议", searchKeyword: "", available: "", viewname: AnyView(v_extensionView()))
+        ]
+    ),
 ]
 
 let SwiftUIComponentsChildList: [CInfo] = [
