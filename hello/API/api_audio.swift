@@ -28,6 +28,7 @@ struct api_audio: View {
                 .font(.caption)
                 .foregroundColor(.gray)
                 .frame(height: 80)
+                .padding()
         }
         .navigationTitle("Audio")
         .navigationBarTitleDisplayMode(.inline)

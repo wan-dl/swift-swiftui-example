@@ -40,7 +40,7 @@ struct navBarViewCodeAndDocs: ViewModifier {
                         Button(action: {
                             isPresentedForSource.toggle()
                         }, label: {
-                            Label("查看源码 ", systemImage: "text.viewfinder")
+                            Label("示例源码 ", systemImage: "text.viewfinder")
                         })
                         
 //                        Button(action: {
