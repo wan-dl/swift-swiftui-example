@@ -47,12 +47,12 @@ struct TutorialFirst: View {
                 
                 Spacer()
             }
-            .navigationTitle("初见")
-            .navigationBarTitleDisplayMode(.inline)
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.init(uiColor: UIColor(hexString: "#F2F2F6")))
+        .navigationTitle("初见")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

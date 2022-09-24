@@ -12,6 +12,9 @@ import WebKit
 struct navBarViewCodeAndDocs: ViewModifier {
     //@Environment(\.dismiss) private var dismiss
     
+    // iOS 16.0 +
+    //@EnvironmentObject private var router: Router
+    
     @State var pageType: String = ""
     @State var pageID: String = ""
     

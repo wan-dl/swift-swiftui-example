@@ -9,8 +9,6 @@ import SwiftUI
 
 enum Tab: String {
     case home
-//    case view
-//    case api
     case search
 }
 
@@ -23,14 +21,12 @@ struct TabItem: Identifiable {
 
 var tabItems = [
     TabItem(name: "探索", icon: "house", tab: .home),
-//    TabItem(name: "SwiftUI", icon: "viewfinder", tab: .view),
-//    TabItem(name: "API", icon: "textformat", tab: .api),
     TabItem(name: "搜索", icon: "magnifyingglass", tab: .search)
 ]
 
 
 @available (iOS 16.0, *)
-class PathManager: ObservableObject {
+class Router: ObservableObject {
     @Published var path = NavigationPath()
 }
 
@@ -52,17 +48,18 @@ struct RootView: View {
             NavigationView {
                 BasicView()
             }
+            .navigationViewStyle(.stack)
         }
     }
 }
 
 @available(iOS 16.0, *)
 struct RootViewForIOS16: View {
-    @StateObject var pagePathManager = PathManager()
+    @StateObject var router = Router()
     @EnvironmentObject var quickActionSettings : QuickActionSettings
     
     var body: some View {
-        NavigationStack(path: $pagePathManager.path) {
+        NavigationStack(path: $router.path) {
             BasicView()
             .navigationDestination(for: Target.self) { target in
                 switch target {
@@ -77,13 +74,14 @@ struct RootViewForIOS16: View {
                 }
             }
         }
+        .environmentObject(router)
         .onReceive(self.quickActionSettings.$quickAction) { new in
             let shortcutItem = quickActionSettings.quickAction
             if (shortcutItem == "ViewDeviceInfo") {
-                pagePathManager.path.append(Target.deviceInfo)
+                router.path.append(Target.deviceInfo)
             }
             if (shortcutItem == "Search") {
-                pagePathManager.path.append(Target.search)
+                router.path.append(Target.search)
             }
         }
         .task {}
@@ -101,10 +99,6 @@ struct BasicView: View {
             switch selectedTab {
             case .home:
                 Home()
-//            case .view:
-//                SwiftUIComponentsView()
-//            case .api:
-//                API()
             case .search:
                 GlobalSearch()
             }
