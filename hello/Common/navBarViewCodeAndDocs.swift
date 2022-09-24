@@ -57,7 +57,7 @@ struct navBarViewCodeAndDocs: ViewModifier {
             .sheet(isPresented: $isPresentedForSource) {
                 VStack {
                     HStack() {
-                        Text("当前源码")
+                        Text("示例源码")
                             .font(.title2)
                         Spacer()
                         

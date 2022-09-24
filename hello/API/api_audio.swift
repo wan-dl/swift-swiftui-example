@@ -17,14 +17,14 @@ struct api_audio: View {
             Button(action: {
                 playAudio()
             }, label: {
-                Label("播放Bundel下的Mp3音频", systemImage: "waveform.circle")
+                Label("播放Bundle下的音频文件", systemImage: "waveform.circle")
             })
             .tint(.purple)
             .controlSize(.large)
             .buttonStyle(.borderedProminent)
             .padding()
             
-            Text("说明：本页面音频示例，是从 app bundle 中加载的资源。使用AVkit库。\n主要代码为：AVAudioPlayer(contentsOf: URL)")
+            Text("说明：本页面音频文件，是从 App Bundle 中加载的资源，播放时，请打开声音。\n\n本示例使用AVkit库, 主要代码为：AVAudioPlayer(contentsOf: URL)")
                 .font(.caption)
                 .foregroundColor(.gray)
                 .frame(height: 80)
