@@ -1,0 +1,83 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;-webkit-text-size-adjust: none;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
+import SwiftUI
+
+struct fStyle: ViewModifier {
+    @State var color: Color = .black
+    
+    func body(content: Content) -> some View {
+        content
+            .font(.body)
+            .padding(10)
+            .frame(width: 120)
+            .overlay(
+                RoundedRectangle(cornerRadius: 15)
+                    .stroke(lineWidth: 1)
+            )
+            .foregroundColor(color)
+    }
+}
+
+extension View {
+    func borderedCaption(_ color: Color) -> some View {
+        modifier(fStyle(color: color))
+    }
+}
+
+struct v_modifier: View {
+    var body: some View {
+        VStack() {
+            
+            Text("以下示例，是对 .modifier() 修饰符的运用。\n\n示例创建了一种带有圆角矩形包围文本的视图修饰符。")
+                .foregroundColor(.gray)
+                .font(.callout)
+                .frame(height: 120)
+                .padding()
+            
+            Group {
+                // 示例1
+                Text("Download")
+                    .modifier(fStyle(color: .blue))
+                
+                // 示例2
+                Text("Upload")
+                    .borderedCaption(.blue)
+                
+                // 示例3
+                Text("Data")
+                    .borderedCaption(.pink)
+            }
+        }
+        .navigationTitle("modifier")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct v_modifier_Previews: PreviewProvider {
+    static var previews: some View {
+        v_modifier()
+    }
+}
+
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>

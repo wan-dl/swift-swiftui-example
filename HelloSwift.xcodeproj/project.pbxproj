@@ -32,6 +32,7 @@
 		6317D7172892E03700192E5A /* v_TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6317D7162892E03700192E5A /* v_TimelineView.swift */; };
 		631E4B5128CBA3F900A0901D /* readMarkDownFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631E4B5028CBA3F900A0901D /* readMarkDownFile.swift */; };
 		632072C528DEB51C00F7DDF9 /* v_extensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632072C428DEB51C00F7DDF9 /* v_extensionView.swift */; };
+		632072C728DED1CA00F7DDF9 /* v_modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632072C628DED1CA00F7DDF9 /* v_modifier.swift */; };
 		632081D828A2B0C400B9D888 /* Resouces.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 632081D728A2B0C400B9D888 /* Resouces.bundle */; };
 		6327DE3F28A5379D0097F3BF /* MainSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6327DE3E28A5379D0097F3BF /* MainSceneDelegate.swift */; };
 		6327FA6228957E440091BB9B /* p_tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6327FA6128957E440091BB9B /* p_tabbar.swift */; };
@@ -234,6 +235,7 @@
 		6317D7162892E03700192E5A /* v_TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_TimelineView.swift; sourceTree = "<group>"; };
 		631E4B5028CBA3F900A0901D /* readMarkDownFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = readMarkDownFile.swift; sourceTree = "<group>"; };
 		632072C428DEB51C00F7DDF9 /* v_extensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_extensionView.swift; sourceTree = "<group>"; };
+		632072C628DED1CA00F7DDF9 /* v_modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_modifier.swift; sourceTree = "<group>"; };
 		632081D728A2B0C400B9D888 /* Resouces.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resouces.bundle; sourceTree = "<group>"; };
 		6320823028A2B1C100B9D888 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6327DE3D28A532300097F3BF /* HelloSwift-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "HelloSwift-Info.plist"; sourceTree = "<group>"; };
@@ -549,6 +551,7 @@
 				6373BB262893595C0002A084 /* v_List.swift */,
 				E52ECFBB2893AAC40051D2DE /* v_Maps.swift */,
 				E5CE5CB428925DFD00BC7FF1 /* v_Menu.swift */,
+				632072C628DED1CA00F7DDF9 /* v_modifier.swift */,
 				6373BB2C289369B10002A084 /* v_Navigation.swift */,
 				63619D0228DA008800335762 /* v_navigationBarItems.swift */,
 				63F91D7C28DD4309003D5EC0 /* v_offset.swift */,
@@ -899,6 +902,7 @@
 				63AF99D128B51427002A87F8 /* api_network.swift in Sources */,
 				63F76BD52899E6EA0028A4D4 /* api_audio.swift in Sources */,
 				63C0954C2899628D00498562 /* Mask.swift in Sources */,
+				632072C728DED1CA00F7DDF9 /* v_modifier.swift in Sources */,
 				6314548B28C5011E001136EF /* InputCloseKeyBoard.swift in Sources */,
 				6317D7112892DDA700192E5A /* v_OutlineGroup.swift in Sources */,
 				63556DD6289976870020ABDD /* p_ScrollWithRotate3DEffect.swift in Sources */,

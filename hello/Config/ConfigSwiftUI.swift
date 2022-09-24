@@ -179,7 +179,8 @@ let SwiftUIComponentsList: [CInfo] = [
     CInfo(
         name: "拓展",
         seas: [
-            LangSwiftUIItem(name: "extension View 协议", searchKeyword: "", available: "", viewname: AnyView(v_extensionView()))
+            LangSwiftUIItem(name: "extension View 协议", searchKeyword: "协议,扩展", available: "", viewname: AnyView(v_extensionView())),
+            LangSwiftUIItem(name: ".modifier() - 修饰符", searchKeyword: "ViewModifier,extension", available: "", viewname: AnyView(v_modifier()))
         ]
     ),
 ]
