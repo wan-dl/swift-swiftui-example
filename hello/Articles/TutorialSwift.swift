@@ -66,7 +66,7 @@ struct TutorialSwiftLanguage: View {
             ForEach(LangSwiftWelcomeList, id: \.id) { item in
                 NavigationLink(destination: {
                     //readMarkDownFile(mdDir: "swift/welcome", mdPath: item.nid, mdTitle: item.name)
-                    loadLocalHtml(pageTitle: item.name, filedir: "swift/welcome", filename: item.nid)
+                    loadSwiftProgrammingLanguage(pageTitle: item.name, filedir: "swift/welcome", filename: item.nid)
                 }, label: {
                     Text(item.name)
                 })
@@ -79,7 +79,7 @@ struct TutorialSwiftLanguage: View {
             ForEach(LangSwiftSyntaxList, id: \.id) { item in
                 NavigationLink(destination: {
                     //readMarkDownFile(mdDir: "swift/guide", mdPath: item.nid, mdTitle: item.name)
-                    loadLocalHtml(pageTitle: item.name, filedir: "swift/guide", filename: item.nid)
+                    loadSwiftProgrammingLanguage(pageTitle: item.name, filedir: "swift/guide", filename: item.nid)
                 }, label: {
                     Text(item.name)
                     Text(item.en)
@@ -96,7 +96,7 @@ struct TutorialSwiftLanguage: View {
             ForEach(LangSwiftReferenceList, id: \.id) { item in
                 NavigationLink(destination: {
                     //readMarkDownFile(mdDir: "swift/reference", mdPath: item.nid, mdTitle: item.name)
-                    loadLocalHtml(pageTitle: item.name, filedir: "swift/reference", filename: item.nid)
+                    loadSwiftProgrammingLanguage(pageTitle: item.name, filedir: "swift/reference", filename: item.nid)
                 }, label: {
                     Text(item.name)
                     Text(item.en)
@@ -163,7 +163,7 @@ struct SwiftSyntaxSearch: View {
                     Section(header: Text("搜索结果").font(.subheadline)) {
                         ForEach(LangSwiftSyntaxListResults, id: \.id) { item in
                             NavigationLink(destination: {
-                                loadLocalHtml(pageTitle: item.name, filedir: "swift/\(item.ndir)", filename: item.nid)
+                                loadSwiftProgrammingLanguage(pageTitle: item.name, filedir: "swift/\(item.ndir)", filename: item.nid)
                             }, label: {
                                 Text(item.name)
                                     .font(.body)

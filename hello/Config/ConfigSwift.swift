@@ -68,3 +68,10 @@ let LangSwiftReferenceList: [LangSwiftItem] = [
     LangSwiftItem(ndir: "reference", nid: "Generic_Parameters_and_Arguments", name: "泛型参数", en: "Generic Parameters and Arguments", searchKeyword: ""),
 //    LangSwiftItem(ndir: "reference", nid: "Summary_of_the_Grammar", name: "语法总结", en: "Summary of the Grammar", searchKeyword: "")
 ]
+
+
+// swift中文教程所有章节
+let LangSwiftAllSectionsList = LangSwiftWelcomeList + LangSwiftSyntaxList + LangSwiftReferenceList
+let LangSwiftAllNid = LangSwiftAllSectionsList.map { item in
+    return item.nid
+}

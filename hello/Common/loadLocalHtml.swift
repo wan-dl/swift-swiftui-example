@@ -8,7 +8,7 @@
 import SwiftUI
 import WebKit
 
-struct loadLocalHtmlFile: UIViewRepresentable {
+fileprivate struct loadLocalHtmlFile: UIViewRepresentable {
     var filename: String
     var filedir: String
     

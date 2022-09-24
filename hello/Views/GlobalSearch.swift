@@ -122,7 +122,7 @@ struct GlobalSearch: View {
                             Section(header: Text("Swift Language").sectionTitle()) {
                                 ForEach(searchResultForSwift) { item in
                                     NavigationLink(item.name, destination: {
-                                        loadLocalHtml(pageTitle: item.name, filedir: "swift/\(item.ndir)", filename: item.nid)
+                                        loadSwiftProgrammingLanguage(pageTitle: item.name, filedir: "swift/\(item.ndir)", filename: item.nid)
                                     })
                                 }
                             }
