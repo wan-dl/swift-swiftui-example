@@ -5,6 +5,11 @@
   Maintainer: @highlightjs/core-team
   Version: 2021.09.0
 */
+
+*{
+    -webkit-user-select: none; /* Disable selection/Copy of UIWebView */
+}
+
 body {
     margin: 0;
 }
