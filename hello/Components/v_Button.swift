@@ -69,7 +69,7 @@ struct v_Button: View {
                         HStack {
                            Image(systemName: "star")
                            Text("带有SF符号的按钮")
-                        }.padding(8)
+                        }.padding()
                     })
                     .background(.blue)
                     .foregroundColor(.white)
@@ -77,6 +77,15 @@ struct v_Button: View {
                     
                     Button("带有缩放效果的按钮", action: {})
                         .buttonStyle(withScaleEffectButtonStyle())
+                    
+                    
+                    Button(action: {}, label: {
+                        Label("渐变效果按钮", systemImage: "plus")
+                            .foregroundColor(Color.white)
+                            .padding()
+                            .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.orange]), startPoint: .leading, endPoint: .trailing))
+                            .cornerRadius(15.0)
+                    })
                 }
             }
             .padding()
@@ -96,7 +105,7 @@ struct withScaleEffectButtonStyle: ButtonStyle {
         HStack {
             configuration.label
                 .foregroundColor(.white)
-                .padding(10)
+                .padding()
         }
         .background(.blue)
         .cornerRadius(10)

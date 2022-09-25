@@ -52,23 +52,35 @@ let SwiftUIComponentsList: [CInfo] = [
         seas: [
             LangSwiftUIItem(name: "Button - 按钮", searchKeyword: "", available: "iOS 13.0+", viewname: AnyView(v_Button())),
             LangSwiftUIItem(name: "PasteButton", searchKeyword: "", available: "iOS 16.0+", viewname: AnyView(v_PasteButton())),
+            LangSwiftUIItem(name: "Link | ShareLink - 链接", searchKeyword: "", available: "iOS 14.0+", viewname: AnyView(v_Link())),
             LangSwiftUIItem(name: "Slider - 滑块", searchKeyword: "", available: "iOS 13.0+", viewname: AnyView(v_Slider())),
             LangSwiftUIItem(name: "Stepper", searchKeyword: "", available: "iOS 13.0+", viewname: AnyView(v_Stepper())),
             LangSwiftUIItem(name: "Picker - 选择器", searchKeyword: "", available: "iOS 13.0+", viewname: AnyView(v_Picker())),
             LangSwiftUIItem(name: "Toggle", searchKeyword: "", available: "iOS 13.0+", viewname: AnyView(v_Toggle())),
-            LangSwiftUIItem(name: "Link | ShareLink - 链接", searchKeyword: "", available: "iOS 14.0+", viewname: AnyView(v_Link())),
+            LangSwiftUIItem(name: "ProgressView", searchKeyword: "loading,进度条", available: "iOS 14.0+", viewname: AnyView(v_ProgressView())),
             LangSwiftUIItem(name: "Menu", searchKeyword: ".menuOrder,目录", available: "iOS 14.0+", viewname: AnyView(v_Menu())),
             LangSwiftUIItem(name: "contextMenu", searchKeyword: "目录", available: "iOS 13.0–16.0", viewname: AnyView(v_contextMenu())),
-            LangSwiftUIItem(name: "ProgressView", searchKeyword: "loading,进度条", available: "iOS 14.0+", viewname: AnyView(v_ProgressView())),
-            LangSwiftUIItem(name: ".alert() - 弹窗", searchKeyword: "弹窗,.alert()", available: "", viewname: AnyView(v_Alert())),
-            LangSwiftUIItem(name: ".swipeActions()", searchKeyword: ".swipeActions()", available: "iOS 15.0+", viewname: AnyView(v_swipeActions())),
         ]
     ),
     CInfo(
-        name: "ActionSheet",
+        name: "Instance Method",
         seas: [
+            LangSwiftUIItem(name: ".alert() - 弹窗", searchKeyword: "弹窗,.alert()", available: "", viewname: AnyView(v_Alert())),
+            LangSwiftUIItem(name: ".swipeActions()", searchKeyword: ".swipeActions()", available: "iOS 15.0+", viewname: AnyView(v_swipeActions())),
+            LangSwiftUIItem(name: ".sheet() - 工作表", searchKeyword: ".sheet()", available: "iOS 13.0+", viewname: AnyView(v_Sheet())),
+            LangSwiftUIItem(name: ".fullScreenCover() - 全屏视图", searchKeyword: ".fullScreenCover()", available: "iOS 14.0+", viewname: AnyView(v_fullScreenCover())),
+            LangSwiftUIItem(name: ".popover()", searchKeyword: ".popover()", available: "iOS 13.0+", viewname: AnyView(v_Popover())),
             LangSwiftUIItem(name: ".actionSheet()", searchKeyword: ".actionSheet()", available: "iOS 13.0–16.0", viewname: AnyView(v_ActionSheet())),
             LangSwiftUIItem(name: ".confirmationDialog()", searchKeyword: ".confirmationDialog()", available: "iOS 15.0+", viewname: AnyView(v_confirmationDialog()))
+        ]
+    ),
+    CInfo(
+        name: "Navigation",
+        seas: [
+            LangSwiftUIItem(name: "NavigationStack", searchKeyword: "NavigationStack,导航,路由", available: "iOS 16.0+", viewname: AnyView(v_NavigationStack())),
+            LangSwiftUIItem(name: "NavigationView", searchKeyword: "NavigationView,导航,路由", available: "iOS 13.0–16.0", viewname: AnyView(v_NavigationView())),
+            LangSwiftUIItem(name: "导航栏标题、标题样式、返回按钮", searchKeyword: ".navigationTitle(),.navigationBarBackButtonHidden(),.navigationBarTitleDisplayMode()", available: "", viewname: AnyView(v_NavigationSetting())),
+            LangSwiftUIItem(name: "NavigationLink", searchKeyword: "", available: "iOS 13.0+", viewname: AnyView(v_Navigation())),
         ]
     ),
     CInfo(
@@ -84,31 +96,22 @@ let SwiftUIComponentsList: [CInfo] = [
             LangSwiftUIItem(name: "List - 列表", searchKeyword: "", available: "iOS 13.0+", viewname: AnyView(v_List())),
             LangSwiftUIItem(name: "Form - 表单", searchKeyword: "", available: "iOS 13.0+", viewname: AnyView(v_Form())),
             LangSwiftUIItem(name: "LabeledContent", searchKeyword: "", available: "iOS 16.0+", viewname: AnyView(v_LabeledContent())),
-            LangSwiftUIItem(name: "GroupBox", searchKeyword: "", available: "iOS 14.0+", viewname: AnyView(v_GroupBox())),
             LangSwiftUIItem(name: "ScrollView - 滚动视图", searchKeyword: "", available: "iOS 13.0+", viewname: AnyView(v_ScrollView())),
             LangSwiftUIItem(name: "ScrollViewReader - 滚动视图锚点", searchKeyword: "", available: "iOS 14.0+", viewname: AnyView(v_ScrollViewReader())),
             LangSwiftUIItem(name: "Table - 表格", searchKeyword: "", available: "iOS 16.0+", viewname: AnyView(v_Table())),
+            LangSwiftUIItem(name: "GroupBox", searchKeyword: "", available: "iOS 14.0+", viewname: AnyView(v_GroupBox())),
         ]
     ),
     CInfo(
-        name: "",
+        name: "分组",
         seas: [
             LangSwiftUIItem(name: "Section", searchKeyword: "", available: "", viewname: AnyView(v_section())),
             LangSwiftUIItem(name: "Group", searchKeyword: "", available: "", viewname: AnyView(v_Group()))
         ]
     ),
     CInfo(
-        name: "View",
-        seas: [
-            LangSwiftUIItem(name: ".sheet() - 工作表", searchKeyword: ".sheet()", available: "iOS 13.0+", viewname: AnyView(v_Sheet())),
-            LangSwiftUIItem(name: ".fullScreenCover() - 全屏视图", searchKeyword: ".fullScreenCover()", available: "iOS 14.0+", viewname: AnyView(v_fullScreenCover())),
-            LangSwiftUIItem(name: ".popover()", searchKeyword: ".popover()", available: "iOS 13.0+", viewname: AnyView(v_Popover()))
-        ]
-    ),
-    CInfo(
         name: "Presentains Containers",
         seas: [
-            LangSwiftUIItem(name: "NavigationLink", searchKeyword: "", available: "iOS 13.0+", viewname: AnyView(v_Navigation())),
             LangSwiftUIItem(name: "OutlineGroup", searchKeyword: "", available: "iOS 14.0+", viewname: AnyView(v_OutlineGroup())),
             LangSwiftUIItem(name: "DisclosureGroup", searchKeyword: "", available: "iOS 14.0+", viewname: AnyView(v_DisclosureGroup())),
             LangSwiftUIItem(name: "TabView", searchKeyword: "", available: "iOS 13.0+", viewname: AnyView(v_Tab())),
@@ -187,7 +190,7 @@ let SwiftUIComponentsList: [CInfo] = [
 
 let SwiftUIComponentsChildList: [CInfo] = [
     CInfo(
-        name: "",
+        name: "TextField 输入框",
         seas: [
             LangSwiftUIItem(name: "TextField - 输入框样式", searchKeyword: "TextField,input", available: "", viewname: AnyView(InputStyle())),
             LangSwiftUIItem(name: "TextField - 自动获取焦点的输入框", searchKeyword: "TextField,input", available: "", viewname: AnyView(InputAutoFocus())),
@@ -200,19 +203,43 @@ let SwiftUIComponentsChildList: [CInfo] = [
             LangSwiftUIItem(name: "TextField - onEditingChanged & onCommit", searchKeyword: "TextField,input,输入框", available: "", viewname: AnyView(InputOn())),
             LangSwiftUIItem(name: "TextField - 输入框光标颜色", searchKeyword: "TextField,input", available: "", viewname: AnyView(InputAccentColor())),
             LangSwiftUIItem(name: "TextField - 输入框边框颜色", searchKeyword: "TextField,input", available: "", viewname: AnyView(InputBorder())),
+        ]
+    ),
+    CInfo(
+        name: "Image 图片",
+        seas: [
             LangSwiftUIItem(name: "Image - SF符号", searchKeyword: "图片", available: "", viewname: AnyView(v_image_SF())),
             LangSwiftUIItem(name: "Image - Assets图片", searchKeyword: "", available: "", viewname: AnyView(v_image_local())),
             LangSwiftUIItem(name: "Image - 使用URLSession下载图片", searchKeyword: "", available: "", viewname: AnyView(v_image_URLSession())),
             LangSwiftUIItem(name: "Image - 使用AsyncImage下载图片", searchKeyword: "", available: "", viewname: AnyView(v_image_AsyncImage())),
+            
+        ]
+    ),
+    CInfo(
+        name: "手势",
+        seas: [
             LangSwiftUIItem(name: ".onTapGesture() - 点击", searchKeyword: ".gesture()", available: "", viewname: AnyView(v_onTapGesture())),
             LangSwiftUIItem(name: "SpatialTapGesture", searchKeyword: ".gesture()", available: "iOS 16.0+", viewname: AnyView(v_SpatialTapGesture())),
             LangSwiftUIItem(name: ".onLongPressGesture()", searchKeyword: ".gesture()", available: "", viewname: AnyView(v_onLongPressGesture())),
             LangSwiftUIItem(name: ".gesture( LongPressGesture() )", searchKeyword: ".gesture()", available: "", viewname: AnyView(v_gesture_LongPressGesture())),
             LangSwiftUIItem(name: "DragGesture() - 拖拽", searchKeyword: ".gesture()", available: "", viewname: AnyView(v_DragGesture())),
             LangSwiftUIItem(name: "MagnificationGesture() - 缩放", searchKeyword: ".gesture()", available: "", viewname: AnyView(v_MagnificationGesture())),
-            LangSwiftUIItem(name: "RotationGesture() - 旋转", searchKeyword: ".gesture()", available: "", viewname: AnyView(v_RotationGesture()))
+            LangSwiftUIItem(name: "RotationGesture() - 旋转", searchKeyword: ".gesture()", available: "", viewname: AnyView(v_RotationGesture())),
         ]
-    )
+    ),
+    CInfo(
+        name: "Shape 形状",
+        seas: [
+            LangSwiftUIItem(name: "Circle() - 圆形|环形", searchKeyword: "", available: "", viewname: AnyView(v_Circle())),
+            LangSwiftUIItem(name: "Circle() - 圆形进度条", searchKeyword: "", available: "", viewname: AnyView(v_CircleProgressBar())),
+            LangSwiftUIItem(name: "Rectangle()", searchKeyword: "", available: "", viewname: AnyView(v_Rectangle())),
+            LangSwiftUIItem(name: "RoundedRectangle()", searchKeyword: "", available: "", viewname: AnyView(v_RoundedRectangle())),
+            LangSwiftUIItem(name: "Ellipse()", searchKeyword: "", available: "", viewname: AnyView(v_Ellipse())),
+            LangSwiftUIItem(name: "Capsule() - 胶囊", searchKeyword: "", available: "", viewname: AnyView(v_Capsule())),
+            LangSwiftUIItem(name: "Capsule() 组合", searchKeyword: "", available: "", viewname: AnyView(v_CapsuleGroup())),
+            LangSwiftUIItem(name: "Path()", searchKeyword: "", available: "", viewname: AnyView(v_Path())),
+        ]
+    ),
 ]
 
 

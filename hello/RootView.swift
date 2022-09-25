@@ -61,20 +61,20 @@ struct RootViewForIOS16: View {
     var body: some View {
         NavigationStack(path: $router.path) {
             BasicView()
-            .navigationDestination(for: Target.self) { target in
-                switch target {
-                case .login:
-                    UserLogin()
-                case .register:
-                    UserLogin()
-                case .deviceInfo:
-                    api_getSystemInfo()
-                case .search:
-                    GlobalSearch()
-                }
-            }
         }
         .environmentObject(router)
+        .navigationDestination(for: Target.self) { target in
+            switch target {
+            case .login:
+                UserLogin()
+            case .register:
+                UserLogin()
+            case .deviceInfo:
+                api_getSystemInfo()
+            case .search:
+                GlobalSearch()
+            }
+        }
         .onReceive(self.quickActionSettings.$quickAction) { new in
             let shortcutItem = quickActionSettings.quickAction
             if (shortcutItem == "ViewDeviceInfo") {

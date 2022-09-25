@@ -9,64 +9,31 @@ import SwiftUI
 
 struct v_shape: View {
     var body: some View {
-        ScrollView {
-            HStack {
-                Circle()
-                    .fill(.green.opacity(0.4))
-                    .frame(width: 150, height: 150)
-                    .overlay(Text("圆形 Circle()").foregroundColor(.white))
-                
-                Rectangle()
-                    .fill(.blue.opacity(0.4))
-                    .mask(Ellipse())
-                    .frame(width: 150, height: 150)
+        List {
+            Section() {
+                NavigationLink("Circle() - 圆形|环形", destination: v_Circle())
+                NavigationLink("Circle() - 圆形进度条", destination: v_CircleProgressBar())
             }
             
-            HStack(spacing: 30) {
-                RoundedRectangle(cornerRadius: 0)
-                    .fill(.red.opacity(0.4))
-                    .frame(width: 150, height: 150)
-                    .overlay(Text("正方形\n105x150").foregroundColor(.white))
-                
-                RoundedRectangle(cornerRadius: 30)
-                    .fill(.red.opacity(0.4))
-                    .frame(width: 150, height: 150)
+            Section() {
+                NavigationLink("Rectangle()", destination: v_Rectangle())
+                NavigationLink("RoundedRectangle()", destination: v_RoundedRectangle())
             }
             
-            HStack(spacing: 30) {
-                RoundedRectangle(cornerRadius: 30)
-                    .inset(by: 10)
-                    .stroke(Color.yellow, lineWidth: 15)
-                    .frame(width: 150, height: 150)
-                
-                Circle()
-                    .fill(.yellow)
-                    .overlay(
-                        Circle().strokeBorder(.white).padding(10)
-                    )
-                    .frame(width: 150, height: 150)
+            Section() {
+                NavigationLink("Ellipse()", destination: v_Ellipse())
             }
             
-            HStack(spacing: 30) {
-                Ellipse()
-                    .fill(.green)
-                    .overlay(Text("椭圆 Ellipse()").foregroundColor(.white))
-                    
+            Section() {
+                NavigationLink("Capsule() - 胶囊", destination: v_Capsule())
+                NavigationLink("Capsule() 组合", destination: v_CapsuleGroup())
             }
-            .frame(height: 150)
-            .padding()
             
-            HStack(spacing: 30) {
-                Capsule()
-                    .fill(.pink)
-                    .overlay(Text("胶囊 Capsule()").foregroundColor(.white))
+            Section() {
+                NavigationLink("Path()", destination: v_Path())
             }
-            .frame(height: 50)
-            .padding()
         }
-        .navigationTitle("形状")
-        .navigationBarTitleDisplayMode(.inline)
-        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "ShapeSet"))
+        .navigationTitle("Shapes")
     }
 }
 

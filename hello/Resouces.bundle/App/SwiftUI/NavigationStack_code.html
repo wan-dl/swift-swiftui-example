@@ -1,0 +1,112 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link type="text/css" rel="stylesheet" href="../static/github.min.css" />
+        <script src="../static/marked.min.js"></script>
+        <script src="../static/highlight.min.js"></script>
+        <style>body{font-size: 16px;line-height: 21px;-webkit-text-size-adjust: none;}</style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+let mdtext = `
+\`\`\`swift
+import SwiftUI
+
+enum TargetPage {
+    case login
+    case loginSuccess
+}
+
+@available (iOS 16.0, *)
+class appRouter: ObservableObject {
+    @Published var path = NavigationPath()
+}
+
+@available(iOS 16.0, *)
+struct ContentView: View {
+    @StateObject var router = appRouter()
+    
+    var body: some View {
+        NavigationStack(path: $router.path) {
+            List {
+                NavigationLink("打开登录窗口", value: TargetPage.login)
+            }
+            .navigationDestination(for: TargetPage.self) { target in
+                switch target {
+                case .login:
+                    exampleLogin()
+                case .loginSuccess:
+                    exampleLoginSuccess()
+                }
+            }
+            
+        }
+        .environmentObject(router)
+    }
+}
+
+// 登录页面
+struct exampleLogin: View {
+    @EnvironmentObject var router: appRouter
+    @State var phone: String = ""
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 30) {
+            
+            HStack {
+                TextField("手机号", text: $phone)
+                    .textFieldStyle(.roundedBorder)
+                Button("登录", action: {
+                    router.path.append(TargetPage.loginSuccess)
+                })
+            }
+            
+            Spacer()
+            
+            HStack{
+                Button("返回上层视图", action: {
+                    router.path.removeLast()
+                })
+                .buttonStyle(.borderedProminent)
+                .controlSize(.regular)
+                
+                Button("返回根视图", action: {
+                    router.path.removeLast(router.path.count)
+                })
+                .buttonStyle(.borderedProminent)
+                .controlSize(.regular)
+            }
+           
+        }
+        .padding()
+        .navigationTitle("登录")
+        .navigationBarBackButtonHidden()
+    }
+}
+
+// 登录成功页面
+struct exampleLoginSuccess: View {
+    var body: some View {
+        Text("登录成功")
+            .font(.largeTitle)
+            .navigationTitle("登录成功")
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+
+\`\`\`
+`
+            hljs.highlightAll();
+            document.getElementById('content').innerHTML = marked.parse(mdtext);
+        </script>
+    </body>
+</html>
