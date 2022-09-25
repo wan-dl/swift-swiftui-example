@@ -18,58 +18,54 @@ struct SwiftUIComponentsView: View {
     @State var searchKeyword: String = ""
     @State var isDelay: Bool = false
     var body: some View {
-        VStack {
-            List {
-                Section() {
-                    NavigationLink(destination: TutorialSwiftUI(), label: {
-                        HStack() {
-                            Image("icon_swiftui")
-                                .resizable(resizingMode: .stretch)
-                                .frame(width: 25, height: 25)
-                            VStack(alignment: .leading) {
-                                Text("SwiftUI是一种使用Swift语言在苹果设备上构建用户界面的创新且简单的方式...")
-                                    .lineLimit(2)
-                                    .lineSpacing(6)
-                                    .font(.callout)
+        List {
+            // 简短介绍
+            SwiftUIBriefIntroduction
+            
+            ForEach(SwiftUIComponentsList, id: \.id) { item in
+                Section(header: Text(item.name).textCase(.none)) {
+                    ForEach(item.seas, id:\.id) { item2 in
+                        NavigationLink(destination: item2.viewname, label: {
+                            Text(item2.name).lineLimit(1)
+                            if item2.available != "iOS 13.0+" && !item2.available.isEmpty {
+                                Text(item2.available).font(.caption).foregroundColor(.secondary)
                             }
-                        }
-                    })
-                }
-                ForEach(SwiftUIComponentsList, id: \.id) { item in
-                    Section(header: Text(item.name).textCase(.none)) {
-                        ForEach(item.seas, id:\.id) { item2 in
-                            NavigationLink(destination: item2.viewname, label: {
-                                Text(item2.name)
-                                    .lineLimit(1)
-                                if item2.available != "iOS 13.0+" && !item2.available.isEmpty {
-                                    Text(item2.available)
-                                        .font(.caption)
-                                        .foregroundColor(.secondary)
-                                }
-                            })
-                        }
+                        })
                     }
                 }
             }
-            .listStyle(.insetGrouped)
-//            .searchable(text: $searchKeyword, placement: SearchFieldPlacement.automatic, prompt: "搜索")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink(destination: {
-                        SwiftUISearch()
-                    }, label: {
-                        Image(systemName: "magnifyingglass")
-                            .foregroundColor(.black)
-                    })
-                }
+        }
+        .listStyle(.insetGrouped)
+        //.searchable(text: $searchKeyword, placement: SearchFieldPlacement.automatic, prompt: "搜索")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                NavigationLink(destination: {
+                    SwiftUISearch()
+                }, label: {
+                    Image(systemName: "magnifyingglass")
+                        .foregroundColor(.black)
+                })
             }
         }
         .navigationTitle("SwiftUI")
         .navigationBarTitleDisplayMode(.inline)
-//        .ignoresSafeArea(edges: .bottom)
-//        .safeAreaInset(edge: .bottom, content: {
-//            Color.clear.frame(height: 44)
-//        })
+    }
+    
+    // SwiftUI 简短介绍
+    var SwiftUIBriefIntroduction: some View {
+        Section() {
+            NavigationLink(destination: TutorialSwiftUI(), label: {
+                Image("icon_swiftui")
+                    .resizable(resizingMode: .stretch)
+                    .frame(width: 25, height: 25)
+                VStack(alignment: .leading) {
+                    Text("SwiftUI是一种使用Swift语言在苹果设备上构建用户界面的创新且简单的方式...")
+                        .lineLimit(2)
+                        .lineSpacing(6)
+                        .font(.callout)
+                }
+            })
+        }
     }
     
     // 根据搜索关键字，返回搜索结果
