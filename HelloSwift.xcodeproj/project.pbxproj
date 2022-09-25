@@ -1249,8 +1249,9 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSCameraUsageDescription = "该应用需要使用相机，以便为你演示相关功能";
 				INFOPLIST_KEY_NSContactsUsageDescription = "该应用需要读取你的通讯录，以便为您演示相关功能";
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "该应用需要使用健康，以便为您演示相关代码功能";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "该应用需要使用健康，以便为您演示相关代码功能";
-				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "该应用需要使用健康，以便为您演示相关代码功能";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "使用您的位置信息，以便向您演示相关功能";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "使用您的位置信息，以便向您演示相关功能";
 				INFOPLIST_KEY_NSLocationTemporaryUsageDescriptionDictionary = "使用您的位置信息，以便向您演示相关功能";
@@ -1277,6 +1278,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = io.swift.expert;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1303,8 +1307,9 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSCameraUsageDescription = "该应用需要使用相机，以便为你演示相关功能";
 				INFOPLIST_KEY_NSContactsUsageDescription = "该应用需要读取你的通讯录，以便为您演示相关功能";
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "该应用需要使用健康，以便为您演示相关代码功能";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "该应用需要使用健康，以便为您演示相关代码功能";
-				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "该应用需要使用健康，以便为您演示相关代码功能";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "使用您的位置信息，以便向您演示相关功能";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "使用您的位置信息，以便向您演示相关功能";
 				INFOPLIST_KEY_NSLocationTemporaryUsageDescriptionDictionary = "使用您的位置信息，以便向您演示相关功能";
@@ -1331,6 +1336,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = io.swift.expert;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
