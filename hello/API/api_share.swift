@@ -32,7 +32,7 @@ struct api_share: View {
     }
     
     func shareButton() {
-        let url = URL(string: "itms-apps://itunes.apple.com/app/")
+        let url = URL(string: "itms-apps://itunes.apple.com/cn/app/id1643821819")
         let activityController = UIActivityViewController(
             activityItems: [url!],
             applicationActivities: nil

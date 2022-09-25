@@ -62,7 +62,7 @@ struct About: View {
     }
     
     func gotoStore() {
-        let url = URL(string: "itms-apps://itunes.apple.com/app/")!
+        let url = URL(string: "itms-apps://itunes.apple.com/cn/app/id1643821819")!
         
         if !UIApplication.shared.canOpenURL(url) {
              return
