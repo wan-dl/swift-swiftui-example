@@ -5,3 +5,6 @@
 # vim/vi
 *.swp
 convert_md_html.py
+
+Resouces.bundle/App/SwiftUI/*.html
+Resouces.bundle/App/API/*.html
