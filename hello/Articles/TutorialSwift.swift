@@ -49,7 +49,6 @@ struct TutorialSwiftLanguage: View {
             Image("icon_swift")
                 .resizable(resizingMode: .stretch)
                 .frame(width: 25, height: 25)
-                .offset(y: -10)
             VStack(alignment: .leading) {
                 Text(pageDesc)
                     .lineSpacing(6)

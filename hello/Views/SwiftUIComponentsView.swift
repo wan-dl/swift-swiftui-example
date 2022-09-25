@@ -26,7 +26,6 @@ struct SwiftUIComponentsView: View {
                             Image("icon_swiftui")
                                 .resizable(resizingMode: .stretch)
                                 .frame(width: 25, height: 25)
-                                .offset(y: -10)
                             VStack(alignment: .leading) {
                                 Text("SwiftUI是一种使用Swift语言在苹果设备上构建用户界面的创新且简单的方式...")
                                     .lineLimit(2)
