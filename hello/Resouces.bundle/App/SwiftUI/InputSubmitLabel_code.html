@@ -87,6 +87,14 @@ struct InputKeyboardButtons: View {
             }
             .padding()
         }
+        .navigationTitle(".submitLabel")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct InputKeyboardButtons_Previews: PreviewProvider {
+    static var previews: some View {
+        InputKeyboardButtons()
     }
 }
 

@@ -32,6 +32,14 @@ struct v_ColorPicker: View {
                 .padding(.horizontal)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .navigationTitle("ColorPicker")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct v_ColorPicker_Previews: PreviewProvider {
+    static var previews: some View {
+        v_ColorPicker()
     }
 }
 

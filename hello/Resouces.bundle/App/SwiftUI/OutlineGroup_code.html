@@ -58,6 +58,14 @@ struct v_OutlineGroup: View {
                 Text("OutlineGroup方法，仅支持iOS 14.0+")
             }
         }
+        .navigationTitle("OutlineGroup")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct v_OutlineGroup_Previews: PreviewProvider {
+    static var previews: some View {
+        v_OutlineGroup()
     }
 }
 

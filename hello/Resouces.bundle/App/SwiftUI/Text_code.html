@@ -16,6 +16,7 @@ let mdtext = `
 \`\`\`swift
 import SwiftUI
 
+
 struct v_Text: View {
     struct Item: Identifiable {
         let name: String
@@ -131,6 +132,14 @@ struct v_Text: View {
                 }
             }
         }
+        .navigationTitle("Text")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct v_Text_Previews: PreviewProvider {
+    static var previews: some View {
+        v_Text()
     }
 }
 

@@ -77,6 +77,14 @@ struct v_fileExporter: View {
                 .foregroundColor(.gray)
                 .frame(height: 80)
         }
+        .navigationTitle("fileExporter")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct v_fileExporter_Previews: PreviewProvider {
+    static var previews: some View {
+        v_fileExporter()
     }
 }
 

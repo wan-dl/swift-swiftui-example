@@ -7,14 +7,21 @@
 
 import SwiftUI
 
+enum Colors2: String, CaseIterable, Identifiable {
+    case yellow
+    case blue
+    case white
+    var id: Self { self }
+}
+
 struct v_pickerStyle_segmented: View {
-    @State private var selectedColor: Colors = .white
+    @State private var selectedColor: Colors2 = .white
     
     var body: some View {
         List {
             Section(header: Text("pickerStyle .segmented样式").textCase(.none)) {
                 Picker("Colors", selection: $selectedColor) {
-                    ForEach(Colors.allCases) { item in
+                    ForEach(Colors2.allCases) { item in
                         Text(item.rawValue.capitalized)
                     }
                 }.pickerStyle(.segmented)

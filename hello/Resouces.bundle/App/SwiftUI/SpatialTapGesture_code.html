@@ -16,6 +16,7 @@ let mdtext = `
 \`\`\`swift
 import SwiftUI
 
+
 struct v_SpatialTapGesture: View {
     @State private var location: CGPoint = .zero
     
@@ -48,6 +49,14 @@ struct v_SpatialTapGesture: View {
                 .foregroundColor(.secondary)
         }
         .padding()
+        .navigationTitle("SpatialTapGesture")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct v_SpatialTapGesture_Previews: PreviewProvider {
+    static var previews: some View {
+        v_SpatialTapGesture()
     }
 }
 

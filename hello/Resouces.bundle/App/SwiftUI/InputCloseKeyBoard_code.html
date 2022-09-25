@@ -43,6 +43,8 @@ struct InputCloseKeyBoard: View {
         .onTapGesture {
             hideKeyboard()
         }
+        .navigationTitle("关闭键盘")
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     // 方法1: 关闭键盘
@@ -59,6 +61,12 @@ struct InputCloseKeyBoard: View {
     // 方法2: 关闭键盘
     func hideKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
+
+struct InputCloseKeyBoard_Previews: PreviewProvider {
+    static var previews: some View {
+        InputCloseKeyBoard()
     }
 }
 

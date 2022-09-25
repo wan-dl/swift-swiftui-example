@@ -57,6 +57,14 @@ struct v_DatePicker: View {
                 .datePickerStyle(.graphical)
             }
         }
+        .navigationTitle("DatePicker")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct v_DatePicker_Previews: PreviewProvider {
+    static var previews: some View {
+        v_DatePicker()
     }
 }
 

@@ -34,6 +34,8 @@ struct InputBorder: View {
             Spacer()
         }
         .padding()
+        .navigationTitle(".border()")
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     // 输入框编辑状态 边框颜色
@@ -43,6 +45,12 @@ struct InputBorder: View {
         } else {
             return Color.gray
         }
+    }
+}
+
+struct InputBorder_Previews: PreviewProvider {
+    static var previews: some View {
+        InputBorder()
     }
 }
 

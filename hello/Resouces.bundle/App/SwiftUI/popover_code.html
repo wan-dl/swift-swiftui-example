@@ -28,6 +28,14 @@ struct v_Popover: View {
                 Text("本窗口由.popover弹出")
             }
         }
+        .navigationTitle(".popover")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct v_Popover_Previews: PreviewProvider {
+    static var previews: some View {
+        v_Popover()
     }
 }
 

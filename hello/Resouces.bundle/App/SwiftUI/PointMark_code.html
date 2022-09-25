@@ -46,6 +46,8 @@ struct chart_PointMark: View {
                     .font(.body)
             }
         }
+        .navigationTitle("PointMark - 散点图")
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     @available(iOS 16.0, *)
@@ -60,6 +62,12 @@ struct chart_PointMark: View {
             .frame(height: 250)
             .padding()
         }
+    }
+}
+
+struct chart_PointMark_Previews: PreviewProvider {
+    static var previews: some View {
+        chart_PointMark()
     }
 }
 

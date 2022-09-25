@@ -26,6 +26,14 @@ struct v_ScrollView: View {
             }
             .frame(maxWidth: .infinity)
         }
+        .navigationTitle("ScrollView")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct v_ScrollView_Previews: PreviewProvider {
+    static var previews: some View {
+        v_ScrollView()
     }
 }
 

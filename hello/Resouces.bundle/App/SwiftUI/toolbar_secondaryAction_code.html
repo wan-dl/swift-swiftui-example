@@ -16,10 +16,24 @@ let mdtext = `
 \`\`\`swift
 import SwiftUI
 
+fileprivate let pageDesc:String = """
+注意页面顶部导航栏尾部。
+
+本页面示例 是对 toolbar placement: .secondaryAction 的应用展示。
+
+.secondaryAction 是iOS 16.0新增的方法，只有手机系统为iOS 16.0+时，才能看到效果
+"""
+
 struct v_toolbar_secondaryAction: View {
     
     var body: some View {
         VStack(alignment: .leading) {
+            
+            Text(pageDesc)
+                .font(.callout)
+                .foregroundColor(.gray)
+                .padding()
+            Spacer()
             
             if #available(iOS 16.0, *) {
                 Text("")
@@ -45,7 +59,6 @@ struct v_toolbar_secondaryAction_Previews: PreviewProvider {
         v_toolbar_secondaryAction()
     }
 }
-
 
 \`\`\`
 `

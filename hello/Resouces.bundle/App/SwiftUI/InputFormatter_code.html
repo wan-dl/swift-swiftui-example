@@ -37,6 +37,14 @@ struct InputFormatter: View {
             Spacer()
         }
         .padding()
+        .navigationTitle("formatter")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct InputFormatter_Previews: PreviewProvider {
+    static var previews: some View {
+        InputFormatter()
     }
 }
 

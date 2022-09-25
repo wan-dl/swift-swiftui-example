@@ -20,6 +20,7 @@ struct v_Layout: View {
     
     let colors: [Color] =
         [.red, .orange, .yellow]
+
     
     var body: some View {
         ScrollView() {
@@ -47,6 +48,8 @@ struct v_Layout: View {
             }
             .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .navigationTitle("布局")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
     
@@ -128,6 +131,12 @@ struct v_Layout: View {
             }
         }
         .frame(height: 150)
+    }
+}
+
+struct v_Layout_Previews: PreviewProvider {
+    static var previews: some View {
+        v_Layout()
     }
 }
 

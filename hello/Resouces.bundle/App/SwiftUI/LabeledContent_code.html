@@ -29,6 +29,9 @@ struct v_LabeledContent: View {
             
             Spacer()
         }
+        .navigationTitle("LabeledContent")
+        .navigationBarTitleDisplayMode(.inline)
+
     }
     
     @available (iOS 16.0, *)
@@ -48,6 +51,12 @@ struct v_LabeledContent: View {
             LabeledContent("Number", value: 100.0, format: .number.precision(.fractionLength(0)) )
         }
         .frame(height: 200)
+    }
+}
+
+struct v_LabeledContent_Previews: PreviewProvider {
+    static var previews: some View {
+        v_LabeledContent()
     }
 }
 

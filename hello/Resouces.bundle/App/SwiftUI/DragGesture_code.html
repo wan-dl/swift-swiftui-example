@@ -50,6 +50,14 @@ struct v_DragGesture: View {
                 .foregroundColor(.secondary)
         }
         .padding()
+        .navigationTitle("拖曳 - DragGesture")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct v_DragGesture_Previews: PreviewProvider {
+    static var previews: some View {
+        v_DragGesture()
     }
 }
 

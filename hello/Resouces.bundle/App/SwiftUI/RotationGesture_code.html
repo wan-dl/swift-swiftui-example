@@ -51,6 +51,14 @@ struct v_RotationGesture: View {
         }
         .padding()
         .frame(maxWidth: .infinity)
+        .navigationTitle("旋转 - RotationGesture")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct v_RotationGesture_Previews: PreviewProvider {
+    static var previews: some View {
+        v_RotationGesture()
     }
 }
 

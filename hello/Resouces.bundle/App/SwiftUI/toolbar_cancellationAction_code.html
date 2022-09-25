@@ -21,6 +21,12 @@ struct v_toolbar_cancellationAction: View {
     var body: some View {
         VStack(alignment: .leading) {
             
+            Text("注意页面顶部导航栏。\n\n本页面示例 是对 toolbar placement: .cancellationAction 的应用展示。")
+                .font(.callout)
+                .foregroundColor(.gray)
+                .padding()
+            Spacer()
+            
             Text("")
                 .toolbar {
                     ToolbarItemGroup(placement: .cancellationAction) {
@@ -43,7 +49,6 @@ struct v_toolbar_cancellationAction_Previews: PreviewProvider {
         v_toolbar_cancellationAction()
     }
 }
-
 
 \`\`\`
 `

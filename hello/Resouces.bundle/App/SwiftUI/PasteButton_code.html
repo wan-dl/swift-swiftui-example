@@ -16,6 +16,7 @@ let mdtext = `
 \`\`\`swift
 import SwiftUI
 
+
 struct v_PasteButton: View {
     @State private var username = "小明同学"
     
@@ -48,6 +49,14 @@ struct v_PasteButton: View {
         .padding()
         .frame(maxHeight: .infinity)
         .background(.gray.opacity(0.1))
+        .navigationTitle("PasteButton")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct v_PasteButton_Previews: PreviewProvider {
+    static var previews: some View {
+        v_PasteButton()
     }
 }
 

@@ -20,6 +20,13 @@ struct v_toolbar_navigation: View {
     
     var body: some View {
         VStack(alignment: .leading) {
+            
+            Text("注意查看页面顶部导航栏尾部。\n\n本页面示例 是对 toolbar placement: .navigation 的应用展示。")
+                .font(.callout)
+                .foregroundColor(.gray)
+                .padding()
+            Spacer()
+            
             Text("")
                 .toolbar {
                     ToolbarItemGroup(placement: .navigation) {

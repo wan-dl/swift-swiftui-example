@@ -7,13 +7,6 @@
 
 import SwiftUI
 
-enum Colors: String, CaseIterable, Identifiable {
-    case yellow
-    case blue
-    case white
-    var id: Self { self }
-}
-
 struct v_Picker: View {
     
     var body: some View {

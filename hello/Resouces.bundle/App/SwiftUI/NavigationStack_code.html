@@ -16,90 +16,32 @@ let mdtext = `
 \`\`\`swift
 import SwiftUI
 
-enum TargetPage {
-    case login
-    case loginSuccess
-}
+struct v_NavigationStack: View {
 
-@available (iOS 16.0, *)
-class appRouter: ObservableObject {
-    @Published var path = NavigationPath()
-}
-
-@available(iOS 16.0, *)
-struct ContentView: View {
-    @StateObject var router = appRouter()
-    
     var body: some View {
-        NavigationStack(path: $router.path) {
-            List {
-                NavigationLink("打开登录窗口", value: TargetPage.login)
-            }
-            .navigationDestination(for: TargetPage.self) { target in
-                switch target {
-                case .login:
-                    exampleLogin()
-                case .loginSuccess:
-                    exampleLoginSuccess()
-                }
-            }
+        VStack(alignment: .leading, spacing: 20) {
+            Text("在App内，对NavigationStack，呈现肉眼可观察的效果，并不容易(因为App本身就使用了NavigationStack，在此页面使用会导致闪退)。")
             
-        }
-        .environmentObject(router)
-    }
-}
-
-// 登录页面
-struct exampleLogin: View {
-    @EnvironmentObject var router: appRouter
-    @State var phone: String = ""
-    
-    var body: some View {
-        VStack(alignment: .leading, spacing: 30) {
+            Text("对于NavigationStack，建议直接观看官方文档。")
             
-            HStack {
-                TextField("手机号", text: $phone)
-                    .textFieldStyle(.roundedBorder)
-                Button("登录", action: {
-                    router.path.append(TargetPage.loginSuccess)
-                })
-            }
+            NavigationLink("NavigationStack 文档", destination: {
+                loadOpenUrl(url: "https://developer.apple.com/documentation/swiftui/NavigationStack")
+            })
+            
+            Text("右上角【示例源码】，对于NavigationStack的用法，写了一个简单的demo。请新建一个项目，拷贝源码，直接查看。")
+                .font(.headline)
             
             Spacer()
-            
-            HStack{
-                Button("返回上层视图", action: {
-                    router.path.removeLast()
-                })
-                .buttonStyle(.borderedProminent)
-                .controlSize(.regular)
-                
-                Button("返回根视图", action: {
-                    router.path.removeLast(router.path.count)
-                })
-                .buttonStyle(.borderedProminent)
-                .controlSize(.regular)
-            }
-           
         }
         .padding()
-        .navigationTitle("登录")
-        .navigationBarBackButtonHidden()
+        .navigationTitle("NavigationStack")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
-// 登录成功页面
-struct exampleLoginSuccess: View {
-    var body: some View {
-        Text("登录成功")
-            .font(.largeTitle)
-            .navigationTitle("登录成功")
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
+struct v_NavigationStack_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        v_NavigationStack()
     }
 }
 

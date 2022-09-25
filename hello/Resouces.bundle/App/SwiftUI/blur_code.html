@@ -31,6 +31,14 @@ struct v_blur: View {
                 .frame(width: 128, height: 128)
                 .blur(radius: 10.0)
         }
+        .navigationTitle(".blur")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct v_blur_Previews: PreviewProvider {
+    static var previews: some View {
+        v_blur()
     }
 }
 

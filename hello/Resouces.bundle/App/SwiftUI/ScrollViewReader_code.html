@@ -53,10 +53,18 @@ struct v_ScrollViewReader: View {
             }
         }
         .padding()
+        .navigationTitle("ScrollViewReader")
+        .navigationBarTitleDisplayMode(.inline)
     }
 
     func color(fraction: Double) -> Color {
         Color(red: fraction, green: 1 - fraction, blue: 0.5)
+    }
+}
+
+struct v_ScrollViewReader_Previews: PreviewProvider {
+    static var previews: some View {
+        v_ScrollViewReader()
     }
 }
 

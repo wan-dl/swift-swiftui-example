@@ -27,6 +27,14 @@ struct v_Navigation: View {
                 Label("跳转到Image页面", systemImage: "photo")
             }
         }
+        .navigationTitle("NavigationLink")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct v_Navigation_Previews: PreviewProvider {
+    static var previews: some View {
+        v_Navigation()
     }
 }
 

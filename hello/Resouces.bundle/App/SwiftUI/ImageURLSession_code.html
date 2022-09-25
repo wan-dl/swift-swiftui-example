@@ -42,6 +42,8 @@ struct v_image_URLSession: View {
             }
         }
         .onAppear(perform: fetchRemoteImage)
+        .navigationTitle("使用URLSession下载图片")
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     func fetchRemoteImage() {
@@ -82,6 +84,12 @@ struct v_image_URLSession: View {
             }
         }
         .resume()
+    }
+}
+
+struct v_image_URLSession_Previews: PreviewProvider {
+    static var previews: some View {
+        v_image_URLSession()
     }
 }
 

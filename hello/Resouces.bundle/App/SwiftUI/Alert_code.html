@@ -48,6 +48,14 @@ struct v_Alert: View {
                 )
             }
         }
+        .navigationTitle("Alert")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct v_Alert_Previews: PreviewProvider {
+    static var previews: some View {
+        v_Alert()
     }
 }
 

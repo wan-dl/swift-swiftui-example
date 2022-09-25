@@ -23,6 +23,11 @@ struct v_toolbar_keyboard: View {
     var body: some View {
         VStack(alignment: .leading) {
             
+            Text("请将光标置于输入框中，然后查看键盘。\n\n本页面示例 是对 toolbar placement: .keyboard 的应用展示。")
+                .font(.callout)
+                .foregroundColor(.gray)
+                .padding()
+            
             TextEditor(text: $text)
                 .frame(height: 150)
                 .font(fontType)
@@ -38,7 +43,7 @@ struct v_toolbar_keyboard: View {
                         Spacer()
                     }
                 }
-                
+            
             Spacer()
         }
     }
@@ -49,7 +54,6 @@ struct v_toolbar_keyboard_Previews: PreviewProvider {
         v_toolbar_keyboard()
     }
 }
-
 
 \`\`\`
 `

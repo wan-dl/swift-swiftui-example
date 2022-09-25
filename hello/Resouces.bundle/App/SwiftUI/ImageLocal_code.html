@@ -25,6 +25,14 @@ struct v_image_local: View {
                 .aspectRatio(contentMode: .fit)
                 .scaledToFit()
         }
+        .navigationTitle("本地资源图片")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct v_image_local_Previews: PreviewProvider {
+    static var previews: some View {
+        v_image_local()
     }
 }
 

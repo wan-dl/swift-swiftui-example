@@ -22,6 +22,14 @@ struct v_image_SF: View {
             Image(systemName: "leaf.fill")
                 .foregroundColor(.green)
         }
+        .navigationTitle("SF符号")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct v_image_SF_Previews: PreviewProvider {
+    static var previews: some View {
+        v_image_SF()
     }
 }
 

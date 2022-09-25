@@ -52,6 +52,14 @@ struct v_gesture_LongPressGesture: View {
                 .foregroundColor(.secondary)
         }
         .padding()
+        .navigationTitle("onLongPressGesture")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct v_gesture_LongPressGesture_Previews: PreviewProvider {
+    static var previews: some View {
+        v_gesture_LongPressGesture()
     }
 }
 

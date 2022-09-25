@@ -39,6 +39,14 @@ struct v_onTapGesture: View {
                 .foregroundColor(.secondary)
         }
         .padding()
+        .navigationTitle("onTapGesture")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct v_onTapGesture_Previews: PreviewProvider {
+    static var previews: some View {
+        v_onTapGesture()
     }
 }
 

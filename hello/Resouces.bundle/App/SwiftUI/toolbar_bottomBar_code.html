@@ -20,6 +20,13 @@ struct v_toolbar_bottomBar: View {
     
     var body: some View {
         VStack(alignment: .leading) {
+            
+            Text("注意页面底部工具栏，左右两侧图标。\n\n本页面示例 是对 toolbar placement: .bottomBar 的应用展示。 ")
+                .font(.callout)
+                .foregroundColor(.gray)
+                .padding()
+            Spacer()
+            
             Text("")
                 .toolbar {
                     ToolbarItemGroup(placement: .bottomBar) {

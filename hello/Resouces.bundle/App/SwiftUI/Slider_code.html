@@ -35,12 +35,14 @@ struct v_Slider: View {
             Section(header: Text("Slider 自定义风格")) {
                 CustomSlider(percentage: $speed2)
                     .frame(height: 20)
-                    
+                
                 Text("\(speed2, specifier: "%.2f")")
                         .foregroundColor(isEditing ? .red : .blue)
             }
         }
         .padding()
+        .navigationTitle("Slider")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
@@ -83,6 +85,13 @@ struct CustomSlider: View {
                 self.percentage = min(max(0, Float(value.location.x / geometry.size.width * 100)), 100)
             }))
         }
+    }
+}
+
+
+struct v_Slider_Previews: PreviewProvider {
+    static var previews: some View {
+        v_Slider()
     }
 }
 

@@ -46,6 +46,14 @@ struct v_ActionSheet: View {
             }
         }
         .padding()
+        .navigationTitle("ActionSheet")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct v_ActionSheet_Previews: PreviewProvider {
+    static var previews: some View {
+        v_ActionSheet()
     }
 }
 

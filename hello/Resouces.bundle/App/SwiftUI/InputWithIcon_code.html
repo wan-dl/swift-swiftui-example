@@ -38,6 +38,8 @@ struct InputWithIcon: View {
         .padding()
         .frame(maxHeight: .infinity)
         .background(.gray.opacity(0.1))
+        .navigationTitle("带有图标的输入框")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
@@ -75,6 +77,12 @@ struct InputWithClearIcon: TextFieldStyle {
                 .padding(.trailing, 10)
             }
         }.background(.white)
+    }
+}
+
+struct InputWithIcon_Previews: PreviewProvider {
+    static var previews: some View {
+        InputWithIcon()
     }
 }
 

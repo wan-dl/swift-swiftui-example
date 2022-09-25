@@ -19,7 +19,7 @@ import SwiftUI
 struct v_offset: View {
     var body: some View {
         VStack {
-            Text("如下示例，中间圆，设置了x和y的偏移量为25。但是视图的原始尺寸没有因为设置offset发生更改，换而言之，offset不会影响布局。")
+            Text("如下示例，中间圆，设置了x和y的偏移量为25。但是视图的原始尺寸没有因为设置offset发生更改，仅会影响子视图，换而言之，offset不会影响布局。")
                 .font(.callout)
                 .foregroundColor(.gray)
                 .padding(20)

@@ -57,6 +57,8 @@ struct chart_BarMark: View {
                 Text("图表仅支持iOS 16.0系统")
             }
         }
+        .navigationTitle("BarMark - 柱状图")
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     @available(iOS 16.0, *)
@@ -84,6 +86,12 @@ struct chart_BarMark: View {
             .foregroundStyle(.blue.opacity(0.6))
         }
         .frame(height: 250)
+    }
+}
+
+struct chart_BarMark_Previews: PreviewProvider {
+    static var previews: some View {
+        chart_BarMark()
     }
 }
 

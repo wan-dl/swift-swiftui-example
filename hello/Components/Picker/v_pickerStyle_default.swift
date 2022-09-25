@@ -7,14 +7,21 @@
 
 import SwiftUI
 
+enum Colors4: String, CaseIterable, Identifiable {
+    case yellow
+    case blue
+    case white
+    var id: Self { self }
+}
+
 struct v_pickerStyle_default: View {
-    @State private var selectedColor: Colors = .white
+    @State private var selectedColor: Colors4 = .white
     
     var body: some View {
         List {
             Section(header: Text("默认样式")) {
                 Picker("Colors", selection: $selectedColor) {
-                    ForEach(Colors.allCases) { item in
+                    ForEach(Colors4.allCases) { item in
                         Text(item.rawValue.capitalized)
                     }
                 }

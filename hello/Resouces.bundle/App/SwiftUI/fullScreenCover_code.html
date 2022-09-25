@@ -44,10 +44,18 @@ struct v_fullScreenCover: View {
                 .font(.body)
                 .padding()
         }
+        .navigationTitle(".fullScreenCover")
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     func didDismiss() {
         
+    }
+}
+
+struct v_fullScreenCover_Previews: PreviewProvider {
+    static var previews: some View {
+        v_fullScreenCover()
     }
 }
 

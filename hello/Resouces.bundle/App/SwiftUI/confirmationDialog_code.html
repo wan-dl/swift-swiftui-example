@@ -36,6 +36,14 @@ struct v_confirmationDialog: View {
             }
         }
         .padding()
+        .navigationTitle("confirmationDialog")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct v_confirmationDialog_Previews: PreviewProvider {
+    static var previews: some View {
+        v_confirmationDialog()
     }
 }
 

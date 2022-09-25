@@ -45,6 +45,8 @@ struct v_Menu: View {
                 .foregroundColor(.gray)
                 .padding(EdgeInsets(top: 50, leading: 10, bottom: 0, trailing: 10))
         }
+        .navigationTitle("Menu")
+        .navigationBarTitleDisplayMode(.inline)
     }
         
     
@@ -57,6 +59,12 @@ struct v_Menu: View {
     func show() {}
     
     func share() {}
+}
+
+struct v_Menu_Previews: PreviewProvider {
+    static var previews: some View {
+        v_Menu()
+    }
 }
 
 \`\`\`

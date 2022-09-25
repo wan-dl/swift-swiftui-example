@@ -54,6 +54,8 @@ struct v_Gradient: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             .padding()
+            .navigationTitle("Gradient - 渐变")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
     
@@ -111,6 +113,12 @@ struct FontGradient: View {
                     endPoint: end
                 )
             )
+    }
+}
+
+struct v_Gradient_Previews: PreviewProvider {
+    static var previews: some View {
+        v_Gradient()
     }
 }
 

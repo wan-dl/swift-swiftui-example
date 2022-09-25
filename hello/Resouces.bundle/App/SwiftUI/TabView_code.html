@@ -38,6 +38,14 @@ struct v_Tab: View {
                     }
             }
         }
+        .navigationTitle("TabView")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct v_Tab_Previews: PreviewProvider {
+    static var previews: some View {
+        v_Tab()
     }
 }
 

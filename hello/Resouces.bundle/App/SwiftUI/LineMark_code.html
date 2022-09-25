@@ -50,6 +50,8 @@ struct chart_LineMark: View {
                     .font(.body)
             }
         }
+        .navigationTitle("LineMark - 线图")
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     @available(iOS 16.0, *)
@@ -74,6 +76,12 @@ struct chart_LineMark: View {
             .frame(height: 250)
             .padding()
         }
+    }
+}
+
+struct chart_LineMark_Previews: PreviewProvider {
+    static var previews: some View {
+        chart_LineMark()
     }
 }
 

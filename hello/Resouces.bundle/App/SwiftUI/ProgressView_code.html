@@ -42,6 +42,8 @@ struct v_ProgressView: View {
             }
         }
         .padding()
+        .navigationTitle("ProgressView")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
@@ -50,6 +52,12 @@ struct DarkBlueShadowProgressViewStyle: ProgressViewStyle {
         ProgressView(configuration)
             .shadow(color: Color(red: 0, green: 0, blue: 0.6),
                     radius: 4.0, x: 1.0, y: 2.0)
+    }
+}
+
+struct v_ProgressView_Previews: PreviewProvider {
+    static var previews: some View {
+        v_ProgressView()
     }
 }
 

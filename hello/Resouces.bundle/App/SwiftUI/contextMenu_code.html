@@ -28,7 +28,19 @@ struct v_contextMenu: View {
                     Button("♠️ - Spades", action: {})
                     Button("♦️ - Diamonds", action: {})
                 }
+            
+            Text("长按即可看到效果")
+                .font(.callout)
+                .foregroundColor(.gray)
         }
+        .navigationTitle("contextMenu")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct v_contextMenu_Previews: PreviewProvider {
+    static var previews: some View {
+        v_contextMenu()
     }
 }
 

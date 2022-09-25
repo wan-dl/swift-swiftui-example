@@ -45,6 +45,14 @@ struct v_Grid: View {
         }
         .frame(height: 200)
         .padding()
+        .navigationTitle("Grid")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct v_Grid_Previews: PreviewProvider {
+    static var previews: some View {
+        v_Grid()
     }
 }
 

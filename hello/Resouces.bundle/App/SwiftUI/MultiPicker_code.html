@@ -47,6 +47,14 @@ struct v_MultiPicker: View {
                 }
             }
         }
+        .navigationTitle("多列选择器")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct v_MultiPicker_Previews: PreviewProvider {
+    static var previews: some View {
+        v_MultiPicker()
     }
 }
 

@@ -31,6 +31,14 @@ struct v_TextEditor: View {
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 200, maxHeight: 300)
             }
         }
+        .navigationTitle("TextEditor")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct v_TextEditor_Previews: PreviewProvider {
+    static var previews: some View {
+        v_TextEditor()
     }
 }
 

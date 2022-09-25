@@ -39,12 +39,20 @@ struct v_TimelineView: View {
                     .stroke()
             }
         }
+        .navigationTitle("TimelineView")
+        .navigationBarTitleDisplayMode(.inline)
    }
 
    private func secondsValue(for date: Date) -> Double {
        let seconds = Calendar.current.component(.second, from: date)
        return Double(seconds) / 60
    }
+}
+
+struct v_TimelineView_Previews: PreviewProvider {
+    static var previews: some View {
+        v_TimelineView()
+    }
 }
 
 \`\`\`

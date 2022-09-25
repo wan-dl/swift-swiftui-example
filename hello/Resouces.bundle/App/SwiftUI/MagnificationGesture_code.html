@@ -46,6 +46,14 @@ struct v_MagnificationGesture: View {
                 .foregroundColor(.secondary)
         }
         .padding()
+        .navigationTitle("MagnificationGesture")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct v_MagnificationGesture_Previews: PreviewProvider {
+    static var previews: some View {
+        v_MagnificationGesture()
     }
 }
 
