@@ -33,6 +33,12 @@ let SwiftUIComponentsList: [CInfo] = [
         ]
     ),
     CInfo(
+        name: "Color",
+        seas: [
+            LangSwiftUIItem(name: "Color - 颜色", searchKeyword: "Colors", available: "", viewname: AnyView(v_Colors()))
+        ]
+    ),
+    CInfo(
         name: "Image",
         seas: [
             LangSwiftUIItem(name: "Image - 图片", searchKeyword: "", available: "iOS 13.0+", viewname: AnyView(v_Image()))

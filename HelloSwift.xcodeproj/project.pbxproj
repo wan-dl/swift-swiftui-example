@@ -34,6 +34,7 @@
 		632072C528DEB51C00F7DDF9 /* v_extensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632072C428DEB51C00F7DDF9 /* v_extensionView.swift */; };
 		632072C728DED1CA00F7DDF9 /* v_modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632072C628DED1CA00F7DDF9 /* v_modifier.swift */; };
 		632081D828A2B0C400B9D888 /* Resouces.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 632081D728A2B0C400B9D888 /* Resouces.bundle */; };
+		63224D5428E055A000476CF0 /* v_Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63224D5328E055A000476CF0 /* v_Colors.swift */; };
 		6327DE3F28A5379D0097F3BF /* MainSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6327DE3E28A5379D0097F3BF /* MainSceneDelegate.swift */; };
 		6327FA6228957E440091BB9B /* p_tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6327FA6128957E440091BB9B /* p_tabbar.swift */; };
 		6327FA6428958B740091BB9B /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6327FA6328958B740091BB9B /* RootView.swift */; };
@@ -250,6 +251,7 @@
 		632072C628DED1CA00F7DDF9 /* v_modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_modifier.swift; sourceTree = "<group>"; };
 		632081D728A2B0C400B9D888 /* Resouces.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resouces.bundle; sourceTree = "<group>"; };
 		6320823028A2B1C100B9D888 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		63224D5328E055A000476CF0 /* v_Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_Colors.swift; sourceTree = "<group>"; };
 		6327DE3D28A532300097F3BF /* HelloSwift-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "HelloSwift-Info.plist"; sourceTree = "<group>"; };
 		6327DE3E28A5379D0097F3BF /* MainSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneDelegate.swift; sourceTree = "<group>"; };
 		6327FA6128957E440091BB9B /* p_tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p_tabbar.swift; sourceTree = "<group>"; };
@@ -554,6 +556,7 @@
 				E52ECFB62893A7AE0051D2DE /* v_Alert.swift */,
 				63AC4B0C28916D71004B4A45 /* v_Button.swift */,
 				639BA7B62894229B007C2797 /* v_Canvas.swift */,
+				63224D5328E055A000476CF0 /* v_Colors.swift */,
 				63BE461E2894FE1000FB9844 /* v_confirmationDialog.swift */,
 				639A97B128CD927B0044027D /* v_contextMenu.swift */,
 				6317D7122892DE1C00192E5A /* v_DisclosureGroup.swift */,
@@ -928,6 +931,7 @@
 				636104DA289631FA000DA851 /* v_swipeActions.swift in Sources */,
 				639BA7B3289420C4007C2797 /* v_ProgressView.swift in Sources */,
 				63C095532899684F00498562 /* Timing.swift in Sources */,
+				63224D5428E055A000476CF0 /* v_Colors.swift in Sources */,
 				63946B0628D6D0FE000AA29C /* ArticleList.swift in Sources */,
 				6327FA6228957E440091BB9B /* p_tabbar.swift in Sources */,
 				63286E4428CF28B200C03024 /* ConfigFramework.swift in Sources */,
