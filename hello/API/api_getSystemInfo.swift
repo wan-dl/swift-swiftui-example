@@ -63,11 +63,12 @@ struct api_getSystemInfo: View {
         let model = UIDevice.current.model
         self.DeviceInfo.append(DeviceItem(name: "model", desc: "设备型号", value: model))
         
-        let isPortrait = UIDevice.current.orientation.isPortrait
-        self.DeviceInfo.append(DeviceItem(name: "model", desc: "横屏", value: "\(isPortrait)"))
-        
-        let isLandscape = UIDevice.current.orientation.isLandscape
-        self.DeviceInfo.append(DeviceItem(name: "model", desc: "竖屏", value: "\(isLandscape)"))
+//        2022/9/25 横屏竖屏判断 存在问题，暂时屏蔽
+//        let isPortrait = UIDevice.current.orientation.isPortrait
+//        self.DeviceInfo.append(DeviceItem(name: "model", desc: "横屏", value: "\(isPortrait)"))
+//
+//        let isLandscape = UIDevice.current.orientation.isLandscape
+//        self.DeviceInfo.append(DeviceItem(name: "model", desc: "竖屏", value: "\(isLandscape)"))
         
         let screenHeight = UIScreen.main.bounds.height
         self.DeviceInfo.append(DeviceItem(name: "height", desc: "屏幕高度", value: "\(screenHeight)"))
