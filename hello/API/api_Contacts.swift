@@ -27,7 +27,7 @@ struct api_Contacts: View {
     var body: some View {
         ScrollView {
             
-            Text("说明：本页面示例，使用Contacts库。")
+            Text("说明：本页面通讯录示例，使用Contacts库。页面右上角，即可查看源码。")
                 .font(.caption)
                 .foregroundColor(.gray)
                 .frame(height: 80)
