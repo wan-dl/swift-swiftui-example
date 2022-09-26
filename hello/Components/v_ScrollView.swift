@@ -9,17 +9,15 @@ import SwiftUI
 
 struct v_ScrollView: View {
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 20) {
-                ForEach(1..<100) {
-                    Text("1 + \($0) = ")
-                }
+        List {
+            Section() {
+                NavigationLink("纵向滚动", destination: v_ScrollView_vertical())
             }
-            .frame(maxWidth: .infinity)
+            
+            Section() {
+                NavigationLink("水平滚动", destination: v_ScrollView_horizontal())
+            }
         }
-        .navigationTitle("ScrollView")
-        .navigationBarTitleDisplayMode(.inline)
-        .modifier(navBarViewCodeAndDocs(pageType: "SwiftUI",pageID: "ScrollView"))
     }
 }
 

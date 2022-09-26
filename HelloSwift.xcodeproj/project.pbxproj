@@ -179,6 +179,8 @@
 		63F76BD32899DFF40028A4D4 /* v_Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F76BD22899DFF40028A4D4 /* v_Grid.swift */; };
 		63F76BD52899E6EA0028A4D4 /* api_audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F76BD42899E6EA0028A4D4 /* api_audio.swift */; };
 		63F91D7D28DD4309003D5EC0 /* v_offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F91D7C28DD4309003D5EC0 /* v_offset.swift */; };
+		63FAE65928E1E021008850DF /* v_ScrollView_vertical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FAE65828E1E021008850DF /* v_ScrollView_vertical.swift */; };
+		63FAE65B28E1E07B008850DF /* v_ScrollView_horizontal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FAE65A28E1E07B008850DF /* v_ScrollView_horizontal.swift */; };
 		63FD9555289F91440069F691 /* api_camera_photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FD9554289F91440069F691 /* api_camera_photo.swift */; };
 		63FEF4162896872E00BC886C /* v_shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FEF4152896872E00BC886C /* v_shape.swift */; };
 		63FEF4182896B18000BC886C /* v_Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FEF4172896B18000BC886C /* v_Gesture.swift */; };
@@ -400,6 +402,8 @@
 		63F76BD22899DFF40028A4D4 /* v_Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_Grid.swift; sourceTree = "<group>"; };
 		63F76BD42899E6EA0028A4D4 /* api_audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_audio.swift; sourceTree = "<group>"; };
 		63F91D7C28DD4309003D5EC0 /* v_offset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_offset.swift; sourceTree = "<group>"; };
+		63FAE65828E1E021008850DF /* v_ScrollView_vertical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_ScrollView_vertical.swift; sourceTree = "<group>"; };
+		63FAE65A28E1E07B008850DF /* v_ScrollView_horizontal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_ScrollView_horizontal.swift; sourceTree = "<group>"; };
 		63FD9554289F91440069F691 /* api_camera_photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_camera_photo.swift; sourceTree = "<group>"; };
 		63FEF4152896872E00BC886C /* v_shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_shape.swift; sourceTree = "<group>"; };
 		63FEF4172896B18000BC886C /* v_Gesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_Gesture.swift; sourceTree = "<group>"; };
@@ -592,6 +596,8 @@
 				63DEEAC828DCB73B0060DC1E /* v_position.swift */,
 				639BA7B2289420C4007C2797 /* v_ProgressView.swift */,
 				63B7512B28DBE90300589665 /* v_safeAreaInset.swift */,
+				63FAE65A28E1E07B008850DF /* v_ScrollView_horizontal.swift */,
+				63FAE65828E1E021008850DF /* v_ScrollView_vertical.swift */,
 				6373BB28289364E50002A084 /* v_ScrollView.swift */,
 				6373BB2A289367F50002A084 /* v_ScrollViewReader.swift */,
 				63DEEAC428DCAFE80060DC1E /* v_section.swift */,
@@ -893,6 +899,7 @@
 				63286E4D28CF833900C03024 /* v_DragGesture.swift in Sources */,
 				63D41CD628DF4B95004FEC8E /* v_Ellipse.swift in Sources */,
 				63C0954A2899620F00498562 /* Shadow.swift in Sources */,
+				63FAE65B28E1E07B008850DF /* v_ScrollView_horizontal.swift in Sources */,
 				63CD857128C4F105004FDEFA /* InputAutoFocus.swift in Sources */,
 				634D681328CCD67300B8C9D1 /* v_LabeledContent.swift in Sources */,
 				639D2A1A289833B200B3AEF3 /* p_tmp.swift in Sources */,
@@ -1015,6 +1022,7 @@
 				637622CA28C332080090BBBD /* api_WeatherKit.swift in Sources */,
 				633207B128DDF3FC007B8E1C /* FavoritesList.swift in Sources */,
 				63B6BD1828D0C6D9000803FE /* navBarViewCodeAndDocs.swift in Sources */,
+				63FAE65928E1E021008850DF /* v_ScrollView_vertical.swift in Sources */,
 				639BA7B72894229B007C2797 /* v_Canvas.swift in Sources */,
 				63545EF52897F1450054FFBB /* api_getSystemInfo.swift in Sources */,
 				E5E5AA5028C9C9A400C95A00 /* TutorialSwift.swift in Sources */,
