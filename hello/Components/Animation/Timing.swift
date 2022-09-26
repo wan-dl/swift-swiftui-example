@@ -12,11 +12,6 @@ struct Timing: View {
     
     var body: some View {
         VStack {
-            Text("Animation Modifier and Tinming")
-                .font(.title)
-                .offset(y: 120)
-                .foregroundColor(.red)
-            
             exampleTiming
         }
         .navigationTitle("Modifier and Tinming")
@@ -26,8 +21,9 @@ struct Timing: View {
     
     var exampleTiming: some View {
         ZStack {
-            Color.black.ignoresSafeArea()
-                .opacity(show ? 0.8 : 0.2)
+            Color.pink
+                .ignoresSafeArea()
+                .opacity(show ? 0.9 : 0.85)
                 .animation(.easeOut(duration: 0.8), value: show)
             
             RoundedRectangle(cornerRadius: 40)
@@ -46,6 +42,11 @@ struct Timing: View {
                 .padding()
                 .animation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 0.8), value: show)
         }
+        .overlay(
+            Image(systemName: show ? "cloud.sun" : "cloud.moon")
+                .font(.largeTitle)
+                .foregroundColor(.yellow)
+        )
         .onTapGesture {
             show.toggle()
         }
