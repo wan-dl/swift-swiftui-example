@@ -20,7 +20,7 @@ struct TabItem: Identifiable {
 }
 
 var tabItems = [
-    TabItem(name: "探索", icon: "house", tab: .home),
+    TabItem(name: "学习", icon: "house", tab: .home),
     TabItem(name: "搜索", icon: "magnifyingglass", tab: .search)
 ]
 

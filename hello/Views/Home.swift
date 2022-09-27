@@ -18,9 +18,9 @@ struct elment: Identifiable {
 
 var tutorialList: [elment] = [
     elment(docId: "firstSight", title: "初见", desc: "希望每一个 “Hello, World!” 之后都能开启一段圆满", icon: "firstSight", viewName: AnyView(TutorialFirst())),
-    elment(docId: "SwiftUI", title: "SwiftUI 组件", desc: "展示大多数SwiftUI组件效果及示例代码", icon: "icon_swiftui", viewName: AnyView(SwiftUIComponentsView())),
+    elment(docId: "SwiftUI", title: "SwiftUI教程", desc: "Tutorial for SwiftUI", icon: "icon_swiftui", viewName: AnyView(SwiftUIComponentsView())),
     elment(docId: "Swift", title: "Swift 官方教程中文版", desc: "The Swift Programming Language", icon: "icon_swift", viewName: AnyView(TutorialSwiftLanguage())),
-    elment(docId: "Framework", title: "iOS Framework", desc: "包含常用库使用示例及示例代码", icon: "icon_sdk", viewName: AnyView(API()))
+    elment(docId: "Framework", title: "常用库使用示例", desc: "Tutorial for iOS Framework", icon: "icon_sdk", viewName: AnyView(API()))
 ]
 
 struct Home: View {
@@ -52,7 +52,7 @@ struct Home: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.init(uiColor: UIColor(hexString: "#F2F2F6")))
-        .navigationTitle("探索")
+        .navigationTitle("学习")
         .navigationBarTitleDisplayMode(.large)
         .safeAreaInset(edge: .bottom, content: {
             Color.clear.frame(height: 88)

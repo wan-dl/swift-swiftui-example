@@ -10,8 +10,8 @@ import PhotosUI
 
 struct api_saveImage: View {
     
-    // 名称为wuhuan的图片为Assets.xcassets下的资源图片
-    @State private var localImage: UIImage? = UIImage(named: "wuhuan")
+    // 名称为car的图片为Assets.xcassets下的资源图片
+    @State private var localImage: UIImage? = UIImage(named: "car")
     
     @State var isAuthorizationAlert: Bool = false
     @State var isPhotoSaveAlert: Bool = false
@@ -19,7 +19,7 @@ struct api_saveImage: View {
     
     var body: some View {
         VStack {
-            Image("wuhuan")
+            Image("car")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .scaledToFit()

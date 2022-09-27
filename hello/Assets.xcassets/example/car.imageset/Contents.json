@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "wuhuan.png",
+      "filename" : "car.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "car 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "car 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

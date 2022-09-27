@@ -21,7 +21,7 @@ struct v_image_URLSession: View {
                     .onAppear(perform: fetchRemoteImage)
                 
                 Text("备注：本图片是采用URLSession从网络下载")
-                    .font(.footnote)
+                    .font(.callout)
             } else {
                 Image(systemName: "photo.on.rectangle.angled")
                 

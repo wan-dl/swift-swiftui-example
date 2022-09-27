@@ -48,7 +48,7 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
             self.location = location.coordinate
             self.region = .init(
                 center: location.coordinate,
-                span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+                span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
             )
         }
     }
@@ -64,27 +64,32 @@ struct api_CoreLocationUI: View {
 
     var body: some View {
         ZStack(alignment: .bottom) {
-            Map(coordinateRegion: $locationManager.region, showsUserLocation: true)
-                .edgesIgnoringSafeArea(.all)
-            
-            VStack {
-                if let location = locationManager.location {
-                    Text("当前经纬度: \(location.latitude), \(location.longitude)")
-                        .font(.callout)
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(.gray)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                }
+            if #available(iOS 16.0, *) {
+                Map(coordinateRegion: $locationManager.region, showsUserLocation: true)
+                    .edgesIgnoringSafeArea(.all)
                 
-                LocationButton(.currentLocation) {
-                    locationManager.requestLocation()
+                VStack {
+                    if let location = locationManager.location {
+                        Text("当前经纬度: \(location.latitude), \(location.longitude)")
+                            .font(.callout)
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(.gray)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                    }
+                    
+                    LocationButton(.currentLocation) {
+                        locationManager.requestLocation()
+                    }
+                    .symbolVariant(.fill)
+                    .labelStyle(.titleAndIcon)
+                    .foregroundColor(.white)
                 }
-                .symbolVariant(.fill)
-                .labelStyle(.titleAndIcon)
-                .foregroundColor(.white)
+                .padding()
+            } else {
+                Text("本页面右上角，包含一个简单的示例Demo。")
+                    .offset(y: 20)
             }
-            .padding()
         }
         .navigationTitle("CoreLocationUI")
         .modifier(navBarViewCodeAndDocs(pageType: "API",pageID: "CoreLocationUI"))

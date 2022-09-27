@@ -10,15 +10,15 @@ import SwiftUI
 struct v_image_AsyncImage: View {
     var body: some View {
         VStack {
-            AsyncImage(url: URL(string: "https://ydlunacommon-cdn.nosdn.127.net/abc2e00ba59ece4101a89a01cce818da.png")) { image in
+            AsyncImage(url: URL(string: "https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png")) { image in
                 image.resizable()
             } placeholder: {
                 ProgressView()
             }
-            .frame(width: 100, height: 100)
+            .frame(height: 200)
             
             Text("备注：本图片是采用AsyncImage从网络下载, AsyncImage适用于iOS 15.0+")
-                .font(.footnote)
+                .font(.callout)
                 .padding()
         }
         .navigationTitle("使用AsyncImage下载图片")

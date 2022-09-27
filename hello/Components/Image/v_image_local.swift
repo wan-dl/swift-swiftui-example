@@ -10,11 +10,14 @@ import SwiftUI
 struct v_image_local: View {
     var body: some View {
         VStack {
-            // 图片预先放置在项目Assets目录下
-            Image("wuhuan")
+            Image("car")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .frame(width: 256, height: 256)
                 .scaledToFit()
+            
+            Text("备注：图片预先放置在项目Assets目录下")
+                .font(.callout)
         }
         .navigationTitle("本地资源图片")
         .navigationBarTitleDisplayMode(.inline)
