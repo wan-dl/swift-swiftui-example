@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E5C85280288A51B500BBB795"
-               BuildableName = "HelloSwift.app"
-               BlueprintName = "HelloSwift"
-               ReferencedContainer = "container:HelloSwift.xcodeproj">
+               BuildableName = "Hello.app"
+               BlueprintName = "Hello"
+               ReferencedContainer = "container:Hello.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,9 +46,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E5C85280288A51B500BBB795"
-            BuildableName = "HelloSwift.app"
-            BlueprintName = "HelloSwift"
-            ReferencedContainer = "container:HelloSwift.xcodeproj">
+            BuildableName = "Hello.app"
+            BlueprintName = "Hello"
+            ReferencedContainer = "container:Hello.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -63,9 +63,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E5C85280288A51B500BBB795"
-            BuildableName = "HelloSwift.app"
-            BlueprintName = "HelloSwift"
-            ReferencedContainer = "container:HelloSwift.xcodeproj">
+            BuildableName = "Hello.app"
+            BlueprintName = "Hello"
+            ReferencedContainer = "container:Hello.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

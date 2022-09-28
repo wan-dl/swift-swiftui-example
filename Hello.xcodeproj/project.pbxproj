@@ -253,7 +253,7 @@
 		632081D728A2B0C400B9D888 /* Resouces.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resouces.bundle; sourceTree = "<group>"; };
 		6320823028A2B1C100B9D888 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		63224D5328E055A000476CF0 /* v_Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_Colors.swift; sourceTree = "<group>"; };
-		6327DE3D28A532300097F3BF /* HelloSwift-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "HelloSwift-Info.plist"; sourceTree = "<group>"; };
+		6327DE3D28A532300097F3BF /* Hello-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hello-Info.plist"; sourceTree = "<group>"; };
 		6327DE3E28A5379D0097F3BF /* MainSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneDelegate.swift; sourceTree = "<group>"; };
 		6327FA6128957E440091BB9B /* p_tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p_tabbar.swift; sourceTree = "<group>"; };
 		6327FA6328958B740091BB9B /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -326,7 +326,7 @@
 		63808AFE28C39DD900023081 /* v_blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_blur.swift; sourceTree = "<group>"; };
 		6384F9E0289C98E1005BDC98 /* api_URLSession_Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_URLSession_Post.swift; sourceTree = "<group>"; };
 		638B32AB28DFE3AF00BF995D /* v_NavigationSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_NavigationSetting.swift; sourceTree = "<group>"; };
-		639276E628C8D640007A1D6F /* HelloSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		639276E628C8D640007A1D6F /* Hello.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hello.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6393F4B128C3974700CBD1DA /* v_statusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_statusBar.swift; sourceTree = "<group>"; };
 		63946B0528D6D0FE000AA29C /* ArticleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleList.swift; sourceTree = "<group>"; };
 		639A97B128CD927B0044027D /* v_contextMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_contextMenu.swift; sourceTree = "<group>"; };
@@ -750,10 +750,10 @@
 			isa = PBXGroup;
 			children = (
 				6334F9DB28C7767000DBEA18 /* HelloSwiftRelease.entitlements */,
-				6327DE3D28A532300097F3BF /* HelloSwift-Info.plist */,
+				6327DE3D28A532300097F3BF /* Hello-Info.plist */,
 				6300703728A1F83100EE378D /* HelloSwift.entitlements */,
 				E5C85283288A51B500BBB795 /* hello */,
-				639276E628C8D640007A1D6F /* HelloSwift.app */,
+				639276E628C8D640007A1D6F /* Hello.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -809,9 +809,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E5C85280288A51B500BBB795 /* HelloSwift */ = {
+		E5C85280288A51B500BBB795 /* Hello */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E5C8528F288A51B700BBB795 /* Build configuration list for PBXNativeTarget "HelloSwift" */;
+			buildConfigurationList = E5C8528F288A51B700BBB795 /* Build configuration list for PBXNativeTarget "Hello" */;
 			buildPhases = (
 				E5C8527D288A51B500BBB795 /* Sources */,
 				E5C8527E288A51B500BBB795 /* Frameworks */,
@@ -822,9 +822,9 @@
 			);
 			dependencies = (
 			);
-			name = HelloSwift;
+			name = Hello;
 			productName = format;
-			productReference = 639276E628C8D640007A1D6F /* HelloSwift.app */;
+			productReference = 639276E628C8D640007A1D6F /* Hello.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -842,7 +842,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E5C8527C288A51B500BBB795 /* Build configuration list for PBXProject "HelloSwift" */;
+			buildConfigurationList = E5C8527C288A51B500BBB795 /* Build configuration list for PBXProject "Hello" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -855,7 +855,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E5C85280288A51B500BBB795 /* HelloSwift */,
+				E5C85280288A51B500BBB795 /* Hello */,
 			);
 		};
 /* End PBXProject section */
@@ -1242,13 +1242,13 @@
 				CODE_SIGN_ENTITLEMENTS = HelloSwift.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"hello/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 9RN855T24F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "HelloSwift-Info.plist";
+				INFOPLIST_FILE = "Hello-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "极简开发";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSCameraUsageDescription = "该应用需要使用相机，以便为你演示相关功能";
@@ -1275,7 +1275,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = io.swift.expert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1298,13 +1298,13 @@
 				CODE_SIGN_ENTITLEMENTS = HelloSwiftRelease.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"hello/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 9RN855T24F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "HelloSwift-Info.plist";
+				INFOPLIST_FILE = "Hello-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "极简开发";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSCameraUsageDescription = "该应用需要使用相机，以便为你演示相关功能";
@@ -1331,7 +1331,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = io.swift.expert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1348,7 +1348,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E5C8527C288A51B500BBB795 /* Build configuration list for PBXProject "HelloSwift" */ = {
+		E5C8527C288A51B500BBB795 /* Build configuration list for PBXProject "Hello" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E5C8528D288A51B700BBB795 /* Debug */,
@@ -1357,7 +1357,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E5C8528F288A51B700BBB795 /* Build configuration list for PBXNativeTarget "HelloSwift" */ = {
+		E5C8528F288A51B700BBB795 /* Build configuration list for PBXNativeTarget "Hello" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E5C85290288A51B700BBB795 /* Debug */,
