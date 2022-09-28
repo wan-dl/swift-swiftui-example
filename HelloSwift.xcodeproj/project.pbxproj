@@ -105,7 +105,6 @@
 		63772DE2289BFB4300BB56AD /* api_URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63772DE1289BFB4300BB56AD /* api_URLSession.swift */; };
 		63808AFF28C39DD900023081 /* v_blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63808AFE28C39DD900023081 /* v_blur.swift */; };
 		6384F9E1289C98E1005BDC98 /* api_URLSession_Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6384F9E0289C98E1005BDC98 /* api_URLSession_Post.swift */; };
-		6389EE9928A1683E002B6E4A /* api_HealthKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6389EE9828A1683E002B6E4A /* api_HealthKit.swift */; };
 		638B32AC28DFE3AF00BF995D /* v_NavigationSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638B32AB28DFE3AF00BF995D /* v_NavigationSetting.swift */; };
 		6393F4B228C3974700CBD1DA /* v_statusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6393F4B128C3974700CBD1DA /* v_statusBar.swift */; };
 		63946B0628D6D0FE000AA29C /* ArticleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63946B0528D6D0FE000AA29C /* ArticleList.swift */; };
@@ -326,7 +325,6 @@
 		63772DE1289BFB4300BB56AD /* api_URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_URLSession.swift; sourceTree = "<group>"; };
 		63808AFE28C39DD900023081 /* v_blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_blur.swift; sourceTree = "<group>"; };
 		6384F9E0289C98E1005BDC98 /* api_URLSession_Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_URLSession_Post.swift; sourceTree = "<group>"; };
-		6389EE9828A1683E002B6E4A /* api_HealthKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_HealthKit.swift; sourceTree = "<group>"; };
 		638B32AB28DFE3AF00BF995D /* v_NavigationSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_NavigationSetting.swift; sourceTree = "<group>"; };
 		639276E628C8D640007A1D6F /* HelloSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6393F4B128C3974700CBD1DA /* v_statusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_statusBar.swift; sourceTree = "<group>"; };
@@ -491,7 +489,6 @@
 				63C35C2228A14AFA00AFA350 /* api_CoreLocation.swift */,
 				63C35C2428A1618900AFA350 /* api_CoreLocationUI.swift */,
 				63545EF42897F1450054FFBB /* api_getSystemInfo.swift */,
-				6389EE9828A1683E002B6E4A /* api_HealthKit.swift */,
 				63AF99D028B51427002A87F8 /* api_network.swift */,
 				63CD81E828BB9606003A2C4C /* api_Notifications.swift */,
 				6300BA0E28AE7C5A002D03CE /* api_openURL.swift */,
@@ -1064,7 +1061,6 @@
 				63F48C7028C5082E00B84680 /* InputOn.swift in Sources */,
 				6332B64628B3BD0400193C04 /* LifeCycle.swift in Sources */,
 				63619D1028DA0A8F00335762 /* v_toolbar_principal.swift in Sources */,
-				6389EE9928A1683E002B6E4A /* api_HealthKit.swift in Sources */,
 				6317D7072892D20900192E5A /* v_Sheet.swift in Sources */,
 				6350BF3B28C6412800EE3F95 /* v_ColorPicker.swift in Sources */,
 				63428E1128CC477A00BFFCF0 /* TutorialDeveloperAccount.swift in Sources */,
@@ -1257,6 +1253,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSCameraUsageDescription = "该应用需要使用相机，以便为你演示相关功能";
 				INFOPLIST_KEY_NSContactsUsageDescription = "该应用需要读取你的通讯录，以便为您演示相关功能";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "使用您的位置信息，以便向您演示相关功能";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "使用您的位置信息，以便向您演示相关功能";
 				INFOPLIST_KEY_NSLocationTemporaryUsageDescriptionDictionary = "使用您的位置信息，以便向您演示相关功能";
@@ -1312,6 +1309,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSCameraUsageDescription = "该应用需要使用相机，以便为你演示相关功能";
 				INFOPLIST_KEY_NSContactsUsageDescription = "该应用需要读取你的通讯录，以便为您演示相关功能";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "使用您的位置信息，以便向您演示相关功能";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "使用您的位置信息，以便向您演示相关功能";
 				INFOPLIST_KEY_NSLocationTemporaryUsageDescriptionDictionary = "使用您的位置信息，以便向您演示相关功能";

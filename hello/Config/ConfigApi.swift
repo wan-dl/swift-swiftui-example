@@ -36,8 +36,6 @@ var ApiList: [ApiInfo] = [
     ApiInfo(
         name: "FrameWork",
         seas: [
-            ApiItem(name: "Contacts - 联系人", available: "", searchKeyword: "联系人,通讯录,Contacts", viewname: AnyView(api_Contacts())),
-            ApiItem(name: "HealthKit - 健康", available: "", searchKeyword: "健康,运行,headlthkit", viewname: AnyView(api_HealthKit())),
             ApiItem(name: "Notification - 本地通知", available: "", searchKeyword: "本地通知,Notification", viewname: AnyView(api_Notifications())),
             ApiItem(name: "WeatherKit - 天气", available: "iOS 16.0+", searchKeyword: "WeatherKit", viewname: AnyView(api_WeatherKit()))
         ]

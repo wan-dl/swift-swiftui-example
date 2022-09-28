@@ -75,13 +75,6 @@ var FrameworkList: [FrameworkInfo] = [
         ]
     ),
     FrameworkInfo(
-        name: "健康",
-        seas: [
-            FrameworkItem(name: "HealthKit", zh: "", available: "", url: "",  searchKeyword: ""),
-            FrameworkItem(name: "HealthKitUI", zh: "", available: "", url: "",  searchKeyword: ""),
-        ]
-    ),
-    FrameworkInfo(
         name: "日历",
         seas: [
             FrameworkItem(name: "EventKit", zh: "", available: "", url: "",  searchKeyword: ""),
