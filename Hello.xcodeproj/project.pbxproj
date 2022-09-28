@@ -1136,9 +1136,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSContactsUsageDescription = "";
-				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
@@ -1209,9 +1206,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSContactsUsageDescription = "";
-				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
