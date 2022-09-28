@@ -46,9 +46,9 @@ struct TutorialSwiftLanguage: View {
     
     var headView: some View {
         HStack() {
-            Image("icon_swift")
-                .resizable(resizingMode: .stretch)
-                .frame(width: 25, height: 25)
+//            Image("icon_swift")
+//                .resizable(resizingMode: .stretch)
+//                .frame(width: 25, height: 25)
             VStack(alignment: .leading) {
                 Text(pageDesc)
                     .lineSpacing(6)
@@ -59,9 +59,9 @@ struct TutorialSwiftLanguage: View {
     
     var SwiftWelcomeView: some View {
         Section(header: Text("Welcome to Swift").textCase(.none)) {
-            NavigationLink("Swift 5.7英文文档", destination: {
-                loadOpenUrl(url: swiftOfficialWebsite, title: "Swift")
-            })
+//            NavigationLink("Swift 5.7英文文档", destination: {
+//                loadOpenUrl(url: swiftOfficialWebsite, title: "Swift")
+//            })
             ForEach(LangSwiftWelcomeList, id: \.id) { item in
                 NavigationLink(destination: {
                     //readMarkDownFile(mdDir: "swift/welcome", mdPath: item.nid, mdTitle: item.name)

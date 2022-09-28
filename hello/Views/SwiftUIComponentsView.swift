@@ -55,9 +55,9 @@ struct SwiftUIComponentsView: View {
     var SwiftUIBriefIntroduction: some View {
         Section() {
             NavigationLink(destination: TutorialSwiftUI(), label: {
-                Image("icon_swiftui")
-                    .resizable(resizingMode: .stretch)
-                    .frame(width: 25, height: 25)
+//                Image("icon_swiftui")
+//                    .resizable(resizingMode: .stretch)
+//                    .frame(width: 25, height: 25)
                 VStack(alignment: .leading) {
                     Text("SwiftUI是一种使用Swift语言在苹果设备上构建用户界面的创新且简单的方式...")
                         .lineLimit(2)

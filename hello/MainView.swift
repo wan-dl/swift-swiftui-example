@@ -1,5 +1,5 @@
 //
-//  HelloSwiftApp.swift
+//  main.swift
 //  format
 //
 //  Created by 1 on 7/22/22.
@@ -42,7 +42,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 
 @main
-struct HelloSwiftApp: App {
+struct HelloApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
