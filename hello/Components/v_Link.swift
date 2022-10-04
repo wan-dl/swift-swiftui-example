@@ -25,11 +25,11 @@ struct v_Link: View {
             
             Divider()
             
-            if #available(iOS 16.0, *) {
-                ShareLink(item: URL(string: "https://developer.apple.com/xcode/swiftui/")!) {
-                    Label("ShareLink示例", image: "square.and.arrow.up")
-                }
-            }
+//            if #available(iOS 16.0, *) {
+//                ShareLink(item: URL(string: "https://developer.apple.com/xcode/swiftui/")!) {
+//                    Label("ShareLink示例", image: "square.and.arrow.up")
+//                }
+//            }
         }
         .navigationTitle("Link")
         .navigationBarTitleDisplayMode(.inline)

@@ -58,7 +58,7 @@ let SwiftUIComponentsList: [CInfo] = [
         seas: [
             LangSwiftUIItem(name: "Button - 按钮", searchKeyword: "", available: "iOS 13.0+", viewname: AnyView(v_Button())),
             LangSwiftUIItem(name: "PasteButton", searchKeyword: "", available: "iOS 16.0+", viewname: AnyView(v_PasteButton())),
-            LangSwiftUIItem(name: "Link | ShareLink - 链接", searchKeyword: "", available: "iOS 14.0+", viewname: AnyView(v_Link())),
+            LangSwiftUIItem(name: "Link - 链接", searchKeyword: "Link,ShareLink", available: "iOS 14.0+", viewname: AnyView(v_Link())),
             LangSwiftUIItem(name: "Slider - 滑块", searchKeyword: "", available: "iOS 13.0+", viewname: AnyView(v_Slider())),
             LangSwiftUIItem(name: "Stepper", searchKeyword: "", available: "iOS 13.0+", viewname: AnyView(v_Stepper())),
             LangSwiftUIItem(name: "Picker - 选择器", searchKeyword: "", available: "iOS 13.0+", viewname: AnyView(v_Picker())),
