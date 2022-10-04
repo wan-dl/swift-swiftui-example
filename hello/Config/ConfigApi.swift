@@ -37,7 +37,7 @@ var ApiList: [ApiInfo] = [
         name: "FrameWork",
         seas: [
             ApiItem(name: "Notification - 本地通知", available: "", searchKeyword: "本地通知,Notification", viewname: AnyView(api_Notifications())),
-            ApiItem(name: "WeatherKit - 天气", available: "iOS 16.0+", searchKeyword: "WeatherKit", viewname: AnyView(api_WeatherKit()))
+//            ApiItem(name: "WeatherKit - 天气", available: "iOS 16.0+", searchKeyword: "WeatherKit", viewname: AnyView(api_WeatherKit()))
         ]
     ),
     ApiInfo(
