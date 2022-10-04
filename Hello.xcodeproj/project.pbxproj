@@ -99,7 +99,6 @@
 		6373BB29289364E50002A084 /* v_ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6373BB28289364E50002A084 /* v_ScrollView.swift */; };
 		6373BB2B289367F50002A084 /* v_ScrollViewReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6373BB2A289367F50002A084 /* v_ScrollViewReader.swift */; };
 		6373BB2D289369B10002A084 /* v_Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6373BB2C289369B10002A084 /* v_Navigation.swift */; };
-		637622CA28C332080090BBBD /* api_WeatherKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637622C928C332080090BBBD /* api_WeatherKit.swift */; };
 		637622CC28C37D4E0090BBBD /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637622CB28C37D4E0090BBBD /* About.swift */; };
 		637622CE28C38DA00090BBBD /* v_PasteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637622CD28C38DA00090BBBD /* v_PasteButton.swift */; };
 		63772DE2289BFB4300BB56AD /* api_URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63772DE1289BFB4300BB56AD /* api_URLSession.swift */; };
@@ -319,7 +318,6 @@
 		6373BB28289364E50002A084 /* v_ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_ScrollView.swift; sourceTree = "<group>"; };
 		6373BB2A289367F50002A084 /* v_ScrollViewReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_ScrollViewReader.swift; sourceTree = "<group>"; };
 		6373BB2C289369B10002A084 /* v_Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_Navigation.swift; sourceTree = "<group>"; };
-		637622C928C332080090BBBD /* api_WeatherKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_WeatherKit.swift; sourceTree = "<group>"; };
 		637622CB28C37D4E0090BBBD /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		637622CD28C38DA00090BBBD /* v_PasteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_PasteButton.swift; sourceTree = "<group>"; };
 		63772DE1289BFB4300BB56AD /* api_URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_URLSession.swift; sourceTree = "<group>"; };
@@ -502,7 +500,6 @@
 				63772DE1289BFB4300BB56AD /* api_URLSession.swift */,
 				63AFF202289AAE6600C949E3 /* api_UserDefaults.swift */,
 				63168D0428997BF200C7D0DC /* api_video.swift */,
-				637622C928C332080090BBBD /* api_WeatherKit.swift */,
 				63C7776C28B2678400F56321 /* api_WebView.swift */,
 			);
 			path = API;
@@ -1016,7 +1013,6 @@
 				631E4B5128CBA3F900A0901D /* readMarkDownFile.swift in Sources */,
 				E5C85285288A51B500BBB795 /* MainView.swift in Sources */,
 				63319D8C28AD2FC700980F53 /* api_saveImage.swift in Sources */,
-				637622CA28C332080090BBBD /* api_WeatherKit.swift in Sources */,
 				633207B128DDF3FC007B8E1C /* FavoritesList.swift in Sources */,
 				63B6BD1828D0C6D9000803FE /* navBarViewCodeAndDocs.swift in Sources */,
 				63FAE65928E1E021008850DF /* v_ScrollView_vertical.swift in Sources */,
