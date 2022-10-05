@@ -2,18 +2,13 @@
 
 2022年7月，开始学习swift + swiftui，在此记录每日所学。
 
+**`本项目已在Apple AppStore上线，扫码体验`**.
+
+<img src="https://pic.jitudisk.com/public/2022/10/05/c1d46d3c22e63.png" width="240" height="240" />
+
 ## 环境
 
 本项目使用`Xcode 14.0`创建，运行的iOS最低版本为 `iOS 15.0`
-
-本项目使用了`pod`, git clone后，请在终端输入如下命令：
-
-```shell
-$ pod install
-
-# 注意：请用Xcode打开`HelloSwift.xcworkspace`, 如果打开的是`HelloSwift.xcodeproj`会报错。
-$ open HelloSwift.xcworkspace
-```
 
 ## 项目简介
 
