@@ -24,6 +24,12 @@ struct CInfo: Identifiable {
 
 let SwiftUIComponentsList: [CInfo] = [
     CInfo(
+        name: "",
+        seas: [
+            LangSwiftUIItem(name: "SwiftUI介绍", searchKeyword: "介绍", available: "", viewname: AnyView(TutorialSwiftUI()))
+        ]
+    ),
+    CInfo(
         name: "Text Input and Output",
         seas: [
             LangSwiftUIItem(name: "Text - 文本", searchKeyword: ".font字体,.fontWeight字重,.foregoundColor前景色,.italic斜体,.bold粗体,.underline下划线,.textCase大小写,.strikethrough删除线, .linelimit超出截断,.background背景色,.linespacing行间距,.textselection选中", available: "iOS 13.0+", viewname: AnyView(v_Text())),
@@ -63,9 +69,15 @@ let SwiftUIComponentsList: [CInfo] = [
             LangSwiftUIItem(name: "Stepper", searchKeyword: "", available: "iOS 13.0+", viewname: AnyView(v_Stepper())),
             LangSwiftUIItem(name: "Picker - 选择器", searchKeyword: "", available: "iOS 13.0+", viewname: AnyView(v_Picker())),
             LangSwiftUIItem(name: "Toggle", searchKeyword: "", available: "iOS 13.0+", viewname: AnyView(v_Toggle())),
-            LangSwiftUIItem(name: "ProgressView", searchKeyword: "loading,进度条", available: "iOS 14.0+", viewname: AnyView(v_ProgressView())),
             LangSwiftUIItem(name: "Menu", searchKeyword: ".menuOrder,目录", available: "iOS 14.0+", viewname: AnyView(v_Menu())),
             LangSwiftUIItem(name: "contextMenu", searchKeyword: "目录", available: "iOS 13.0–16.0", viewname: AnyView(v_contextMenu())),
+        ]
+    ),
+    CInfo(
+        name: "Indicators",
+        seas: [
+            LangSwiftUIItem(name: "Gauge", searchKeyword: "进度条,仪表", available: "iOS 16.0+", viewname: AnyView(v_Gauge())),
+            LangSwiftUIItem(name: "ProgressView", searchKeyword: "loading,进度条", available: "iOS 14.0+", viewname: AnyView(v_ProgressView())),
         ]
     ),
     CInfo(
