@@ -121,6 +121,7 @@
 		63AF99D128B51427002A87F8 /* api_network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AF99D028B51427002A87F8 /* api_network.swift */; };
 		63AFF201289AAE5100C949E3 /* p_markdownWithAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AFF200289AAE5100C949E3 /* p_markdownWithAttributedString.swift */; };
 		63AFF203289AAE6600C949E3 /* api_UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AFF202289AAE6600C949E3 /* api_UserDefaults.swift */; };
+		63B116F828F3AEEA00168B6A /* ReleaseNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B116F728F3AEEA00168B6A /* ReleaseNote.swift */; };
 		63B6BD1828D0C6D9000803FE /* navBarViewCodeAndDocs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B6BD1728D0C6D9000803FE /* navBarViewCodeAndDocs.swift */; };
 		63B711B628D619570034C112 /* TutorialFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B711B528D619570034C112 /* TutorialFirst.swift */; };
 		63B73568289D4E1500CA74C8 /* api_clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B73567289D4E1500CA74C8 /* api_clipboard.swift */; };
@@ -341,6 +342,7 @@
 		63AF99D028B51427002A87F8 /* api_network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_network.swift; sourceTree = "<group>"; };
 		63AFF200289AAE5100C949E3 /* p_markdownWithAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p_markdownWithAttributedString.swift; sourceTree = "<group>"; };
 		63AFF202289AAE6600C949E3 /* api_UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_UserDefaults.swift; sourceTree = "<group>"; };
+		63B116F728F3AEEA00168B6A /* ReleaseNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseNote.swift; sourceTree = "<group>"; };
 		63B6BD1728D0C6D9000803FE /* navBarViewCodeAndDocs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navBarViewCodeAndDocs.swift; sourceTree = "<group>"; };
 		63B711B528D619570034C112 /* TutorialFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialFirst.swift; sourceTree = "<group>"; };
 		63B73567289D4E1500CA74C8 /* api_clipboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_clipboard.swift; sourceTree = "<group>"; };
@@ -773,6 +775,7 @@
 				63E8CFD0288AEC5300550E52 /* Fonts */,
 				6320822F28A2B1C100B9D888 /* Preview Content */,
 				63AFF206289AAEF800C949E3 /* Views */,
+				63B116F728F3AEEA00168B6A /* ReleaseNote.swift */,
 			);
 			path = hello;
 			sourceTree = "<group>";
@@ -994,6 +997,7 @@
 				634D681128CCC5F900B8C9D1 /* Show_SwiftUI_Docs.swift in Sources */,
 				63286E4F28CF83A700C03024 /* v_MagnificationGesture.swift in Sources */,
 				633207B328DDF99A007B8E1C /* AddToFavoriteList.swift in Sources */,
+				63B116F828F3AEEA00168B6A /* ReleaseNote.swift in Sources */,
 				63619D1A28DA10C100335762 /* v_toolbar_destructiveAction.swift in Sources */,
 				639BA7BC28942D5F007C2797 /* p_navigationBar.swift in Sources */,
 				E52ECFB92893A8860051D2DE /* v_ActionSheet.swift in Sources */,
@@ -1237,7 +1241,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Hello-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "极简开发";
+				INFOPLIST_KEY_CFBundleDisplayName = "Swift开发示例";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSCameraUsageDescription = "该应用需要使用相机，以便为你演示相关功能";
 				INFOPLIST_KEY_NSContactsUsageDescription = "该应用需要读取你的通讯录，以便为您演示相关功能";
@@ -1293,7 +1297,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Hello-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "极简开发";
+				INFOPLIST_KEY_CFBundleDisplayName = "Swift开发示例";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSCameraUsageDescription = "该应用需要使用相机，以便为你演示相关功能";
 				INFOPLIST_KEY_NSContactsUsageDescription = "该应用需要读取你的通讯录，以便为您演示相关功能";

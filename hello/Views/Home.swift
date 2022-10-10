@@ -20,7 +20,7 @@ struct elment: Identifiable {
 var tutorialList: [elment] = [
     elment(docId: "firstSight", title: "初见", desc: "希望每一个 “Hello, World!” 之后都能开启一段圆满", icon: "face.smiling", iconColor: .red, viewName: AnyView(TutorialFirst())),
     elment(docId: "SwiftUI", title: "SwiftUI 教程", desc: "Tutorial for SwiftUI", icon: "square.stack.3d.down.forward", iconColor: .indigo, viewName: AnyView(SwiftUIComponentsView())),
-    elment(docId: "Swift", title: "Swift 官方教程中文版", desc: "The Swift Programming Language", icon: "curlybraces",  iconColor: .orange, viewName: AnyView(TutorialSwiftLanguage())),
+//    elment(docId: "Swift", title: "Swift 官方教程中文版", desc: "The Swift Programming Language", icon: "curlybraces",  iconColor: .orange, viewName: AnyView(TutorialSwiftLanguage())),
     elment(docId: "Framework", title: "常用库使用示例", desc: "Tutorial for iOS Framework", icon: "icon_sdk",  iconColor: .black, viewName: AnyView(API()))
 ]
 

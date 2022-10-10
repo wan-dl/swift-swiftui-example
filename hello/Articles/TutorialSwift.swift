@@ -65,7 +65,8 @@ struct TutorialSwiftLanguage: View {
             ForEach(LangSwiftWelcomeList, id: \.id) { item in
                 NavigationLink(destination: {
                     //readMarkDownFile(mdDir: "swift/welcome", mdPath: item.nid, mdTitle: item.name)
-                    loadSwiftProgrammingLanguage(pageTitle: item.name, filedir: "swift/welcome", filename: item.nid)
+//                    loadSwiftProgrammingLanguage(pageTitle: item.name, filedir: "swift/welcome", filename: item.nid)
+                    Text("找不到文档了")
                 }, label: {
                     Text(item.name)
                 })
