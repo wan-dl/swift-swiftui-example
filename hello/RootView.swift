@@ -20,7 +20,7 @@ struct TabItem: Identifiable {
 }
 
 var tabItems = [
-    TabItem(name: "学习", icon: "house", tab: .home),
+    TabItem(name: "探索", icon: "house", tab: .home),
     TabItem(name: "搜索", icon: "magnifyingglass", tab: .search)
 ]
 
@@ -31,8 +31,6 @@ class Router: ObservableObject {
 }
 
 enum Target: String {
-    case login
-    case register
     case deviceInfo
     case search
 }
@@ -65,10 +63,6 @@ struct RootViewForIOS16: View {
         .environmentObject(router)
         .navigationDestination(for: Target.self) { target in
             switch target {
-            case .login:
-                UserLogin()
-            case .register:
-                UserLogin()
             case .deviceInfo:
                 api_getSystemInfo()
             case .search:
