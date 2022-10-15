@@ -114,6 +114,7 @@
 		639BA7B928942CBD007C2797 /* Examples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639BA7B828942CBD007C2797 /* Examples.swift */; };
 		639BA7BC28942D5F007C2797 /* p_navigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639BA7BB28942D5F007C2797 /* p_navigationBar.swift */; };
 		639D2A1A289833B200B3AEF3 /* p_tmp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D2A19289833B200B3AEF3 /* p_tmp.swift */; };
+		639DFF2128FA984D00CC91B3 /* TutorialSwiftSimple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DFF2028FA984D00CC91B3 /* TutorialSwiftSimple.swift */; };
 		63AAAD592890C65F005F1C20 /* v_TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AAAD582890C65F005F1C20 /* v_TextField.swift */; };
 		63AC4B0D28916D71004B4A45 /* v_Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AC4B0C28916D71004B4A45 /* v_Button.swift */; };
 		63AC4B0F289177C3004B4A45 /* v_Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AC4B0E289177C3004B4A45 /* v_Label.swift */; };
@@ -333,6 +334,7 @@
 		639BA7B828942CBD007C2797 /* Examples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Examples.swift; sourceTree = "<group>"; };
 		639BA7BB28942D5F007C2797 /* p_navigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p_navigationBar.swift; sourceTree = "<group>"; };
 		639D2A19289833B200B3AEF3 /* p_tmp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p_tmp.swift; sourceTree = "<group>"; };
+		639DFF2028FA984D00CC91B3 /* TutorialSwiftSimple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialSwiftSimple.swift; sourceTree = "<group>"; };
 		63AAAD582890C65F005F1C20 /* v_TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_TextField.swift; sourceTree = "<group>"; };
 		63AC4B0C28916D71004B4A45 /* v_Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_Button.swift; sourceTree = "<group>"; };
 		63AC4B0E289177C3004B4A45 /* v_Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v_Label.swift; sourceTree = "<group>"; };
@@ -786,6 +788,7 @@
 				63B711B528D619570034C112 /* TutorialFirst.swift */,
 				63946B0528D6D0FE000AA29C /* ArticleList.swift */,
 				63397FE228D7716A009FA7A0 /* SwiftUIView.swift */,
+				639DFF2028FA984D00CC91B3 /* TutorialSwiftSimple.swift */,
 			);
 			path = Articles;
 			sourceTree = "<group>";
@@ -905,6 +908,7 @@
 				636104DF289654BF000DA851 /* NavigationBar.swift in Sources */,
 				E5CE5CB72892602500BC7FF1 /* v_Stepper.swift in Sources */,
 				E58522EA28D17EAB00582B50 /* v_image_AsyncImage.swift in Sources */,
+				639DFF2128FA984D00CC91B3 /* TutorialSwiftSimple.swift in Sources */,
 				63B7356A289D517B00CA74C8 /* styles.swift in Sources */,
 				63619D1828DA107A00335762 /* v_toolbar_cancellationAction.swift in Sources */,
 				E5E5AA5428C9CCA600C95A00 /* ConfigSwift.swift in Sources */,
@@ -1214,12 +1218,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HelloSwift.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"hello/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 9RN855T24F;
+				DEVELOPMENT_TEAM = 9RN855T24F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Hello-Info.plist";
@@ -1250,10 +1253,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.3;
-				PRODUCT_BUNDLE_IDENTIFIER = io.swift.expert;
+				PRODUCT_BUNDLE_IDENTIFIER = io.swift.study;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = io.swift.expert;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -1270,12 +1272,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HelloSwiftRelease.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"hello/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 9RN855T24F;
+				DEVELOPMENT_TEAM = 9RN855T24F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Hello-Info.plist";
@@ -1306,10 +1307,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.3;
-				PRODUCT_BUNDLE_IDENTIFIER = io.swift.expert;
+				PRODUCT_BUNDLE_IDENTIFIER = io.swift.study;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = io.swift.expert;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;

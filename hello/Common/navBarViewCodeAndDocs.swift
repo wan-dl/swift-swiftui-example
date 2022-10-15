@@ -55,7 +55,7 @@ struct navBarViewCodeAndDocs: ViewModifier {
                     }
                     .padding()
                     
-                    Text("没有示例源码了，请直接在Github查看源文件")
+                    Text("没有示例源码了")
                         .foregroundColor(.gray)
                         .offset(y: 150)
                     Spacer()
@@ -117,7 +117,7 @@ struct buttonViewCodeAndDocs: ViewModifier {
                     }
                     .padding()
                     
-                    Text("没有示例源码了，请直接在Github查看源文件")
+                    Text("没有示例源码了")
                         .foregroundColor(.gray)
                         .offset(y: 150)
                     Spacer()

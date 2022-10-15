@@ -19,8 +19,6 @@ struct SwiftUIComponentsView: View {
     @State var isDelay: Bool = false
     var body: some View {
         List {
-            // 简短介绍
-            SwiftUIBriefIntroduction
             
             ForEach(SwiftUIComponentsList, id: \.id) { item in
                 Section(header: Text(item.name).textCase(.none)) {
@@ -49,23 +47,6 @@ struct SwiftUIComponentsView: View {
         }
         .navigationTitle("SwiftUI")
         .navigationBarTitleDisplayMode(.inline)
-    }
-    
-    // SwiftUI 简短介绍
-    var SwiftUIBriefIntroduction: some View {
-        Section() {
-            NavigationLink(destination: TutorialSwiftUI(), label: {
-//                Image("icon_swiftui")
-//                    .resizable(resizingMode: .stretch)
-//                    .frame(width: 25, height: 25)
-                VStack(alignment: .leading) {
-                    Text("SwiftUI是一种使用Swift语言在苹果设备上构建用户界面的创新且简单的方式...")
-                        .lineLimit(2)
-                        .lineSpacing(6)
-                        .font(.callout)
-                }
-            })
-        }
     }
     
     // 根据搜索关键字，返回搜索结果
