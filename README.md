@@ -2,6 +2,8 @@
 
 2022年7月，开始学习swift + swiftui，在此记录每日所学。
 
+**`本项目包含绝大多数SwiftUI示例及源码、以及常用iOS库使用示例`**
+
 **`本项目已在Apple AppStore上线，扫码体验`**.
 
 <img src="https://pic.jitudisk.com/public/2022/10/05/c1d46d3c22e63.png" width="240" height="240" />
