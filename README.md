@@ -6,7 +6,7 @@
 
 **`本项目已在Apple AppStore上线，扫码体验`**.
 
-<img src="https://pic.jitudisk.com/public/2022/10/05/c1d46d3c22e63.png" width="240" height="240" />
+<img src="https://raw.githubusercontent.com/yi-heng/Swift-SwiftUI-example/main/docs/static/qrcode.png" width="240" height="240" />
 
 ## 环境
 
